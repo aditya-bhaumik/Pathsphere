@@ -4,9 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PathSphere | Scholarships</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f0f2f5;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?fit=crop&w=1350&q=80') no-repeat center center/cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        /* Scholarship Form Section */
+        .mainform {
+            background-color: white;
+            max-width: 700px;
+            margin: -50px auto 50px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .mainform h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, select {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #scholarshipList {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #333;
+            list-style: none;
+            padding-left: 0;
+        }
+        #scholarshipList li {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .mainform {
+                padding: 20px;
+            }
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Header with Navigation -->
     <header>
         <nav>
             <div class="logo">PathSphere</div>
@@ -18,15 +181,41 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="hero">
-            <h1>Scholarships</h1>
-            <p>Find scholarships that match your academic profile and needs.</p>
-        </section>
-        <!-- Add scholarship listings and search/filter options here -->
-    </main>
+
+    <!-- Hero Section with a Background Image -->
+    <section class="hero">
+        <h1>Scholarships</h1>
+        <p>Find scholarships that match your academic profile and needs.</p>
+    </section>
+
+    <!-- Main Form Section -->
+    <section class="mainform">
+        <h2>Find Your Scholarship</h2>
+        <form id="filterForm">
+            <label for="cgpa">Minimum CGPA:</label>
+            <input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" required>
+
+            <label for="academic">Academic Performance:</label>
+            <select id="academic" name="academic">
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Postgraduate">Postgraduate</option>
+                <option value="PhD">PhD</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <ul id="scholarshipList"></ul>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 PathSphere. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
