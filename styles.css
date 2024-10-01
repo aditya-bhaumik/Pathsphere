@@ -106,11 +106,82 @@ main {
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
+    padding: 80px 16px;
+    background: #1f2125;
     color: #fff;
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
 }
+
+.footer-about p {
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-about-icons i {
+    color: white;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    opacity: 0.7;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 0.5rem;
+    transition: opacity 0.3s ease 0s;
+    margin-top: 3rem;
+}
+
+.footer-about-icons i:hover {
+    opacity: 1;
+}
+
+.footer-about-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-cards a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+    transition: opacity 0.3s ease 0s;
+}
+
+.footer-cards {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+
+.footer-cards h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+
+.footer-cards a:hover {
+    opacity: 1;
+}
+
+.footer-bar {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #1f2125;
+}
+
+@media (max-width: 900px) {
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+}
+
 
 @media (max-width: 1200px) {
     .features {
