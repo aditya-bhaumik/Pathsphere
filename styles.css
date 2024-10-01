@@ -61,6 +61,18 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+@media (max-width: 768px) {
+    nav ul li a:hover {
+        color: #ff6f61;
+        background-color: rgba(255, 255, 255, 0.1); /* Subtle background change for touch devices */
+    }
 }
 
 main {
