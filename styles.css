@@ -13,47 +13,51 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Ensure the body takes full height */
 }
-
+/* General styling */
 header {
-    background: #333;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
     color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    display: inline-block;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
+ul.nav-list {
+    list-style-type: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    gap: 20px;
 }
 
-nav ul li {
-    margin-left: 20px;
+ul.nav-list li {
+    display: inline;
 }
 
-nav ul li a {
-    color: #fff;
+ul.nav-list li a {
     text-decoration: none;
+    color: #fff;
     font-size: 18px;
+}
+
+/* Menu icon - hidden by default */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Show menu when the mobile menu is opened */
+ul.nav-list.active {
+    display: flex;
 }
 
 main {
@@ -99,6 +103,7 @@ main {
     padding: 20px;
     background: #f9f9f9;
     border-radius: 5px;
+    margin: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -107,4 +112,50 @@ footer {
     padding: 10px;
     background: #333;
     color: #fff;
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 768px) {
+    /* Hide the list and show the menu icon on smaller screens */
+    ul.nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Adjust to match your header height */
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    ul.nav-list li {
+        padding: 15px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .features{
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 40px 10px; /* Further reduced padding */
+    }
+
+    .hero h1 {
+        font-size: 28px; /* Even smaller font size for the heading */
+    }
+
+    .hero p {
+        font-size: 18px; /* Even smaller font size for the paragraph */
+    }
+
+    .btn {
+        display: block; /* Stack buttons vertically */
+        margin: 10px auto; /* Center buttons */
+        padding: 10px 20px; /* Adjust padding for buttons */
+        font-size: 16px; /* Adjust font size for buttons */
+    }
 }
