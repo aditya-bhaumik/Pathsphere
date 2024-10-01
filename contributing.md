@@ -1,7 +1,7 @@
 <h1 align="center">Contributors Guide⚡ </h1>
 <h3 align="center">Welcome to our open-source project! Make sure to star this repositionary😍<br> We appreciate your interest in contributing.😊 <br>This guide will help you get started with the project and make your first contribution.</h3>
 
-Join the discord link for more information related to this repo  
+Join the discord link for more information related to this repo   https://discord.gg/FZxBRpTEeH
 
 
 <h1 align="center">Creating first Pull Request 🌟</h1>
