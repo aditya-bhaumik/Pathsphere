@@ -1,4 +1,3 @@
-// Placeholder for future JavaScript functionality
 
 // Animate the navbar
 gsap.from("nav", {
