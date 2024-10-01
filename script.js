@@ -1,11 +1,12 @@
-// Placeholder for future JavaScript functionality
 
-// Animate the navbar
-gsap.from("nav", {
+// Animate the navbar links
+gsap.from("#navbar li a", {
     duration: 1, 
-    y: -100, 
-    opacity: 0,
-    ease: "bounce"
+    opacity: 0, 
+    y: -50, 
+    stagger: 0.2, 
+    ease: "power3.out", 
+    delay: 0.5
 });
 
 // Animate the heading
@@ -34,4 +35,20 @@ gsap.from(".btn", {
     stagger: 0.2, 
     ease: "back.out(1.7)", 
     delay: 1.5
+});
+
+const tabs = document.querySelectorAll('.tab');
+const cursor = document.querySelector('.cursor');
+
+tabs.forEach(tab => {
+    tab.addEventListener('mouseenter', (e) => {
+        const { offsetLeft, offsetWidth } = e.target; 
+        cursor.style.left = `${offsetLeft}px`; 
+        cursor.style.width = `${offsetWidth}px`; 
+        cursor.style.opacity = 1; 
+    });
+
+    tab.addEventListener('mouseleave', () => {
+        cursor.style.opacity = 0; 
+    });
 });
