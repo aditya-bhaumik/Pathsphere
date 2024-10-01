@@ -11,7 +11,7 @@ body {
     background: #f4f4f4;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes full height */
+    min-height: 100vh;
 }
 
 header {
@@ -57,7 +57,7 @@ nav ul li a {
 }
 
 main {
-    flex: 1; /* Ensure main content expands to fill available space */
+    flex: 1;
 }
 
 .hero {
@@ -92,6 +92,7 @@ main {
     justify-content: space-around;
     padding: 20px;
     background: #fff;
+    flex-wrap: wrap;
 }
 
 .feature {
@@ -100,6 +101,8 @@ main {
     background: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -107,4 +110,63 @@ footer {
     padding: 10px;
     background: #333;
     color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 5px;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+
+    .feature {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .feature {
+        width: 100%;
+    }
 }
