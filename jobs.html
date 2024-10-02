@@ -3,15 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PathSphere | Jobs</title>
+    <title>Jobs</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #3c3f41;
+            padding: 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+        .hero {
+            background-color: #4caf50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .search-bar {
+            margin: 20px auto;
+            text-align: center;
+            position: relative;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar i {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #888;
+        }
+        .job-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .job-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            background-color: #ffffff;
+        }
+        .job-item:hover {
+            transform: scale(1.05);
+        }
+        .job-item h2 {
+            margin-top: 0;
+        }
+        .apply-btn {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .apply-btn:hover {
+            background-color: #45a049;
+        }
+        .footer-container {
+            background-color: #3c3f41;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer-list {
+            margin: 20px 0;
+        }
+        .footer-list h3 {
+            margin-bottom: 10px;
+        }
+        .social-icons li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .copyright {
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+            .search-bar input {
+                width: 80%;
+            }
+            .job-item {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        // Function to filter jobs based on search input
+        function filterJobs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.getElementsByClassName('job-item');
+
+            Array.from(items).forEach(item => {
+                const title = item.getElementsByTagName('h2')[0].textContent.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to simulate the application process
+        function applyForJob(jobTitle) {
+            alert(`You have applied for the ${jobTitle}.`);
+        }
+    </script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">PathSphere</a>          
-              <ul>
+            <a href="index.html" class="logo"><img src="/P (1).png" alt="PathSphere Logo"> PathSphere</a>          
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="scholarships.html">Scholarships</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
@@ -25,30 +167,119 @@
             <h1>Jobs</h1>
             <p>Explore job opportunities for educators and professionals.</p>
         </section>
-        <!-- Add job listings and search/filter options here -->
+        
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search for jobs..." aria-label="Search Jobs" onkeyup="filterJobs()">
+        </div>
+        
+        <section class="job-list">
+            <div class="job-item">
+                <h2>Math Teacher</h2>
+                <p>Company: ABC High School</p>
+                <p>Location: New York, NY</p>
+                <p>Salary: $50,000 - $60,000</p>
+                <p>Requirements: Bachelor's degree in Education or relevant field.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Math Teacher')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Software Engineer</h2>
+                <p>Company: Tech Innovations Inc.</p>
+                <p>Location: San Francisco, CA</p>
+                <p>Salary: $100,000 - $120,000</p>
+                <p>Requirements: Bachelor's degree in Computer Science and 2+ years of experience.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Software Engineer')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Data Analyst</h2>
+                <p>Company: Data Insights Ltd.</p>
+                <p>Location: Remote</p>
+                <p>Salary: $70,000 - $80,000</p>
+                <p>Requirements: Proficient in SQL and Python, with 1+ years of experience.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Data Analyst')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Graphic Designer</h2>
+                <p>Company: Creative Agency</p>
+                <p>Location: Austin, TX</p>
+                <p>Salary: $45,000 - $55,000</p>
+                <p>Requirements: Portfolio showcasing design skills.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Graphic Designer')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Project Manager</h2>
+                <p>Company: BuildTech Corp.</p>
+                <p>Location: Chicago, IL</p>
+                <p>Salary: $90,000 - $110,000</p>
+                <p>Requirements: 5+ years of experience in project management.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Project Manager')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Content Writer</h2>
+                <p>Company: WriteNow Media</p>
+                <p>Location: Remote</p>
+                <p>Salary: $40,000 - $50,000</p>
+                <p>Requirements: Excellent writing skills and creativity.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Content Writer')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Web Developer</h2>
+                <p>Company: Web Solutions Co.</p>
+                <p>Location: Los Angeles, CA</p>
+                <p>Salary: $75,000 - $95,000</p>
+                <p>Requirements: Strong knowledge of HTML, CSS, JavaScript.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Web Developer')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Marketing Specialist</h2>
+                <p>Company: MarketWise</p>
+                <p>Location: Miami, FL</p>
+                <p>Salary: $60,000 - $70,000</p>
+                <p>Requirements: Experience in digital marketing.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Marketing Specialist')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Sales Representative</h2>
+                <p>Company: SalesPro Inc.</p>
+                <p>Location: Denver, CO</p>
+                <p>Salary: $50,000 - $60,000</p>
+                <p>Requirements: Excellent communication skills.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Sales Representative')">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h2>Research Scientist</h2>
+                <p>Company: BioTech Labs</p>
+                <p>Location: Boston, MA</p>
+                <p>Salary: $85,000 - $95,000</p>
+                <p>Requirements: PhD in a related field.</p>
+                <a href="#" class="apply-btn" onclick="applyForJob('Research Scientist')">Apply Now</a>
+            </div>
+            
+        </section>
     </main>
+
     <div class="footer-container">
         <div class="footer-description">
             <h3>PathSphere</h3>
             <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and educators with job openings. It features dynamic search tools and community discussions to enhance access to educational and career resources.</p>
         </div>
         <div class="footer-list">
-            <h3>Quick links</h3>
+            <h3>Quick Links</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="scholarships.html">Scholarships</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="forum.html">Forum</a></li>
+                <li><a href="index.html" style="color: white;">Home</a></li>
+                <li><a href="scholarships.html" style="color: white;">Scholarships</a></li>
+                <li><a href="jobs.html" style="color: white;">Jobs</a></li>
+                <li><a href="forum.html" style="color: white;">Forum</a></li>
             </ul>
         </div>
         <div class="footer-list">
-            <h3>Follow us on</h3>
+            <h3>Follow Us On</h3>
             <ul class="social-icons">
-                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com" target="_blank" style="color: white;"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" style="color: white;"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://x.com" target="_blank" style="color: white;"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank" style="color: white;"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" style="color: white;"><i class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
     </div>
