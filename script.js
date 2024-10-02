@@ -44,3 +44,19 @@ icon.onclick=function(){
         icon.src="images/dark.png"
     }
 }
+//FAQ Section
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('.toggle-icon'); 
+        
+ 
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            icon.textContent = '+'; 
+        } else {
+            answer.style.display = 'block';
+            icon.textContent = '-'; 
+        }
+    });
+});
