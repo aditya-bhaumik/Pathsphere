@@ -81,33 +81,51 @@
             justify-content: center;
             margin: 20px;
         }
+      
+
         .scholarship-item {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 10px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 320px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
             background-color: var(--primary-color);
+            color: black;
+            font-family: 'Arial', sans-serif;
         }
-        .scholarship-item:hover {
-            transform: scale(1.05);
-        }
+        
         .scholarship-item h2 {
-            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
-        .apply-btn {
+        
+        .scholarship-item p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: black;
+        }
+        
+        .scholarship-item .apply-btn {
             display: inline-block;
-            background-color: #4caf50;
-            color:  var(--primary-color);
+            background-color: #ff9800;
+            color: white;
             padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
         }
-        .apply-btn:hover {
-            background-color: #45a049;
+        
+        .scholarship-item .apply-btn:hover {
+            background-color: #ffb74d;
+            transform: translateY(-3px);
+        }
+        
+        .scholarship-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .footer-container {
             background-color:  var(--primary-color);
