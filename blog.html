@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .blog-header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .blog-subtitle {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .blog-posts {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            flex-wrap: nowrap;
+        }
+
+        .blog-post {
+            flex: 1;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.05);
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .post-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .like-button {
+            padding: 8px 12px;
+            background-color: transparent;
+            color: #ff7e5f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .like-button.liked {
+            color: red;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .submit-comment {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .additional-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .newsletter-section {
+            background-color: #ff7e5f;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .newsletter-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .subscribe-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: #ff7e5f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .blog-posts {
+                flex-wrap: wrap;
+            }
+
+            .blog-post {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-post {
+                flex: 1 1 calc(100% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post {
+                flex: 1 1 100%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">PathSphere</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <h1>PathSphere Blog</h1>
+            <p class="blog-subtitle">Stay updated with the latest news, tips, and insights on scholarships and jobs.</p>
+        </section>
+
+        <section class="blog-posts">
+            <div class="blog-post">
+                <h2>Understanding Scholarships</h2>
+                <img src="https://www.tradifyhq.com/hubfs/Tradify_culture_Blog3_.gif" alt="Scholarship" class="post-image">
+                <p class="post-content">Scholarships are financial aid that do not require repayment. They are offered based
+                    on various criteria such as academic merit, financial need, or specific talents. Understanding the
+                    different types of scholarships available can significantly enhance your chances of funding your
+                    education.</p>
+                <div class="button-group">
+                    <button class="like-button"><i class="fas fa-heart"></i></button>
+                    <textarea rows="4" placeholder="Write your comment here..."></textarea>
+                    <button class="submit-comment">Submit</button>
+                </div>
+                <button class="read-more">Read more</button>
+                <div class="additional-content">
+                    <p>Scholarships can come from various sources, including government bodies, educational institutions,
+                        and private organizations. Researching and applying for scholarships early can greatly increase
+                        your chances of success. Always read the eligibility criteria carefully!</p>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <h2>Tips for Job Hunting</h2>
+                <img src="https://media0.giphy.com/media/l4Epe8gPvTodwd8CQ/giphy.gif" alt="Job Hunting" class="post-image">
+                <p class="post-content">Job hunting can be challenging, but with the right approach, you can find
+                    opportunities that suit your skills and aspirations. Here are some essential tips to navigate your
+                    search and make yourself stand out in the job market.</p>
+                <div class="button-group">
+                    <button class="like-button"><i class="fas fa-heart"></i></button>
+                    <textarea rows="4" placeholder="Write your comment here..."></textarea>
+                    <button class="submit-comment">Submit</button>
+                </div>
+                <button class="read-more">Read more</button>
+                <div class="additional-content">
+                    <p>Some useful tips include customizing your resume for each application, networking with professionals
+                        in your desired field, and practicing interview questions. Additionally, be sure to follow up
+                        after interviews to show your enthusiasm!</p>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <h2>Networking for Success</h2>
+                <img src="https://digitalscholar.in/wp-content/uploads/2022/07/ways-to-create-resume-2.gif"
+                    alt="Networking" class="post-image">
+                <p class="post-content">Networking is a crucial aspect of career development. Building relationships with
+                    professionals in your field can lead to job opportunities and collaborations. Learn effective
+                    networking strategies to expand your professional circle.</p>
+                <div class="button-group">
+                    <button class="like-button"><i class="fas fa-heart"></i></button>
+                    <textarea rows="4" placeholder="Write your comment here..."></textarea>
+                    <button class="submit-comment">Submit</button>
+                </div>
+                <button class="read-more">Read more</button>
+                <div class="additional-content">
+                    <p>Networking can be done through various means, including social media platforms like LinkedIn, attending
+                        industry events, and joining professional associations. Always follow up with new contacts to build
+                        lasting relationships.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <h2>Subscribe to Our Newsletter</h2>
+            <input type="email" placeholder="Enter your email" class="newsletter-input" id="newsletter-input">
+            <button class="subscribe-button" id="subscribe-button">Subscribe</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PathSphere. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.like-button').forEach(button => {
+            button.addEventListener('click', function () {
+                this.classList.toggle('liked');
+            });
+        });
+
+        document.querySelectorAll('.submit-comment').forEach(button => {
+            button.addEventListener('click', function () {
+                const textarea = this.previousElementSibling;
+                const comment = textarea.value.trim();
+                if (comment) {
+                    alert(`Comment submitted: ${comment}`);
+                    textarea.value = '';
+                } else {
+                    alert('Please enter a comment.');
+                }
+            });
+        });
+
+        // Subscribe button functionality
+        document.getElementById('subscribe-button').addEventListener('click', function () {
+            const emailInput = document.getElementById('newsletter-input');
+            const email = emailInput.value.trim();
+            if (email) {
+                alert(`Thank you for subscribing with ${email}!`);
+                emailInput.value = ''; // Clear the input
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        // Read more functionality
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function () {
+                const additionalContent = this.nextElementSibling;
+                additionalContent.style.display = additionalContent.style.display === 'none' || additionalContent.style.display === '' ? 'block' : 'none';
+                this.textContent = additionalContent.style.display === 'block' ? 'Read less' : 'Read more';
+            });
+        });
+    </script>
+</body>
+
+</html>
