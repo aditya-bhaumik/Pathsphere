@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="jobs.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input[type="text"] {
+            width: 50%;
+            height: 30px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .search-bar button {
+            height: 30px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,15 +51,16 @@
                 <h1>Jobs</h1>
                 <p>Explore job opportunities for educators and professionals.</p>
             </section>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search jobs...">
+                <button id="search-button">Search</button>
+            </div>
             <div class="job-listings">
                 <h3>Job Listings</h3>
                 <div id="jobs" class="main">
                     <!-- Cards will be generated here by JavaScript -->
                 </div>
             </div>
-            
-            
-            
         </main>
     </main>
     <div class="footer-container">
@@ -64,6 +89,4 @@
         </div>
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-</body>
-<script src="jobs.js"></script>
-</html>
+</body
