@@ -10,8 +10,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="jobs.css">
+<!-- <<<<<<< enhanceFAQ -->
+    <!-- <style>
+        Removed css code from here and created a new file jobs.css
+    </style> -->
+    <script>
+        // Function to filter jobs based on search input
+        function filterJobs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.getElementsByClassName('job-item');
+
+            Array.from(items).forEach(item => {
+                const title = item.getElementsByTagName('h2')[0].textContent.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to simulate the application process
+        function applyForJob(jobTitle) {
+            alert(`You have applied for the ${jobTitle}.`);
+        }
+    </script>
+=======
     
     
+<!-- >>>>>>> main -->
 </head>
 <body>
     <header>
