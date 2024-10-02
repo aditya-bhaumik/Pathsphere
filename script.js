@@ -34,3 +34,13 @@ gsap.from(".btn", {
     ease: "back.out(1.7)", 
     delay: 1.5
 });
+let icon=document.getElementById("icon")
+icon.onclick=function(){
+    document.body.classList.toggle("darkmode")
+    if(document.body.classList.contains("darkmode")){
+        icon.src="images/light.png"
+    }
+    else{
+        icon.src="images/dark.png"
+    }
+}
