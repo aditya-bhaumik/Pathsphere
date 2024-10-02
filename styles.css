@@ -97,22 +97,44 @@ main {
 }
 
 .hero {
-    background: linear-gradient(to right, #ff6f61, #d83d77);
+
+
     color: var(--primary-color);;
     text-align: center;
     padding: 100px 20px;
     margin-top: 60px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 50px;
+    background-image: url("https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826");
+background-repeat: no-repeat;
+/* width: 100vw; */
+background-size:cover;
+height: 100vh;
+
 }
 
 .hero h1 {
     font-size: 48px;
     margin: 0;
+    padding: 5px;
 }
 
 .hero p {
     font-size: 24px;
+    padding: 10px;
 }
-
+.hero .left{
+    width: 60%;
+}
+.hero .right{
+    width: 40%;
+}
+.hero .right img{
+    width: 500px;
+    height: 300px;
+}
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -134,62 +156,96 @@ main {
 .feature {
     text-align: center;
     padding: 20px;
-    background: var(--primary-color);;
+    background: #f9f9f9;
     border-radius: 5px;
+    gap: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin-bottom: 20px;
+}
+.feature img{
+    width: 30px;
+    height: 30px;
 }
 .faq-section {
     max-width: 900px;
     margin: 2rem auto;
     padding: 1rem 2rem;
-    background-color: var(--primary-color);;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; 
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif; 
 }
 
 .faq-section h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: #333; 
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #ffa500;
     padding-bottom: 0.5rem;
 }
 
-
 .faq-item {
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--primary-color);;
+    border-bottom: 1px solid #e0e0e0; 
     padding-bottom: 1rem;
+    transition: background-color 0.3s ease; 
+}
+
+.faq-item:hover {
+    background-color: #f1f1f1; 
 }
 
 .faq-item h2 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+    font-size: 1.6rem;
+    color: #333;
     margin-bottom: 0.5rem;
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+.faq-item h2:hover {
+    font-size: 1.8rem; 
+    color: #ffa500; 
 }
 
 .faq-item p {
-    font-size: 1rem;
-    color: #666;
+        font-size: 1rem;
+        color: #666;
+        display: none; 
+        font-style: italic; 
+        transition: max-height 0.3s ease, opacity 0.3s ease; 
+        max-height: 0; 
+        overflow: hidden; 
+        padding: 1rem 1.5rem; 
+        background-color: #f9f9f9; 
+        border-radius: 5px; 
+        margin-top: 0.5rem; 
 }
 
-.faq-item a {
-    color: #ffa500;
-    text-decoration: none;
-    font-weight: bold;
+
+.faq-item p.show {
+    display: block; 
+    max-height: 200px; 
+    opacity: 1; 
 }
 
-.faq-item a:hover {
-    text-decoration: underline;
+.toggle-icon {
+    margin-right: 10px; 
+    font-size: 1.5rem; 
+    transition: transform 0.3s ease; 
+}
+
+.toggle-icon.rotate {
+    transform: rotate(180deg); 
 }
 
 .btn {
     display: inline-block;
     background-color: #ffa500;
-    color: var(--primary-color);;
+    color: #fff; 
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     text-decoration: none;
