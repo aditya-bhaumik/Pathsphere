@@ -99,10 +99,16 @@ main {
     text-align: center;
     padding: 20px;
     background: #f9f9f9;
+    flex-direction: column;
     border-radius: 5px;
+    gap: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin-bottom: 20px;
+}
+.feature img{
+    width: 30px;
+    height: 30px;
 }
 .faq-section {
     max-width: 900px;
