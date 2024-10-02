@@ -5,49 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PathSphere | Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Added a favicon -->
+	<link rel="icon" type="image/x-icon" href="images\pathsphere.png">
+
+    
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
+<!-- Add an ID to the body tag or a specific class to the blog section -->
+<body id="blog-page"> <!-- or class="blog-page" -->
     <header>
-        <nav>
-            <a href="index.html" class="logo"><img src="/P (1).png">PathSphere</a>
-            <ul>
+
+        <nav id="navbar"> <!-- Add an ID to the nav -->
+            <a href="index.html" class="logo">PathSphere</a>
+
+             <ul>
+
                 <li><a href="index.html">Home</a></li>
                 <li><a href="scholarships.html">Scholarships</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="forum.html">Forum</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#faqs">FAQs</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- Include blog in the nav -->
             </ul>
 
             <img src="images/dark.png" id="icon" alt="">
 
         </nav>
     </header>
+
     <main>
-        <section class="hero">
+
+ <section class="hero">
+            <div class="left">
             <h1>Welcome to PathSphere</h1>
             <p>Your gateway to educational and professional resources</p>
-            <a href="scholarships.html" class="btn">Find Scholarships</a>
-            <a href="jobs.html" class="btn">Find Jobs</a>
-        </section>
-        <section class="features">
+
+            <div class="search-container">
+                <a href="scholarships.html" class="btn">
+                 <i class="fa-solid fa-magnifying-glass"></i>
+                  Find Scholarships
+              </a>
+            
+         <a href="jobs.html" class="btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+		 Find Jobs
+         </a>
+           </div>
+    </section>
+      <section class="features">
             <div class="feature">
-                <h2><img src="/sicon.png">Scholarships</h2>
+
+                <img src="images/sicon.png" alt="">
+                <h2>Scholarships</h2>
                 <p>Discover scholarships tailored to your needs and academic performance.</p>
                 <a href="scholarships.html" class="btn">Explore</a>
             </div>
             <div class="feature">
-                <h2><img src="/jicon.png">Jobs</h2>
+
+                <img src="images/jicon.png" alt="">
+                <h2>Jobs</h2>
                 <p>Find job opportunities for educators and professionals.</p>
                 <a href="jobs.html" class="btn">Browse Jobs</a>
             </div>
             <div class="feature">
-                <h2><img src="/ficon.png">Forum</h2>
+
+                <img src="images/ficon.png" alt="">
+                <h2>Forum</h2>
                 <p>Join discussions, ask questions, and connect with others.</p>
                 <a href="forum.html" class="btn">Join the Forum</a>
             </div>
