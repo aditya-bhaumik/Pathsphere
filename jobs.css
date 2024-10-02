@@ -1,0 +1,118 @@
+/*-----------job listings-----------*/ 
+:root {
+    --primary-color: #FF6868;
+    --secondary-color: #39DB4A;
+    --text-color: #6F6E6E;
+    --dark-text-color: #454545;
+    --light-text-color: #555555;
+    --heading-font-size: 50px;
+    --subheading-font-size: 30px;
+    --text-font-size: 20px;
+    --padding: 30px;
+    --section-padding: 30px 90px;
+    --gap: 35px;
+    --card-padding: 20px;
+    --card-shadow: 0px 0px 19px -6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.job-listings {
+    padding: var(--section-padding);
+    width: 70vw;
+    margin: auto;
+}
+
+.job-listings h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    letter-spacing: 6px;
+    word-spacing: 10px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.job-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.card {
+    box-shadow: var(--card-shadow);
+    border-radius: 20px;
+    padding: var(--card-padding);
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.card-body {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+.card-body h5 {
+    font-size: var(--subheading-font-size);
+    font-weight: bold;
+}
+
+.card-body h6 {
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin: 0;
+}
+
+.location {
+    color: var(--text-color);
+    margin-left: auto; 
+}
+
+.card-body p {
+    color: var(--light-text-color);
+    font-size: 15px;
+    margin: 10px 0; 
+}
+
+.card-body button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--text-font-size);
+    margin-top: auto; 
+    align-self: flex-end; 
+}
+
+
+
+.card .apply-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card .apply-btn button{
+    width: 150px;
+    padding: 5px 15px ;
+    background-color: #ff6f61;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+}
+.card button:hover {
+    background-color: #33b84e; 
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PathSphere | Jobs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="jobs.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,11 +22,21 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>Jobs</h1>
-            <p>Explore job opportunities for educators and professionals.</p>
-        </section>
-        <!-- Add job listings and search/filter options here -->
+        <main>
+            <section class="hero">
+                <h1>Jobs</h1>
+                <p>Explore job opportunities for educators and professionals.</p>
+            </section>
+            <div class="job-listings">
+                <h3>Job Listings</h3>
+                <div id="jobs" class="main">
+                    <!-- Cards will be generated here by JavaScript -->
+                </div>
+            </div>
+            
+            
+            
+        </main>
     </main>
     <div class="footer-container">
         <div class="footer-description">
@@ -54,4 +65,5 @@
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
 </body>
+<script src="jobs.js"></script>
 </html>
