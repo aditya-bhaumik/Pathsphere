@@ -244,41 +244,9 @@ footer {
     ;
 }
 
-@media (max-width: 1200px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature {
-        width: 80%;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        gap: 5px;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
 
 
-    .feature {
-        width: 90%;
-    }
-}
+
 
 @media (max-width: 480px) {
     .hero {
@@ -942,6 +910,7 @@ h1 {
     padding: 15px 0;
     border-bottom: 1px solid  var(--primary-color);
     transition: background-color 0.2s;
+}
 .blog-header {
     text-align: center;
     padding: 2rem;
@@ -964,11 +933,11 @@ h1 {
 
 .forum-post:hover {
     background-color:  var(--primary-color);
+}
 
 .blog-post h2 {
     margin-bottom: 0.5rem;
     color: #333;
-
 }
 
 .blog-post p {
