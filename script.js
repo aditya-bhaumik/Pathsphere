@@ -34,7 +34,16 @@ gsap.from(".btn", {
     ease: "back.out(1.7)", 
     delay: 1.5
 });
-
+let icon=document.getElementById("icon")
+icon.onclick=function(){
+    document.body.classList.toggle("darkmode")
+    if(document.body.classList.contains("darkmode")){
+        icon.src="images/light.png"
+    }
+    else{
+        icon.src="images/dark.png"
+    }
+}
 //FAQ Section
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
@@ -51,6 +60,7 @@ document.querySelectorAll('.faq-question').forEach(question => {
         }
     });
 });
+<<<<<<< HEAD
 
 function toggleMenu() {
     var menu = document.getElementById("mobile-menu");
@@ -64,3 +74,5 @@ function toggleMenu() {
         icon.innerHTML = "&#10006;"; // Change to crossmark (X)
     }
 }
+=======
+>>>>>>> 100cd6cddaae84efdbbf2dcf2210ed54b5cd2c88
