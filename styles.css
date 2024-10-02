@@ -31,15 +31,19 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    img{
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .logo:hover {
@@ -84,7 +88,7 @@ main {
     color: #fff;
     text-align: center;
     padding: 100px 20px;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .hero h1 {
