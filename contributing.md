@@ -33,7 +33,9 @@ git commit -m "added reademe.
 > 
 > 
 > Co-authored-by: your github username <your email related to github>
-> Co-authored-by: aditya-bhaumik <adi.b98120@gmail.com>"
+> Co-authored-by: aditya-bhaumik <adi.b98120@gmail.com>
+> Co-authored-by: @Bhanuprakash842
+<bhanuprakashkasireddy97@gmail.com>"
 ```
 8. Push your local commits to the remote repo.
 ```css

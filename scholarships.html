@@ -10,15 +10,26 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo"><img src="/P (1).png">PathSphere</a>
-                        <ul>
+            <a href="index.html" class="logo"><img src="./P (1).png">PathSphere</a>
+            <div id="menu-icon" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="scholarships.html">Scholarships</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="forum.html">Forum</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
-                
             </ul>
+            <div id="mobile-menu" class="mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="scholarships.html">Scholarships</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -54,5 +65,6 @@
         </div>
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+    <script src="script.js"></script>
 </body>
 </html>

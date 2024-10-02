@@ -40,10 +40,11 @@ nav {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
-    img{
-        width: 50px;
-        height: 50px;
-    }
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
 }
 
 .logo:hover {
@@ -77,6 +78,7 @@ nav ul li a:hover {
         color: #ff6f61;
         background-color: rgba(255, 255, 255, 0.1); /* Subtle background change for touch devices */
     }
+    
 }
 
 main {
@@ -87,7 +89,7 @@ main {
     background: linear-gradient(to right, #ff6f61, #d83d77);
     color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     margin-top: 50px;
 }
 
@@ -127,6 +129,7 @@ main {
     width: 30%;
     margin-bottom: 20px;
 }
+
 .faq-section {
     max-width: 900px;
     margin: 2rem auto;
@@ -144,7 +147,6 @@ main {
     border-bottom: 2px solid #ffa500;
     padding-bottom: 0.5rem;
 }
-
 
 .faq-item {
     margin-bottom: 1.5rem;
@@ -172,102 +174,6 @@ main {
 .faq-item a:hover {
     text-decoration: underline;
 }
-
-.btn {
-    display: inline-block;
-    background-color: #ffa500;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #cc8400;
-}
-
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-}
-
-@media (max-width: 1200px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature {
-        width: 80%;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        gap: 5px;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-
-    .feature {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 50px 10px;
-    }
-
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .btn {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-
-    .feature {
-        width: 100%;
-    }
-}
-
 
 .footer-container {
     display: flex;
@@ -344,7 +250,118 @@ footer {
     color: #BDBDBD;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 5px;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+    #nav-links{
+        visibility:hidden;
+        display:none;
+
+    }
+}
+
+@media (min-width:768px) {
+    #nav-links{
+        visibility: visible;
+
+    }
+    .menu-icon{
+        visibility: hidden;
+
+    }
+    .mobile-menu{
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .feature {
+        width: 100%;
+    }
+}
+
+.faq-answer {
+    display: none;
+}
+
+.faq-question {
+    cursor: pointer; 
+}
+
+.toggle-icon {
+    margin-right: 10px; 
+}
+
+.copyright {
+    color: #BDBDBD;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -365,23 +382,73 @@ footer {
     }
 }
 
-.copyright{
-    color:#BDBDBD;
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: small;
-}
-
-.faq-answer {
+/* Default styles for mobile menu - hidden initially */
+.mobile-menu {
     display: none;
+    position: fixed;
+    top: 65px; /* adjust this based on the height of your header */
+    right: 0;
+    background-color: #333;
+    height: 270px; /* Set the height to 100px */
+    width: 100%; /* Full width */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    z-index: 1000;
+    padding: 10px;
 }
 
-.faq-question {
-    cursor: pointer; 
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.toggle-icon {
-    margin-right: 10px; 
+.mobile-menu ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+}
+
+.mobile-menu ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Add a transition for a smooth appearance */
+.mobile-menu ul {
+    transition: all 0.3s ease-in-out;
+    display: flow-root;
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+@media (min-width:768px) {
+    #menu-icon{
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.faq-section{
+    margin-top: 100px;
+}
+
+#menu-icon{
+    font-size: 20px;
 }

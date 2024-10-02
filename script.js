@@ -51,3 +51,16 @@ document.querySelectorAll('.faq-question').forEach(question => {
         }
     });
 });
+
+function toggleMenu() {
+    var menu = document.getElementById("mobile-menu");
+    var icon = document.getElementById("menu-icon");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+        icon.innerHTML = "&#9776;"; // Change back to three bars
+    } else {
+        menu.style.display = "block";
+        icon.innerHTML = "&#10006;"; // Change to crossmark (X)
+    }
+}
