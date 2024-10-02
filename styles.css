@@ -373,3 +373,15 @@ footer {
     justify-content: center;
     font-size: small;
 }
+
+.faq-answer {
+    display: none;
+}
+
+.faq-question {
+    cursor: pointer; 
+}
+
+.toggle-icon {
+    margin-right: 10px; 
+}
