@@ -327,6 +327,7 @@ h6 {
 }
 
 .darkmode .faq-container {
+  background-color: #333; 
   color: black;
 }
 
