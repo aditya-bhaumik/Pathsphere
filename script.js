@@ -81,3 +81,13 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+        button.style.animation = 'popup 0.5s ease';
+        
+        // Remove the animation after it's done to allow it to be reapplied on subsequent clicks
+        button.addEventListener('animationend', function() {
+            button.style.animation = '';
+        });
+    });
+});
