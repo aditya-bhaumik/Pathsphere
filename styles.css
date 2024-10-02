@@ -414,3 +414,170 @@ footer {
     background-color: #0056b3;
 }
 
+/* Adjust the size and scaling of the logo */
+.logo-image {
+    max-height: 120px; /* Ensure proper height */
+    width: auto;      /* Ensure it scales proportionally */
+    object-fit: contain; /* Ensures the logo doesn't stretch */
+}
+
+/* Ensure the logo scales well for different screen sizes */
+@media (max-width: 768px) {
+    .logo-image {
+        max-height: 100px; /* Smaller logo on mobile */
+    }
+}
+
+/* Navbar styling */
+#navbar {
+    background-color: white; /* Set the navbar background to white */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar ul li {
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    color: black; /* Set the font color to black */
+    text-decoration: none;
+    font-size: 18px; /* Adjust font size for readability */
+    font-weight: 500; /* Bold font for better visibility */
+}
+
+#navbar ul li a:hover {
+    color: #555; /* Slight hover effect for navigation links */
+}
+
+.logo-image {
+    max-height: 100px; /* Logo size remains the same */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    #navbar ul li {
+        margin: 10px 0;
+    }
+    .logo-image {
+        max-height: 80px;
+    }
+}
+
+nav ul li a {
+    color: #333; /* Darker text for better contrast */
+    text-decoration: none;
+    font-size: 18px; /* Increase the size slightly for better readability */
+    font-weight: 700; /* Make the font bold */
+    font-family: 'Arial', sans-serif; /* Ensure a clear and widely supported font */
+    letter-spacing: 0.5px; /* Slightly increase letter spacing for clarity */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61; /* Keep hover effect consistent */
+}
+
+/* Adjust logo font to match */
+.logo {
+    font-size: 26px; /* Increase logo font size slightly */
+    font-weight: 900; /* Make the logo font even bolder */
+    color: #333; /* Ensure logo color matches the nav text */
+    text-decoration: none;
+    letter-spacing: 1px; /* Increase letter-spacing for the logo */
+}
+/* Make the header and nav full width */
+header {
+    background: #fff; /* White background for the header */
+    color: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Style for the navigation container to extend across */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Center the content within a max-width */
+    margin: 0 auto; /* Center the nav on the page */
+    padding: 0 20px; /* Add padding to ensure space on both sides */
+    width: 100%; /* Ensure it takes full width */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 26px; /* Adjust the logo size */
+    font-weight: 900; /* Make the logo bold */
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 1px; /* Add letter spacing */
+    flex: 1; /* Ensure logo takes up the necessary space */
+}
+
+/* Style for the nav links */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Create consistent space between items */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Highlight styles for nav links */
+nav ul li a {
+    color: #333; /* Darker text for better contrast */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700; /* Make the text bold */
+    font-family: 'Arial', sans-serif; /* Use a clear, widely supported font */
+    letter-spacing: 0.5px; /* Increase spacing for clarity */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Round the corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for hover effects */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #ff6f61; /* Background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Ensure full width for nav bar items on smaller screens */
+@media (max-width: 1200px) {
+    nav {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
