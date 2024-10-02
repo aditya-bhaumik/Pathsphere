@@ -14,10 +14,18 @@
             padding: 0;
             box-sizing: border-box;
         }
+        :root{
+            --primary-color:#f4f4f4;
+            --secondary-color:#333;
+        }
+        .darkmode{
+            --primary-color:#333;
+            --secondary-color:#f4f4f4;
+        }
         header {
-            background-color: #3c3f41;
+            background-color:  var(--primary-color);
             padding: 20px;
-            color: white;
+            color:  var(--secondary-color);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -32,7 +40,7 @@
             margin-right: 10px;
         }
         nav a {
-            color: white;
+            color:  var(--secondary-color);
             text-decoration: none;
             padding: 10px;
             transition: background-color 0.3s;
@@ -43,7 +51,7 @@
         }
         .hero {
             background-color: #4caf50;
-            color: white;
+            color:  var(--secondary-color);
             padding: 30px;
             text-align: center;
         }
@@ -78,7 +86,7 @@
             width: 300px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s;
-            background-color: #ffffff;
+            background-color:  var(--primary-color);
         }
         .job-item:hover {
             transform: scale(1.05);
@@ -89,7 +97,7 @@
         .apply-btn {
             display: inline-block;
             background-color: #4caf50;
-            color: white;
+            color:  var(--secondary-color);
             padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
@@ -99,8 +107,8 @@
             background-color: #45a049;
         }
         .footer-container {
-            background-color: #3c3f41;
-            color: white;
+            background-color:  var(--primary-color);
+            color:  var(--secondary-color);
             padding: 20px;
             text-align: center;
             margin-top: 20px;
@@ -159,7 +167,9 @@
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="forum.html">Forum</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <img src="images/dark.png" id="icon" alt="">
         </nav>
     </header>
     <main>
@@ -266,23 +276,25 @@
         <div class="footer-list">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="index.html" style="color: white;">Home</a></li>
-                <li><a href="scholarships.html" style="color: white;">Scholarships</a></li>
-                <li><a href="jobs.html" style="color: white;">Jobs</a></li>
-                <li><a href="forum.html" style="color: white;">Forum</a></li>
+                <li><a href="index.html" style="color:  var(--secondary-color);">Home</a></li>
+                <li><a href="scholarships.html" style="color:  var(--secondary-color);">Scholarships</a></li>
+                <li><a href="jobs.html" style="color:  var(--secondary-color);">Jobs</a></li>
+                <li><a href="forum.html" style="color:  var(--secondary-color);">Forum</a></li>
             </ul>
         </div>
         <div class="footer-list">
             <h3>Follow Us On</h3>
             <ul class="social-icons">
-                <li><a href="https://github.com" target="_blank" style="color: white;"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank" style="color: white;"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com" target="_blank" style="color: white;"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank" style="color: white;"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank" style="color: white;"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://x.com" target="_blank" style="color:  var(--secondary-color);"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
 </body>
 </html>

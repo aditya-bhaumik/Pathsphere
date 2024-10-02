@@ -387,7 +387,53 @@ footer {
     font-size: small;
 }
 
+.container {
+    width: 85%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
+h1 {
+    font-size: 2em;
+    color:  var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.forum-section {
+    background-color:  var(--primary-color);
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.forum-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.forum-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #d83d77;
+    border-left: 5px solid #1e3a8a;
+    padding-left: 10px;
+}
+
+.forum-section p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.forum-post {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid  var(--primary-color);
+    transition: background-color 0.2s;
 .blog-header {
     text-align: center;
     padding: 2rem;
@@ -407,14 +453,46 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+.forum-post:hover {
+    background-color:  var(--primary-color);
+
 .blog-post h2 {
     margin-bottom: 0.5rem;
     color: #333;
+
 }
 
 .blog-post p {
     font-size: 1rem;
     color: #555;
+}
+
+.forum-post .post-title:hover {
+    color: #2563eb;
+}
+.forum-post .post-details {
+    font-size: 0.9em;
+    color: #64748b;
+}
+.new-post-button {
+    background-color: #ff6f61;
+    color:  var(--primary-color);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+.new-post-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-3px);
 }
 
 .read-more {
@@ -431,5 +509,3 @@ footer {
 .read-more:hover {
     background-color: #0056b3;
 }
-
-
