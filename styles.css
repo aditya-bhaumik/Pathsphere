@@ -97,7 +97,8 @@ main {
 }
 
 .hero {
-    /* background: linear-gradient(to right, #ff6f61, #d83d77); */
+
+
     color: var(--primary-color);;
     text-align: center;
     padding: 100px 20px;
