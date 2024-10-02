@@ -11,7 +11,7 @@ gsap.from("h1", {
     ease: "power3.out", 
     delay: 0.5
 });
-gsap.from("p", {
+gsap.from("p:not(.footer-description p)", {
     duration: 1.5, 
     opacity: 0, 
     x: 200, 

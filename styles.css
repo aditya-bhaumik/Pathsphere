@@ -162,13 +162,6 @@ height: 100vh;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin-bottom: 20px;
-    color: black;
-}
-.feature h2{
-    padding: 5px;
-}
-.feature p{
-    padding: 5px;
 }
 .feature img{
     width: 30px;
@@ -358,32 +351,43 @@ footer {
 
 .footer-description {
     flex: 1;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .footer-description h3 {
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: bold;
-    color: var(--secondary-color);;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--secondary-color);
 }
 
 .footer-description p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
     color: var(--secondary-color);;
 }
 
 .footer-list h3 {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 15px;
-    color: var(--secondary-color);;
     font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--secondary-color);
+}
+.footer-list2 h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--secondary-color);
 }
 
 .footer-list ul {
     list-style: none;
-    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 10;
 }
 
 .footer-list ul li {
@@ -400,25 +404,74 @@ footer {
 .footer-list ul li a:hover {
     color: var(--secondary-color);;
 }
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons li {
+.footer-list2 ul {
     list-style: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 10;
 }
 
-.social-icons a {
+.footer-list2 ul li {
+    margin-bottom: 10px;
+}
+
+.footer-list2 ul li a {
     color: var(--secondary-color);;
-    font-size: 24px;
+    text-decoration: none;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.footer-list2 ul li a:hover {
     color: var(--secondary-color);;
 }
+
+.footer-list2 {
+    text-align: center;
+}
+
+.social-icons {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-icons li:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg) translate(40px) rotate(-0deg);
+}
+.social-icons li:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(72deg) translate(40px) rotate(-72deg);
+}
+.social-icons li:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(144deg) translate(40px) rotate(-144deg);
+}
+.social-icons li:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(216deg) translate(40px) rotate(-216deg);
+}
+.social-icons li:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(288deg) translate(40px) rotate(-288deg);
+}
+
+.social-icons li a {
+    /* font-size: 30px; */
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.social-icons li a:hover {
+    transform: scale(1.2);
+    color: var(--highlight-color); /* Adjust highlight color */
+}
+
 
 
 
@@ -442,12 +495,15 @@ footer {
 }
 
 .copyright{
-    color:var(--secondary-color);;
-    background-color: var(--primary-color);
+    color:var(--primary-color);
+    background-color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: small;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
 }
 
 .container {
@@ -497,11 +553,11 @@ h1 {
     padding: 15px 0;
     border-bottom: 1px solid  var(--primary-color);
     transition: background-color 0.2s;
+}
 .blog-header {
     text-align: center;
     padding: 2rem;
     background-color: #f9f9f9;
-}
 }
 
 .blog-posts {
@@ -520,7 +576,7 @@ h1 {
 
 .forum-post:hover {
     background-color:  var(--primary-color);
-}
+
 .blog-post h2 {
     margin-bottom: 0.5rem;
     color: #333;
@@ -572,4 +628,4 @@ h1 {
 
 .read-more:hover {
     background-color: #0056b3;
-}
+}}
