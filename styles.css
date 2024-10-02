@@ -43,7 +43,12 @@ nav {
     margin: 0 auto;
     padding: 0 20px;
 }
-
+#navbarn1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
 .logo {
     font-size: 24px;
     font-weight: bold;
