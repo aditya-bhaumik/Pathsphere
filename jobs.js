@@ -73,6 +73,8 @@ const jobListings = [
 ];
 
 
+
+
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 const jobsContainer = document.getElementById('jobs');
@@ -101,8 +103,6 @@ function searchJobs() {
     }
   });
 }
-
-
 function generateJobCards() {
   const jobContainer = document.getElementById("jobs");
   jobContainer.innerHTML = jobListings
