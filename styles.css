@@ -162,6 +162,13 @@ height: 100vh;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin-bottom: 20px;
+    color: black;
+}
+.feature h2{
+    padding: 5px;
+}
+.feature p{
+    padding: 5px;
 }
 .feature img{
     width: 30px;
