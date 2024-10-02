@@ -495,6 +495,7 @@ h1 {
     padding: 2rem;
     background-color: #f9f9f9;
 }
+}
 
 .blog-posts {
     padding: 2rem;
@@ -512,7 +513,7 @@ h1 {
 
 .forum-post:hover {
     background-color:  var(--primary-color);
-
+}
 .blog-post h2 {
     margin-bottom: 0.5rem;
     color: #333;
