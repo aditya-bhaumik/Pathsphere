@@ -47,18 +47,37 @@ icon.onclick = function() {
         localStorage.setItem("theme", "light");
     }
 }
+// document.querySelectorAll('.faq-question').forEach(question => {
+//     question.addEventListener('click', () => {
+//         const answer = question.nextElementSibling;
+//         const icon = question.querySelector('.toggle-icon'); 
+        
+ 
+//         if (answer.style.display === 'block') {
+//             answer.style.display = 'none';
+//             icon.textContent = '+'; 
+//         } else {
+//             answer.style.display = 'block';
+//             icon.textContent = '-'; 
+//         }
+//     });
+// });
+
+
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const answer = question.nextElementSibling;
-        const icon = question.querySelector('.toggle-icon'); 
-        
- 
-        if (answer.style.display === 'block') {
-            answer.style.display = 'none';
-            icon.textContent = '+'; 
+        const icon = question.querySelector('.toggle-icon');
+
+        if (answer.classList.contains('show')) {
+            answer.classList.remove('show');
+            icon.textContent = '+';
+            icon.classList.remove('rotate'); 
         } else {
-            answer.style.display = 'block';
-            icon.textContent = '-'; 
+            answer.classList.add('show');
+            icon.textContent = '-';
+            icon.classList.add('rotate'); // A
         }
     });
 });
+
