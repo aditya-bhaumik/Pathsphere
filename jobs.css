@@ -27,6 +27,33 @@
     width: 70vw;
     margin: auto;
 }
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 70em;
+}
+.search-bar input[type="text"] {
+    width: 50%;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px
+}
+.search-bar button {
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px
+}
+.search-bar button:hover {
+    background-color: #3e8e41;
+}
 
 .job-listings h3 {
     color: var(--primary-color);

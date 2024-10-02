@@ -71,6 +71,38 @@ const jobListings = [
   },
   // Add more job listings as needed
 ];
+
+
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+const jobsContainer = document.getElementById('jobs');
+
+searchButton.addEventListener('click', searchJobs);
+
+function searchJobs() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const jobItems = document.querySelectorAll('.job-item');
+
+  jobItems.forEach(jobItem => {
+    const jobTitle = jobItem.querySelector('h5').textContent.toLowerCase();
+    const jobCompany = jobItem.querySelector('h6').textContent.toLowerCase();
+    const jobLocation = jobItem.querySelector('.location').textContent.toLowerCase();
+    const jobDescription = jobItem.querySelector('p').textContent.toLowerCase();
+
+    if (
+      jobTitle.includes(searchTerm) ||
+      jobCompany.includes(searchTerm) ||
+      jobLocation.includes(searchTerm) ||
+      jobDescription.includes(searchTerm)
+    ) {
+      jobItem.style.display = 'flex';
+    } else {
+      jobItem.style.display = 'none';
+    }
+  });
+}
+
+
 function generateJobCards() {
   const jobContainer = document.getElementById("jobs");
   jobContainer.innerHTML = jobListings
