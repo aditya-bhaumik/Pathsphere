@@ -218,6 +218,12 @@ main {
   background-color: #cc8400;
 }
 
+/* Popup Animation */
+@keyframes popup {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
 footer {
   background-color: var(--secondary-color);
   color: var(--primary-color);
