@@ -13,6 +13,9 @@
 </head>
 <!-- Add an ID to the body tag or a specific class to the blog section -->
 <body id="blog-page"> <!-- or class="blog-page" -->
+   <button class="scroll-up-btn">
+        <i class="arrow-up"></i>
+   </button> 
     <header>
 
         <nav id="navbar"> <!-- Add an ID to the nav -->
@@ -144,6 +147,14 @@
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-    
+    <script>
+        const btn = document.querySelector(".scroll-up-btn");
+        btn.addEventListener("click", () => {
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            })
+        });
+    </script>
 </body>
 </html>
