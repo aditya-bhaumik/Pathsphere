@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathSphere</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Your existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 10px; /* Reduced gap around body */
+        }
+        .card {
+            width: 400px;
+            background: rgb(160, 212, 188);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 10px; /* Reduced gap around card */
+        }
+        .card-header, .card-footer {
+            padding: 16px;
+            text-align: center;
+            margin: 10px; /* Reduced gap around card header and footer */
+        }
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 8px;
+            font-weight: bold; /* Make title bold */
+            font-style: italic; /* Make title italic */
+        }
+        .card-description {
+            color: #666;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px; /* Reduced gap around tabs */
+            background-color: rgb(240, 236, 236);
+        }
+        .tabs button {
+            flex: 1;
+            padding: 8px; /* Reduced padding to make the height smaller */
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 8px;
+            margin: 5px;
+            color: darkgrey;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid #eceef0;
+            color: rgb(236, 232, 232); /* Change text color to black when active */
+            background-color: #5a926b; /* Change background color to white when active */
+        }
+        .tabs button:hover {
+            background-color: rgb(255, 255, 255);
+            color: darkgrey;
+        }
+        .tabs button.active:hover {
+            background-color: rgb(204, 160, 103);
+            color: rgb(0, 0, 0);
+        }
+        .tabs button:not(.active) {
+            background-color: transparent;
+            color: darkgrey;
+        }
+        .tab-content {
+            display: none;
+            padding: 16px;
+            margin: 10px; /* Reduced gap around tab content */
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .form-group {
+            margin-bottom: 16px;
+            margin: 10px; /* Reduced gap around form group */
+            position: relative; /* Add relative positioning for icon positioning */
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold; /* Make labels bold */
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            padding-right: 40px; /* Add padding to the right to make room for the icon */
+            box-sizing: border-box;
+            border-radius: 8px; /* Add round border to input tags */
+            border: 2px solid grey; /* Add 2px grey border to input tags */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+            margin: 10px 0; /* Reduced gap around input fields */
+        }
+        .form-group input:hover {
+            border-color: #888a8d; /* Change border color on hover */
+        }
+        .form-group input:focus {
+            border-color: darkgrey; /* Change border color to dark grey on focus */
+            outline: none; /* Remove default outline */
+        }
+        .form-group .toggle-password {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888a8d;
+            font-size: 1.2em; /* Adjust the size of the icon */
+            margin-top: 12px; /* Add top margin of 1px */
+        }
+        .form-group .toggle-password:hover {
+            color: darkgrey;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #0b0c0c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0; /* Reduced gap around buttons */
+            border-radius: 50px; /* Make buttons round */
+        }
+        .btn:disabled {
+            background-color: #aaa;
+        }
+        .card-footer p {
+            font-size: 12px;
+            color: #666;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: -12px;
+            margin-bottom: 12px;
+        }
+        .success {
+            color: green;
+            font-size: 14px;
+            margin-top: 12px;
+            display: none;
+        }
+        .forgot-password {
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .forgot-password a {
+            color: #3b56cc;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .already-have-account {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .already-have-account a {
+            color: #3b56cc;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .already-have-account a:hover {
+            text-decoration: underline;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">PathSphere</div>
+            <div class="card-description">
+                Your gateway to educational and professional resources</div>
+        </div>
+        <div class="tabs">
+            <button type="button" class="tab-link active" data-tab="login">Login</button>
+            <button type="button" class="tab-link" data-tab="signup">Sign Up</button>
+        </div>
+        <div class="tab-container">
+            <div class="tab-content active" id="login">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                        <div class="error" id="login-email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('login-password')"></i>
+                        <div class="error" id="login-password-error"></div>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#" onclick="openModal()">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn" id="login-btn">Login</button>
+                    <div class="success" id="login-success">Login successful!</div>
+                </form>
+            </div>
+            <div class="tab-content" id="signup">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        <div class="error" id="signup-email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('signup-password')"></i>
+                        <div class="error" id="signup-password-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('signup-confirm-password')"></i>
+                        <div class="error" id="signup-confirm-password-error"></div>
+                    </div>
+                    <button type="submit" class="btn" id="signup-btn">Sign Up</button>
+                    <div class="success" id="signup-success">Signup successful!</div>
+                </form>
+                <div class="already-have-account">
+                    <a href="#" onclick="switchToLogin()">Already have an account? Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p>By continuing, you agree to our Terms of Service and Privacy Policy</p>
+        </div>
+    </div>
+
+    <!-- Password Recovery Modal -->
+    <div id="passwordRecoveryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Password Recovery</h2>
+            <form id="password-recovery-form">
+                <div class="form-group">
+                    <label for="recovery-email">Email</label>
+                    <input type="email" id="recovery-email" placeholder="Enter your email" required>
+                    <div class="error" id="recovery-email-error"></div>
+                </div>
+                <button type="submit" class="btn">Send Recovery Email</button>
+                <div class="success" id="recovery-success">Recovery email sent!</div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tab-link').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                button.classList.add('active');
+                document.getElementById(button.dataset.tab).classList.add('active');
+            });
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function validatePassword(password) {
+            return password.length >= 6;
+        }
+
+        document.getElementById('login-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const emailError = document.getElementById('login-email-error');
+            const passwordError = document.getElementById('login-password-error');
+            const successMessage = document.getElementById('login-success');
+
+            let valid = true;
+
+            if (!validateEmail(email)) {
+                emailError.textContent = 'Invalid email address';
+                valid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            if (!validatePassword(password)) {
+                passwordError.textContent = 'Password must be at least 6 characters';
+                valid = false;
+            } else {
+                passwordError.textContent = '';
+            }
+
+            if (valid) {
+                const loginBtn = document.getElementById('login-btn');
+                loginBtn.disabled = true;
+                loginBtn.textContent = 'Logging in...';
+                console.log('Login submitted');
+                setTimeout(() => {
+                    loginBtn.disabled = false;
+                    loginBtn.textContent = 'Login';
+                    successMessage.style.display = 'block';
+                    localStorage.setItem('isLoggedIn', 'true'); // Store login status
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                        window.location.href = 'scholarships.html'; // Redirect to scholarships page after login
+                    }, 2000); // Hide success message after 2 seconds
+                }, 2000);
+            }
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm-password').value;
+            const emailError = document.getElementById('signup-email-error');
+            const passwordError = document.getElementById('signup-password-error');
+            const confirmPasswordError = document.getElementById('signup-confirm-password-error');
+            const successMessage = document.getElementById('signup-success');
+
+            let valid = true;
+
+            if (!validateEmail(email)) {
+                emailError.textContent = 'Invalid email address';
+                valid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            if (!validatePassword(password)) {
+                passwordError.textContent = 'Password must be at least 6 characters';
+                valid = false;
+            } else {
+                passwordError.textContent = '';
+            }
+
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = 'Passwords do not match';
+                valid = false;
+            } else {
+                confirmPasswordError.textContent = '';
+            }
+
+            if (valid) {
+                const signupBtn = document.getElementById('signup-btn');
+                signupBtn.disabled = true;
+                signupBtn.textContent = 'Signing up...';
+                console.log('Signup submitted');
+                setTimeout(() => {
+                    signupBtn.disabled = false;
+                    signupBtn.textContent = 'Sign Up';
+                    successMessage.style.display = 'block';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                        switchToLogin(); // Switch to login tab after successful signup
+                    }, 2000); // Hide success message after 2 seconds
+                }, 2000);
+            }
+        });
+
+        // Clear success message on user interaction
+        document.querySelectorAll('#signup-form input').forEach(input => {
+            input.addEventListener('input', () => {
+                document.getElementById('signup-success').style.display = 'none';
+            });
+        });
+
+        document.querySelectorAll('#login-form input').forEach(input => {
+            input.addEventListener('input', () => {
+                document.getElementById('login-success').style.display = 'none';
+            });
+        });
+
+        function togglePassword(id) {
+            const input = document.getElementById(id);
+            const icon = input.nextElementSibling;
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        function openModal() {
+            document.getElementById('passwordRecoveryModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('passwordRecoveryModal').style.display = 'none';
+        }
+
+        document.getElementById('password-recovery-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('recovery-email').value;
+            const emailError = document.getElementById('recovery-email-error');
+            const successMessage = document.getElementById('recovery-success');
+
+            if (!validateEmail(email)) {
+                emailError.textContent = 'Invalid email address';
+            } else {
+                emailError.textContent = '';
+                // Simulate sending recovery email
+                console.log('Recovery email sent');
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    closeModal();
+                }, 3000); // Hide success message after 3 seconds
+            }
+        });
+
+        function switchToLogin() {
+            document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            document.querySelector('.tab-link[data-tab="login"]').classList.add('active');
+            document.getElementById('login').classList.add('active');
+        }
+    </script>
+</body>
+</html>
