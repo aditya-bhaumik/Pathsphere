@@ -505,7 +505,6 @@ h1 {
 }
 
 
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -568,6 +567,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
 }
+
 .feature-item h6 {
   font-size: 18px;
   margin: 0;
@@ -579,17 +579,27 @@ body {
   color: #555;
 }
 
+/* Updated image content for better responsiveness and enhanced style */
 .image-content {
   flex-basis: 45%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .image-content img {
   width: 100%;
-  border-radius: 8px;
-  object-fit: cover; /* Make the image fill the container */
-  height: 100%; /* Ensure the image stretches to match the height of the content */
+  height: auto; /* Ensure image maintains its aspect ratio */
+  border-radius: 12px; /* Enhance border radius for smoother corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a deeper shadow for better depth */
+  object-fit: cover; /* Ensure the image fills the container */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Add a hover effect for better interaction */
+.image-content img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 /* Responsive adjustments */
@@ -604,5 +614,6 @@ body {
 
   .image-content img {
     height: auto; /* Reset the image height for smaller screens */
+    object-fit: contain; /* Ensure the image is fully visible on small screens */
   }
 }
