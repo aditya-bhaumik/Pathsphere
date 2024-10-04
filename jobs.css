@@ -5,6 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 :root{
     --primary-color:#f4f4f4;
     --secondary-color:#333;
@@ -259,4 +260,3 @@ nav a:hover {
 .card button:hover {
     background-color: #33b84e;
 }
-

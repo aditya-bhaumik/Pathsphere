@@ -11,10 +11,9 @@
     
     <link rel="stylesheet" href="styles.css">
 </head>
-<!-- Add an ID to the body tag or a specific class to the blog section -->
 <body id="blog-page"> <!-- or class="blog-page" -->
    <button class="scroll-up-btn">
-        <i class="arrow-up"></i>
+        <i class="arrow-up" style=" width: 15px; height: 15px;"></i>
    </button> 
     <header>
 
@@ -206,6 +205,9 @@
     <script src="script.js"></script>
     <script>
         const btn = document.querySelector(".scroll-up-btn");
+
+          
+
         btn.addEventListener("click", () => {
             document.documentElement.scrollTo({
                 top: 0,
