@@ -34,3 +34,18 @@ gsap.from(".btn", {
     ease: "back.out(1.7)", 
     delay: 1.5
 });
+
+document.querySelectorAll('.faq-item h2').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+    });
+});
+
+
+
+
+
+
+
+
