@@ -459,7 +459,7 @@ h1 {
   padding: 2rem;
   background-color: #f9f9f9;
 }
-}
+
 
 .blog-posts {
   padding: 2rem;
@@ -477,7 +477,6 @@ h1 {
 .forum-post:hover {
 /* <<<<<<< enhanceFAQ */
   background-color: var(--primary-color);
-=======
     background-color:  var(--primary-color);
 /* >>>>>>> main */
 }
