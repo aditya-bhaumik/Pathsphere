@@ -11,8 +11,10 @@
     
     <link rel="stylesheet" href="styles.css">
 </head>
-<!-- Add an ID to the body tag or a specific class to the blog section -->
 <body id="blog-page"> <!-- or class="blog-page" -->
+   <button class="scroll-up-btn">
+        <i class="arrow-up" style=" width: 15px; height: 15px;"></i>
+   </button> 
     <header>
 
         <nav id="navbar"> <!-- Add an ID to the nav -->
@@ -23,7 +25,7 @@
                 <li><a href="scholarships.html">Scholarships</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="forum.html">Forum</a></li>
-                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="faqs.html">FAQs</a></li> <!-- Include FAQs in the nav issue#112 -->
                 <li><a href="blog.html">Blog</a></li> <!-- Include blog in the nav -->
                 <li><a href="RegisterPages\register.html">Login</a></li> 
             </ul>
@@ -75,7 +77,66 @@
                 <a href="forum.html" class="btn">Join the Forum</a>
             </div>
         </section>
-        <section id="faqs" class="faq-section">
+        <section id="features-section" class="section"></section>
+            <div class="container">
+              <div class="row">
+                <div class="text-content">
+                  <h3>Key Features of PathSphere</h3>
+                  <p>Connecting students to scholarships and educators to job opportunities with powerful tools and community support.</p>
+                  <div class="feature-list">
+                    <div class="feature-item">
+                      <i class="fas fa-search"></i>
+                      <div>
+                        <h6>Scholarship Search</h6>
+                        <p>Find scholarships easily, quickly.</p>
+                      </div>
+                    </div>
+                    <div class="feature-item">
+                      <i class="fas fa-briefcase"></i>
+                      <div>
+                        <h6>Job Portal</h6>
+                        <p>Job opportunities tailored for educators.</p>
+                      </div>
+                    </div>
+                    <div class="feature-item">
+                      <i class="fas fa-users"></i>
+                      <div>
+                        <h6>Community Forums</h6>
+                        <p>Share resources, advice, experiences.</p>
+                      </div>
+                    </div>
+                    <div class="feature-item">
+                      <i class="fas fa-bell"></i>
+                      <div>
+                        <h6>Instant Notifications</h6>
+                        <p>Get real-time important updates.</p>
+                      </div>
+                    </div>
+                    <div class="feature-item">
+                      <i class="fas fa-bookmark"></i>
+                      <div>
+                        <h6>Save & Track</h6>
+                        <p>Bookmark and monitor application progress.</p>
+                      </div>
+                    </div>
+                    <div class="feature-item">
+                      <i class="fas fa-tools"></i>
+                      <div>
+                        <h6>Resume Builder</h6>
+                        <p>Create a professional profile easily.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image-content">
+                  <img src="images/features.png" alt="PathSphere Features">
+                </div>
+              </div>
+            </div>
+          </section>
+        </br></br></br>
+        <!-- Commented the FAQ Section from Home Page(Hide) #issue112-->
+        <!-- <section id="faqs" class="faq-section">
             <h1>Frequently Asked Questions</h1>
             <div class="faq-item">
                 <h2 class="faq-question">
@@ -112,7 +173,7 @@
                 </h2>
                 <p class="faq-answer">You can reach out to our support team by visiting the <a href="contact.html">Contact Us</a> page and filling out the form, or by emailing us at support@pathsphere.com.</p>
             </div>
-        </section>
+        </section> -->
         
     </main>
     <div class="footer-container">
@@ -143,6 +204,17 @@
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-    
+    <script>
+        const btn = document.querySelector(".scroll-up-btn");
+
+          
+
+        btn.addEventListener("click", () => {
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            })
+        });
+    </script>
 </body>
 </html>
