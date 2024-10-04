@@ -188,6 +188,12 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 30%;
   margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
 }
 .feature img {
   width: 30px;
