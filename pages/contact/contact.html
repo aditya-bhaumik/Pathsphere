@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="icon" type="image/x-icon" href="../../images\pathsphere.png" />
+    <style>
+      .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .contact-form-container {
+        background-color: var(--primary-color);
+        margin: 50px 0px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px var(--seconday-color);
+        max-width: 600px;
+        width: 100%;
+      }
+
+      h1 {
+        margin-top: 0;
+        color: var(--seconday-color);
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: var(--seconday-color);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 1rem;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 0.875rem;
+        display: none; /* Hidden by default */
+      }
+
+      .submit-button {
+        background-color: #28a745;
+        color: var(--primary-color);
+        border: none;
+        padding: 0.75rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
+      }
+
+      .submit-button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html" class="logo"
+          ><img src="/P (1).png" />PathSphere</a
+        >
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../scholarships/scholarships.html">Scholarships</a></li>
+          <li><a href="../jobs/jobs.html">Jobs</a></li>
+          <li><a href="../forum/forum.html">Forum</a></li>
+          <li><a href="../faqs/faqs.html">FAQs</a></li>
+          <li><a href="../blog/blog.html">Blog</a></li>
+        </ul>
+        <img src="../../images/dark.png" id="icon" alt="" />
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Contact Us</h1>
+        <p>Fill the below form,we will reach you out</p>
+      </section>
+      <section class="contact">
+        <div class="contact-form-container">
+          <h1>Submit your Details</h1>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+              <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone Number"
+                required
+              />
+              <span class="error-message" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div class="footer-container">
+      <div class="footer-description">
+        <h3>PathSphere</h3>
+        <p>
+          PathSphere is a comprehensive platform designed to connect students
+          with scholarship opportunities and educators with job openings. It
+          features dynamic search tools and community discussions to enhance
+          access to educational and career resources.
+        </p>
+      </div>
+      <div class="footer-list">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../scholarships/scholarships.html">Scholarships</a></li>
+          <li><a href="../jobs/jobs.html">Jobs</a></li>
+          <li><a href="../forum/forum.html">Forum</a></li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <h3>Follow us on</h3>
+        <ul class="social-icons">
+          <li>
+            <a href="https://github.com" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://x.com" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://facebook.com" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://linkedin.com" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../../scripts/script.js"></script>
+    <script>
+      document
+        .getElementById('contactForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const errorElements = document.querySelectorAll('.error-message');
+          errorElements.forEach((el) => (el.style.display = 'none'));
+
+          // Get form values
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const message = document.getElementById('message').value.trim();
+
+          // Validation flags
+          let isValid = true;
+
+          // Name validation
+          if (name === '') {
+            document.getElementById('nameError').textContent =
+              'Name is required';
+            document.getElementById('nameError').style.display = 'block';
+            isValid = false;
+          }
+
+          // Email validation
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (email === '' || !emailPattern.test(email)) {
+            document.getElementById('emailError').textContent =
+              'Valid email is required';
+            document.getElementById('emailError').style.display = 'block';
+            isValid = false;
+          }
+
+          // Phone validation
+          const phonePattern = /^[0-9]{10}$/;
+          if (phone === '' || !phonePattern.test(phone)) {
+            document.getElementById('phoneError').textContent =
+              'Valid phone number is required';
+            document.getElementById('phoneError').style.display = 'block';
+            isValid = false;
+          }
+
+          // Message validation
+          if (message === '') {
+            document.getElementById('messageError').textContent =
+              'Message is required';
+            document.getElementById('messageError').style.display = 'block';
+            isValid = false;
+          }
+
+          // If form is valid, you can submit it or perform any other action
+          if (isValid) {
+            alert('Form submitted successfully!');
+            // You can also submit the form here using AJAX or similar methods
+          }
+        });
+    </script>
+  </body>
+</html>
