@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="scroll-up-btn">
+      <i class="arrow-up"></i>
+    </button>
+    <script>
+      const btn = document.querySelector('.scroll-up-btn');
+      btn.addEventListener('click', () => {
+        document.documentElement.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -10,14 +10,7 @@
       type="image/x-icon"
       href="../../../../images/pathsphere.png"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../../styles/styles.css" />
+
     <style>
       /* General Styles */
       :root {
@@ -196,22 +189,6 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="../../index.html" class="logo">PathSphere</a>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../scholarships/scholarships.html">Scholarships</a></li>
-          <li><a href="../jobs/jobs.html">Jobs</a></li>
-          <li><a href="../forum/forum.html">Forum</a></li>
-          <li><a href="../faqs/faqs.html">FAQs</a></li>
-          <!--fixed the FAQ issue#112 -->
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-        <img src="../../images/dark.png" id="icon" alt="" />
-      </nav>
-    </header>
-
     <main>
       <section class="blog-header">
         <h1>PathSphere Blog</h1>
@@ -337,6 +314,12 @@
 
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
 
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+      prependComponent('Navbar');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+    </script>
     <script>
       document.querySelectorAll('.like-button').forEach((button) => {
         button.addEventListener('click', function () {
@@ -387,12 +370,5 @@
         });
       });
     </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="../../scripts/script.js"></script>
   </body>
 </html>
