@@ -58,55 +58,6 @@ header {
   z-index: 1000;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--secondary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-.logo:hover {
-  color: #ff6f61;
-}
-#icon {
-  width: 30px;
-  cursor: pointer;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: var(--seondary-color);
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ff6f61;
-}
 
 @media (max-width: 768px) {
   nav ul li a:hover {
@@ -626,6 +577,9 @@ body {
   justify-content: center;
 }
 
+p{
+  color: #333;
+}
 .image-content img {
   width: 100%;
   height: auto; /* Ensure image maintains its aspect ratio */
@@ -690,52 +644,4 @@ body {
     border-radius: 5px; 
     pointer-events: none; 
     transition: width 0.3s ease, left 0.3s ease;
-}
-
-.tab:hover {
-    background-color: rgba(0, 0, 0, 0.8); 
-    color: #ff6f61;
-}
-
-
-.tab.active {
-    color: #ff6f61; 
-    font-weight: bold; 
-}
-.navbar {
-    position: relative;
-}
-
-#tabs {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-}
-
-.tab {
-    position: relative;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: black;
-    background-color: white;
-    margin: 0 5px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.tab:hover {
-    background-color: black;
-}
-
-.cursor {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    background: black;
-    border-radius: 50%;
-    pointer-events: none; 
-    transition: all 0.3s ease; 
-    opacity: 0; 
 }

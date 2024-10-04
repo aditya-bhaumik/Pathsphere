@@ -92,3 +92,10 @@ window.addEventListener('scroll', () => {
 scrollToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+const menuBtn = document.querySelector('.menu-btn');
+const navMenu = document.querySelector('nav ul');
+
+menuBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
