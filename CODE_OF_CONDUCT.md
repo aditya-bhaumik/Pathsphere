@@ -1,69 +1,67 @@
-# Pathsphere Code of Conduct
+# PathSphere Code of Conduct
 
 ## Introduction
 
-The Pathsphere is an innovative Machine Learning-based platform designed to assist in the exploration and evaluation of potential mining sites across celestial bodies. We aim to create a community where all users, contributors, and developers feel respected, valued, and encouraged. Whether you’re contributing code, reporting an issue, or suggesting new features, we expect everyone to adhere to the community standards outlined below.
+PathSphere is an open-source platform that connects students, educators, and professionals to resources such as scholarships, job opportunities, and community discussions. By participating in this community, you agree to contribute positively and respectfully, fostering an environment that promotes inclusivity, learning, and collaboration.
 
 ## Our Commitment
 
-We are committed to maintaining a welcoming, inclusive, and harassment-free environment for all members of the Pathsphere project. By participating in this community, you agree to foster a positive, constructive atmosphere and to respect the contributions of others.
+We are dedicated to maintaining a welcoming, respectful, and harassment-free community. Everyone, regardless of background, is encouraged to participate, contribute, and share. All interactions should promote learning and be free of discrimination.
 
 ## Our Values
 
-1. **Respect and Kindness**  
-   We expect all members of the community to treat others with kindness and respect. Harassment, discrimination, and offensive language or behavior will not be tolerated. We believe that a community built on respect is essential for fostering collaboration and innovation.
+1. **Respect and Empathy**  
+   All users and contributors are expected to engage with others respectfully. Harassment, discrimination, or offensive behavior of any kind will not be tolerated. We believe respect is the foundation for growth and collaboration.
 
-2. **Collaboration and Support**  
-   The Pathsphere thrives on collaboration. If you encounter an issue or need assistance, don’t hesitate to reach out to others. Likewise, offer your help when you can. Encourage the exchange of ideas, and work together to improve the project.
+2. **Collaboration and Knowledge Sharing**  
+   PathSphere thrives on collaboration. We encourage members to help one another, share knowledge, and contribute to the platform's growth. Whether it’s code, advice, or feedback, working together makes us stronger.
 
 3. **Constructive Feedback**  
-   Feedback is an essential part of our community’s growth. When giving or receiving feedback, be respectful and open-minded. Constructive criticism leads to better outcomes and helps improve both the project and the community as a whole.
+   Feedback is essential to improving PathSphere. When giving feedback, focus on constructive suggestions that help improve the platform. We expect all feedback to be respectful and aimed at helping others grow.
 
 4. **Inclusivity and Diversity**  
-   We welcome contributions from individuals of all backgrounds and skill levels. The Pathsphere is a space for diverse perspectives, and everyone should feel empowered to contribute, learn, and share their ideas without fear of discrimination or exclusion.
+   PathSphere is for everyone. We value diverse perspectives and welcome contributions from individuals of all backgrounds and experiences. Everyone should feel empowered to share their thoughts and ideas.
 
 5. **Professionalism**  
-   We expect professionalism in all communications, whether they are issues, pull requests, or direct messages. Be mindful of your tone and ensure that interactions remain respectful and polite at all times.
+   All interactions in PathSphere should be conducted in a professional and courteous manner. Whether you’re reporting an issue, submitting a pull request, or discussing in forums, professionalism is key to maintaining a positive community.
 
 ## Expected Behavior
 
-- Treat everyone with kindness, respect, and empathy.
-- Embrace diverse perspectives and experiences.
-- Offer and receive constructive feedback with an open mind.
-- Focus on improving the project and the community for everyone.
-- Be patient and supportive, especially with newcomers.
+- Be respectful and considerate of others.
+- Embrace diversity and be inclusive in all interactions.
+- Provide constructive and kind feedback.
+- Collaborate to improve the platform for everyone.
+- Offer help and be patient, especially with newcomers.
 
 ## Unacceptable Behavior
 
-- Harassment or discrimination of any kind.
-- Personal attacks, trolling, or inappropriate behavior.
-- Use of offensive, sexualized, or inappropriate language or imagery.
-- Disrupting the community or project contributions in any form.
-- Threatening, intimidating, or bullying behavior.
+- Discrimination, harassment, or any form of abuse.
+- Personal attacks, trolling, or inflammatory behavior.
+- Use of inappropriate language, sexualized content, or offensive imagery.
+- Disrupting contributions or discussions.
+- Threatening or bullying others.
 
-## Spammy PR Rules
+## Spammy Contribution Rules
 
-To ensure high-quality contributions, Pathsphere has established guidelines to prevent spammy pull requests (PRs):
+To ensure meaningful contributions, PathSphere has established guidelines to avoid spammy submissions:
 
-- PRs must be associated with an open issue. PRs without a corresponding issue may be considered spam.
-- Avoid submitting trivial or minor changes unless they significantly improve the project.
-- Contributions for events like Hacktoberfest should focus on solving meaningful issues rather than making superficial changes.
-- Failure to follow these guidelines may result in the PR being marked as spam after consultation with the contributor.
+- Pull Requests (PRs) should address open issues or provide meaningful improvements.
+- Avoid trivial changes unless they significantly enhance the platform.
+- Contributions made during events (e.g., Hacktoberfest) should focus on solving real problems, not superficial changes.
+- PRs failing to adhere to these guidelines may be flagged as spam.
 
 ## Reporting Issues
 
-If you experience or witness behavior that violates this Code of Conduct, please report it to the project maintainers. Reports will be handled confidentially and with care.
-
-We are committed to addressing all concerns promptly to ensure a safe, inclusive environment for everyone.
+If you experience or witness unacceptable behavior, please report it to the project maintainers. All reports will be treated confidentially and with care to maintain the safety of the community.
 
 ## Enforcement
 
-Contributors who violate this Code of Conduct may face actions deemed appropriate by the project leadership. These actions may include warnings, temporary bans, or permanent removal from the project.
+Any violations of this Code of Conduct may result in actions by project maintainers, including warnings, temporary bans, or permanent removal from the platform.
 
 ## Conclusion
 
-By contributing to Pathsphere, you agree to abide by this Code of Conduct. Let’s work together to create a welcoming, inclusive, and productive environment where everyone can thrive and contribute meaningfully.
+By contributing to PathSphere, you agree to abide by this Code of Conduct. Let’s work together to create a community that fosters growth, inclusivity, and collaboration.
 
 ---
 
-Thank you for being a part of the Pathsphere community!
+Thank you for being a part of PathSphere!
