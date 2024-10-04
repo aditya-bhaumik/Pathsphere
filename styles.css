@@ -416,7 +416,7 @@ footer {
 
 /* Adjust the size and scaling of the logo */
 .logo-image {
-    max-height: 120px; /* Ensure proper height */
+    max-height: 220px; /* Ensure proper height */
     width: auto;      /* Ensure it scales proportionally */
     object-fit: contain; /* Ensures the logo doesn't stretch */
 }
@@ -580,4 +580,320 @@ nav ul li a:hover {
         flex-direction: column;
         gap: 10px;
     }
+}
+/* Navbar Styles */
+header {
+    background: #333; /* Dark header */
+    color: #fff;
+    padding: 10px 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Center content */
+    margin: auto;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+}
+
+#navbar a {
+    color: #fff;
+    padding: 10px 15px; /* Increased padding for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+#navbar a:hover {
+    background: #444; /* Darker background on hover */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Active Link Styles */
+#navbar a.active {
+    background: #0066cc; /* Active link background */
+    color: white; /* Active link text color */
+}
+/* Navbar Styles */
+header {
+    background: #333; /* Dark header */
+    color: #fff;
+    padding: 10px 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Center content */
+    margin: auto;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+}
+
+#navbar a {
+    color: #fff;
+    padding: 10px 15px; /* Increased padding for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+#navbar a:hover {
+    background: #444; /* Darker background on hover */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Active Link Styles */
+#navbar a.active {
+    background: #0066cc; /* Active link background */
+    color: white; /* Active link text color */
+}
+/* Header Styles */
+header {
+    background: #333; /* Dark header */
+    color: #fff;
+    padding: 20px 0; /* Increased padding for a taller header */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center;
+    max-width: 1200px; /* Center content */
+    margin: auto;
+}
+
+.logo-image {
+    max-height: 80px; /* Ensure the logo maintains a good size */
+    width: auto; /* Maintain aspect ratio */
+}
+
+#navbar {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+}
+
+#navbar a {
+    color: #fff;
+    padding: 10px 15px; /* Padding for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+#navbar a:hover {
+    background: #444; /* Darker background on hover */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Active Link Styles */
+#navbar a.active {
+    background: #0066cc; /* Active link background */
+    color: white; /* Active link text color */
+}
+/* Header Styles */
+header {
+    background: #333; /* Dark header */
+    color: #fff;
+    padding: 20px 0; /* Padding for a taller header */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center;
+    max-width: 1200px; /* Center content */
+    margin: auto;
+}
+
+/* Logo Styles */
+.logo-image {
+    max-height: 100px; /* Increased logo size */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    gap: 30px; /* Increased space between menu items */
+    list-style: none; /* Remove bullet points */
+}
+
+#navbar a {
+    color: #fff;
+    padding: 15px 20px; /* Increased padding for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Navbar Hover Styles */
+#navbar a:hover {
+    background: rgba(255, 204, 0, 0.2); /* Semi-transparent background on hover for better visibility */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Active Link Styles */
+#navbar a.active {
+    background: #0066cc; /* Active link background */
+    color: white; /* Active link text color */
+}
+
+/* Header Styles */
+header {
+    background: #333; /* Dark header */
+    color: #fff;
+    padding: 20px 0; /* Padding for a taller header */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center;
+    max-width: 1200px; /* Center content */
+    margin: auto;
+}
+
+/* Logo Styles */
+.logo-image {
+    max-height: 100px; /* Increased logo size */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    gap: 30px; /* Increased space between menu items */
+    list-style: none; /* Remove bullet points */
+    background: #333; /* Solid background for navbar */
+    padding: 10px 0; /* Padding for navbar */
+    border-radius: 5px; /* Rounded corners for navbar */
+}
+
+#navbar a {
+    color: #ffcc00; /* Text color */
+    padding: 15px 20px; /* Increased padding for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Navbar Hover Styles */
+#navbar a:hover {
+    background: rgba(255, 204, 0, 0.2); /* Semi-transparent background on hover for better visibility */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Active Link Styles */
+#navbar a.active {
+    background: #0066cc; /* Active link background */
+    color: white; /* Active link text color */
+}
+
+/* Header Styles */
+header {
+    background: #333; /* Dark header */
+    color: #fff;
+    padding: 20px 0; /* Padding for a consistent header size */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center;
+    max-width: 1200px; /* Center content */
+    margin: auto;
+}
+
+/* Logo Styles */
+.logo-image {
+    max-height: 150px; /* Increased logo size (change as needed) */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    gap: 30px; /* Increased space between menu items */
+    list-style: none; /* Remove bullet points */
+    background: #333; /* Solid background for navbar */
+    padding: 10px 0; /* Padding for navbar */
+    border-radius: 5px; /* Rounded corners for navbar */
+}
+
+#navbar a {
+    color: #ffcc00; /* Text color */
+    padding: 15px 20px; /* Increased padding for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Navbar Hover Styles */
+#navbar a:hover {
+    background: rgba(255, 204, 0, 0.2); /* Semi-transparent background on hover for better visibility */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Active Link Styles */
+#navbar a.active {
+    background: #0066cc; /* Active link background */
+    color: white; /* Active link text color */
+}
+/* Header Styles */
+header {
+    background: #333; /* Dark header */
+    color: #fff;
+    height: 150px; /* Fixed height for header */
+    overflow: hidden; /* Prevent overflow due to logo size */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center;
+    max-width: 1200px; /* Center content */
+    margin: auto;
+}
+
+/* Logo Styles */
+.logo-image {
+    max-height: 140px; /* Increased logo size for better visibility */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    gap: 30px; /* Increased space between menu items */
+    list-style: none; /* Remove bullet points */
+    background: #333; /* Solid background for navbar */
+    padding: 10px 0; /* Padding for navbar */
+    border-radius: 5px; /* Rounded corners for navbar */
+}
+
+#navbar a {
+    color: #ffcc00; /* Text color */
+    padding: 15px 20px; /* Increased padding for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Navbar Hover Styles */
+#navbar a:hover {
+    background: rgba(255, 204, 0, 0.2); /* Semi-transparent background on hover for better visibility */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Active Link Styles */
+#navbar a.active {
+    background: #0066cc; /* Active link background */
+    color: white; /* Active link text color */
 }
