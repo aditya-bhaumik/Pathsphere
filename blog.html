@@ -4,24 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PathSphere | Blog</title>
+    <title>Blogs</title>
+    <!-- Added a favicon -->
+	<link rel="icon" type="image/x-icon" href="images\pathsphere.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styles */
+        :root{
+            --primary-color:#f4f4f4;
+            --secondary-color:#333;
+        }
+        .darkmode{
+            --primary-color:#333;
+            --secondary-color:#f4f4f4;
+        }
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: var(--primary-color);
         }
-
         .blog-header {
             background: linear-gradient(to right, #ff7e5f, #feb47b);
             padding: 20px;
             text-align: center;
-            color: white;
+            color: var(--primary-color);
         }
 
         .blog-subtitle {
@@ -33,7 +42,7 @@
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            background-color: white;
+            background-color: var(--primary-color);
             padding: 20px;
             margin: 20px;
             border-radius: 8px;
@@ -97,13 +106,14 @@
             border: 1px solid #ccc;
             margin-top: 10px;
             display: block;
+            background-color: var(--primary-color);
         }
 
         .submit-comment {
             margin-top: 10px;
             padding: 10px 15px;
             background-color: #ff7e5f;
-            color: white;
+            color: var(--primary-color);
             border: none;
             border-radius: 5px;
             display: block;
@@ -114,7 +124,7 @@
             margin-top: 10px;
             padding: 10px 15px;
             background-color: #ff7e5f;
-            color: white;
+            color: var(--primary-color);
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -132,7 +142,7 @@
             background-color: #ff7e5f;
             padding: 30px;
             text-align: center;
-            color: white;
+            color: var(--primary-color);
         }
 
         .newsletter-input {
@@ -146,7 +156,7 @@
         .subscribe-button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: white;
+            background-color: var(--primary-color);
             color: #ff7e5f;
             border: none;
             border-radius: 5px;
@@ -189,9 +199,10 @@
                 <li><a href="scholarships.html">Scholarships</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="forum.html">Forum</a></li>
-                <li><a href="#faqs">FAQs</a></li>
+                 <li><a href="faqs.html">FAQs</a></li> <!--fixed the FAQ issue#112 -->
                 <li><a href="blog.html">Blog</a></li>
             </ul>
+            <img src="images/dark.png" id="icon" alt="">
         </nav>
     </header>
 
@@ -269,9 +280,7 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 PathSphere. All rights reserved.</p>
-    </footer>
+    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
 
     <script>
         document.querySelectorAll('.like-button').forEach(button => {
@@ -314,6 +323,8 @@
             });
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
