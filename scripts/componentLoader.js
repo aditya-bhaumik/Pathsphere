@@ -1,7 +1,7 @@
 const fetchComponent = async (componentName) => {
   try {
     const res = await fetch(
-      `components/${componentName}/${componentName}.html`
+      `/components/${componentName}/${componentName}.html`
     );
     const html = await res.text();
 
