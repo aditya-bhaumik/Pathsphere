@@ -42,3 +42,27 @@ document.querySelectorAll('.faq-item h2').forEach(item => {
 
 
 
+    // Remove the animation after it's done to allow it to be reapplied on subsequent clicks
+// Combined code (assuming you want both pieces)
+
+// Remove the animation after it's done to allow it to be reapplied on subsequent clicks
+button.addEventListener("animationend", function () {
+    button.style.animation = "";
+});
+
+// Add this code to your script.js file
+const scrollToTopButton = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+

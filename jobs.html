@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Jobs</title>
     <!-- Added a favicon -->
 	<link rel="icon" type="image/x-icon" href="images\pathsphere.png">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="jobs.css">
@@ -39,15 +40,19 @@
     
 <!-- >>>>>>> main -->
 </head>
+
 <body>
+ 
     <header>
+
         <nav style="position: relative; bottom: 10px;">
-            <a href="index.html" class="logo"><img src="/P (1).png" alt="PathSphere Logo"> PathSphere</a>          
+            <a href="index.html" class="logo">PathSphere</a>          
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="scholarships.html">Scholarships</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="forum.html">Forum</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
@@ -76,31 +81,44 @@
     <div class="footer-container" style="position: relative; top: 3000px;">
         <div class="footer-description">
             <h3>PathSphere</h3>
-            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and educators with job openings. It features dynamic search tools and community discussions to enhance access to educational and career resources.</p>
+            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and
+                educators with job openings. It features dynamic search tools and community discussions to enhance
+                access to educational and career resources.</p>
         </div>
         <div class="footer-list">
             <h3>Quick Links</h3>
             <ul>
+
                 <li><a href="index.html" style="color:  var(--secondary-color);">Home</a></li>
                 <li><a href="scholarships.html" style="color:  var(--secondary-color);">Scholarships</a></li>
                 <li><a href="jobs.html" style="color:  var(--secondary-color);">Jobs</a></li>
+                <li><a href="about.html"  style="color:  var(--secondary-color);">About Us</a></li>  
                 <li><a href="forum.html" style="color:  var(--secondary-color);">Forum</a></li>
+
             </ul>
         </div>
         <div class="footer-list">
             <h3>Follow Us On</h3>
-            <ul class="social-icons">
-                <li><a href="https://github.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com" target="_blank" style="color:  var(--secondary-color);"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
+            <div class="social-icons">
+                <ul>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </ul>
+              </div>
         </div>
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+    <button id="scroll-to-top" title="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+      </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
     <script src="jobs.js"></script>
+    <!-- Add this code before the closing body tag -->
+
 </body>
+
 </html>
