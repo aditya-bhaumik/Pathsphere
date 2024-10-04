@@ -20,6 +20,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    height: 80px;
 }
 nav {
     display: flex;
@@ -37,7 +38,7 @@ nav a {
     transition: background-color 0.3s;
 }
 nav a:hover {
-    background-color: #4caf50;
+    color: red;
     border-radius: 5px;
 }
 .hero {
@@ -45,6 +46,7 @@ nav a:hover {
     color:  var(--secondary-color);
     padding: 30px;
     text-align: center;
+    width:1688px;
 }
 .search-bar {
     margin: 20px auto;
@@ -125,7 +127,6 @@ nav a:hover {
         width: 100%;
     }
 }
-=======
 /*-----------job listings-----------*/ 
 * {
     margin: 0;

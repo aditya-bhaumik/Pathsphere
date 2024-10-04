@@ -26,6 +26,7 @@ gsap.from(".btn", {
   ease: "back.out(1.7)",
   delay: 1.5,
 });
+
 let icon = document.getElementById("icon");
 window.onload = function () {
   let theme = localStorage.getItem("theme");
@@ -37,6 +38,7 @@ window.onload = function () {
     icon.src = "images/dark.png";
   }
 };
+
 icon.onclick = function () {
   document.body.classList.toggle("darkmode");
   if (document.body.classList.contains("darkmode")) {
@@ -47,6 +49,7 @@ icon.onclick = function () {
     localStorage.setItem("theme", "light");
   }
 };
+
 document.querySelectorAll(".faq-question").forEach((question) => {
   question.addEventListener("click", () => {
     const answer = question.nextElementSibling;
@@ -59,7 +62,18 @@ document.querySelectorAll(".faq-question").forEach((question) => {
     } else {
       answer.classList.add("show");
       icon.textContent = "-";
-      icon.classList.add("rotate"); // A
+      icon.classList.add("rotate");
     }
+  });
+});
+
+document.querySelectorAll(".btn").forEach((button) => {
+  button.addEventListener("click", function () {
+    button.style.animation = "popup 0.5s ease";
+
+    // Remove the animation after it's done to allow it to be reapplied on subsequent clicks
+    button.addEventListener("animationend", function () {
+      button.style.animation = "";
+    });
   });
 });

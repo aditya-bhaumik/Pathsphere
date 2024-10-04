@@ -29,7 +29,6 @@
             --secondary-color:#f4f4f4;
         }
         header {
-            background-color:  var(--primary-color);
             padding: 20px;
             color:  var(--secondary-color);
             position: sticky;
@@ -40,6 +39,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 40px;
         }
         nav .logo img {
             width: 50px;
@@ -52,7 +52,7 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #4caf50;
+            color: red;
             border-radius: 5px;
         }
         .hero {
@@ -202,7 +202,7 @@
             <img src="images/dark.png" id="icon" alt="">
         </nav>
     </header>
-    <main>
+    <main style="position: absolute;">
         <section class="hero">
             <h1>Scholarships</h1>
             <p>Find scholarships that match your academic profile and needs.</p>
@@ -287,7 +287,7 @@
         </section>
     </main>
 
-    <div class="footer-container">
+    <div class="footer-container" style="position: relative; top:1700px; border-top: 1px solid black;">
         <div class="footer-description">
             <h3>PathSphere</h3>
             <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and
