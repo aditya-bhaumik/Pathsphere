@@ -2,7 +2,7 @@
 
 ## Introduction
 
-PathSphere is an open-source platform that connects students, educators, and professionals to resources such as scholarships, job opportunities, and community discussions. By participating in this community, you agree to contribute positively and respectfully, fostering an environment that promotes inclusivity, learning, and collaboration.
+PathSphere is an comprehensive platform that connects students, educators, and professionals to resources such as scholarships, job opportunities, and community discussions. By participating in this community, you agree to contribute positively and respectfully, fostering an environment that promotes inclusivity, learning, and collaboration.
 
 ## Our Commitment
 
