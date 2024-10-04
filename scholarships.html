@@ -7,83 +7,124 @@
 
     <title>Scholarships</title>
     <!-- Added a favicon -->
-	<link rel="icon" type="image/x-icon" href="images\pathsphere.png">
+    <link rel="icon" type="image/x-icon" href="images\pathsphere.png">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <style>
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+  }
+
+        #scroll-to-top i {
+            font-size: 20px;
+            position: relative;
+            top: 2px;
+        }
+
+        #scroll-to-top:hover {
+            background-color: #555;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        :root{
-            --primary-color:#f4f4f4;
-            --secondary-color:#333;
+
+        :root {
+            --primary-color: #f4f4f4;
+            --secondary-color: #333;
         }
-        .darkmode{
-            --primary-color:#333;
-            --secondary-color:#f4f4f4;
+
+        .darkmode {
+            --primary-color: #333;
+            --secondary-color: #f4f4f4;
         }
+
         header {
             padding: 20px;
-            color:  var(--secondary-color);
+            color: var(--secondary-color);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 40px;
         }
+
         nav .logo img {
             width: 50px;
             margin-right: 10px;
         }
+
         nav a {
-            color:  var(--primary-color);
+            color: var(--primary-color);
             text-decoration: none;
             padding: 10px;
             transition: background-color 0.3s;
         }
+
         nav a:hover {
             color: red;
             border-radius: 5px;
         }
+
         .hero {
             background-color: #4caf50;
-            color:  var(--primary-color);
+            color: var(--primary-color);
             padding: 30px;
             text-align: center;
         }
+
         .search-bar {
             margin: 20px auto;
             text-align: center;
             position: relative;
         }
+
         .search-bar input {
             padding: 10px;
             width: 300px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         .search-bar i {
             position: absolute;
             left: 10px;
             top: 10px;
             color: #888;
         }
+
         .scholarship-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin: 20px;
         }
-      
+
 
         .scholarship-item {
             border: none;
@@ -97,18 +138,18 @@
             color: black;
             font-family: 'Arial', sans-serif;
         }
-        
+
         .scholarship-item h2 {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
-        
+
         .scholarship-item p {
             margin: 5px 0;
             font-size: 1.1em;
             color: black;
         }
-        
+
         .scholarship-item .apply-btn {
             display: inline-block;
             background-color: #ff9800;
@@ -119,40 +160,47 @@
             font-weight: bold;
             transition: background-color 0.3s, transform 0.3s;
         }
-        
+
         .scholarship-item .apply-btn:hover {
             background-color: #ffb74d;
             transform: translateY(-3px);
         }
-        
+
         .scholarship-item:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .footer-container {
-            background-color:  var(--primary-color);
-            color:  var(--secondary-color);
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
             padding: 20px;
             text-align: center;
             margin-top: 20px;
         }
+
         .footer-list {
             margin: 20px 0;
         }
+
         .footer-list h3 {
             margin-bottom: 10px;
         }
+
         .social-icons li {
             display: inline;
             margin: 0 10px;
         }
+
         .copyright {
             margin-top: 10px;
         }
+
         @media (max-width: 600px) {
             .search-bar input {
                 width: 80%;
             }
+
             .scholarship-item {
                 width: 100%;
             }
@@ -180,6 +228,7 @@
         }
     </script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -202,12 +251,13 @@
             <h1>Scholarships</h1>
             <p>Find scholarships that match your academic profile and needs.</p>
         </section>
-        
+
         <div class="search-bar">
             <!-- <i class="fas fa-search"></i> -->
-            <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()">
+            <input type="text" id="searchInput" placeholder="Search for scholarships..."
+                aria-label="Search Scholarships" onkeyup="filterScholarships()">
         </div>
-        
+
         <section class="scholarship-list">
             <div class="scholarship-item">
                 <h2>Global Student Scholarship</h2>
@@ -228,14 +278,16 @@
                 <p>Amount: $2,500</p>
                 <p>Eligibility: Must have 100+ hours of community service</p>
                 <p>Deadline: June 1, 2024</p>
-                <a href="#" class="apply-btn" onclick="applyForScholarship('Community Service Scholarship')">Apply Now</a>
+                <a href="#" class="apply-btn" onclick="applyForScholarship('Community Service Scholarship')">Apply
+                    Now</a>
             </div>
             <div class="scholarship-item">
                 <h2>Artistry in Education Scholarship</h2>
                 <p>Amount: $3,000</p>
                 <p>Eligibility: Students majoring in Fine Arts</p>
                 <p>Deadline: August 15, 2024</p>
-                <a href="#" class="apply-btn" onclick="applyForScholarship('Artistry in Education Scholarship')">Apply Now</a>
+                <a href="#" class="apply-btn" onclick="applyForScholarship('Artistry in Education Scholarship')">Apply
+                    Now</a>
             </div>
             <div class="scholarship-item">
                 <h2>Tech Innovators Scholarship</h2>
@@ -263,7 +315,8 @@
                 <p>Amount: $6,000</p>
                 <p>Eligibility: Open to international students</p>
                 <p>Deadline: April 1, 2024</p>
-                <a href="#" class="apply-btn" onclick="applyForScholarship('International Peace Scholarship')">Apply Now</a>
+                <a href="#" class="apply-btn" onclick="applyForScholarship('International Peace Scholarship')">Apply
+                    Now</a>
             </div>
             <div class="scholarship-item">
                 <h2>Women in Tech Scholarship</h2>
@@ -302,16 +355,26 @@
         <div class="footer-list">
             <h3>Follow Us On</h3>
             <ul class="social-icons">
-                <li><a href="https://github.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com" target="_blank" style="color:  var(--secondary-color);"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com" target="_blank" style="color:  var(--secondary-color);"><i
+                            class="fab fa-github"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" style="color:  var(--secondary-color);"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://x.com" target="_blank" style="color:  var(--secondary-color);"><i
+                            class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank" style="color:  var(--secondary-color);"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" style="color:  var(--secondary-color);"><i
+                            class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <button id="scroll-to-top" title="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 </html>
