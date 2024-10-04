@@ -1,142 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PathSphere | Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- Added a favicon -->
-	<link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
 
-    
-    <link rel="stylesheet" href="/styles/styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PathSphere | Home</title>
+  <!-- Added a favicon -->
+  <link rel="icon" type="image/x-icon" href="../images/pathsphere.png">
 </head>
 <!-- Add an ID to the body tag or a specific class to the blog section -->
+
 <body id="blog-page"> <!-- or class="blog-page" -->
-   <button class="scroll-up-btn">
-        <i class="arrow-up"></i>
-   </button> 
-    <header>
 
-        <nav id="navbar"> <!-- Add an ID to the nav -->
-            <a href="/index.html" class="logo">PathSphere</a>
+  <main>
 
-             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/scholarships/scholarships.html">Scholarships</a></li>
-                <li><a href="/pages/jobs/jobs.html">Jobs</a></li>
-                <li><a href="/pages/forum/forum.html">Forum</a></li>
-                <li><a href="/pages/faqs/faqs.html">FAQs</a></li> <!-- Include FAQs in the nav issue#112 -->
-                <li><a href="/pages/blog/blog.html">Blog</a></li> <!-- Include blog in the nav -->
-            </ul>
+    <section class="hero">
+      <div class="left">
+        <h1>Welcome to PathSphere</h1>
+        <p>Your gateway to educational and professional resources</p>
 
-            <img src="/images/dark.png" id="icon" alt="">
+        <div class="search-container">
+          <a href="./scholarships/scholarships.html" class="btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Find Scholarships
+          </a>
 
-        </nav>
-    </header>
-
-    <main>
-
- <section class="hero">
-            <div class="left">
-            <h1>Welcome to PathSphere</h1>
-            <p>Your gateway to educational and professional resources</p>
-
-            <div class="search-container">
-                <a href="/pages/scholarships/scholarships.html" class="btn">
-                 <i class="fa-solid fa-magnifying-glass"></i>
-                  Find Scholarships
-              </a>
-            
-         <a href="/pages/jobs/jobs.html" class="btn">
-        <i class="fa-solid fa-magnifying-glass"></i>
-		 Find Jobs
-         </a>
-           </div>
+          <a href="./jobs/jobs.html" class="btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Find Jobs
+          </a>
+        </div>
     </section>
-      <section class="features">
-            <div class="feature">
+    <section class="features">
+      <div class="feature">
 
-                <img src="/images/sicon.png" alt="">
-                <h2>Scholarships</h2>
-                <p>Discover scholarships tailored to your needs and academic performance.</p>
-                <a href="/pages/scholarships/scholarships.html" class="btn">Explore</a>
-            </div>
-            <div class="feature">
+        <img src="../images/sicon.png" alt="">
+        <h2>Scholarships</h2>
+        <p>Discover scholarships tailored to your needs and academic performance.</p>
+        <a href="./scholarships/scholarships.html" class="btn">Explore</a>
+      </div>
+      <div class="feature">
 
-                <img src="/images/jicon.png" alt="">
-                <h2>Jobs</h2>
-                <p>Find job opportunities for educators and professionals.</p>
-                <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
-            </div>
-            <div class="feature">
+        <img src="../images/jicon.png" alt="">
+        <h2>Jobs</h2>
+        <p>Find job opportunities for educators and professionals.</p>
+        <a href="./jobs/jobs.html" class="btn">Browse Jobs</a>
+      </div>
+      <div class="feature">
 
-                <img src="/images/ficon.png" alt="">
-                <h2>Forum</h2>
-                <p>Join discussions, ask questions, and connect with others.</p>
-                <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
-            </div>
-        </section>
-        <section id="features-section" class="section"></section>
-            <div class="container">
-              <div class="row">
-                <div class="text-content">
-                  <h3>Key Features of PathSphere</h3>
-                  <p>Connecting students to scholarships and educators to job opportunities with powerful tools and community support.</p>
-                  <div class="feature-list">
-                    <div class="feature-item">
-                      <i class="fas fa-search"></i>
-                      <div>
-                        <h6>Scholarship Search</h6>
-                        <p>Find scholarships easily, quickly.</p>
-                      </div>
-                    </div>
-                    <div class="feature-item">
-                      <i class="fas fa-briefcase"></i>
-                      <div>
-                        <h6>Job Portal</h6>
-                        <p>Job opportunities tailored for educators.</p>
-                      </div>
-                    </div>
-                    <div class="feature-item">
-                      <i class="fas fa-users"></i>
-                      <div>
-                        <h6>Community Forums</h6>
-                        <p>Share resources, advice, experiences.</p>
-                      </div>
-                    </div>
-                    <div class="feature-item">
-                      <i class="fas fa-bell"></i>
-                      <div>
-                        <h6>Instant Notifications</h6>
-                        <p>Get real-time important updates.</p>
-                      </div>
-                    </div>
-                    <div class="feature-item">
-                      <i class="fas fa-bookmark"></i>
-                      <div>
-                        <h6>Save & Track</h6>
-                        <p>Bookmark and monitor application progress.</p>
-                      </div>
-                    </div>
-                    <div class="feature-item">
-                      <i class="fas fa-tools"></i>
-                      <div>
-                        <h6>Resume Builder</h6>
-                        <p>Create a professional profile easily.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="image-content">
-                  <img src="/images/features.png" alt="PathSphere Features">
-                </div>
+        <img src="../images/ficon.png" alt="">
+        <h2>Forum</h2>
+        <p>Join discussions, ask questions, and connect with others.</p>
+        <a href="./forum/forum.html" class="btn">Join the Forum</a>
+      </div>
+    </section>
+    <section id="features-section" class="section"></section>
+    <div class="container">
+      <div class="row">
+        <div class="text-content">
+          <h3>Key Features of PathSphere</h3>
+          <p>Connecting students to scholarships and educators to job opportunities with powerful tools and community
+            support.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <i class="fas fa-search"></i>
+              <div>
+                <h6>Scholarship Search</h6>
+                <p>Find scholarships easily, quickly.</p>
               </div>
             </div>
-          </section>
-        </br></br></br>
-        <!-- Commented the FAQ Section from Home Page(Hide) #issue112-->
-        <!-- <section id="faqs" class="faq-section">
+            <div class="feature-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <h6>Job Portal</h6>
+                <p>Job opportunities tailored for educators.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-users"></i>
+              <div>
+                <h6>Community Forums</h6>
+                <p>Share resources, advice, experiences.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-bell"></i>
+              <div>
+                <h6>Instant Notifications</h6>
+                <p>Get real-time important updates.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-bookmark"></i>
+              <div>
+                <h6>Save & Track</h6>
+                <p>Bookmark and monitor application progress.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-tools"></i>
+              <div>
+                <h6>Resume Builder</h6>
+                <p>Create a professional profile easily.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-content">
+          <img src="../images/features.png" alt="PathSphere Features">
+        </div>
+      </div>
+    </div>
+    </section>
+    </br></br></br>
+    <!-- Commented the FAQ Section from Home Page(Hide) #issue112-->
+    <!-- <section id="faqs" class="faq-section">
             <h1>Frequently Asked Questions</h1>
             <div class="faq-item">
                 <h2 class="faq-question">
@@ -174,44 +152,15 @@
                 <p class="faq-answer">You can reach out to our support team by visiting the <a href="contact.html">Contact Us</a> page and filling out the form, or by emailing us at support@pathsphere.com.</p>
             </div>
         </section> -->
-        
-    </main>
-    <div class="footer-container">
-        <div class="footer-description">
-            <h3>PathSphere</h3>
-            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and educators with job openings. It features dynamic search tools and community discussions to enhance access to educational and career resources.</p>
-        </div>
-        <div class="footer-list">
-            <h3>Quick links</h3>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/scholarships/scholarships.html">Scholarships</a></li>
-                <li><a href="/pages/jobs/jobs.html">Jobs</a></li>
-                <li><a href="/pages/forum/forum.html">Forum</a></li>
-            </ul>
-        </div>
-        <div class="footer-list">
-            <h3>Follow us on</h3>
-            <ul class="social-icons">
-                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/scripts/script.js"></script>
-    <script>
-        const btn = document.querySelector(".scroll-up-btn");
-        btn.addEventListener("click", () => {
-            document.documentElement.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            })
-        });
-    </script>
+
+  </main>
+  <script src="/scripts/componentLoader.js">
+  </script>
+  <script>
+    prependComponent("Navbar");
+    prependComponent("ScrollToTop");
+    appendComponent("Footer");
+  </script>
 </body>
+
 </html>

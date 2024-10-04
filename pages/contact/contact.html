@@ -4,14 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../../styles/styles.css" />
+
     <link rel="icon" type="image/x-icon" href="../../images\pathsphere.png" />
     <style>
       .contact {
@@ -86,22 +79,6 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="/index.html" class="logo"
-          ><img src="/P (1).png" />PathSphere</a
-        >
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="../scholarships/scholarships.html">Scholarships</a></li>
-          <li><a href="../jobs/jobs.html">Jobs</a></li>
-          <li><a href="../forum/forum.html">Forum</a></li>
-          <li><a href="../faqs/faqs.html">FAQs</a></li>
-          <li><a href="../blog/blog.html">Blog</a></li>
-        </ul>
-        <img src="../../images/dark.png" id="icon" alt="" />
-      </nav>
-    </header>
     <main>
       <section class="hero">
         <h1>Contact Us</h1>
@@ -160,65 +137,14 @@
         </div>
       </section>
     </main>
-    <div class="footer-container">
-      <div class="footer-description">
-        <h3>PathSphere</h3>
-        <p>
-          PathSphere is a comprehensive platform designed to connect students
-          with scholarship opportunities and educators with job openings. It
-          features dynamic search tools and community discussions to enhance
-          access to educational and career resources.
-        </p>
-      </div>
-      <div class="footer-list">
-        <h3>Quick links</h3>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="../scholarships/scholarships.html">Scholarships</a></li>
-          <li><a href="../jobs/jobs.html">Jobs</a></li>
-          <li><a href="../forum/forum.html">Forum</a></li>
-        </ul>
-      </div>
-      <div class="footer-list">
-        <h3>Follow us on</h3>
-        <ul class="social-icons">
-          <li>
-            <a href="https://github.com" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://instagram.com" target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://x.com" target="_blank"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://facebook.com" target="_blank"
-              ><i class="fab fa-facebook"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://linkedin.com" target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="../../scripts/script.js"></script>
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+      prependComponent('Navbar');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+    </script>
+
     <script>
       document
         .getElementById('contactForm')

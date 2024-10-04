@@ -19,7 +19,7 @@
   right: 30px;
   height: 40px;
   width: 40px;
-  background-color:#ffa500;
+  background-color: #ffa500;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -27,8 +27,8 @@
   cursor: pointer;
 }
 .scroll-up-btn .arrow-up {
-  width:23px;
-  height:23px;
+  width: 23px;
+  height: 23px;
   border-left: 3px solid #f9f9f9;
   border-bottom: 3px solid #f9f9f9;
   transform: rotate(135deg);
@@ -133,7 +133,7 @@ main {
   /* justify-content: center; */
   align-items: center;
   gap: 50px;
-  background-image: url("https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826");
+  background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826');
   background-repeat: no-repeat;
   /* width: 100vw; */
   background-size: cover;
@@ -179,7 +179,7 @@ main {
 }
 
 .feature {
-/* <<<<<<< enhanceFAQ */
+  /* <<<<<<< enhanceFAQ */
   text-align: center;
   padding: 20px;
   background: #f9f9f9;
@@ -220,9 +220,15 @@ main {
 
 /* Popup Animation */
 @keyframes popup {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 footer {
   background-color: var(--secondary-color);
@@ -460,7 +466,6 @@ h1 {
   background-color: #f9f9f9;
 }
 
-
 .blog-posts {
   padding: 2rem;
   max-width: 800px;
@@ -475,10 +480,10 @@ h1 {
 }
 
 .forum-post:hover {
-/* <<<<<<< enhanceFAQ */
+  /* <<<<<<< enhanceFAQ */
   background-color: var(--primary-color);
-    background-color:  var(--primary-color);
-/* >>>>>>> main */
+  background-color: var(--primary-color);
+  /* >>>>>>> main */
 }
 .blog-post h2 {
   margin-bottom: 0.5rem;
@@ -531,11 +536,10 @@ h1 {
 .read-more:hover {
   background-color: #0056b3;
 
-html { scroll-behavior: smooth; }
-
-
+  html {
+    scroll-behavior: smooth;
+  }
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -636,7 +640,8 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
-  .text-content, .image-content {
+  .text-content,
+  .image-content {
     flex-basis: 100%;
   }
 

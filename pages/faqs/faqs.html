@@ -7,27 +7,9 @@
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="../../images/pathsphere.png" />
 
-    <link rel="stylesheet" href="../../styles/styles.css" />
     <link rel="stylesheet" href="faqs.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/index.html" class="logo">
-          <!-- <img src="/P (1).png" /> Removed Image from the FAQ Navbar-->
-          PathSphere</a
-        >
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="../scholarships/scholarships.html">Scholarships</a></li>
-          <li><a href="../jobs/jobs.html">Jobs</a></li>
-          <li><a href="../forum/forum.html">Forum</a></li>
-          <li><a href="#faqs">FAQs</a></li>
-          <li><a href="../blog/blog.html">Blog</a></li>
-        </ul>
-        <img src="../../images/dark.png" id="icon" alt="" />
-      </nav>
-    </header>
     <!-- Not needed Fixed the multiple Nav-List issue#112 -->
     <!-- <main> (Not needed) -->
     <!-- <div class="logo">PathSphere</div>
@@ -137,14 +119,13 @@
       </section>
     </main>
 
-    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="../../scripts/script.js"></script>
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+      prependComponent('Navbar');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+    </script>
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const accordions = document.querySelectorAll('.accordions__item');
