@@ -19,7 +19,7 @@
   right: 30px;
   height: 40px;
   width: 40px;
-  background-color:#ffa500;
+  background-color: #ffa500;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -27,8 +27,8 @@
   cursor: pointer;
 }
 .scroll-up-btn .arrow-up {
-  width:23px;
-  height:23px;
+  width: 23px;
+  height: 23px;
   border-left: 3px solid #f9f9f9;
   border-bottom: 3px solid #f9f9f9;
   transform: rotate(135deg);
@@ -179,7 +179,7 @@ main {
 }
 
 .feature {
-/* <<<<<<< enhanceFAQ */
+  /* <<<<<<< enhanceFAQ */
   text-align: center;
   padding: 20px;
   background: #f9f9f9;
@@ -220,9 +220,15 @@ main {
 
 /* Popup Animation */
 @keyframes popup {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 footer {
   background-color: var(--secondary-color);
@@ -474,10 +480,10 @@ h1 {
 }
 
 .forum-post:hover {
-/* <<<<<<< enhanceFAQ */
+  /* <<<<<<< enhanceFAQ */
   background-color: var(--primary-color);
-    background-color:  var(--primary-color);
-/* >>>>>>> main */
+  background-color: var(--primary-color);
+  /* >>>>>>> main */
 }
 .blog-post h2 {
   margin-bottom: 0.5rem;
@@ -530,11 +536,10 @@ h1 {
 .read-more:hover {
   background-color: #0056b3;
 
-html { scroll-behavior: smooth; }
-
-
+  html {
+    scroll-behavior: smooth;
+  }
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -635,7 +640,8 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
-  .text-content, .image-content {
+  .text-content,
+  .image-content {
     flex-basis: 100%;
   }
 
@@ -672,5 +678,61 @@ body {
 }
 
 .scroll-up-btn:hover {
-    background-color: #555;
-  }
+  background-color: #555;
+}
+
+
+/* Newsletter Section Styles */
+.newsletter-section {
+  background-color: #f5f5f5;
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+
+.newsletter-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.newsletter-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0073e6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #005bb5;
+}
+
+.newsletter-disclaimer {
+  font-size: 0.9rem;
+  color: #777;
+}
