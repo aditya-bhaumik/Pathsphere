@@ -79,6 +79,37 @@ PathSphere can be significantly improved with additional front-end features. Her
 5. **Engage with the Community**:
    - Participate in discussions, review pull requests from other contributors, and provide feedback.
 
+## Contributors
+
+- **[Aditya Bhaumik](https://github.com/aditya-bhaumik)**
+- **[Shireen Kachroo](https://github.com/ShireenKachroo)**
+- **[Apoorva S](https://github.com/Apoorva57)**
+- **[Aman Kumar](https://github.com/AmanKumar1115)**
+- **[ezDecode](https://github.com/ezDecode)**
+- **[Sahho Arjun](https://github.com/sahhoArjun097)**
+- **[Pavani Kudulla](https://github.com/PavaniKudulla)**
+- **[Devanshu](https://github.com/Devanshu1603)**
+- **[Rajat Singh](https://github.com/rajatsinghal02)**
+- **[Pooja Bhattarai](https://github.com/Pooja3Bhattarai)**
+- **[Dev Mani](https://github.com/devxMani)**
+- **[Web Dev Learner](https://github.com/Web-Dev-Learner)**
+- **[Priya Shuu](https://github.com/priyashuu)**
+- **[Itachii27](https://github.com/Itachii27)**
+- **[Bhanu Prakash](https://github.com/Bhanuprakash842)**
+- **[Sujal T](https://github.com/Sujal1201)**
+- **[Sapta Dev](https://github.com/Sapta-Dev27)**
+- **[Vaishnavi](https://github.com/BVaishnavi15)**
+- **[Gaurav](https://github.com/Gauravtb2253)**
+- **[Karthik Kiran](https://github.com/karthik-kiran-29)**
+- **[Shrishti Singh](https://github.com/ShrishtiSingh26)**
+- **[Myself Shivam](https://github.com/myselfshivams)**
+- **[SCR01](https://github.com/SCR01)**
+- **[Mohit Ranag](https://github.com/Mohitranag18)**
+- **[Sri Harsha](https://github.com/sriharsha0x1)**
+- **[Shreyad](https://github.com/shreyad2806)**
+- **[Navya Sharma](https://github.com/770navyasharma)**
+
+
 By implementing these enhancements, you can make PathSphere more interactive and engaging while keeping it entirely front-end focused. Your contributions will help provide a richer experience for users and make the platform more versatile and useful.
 
 
