@@ -79,6 +79,11 @@ PathSphere can be significantly improved with additional front-end features. Her
 5. **Engage with the Community**:
    - Participate in discussions, review pull requests from other contributors, and provide feedback.
 
+## Contributors
+
+<a href="https://github.com/aditya-bhaumik/Pathsphere/graphs/contributors"> <img src="https://contrib.rocks/image?repo=aditya-bhaumik/Pathsphere" /> </a>
+
+
 By implementing these enhancements, you can make PathSphere more interactive and engaging while keeping it entirely front-end focused. Your contributions will help provide a richer experience for users and make the platform more versatile and useful.
 
 
