@@ -677,10 +677,10 @@ body {
   width: 50px;
 }
 
+/* Scroll Up Button Hover */
 .scroll-up-btn:hover {
-  background-color: #555;
+  background-color: #555; /* Kept the same from both branches */
 }
-
 
 /* Newsletter Section Styles */
 .newsletter-section {
@@ -736,3 +736,63 @@ body {
   font-size: 0.9rem;
   color: #777;
 }
+
+/* Cursor and Tab Styles */
+.cursor {
+  position: absolute;
+  height: 5px;
+  width: 0;
+  background: #ff6f61;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.tab:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ff6f61;
+}
+
+.tab.active {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+.navbar {
+  position: relative;
+}
+
+#tabs {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.tab {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: black;
+}
+
+.cursor {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: black;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
