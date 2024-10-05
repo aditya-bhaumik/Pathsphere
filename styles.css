@@ -26,7 +26,7 @@
   ::-webkit-scrollbar-thumb{
     background-color: #ff9800;
     border-radius: 100vw;
-  } 
+  }
   @supports (scrollbar-color:#ff9800){
     *{
         scrollbar-color:#ff9800;
@@ -340,6 +340,7 @@
   }
   
   .features {
+    
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -348,24 +349,35 @@
   }
   
   .feature {
-  /* <<<<<<< enhanceFAQ */
     text-align: center;
     padding: 20px;
-    background: #f9f9f9;
+    background: var(--secondary-color); /* Use secondary color for dark mode */
     border-radius: 5px;
     gap: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for contrast */
     width: 30%;
     margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s ease;
+    transition: transform 0.2s; /* Add transition for scaling effect */
   }
+  
   .feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Scale up on hover */
   }
+  
   .feature img {
-    width: 30px;
-    height: 30px;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .feature h2 {
+    font-size: 24px; /* Increase heading size for better visibility */
+    color: var(--primary-color); /* Light text color for contrast */
+    margin: 10px 0; /* Add margin for spacing */
+  }
+  
+  .feature p {
+    color: var(--primary-color); /* Light text color for better readability */
+    margin-bottom: 15px; /* Spacing between text and button */
   }
   
   .toggle-icon {
@@ -389,8 +401,9 @@
   }
   
   .btn:hover {
-    background-color: #cc8400;
+    background-color: #b88830;
   }
+  
   
   /* Popup Animation */
   @keyframes popup {
