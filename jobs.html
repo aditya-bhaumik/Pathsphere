@@ -17,6 +17,13 @@
     </style> -->
     <script>
         // Function to filter jobs based on search input
+
+	    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('active');
         function filterJobs() {
             const input = document.getElementById('searchInput').value.toLowerCase();
             const items = document.getElementsByClassName('job-item');
