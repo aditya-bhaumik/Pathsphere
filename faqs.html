@@ -14,20 +14,30 @@
 
 <body>
   <header>
-    <nav>
-      <a href="index.html" class="logo">
-        <!-- <img src="/P (1).png" /> Removed Image from the FAQ Navbar-->
-        PathSphere</a>
-      <ul>
+
+    <nav id="navbar"> <!-- Add an ID to the nav -->
+      <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
+      <ul id="tabs">
         <li class="tab"><a href="index.html">Home</a></li>
         <li class="tab"><a href="scholarships.html">Scholarships</a></li>
         <li class="tab"><a href="jobs.html">Jobs</a></li>
         <li class="tab"><a href="forum.html">Forum</a></li>
-        <li class="tab"><a href="about.html">About Us</a></li>
         <li class="tab"><a href="faqs.html">FAQs</a></li>
         <li class="tab"><a href="blog.html">Blog</a></li>
       </ul>
-      <img src="images/dark.png" id="icon" alt="" />
+
+      </nav>
+      <div class="cursor"></div>
+
+
+      <img src="images/dark.png" id="icon" alt="">
+
     </nav>
   </header>
   <!-- Not needed Fixed the multiple Nav-List issue#112 -->

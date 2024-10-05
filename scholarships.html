@@ -59,38 +59,6 @@
             --secondary-color: #f4f4f4;
         }
 
-        header {
-            padding: 20px;
-            color: var(--secondary-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 40px;
-        }
-
-        nav .logo img {
-            width: 50px;
-            margin-right: 10px;
-        }
-
-        nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            padding: 10px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            color: red;
-            border-radius: 5px;
-        }
-
         .hero {
             background-color: #4caf50;
             color: var(--primary-color);
@@ -231,30 +199,32 @@
 
 <body>
     <header>
-        <nav>
-            <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
-            <!-- <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="scholarships.html">Scholarships</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="blog.html">Blog</a></li>
 
-            </ul> -->
-            <ul id="tabs">
-                <li class="tab"><a href="index.html">Home</a></li>
-                <li class="tab"><a href="scholarships.html">Scholarships</a></li>
-                <li class="tab"><a href="jobs.html">Jobs</a></li>
-                <li class="tab"><a href="forum.html">Forum</a></li>
-                <li class="tab"><a href="faqs.html">FAQs</a></li>
-                <li class="tab"><a href="blog.html">Blog</a></li>
-            </ul>
-            <div class="cursor"></div>
-            <img src="images/dark.png" id="icon" alt="">
-        </nav>
-    </header>
+    <nav id="navbar"> <!-- Add an ID to the nav -->
+      <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
+      <ul id="tabs">
+        <li class="tab"><a href="index.html">Home</a></li>
+        <li class="tab"><a href="scholarships.html">Scholarships</a></li>
+        <li class="tab"><a href="jobs.html">Jobs</a></li>
+        <li class="tab"><a href="forum.html">Forum</a></li>
+        <li class="tab"><a href="faqs.html">FAQs</a></li>
+        <li class="tab"><a href="blog.html">Blog</a></li>
+      </ul>
+
+      </nav>
+      <div class="cursor"></div>
+
+
+      <img src="images/dark.png" id="icon" alt="">
+
+    </nav>
+  </header>
     <main style="position: absolute;">
         <section class="hero">
             <h1>Scholarships</h1>

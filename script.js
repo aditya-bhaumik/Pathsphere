@@ -77,9 +77,13 @@ document.querySelectorAll(".btn").forEach((button) => {
     });
   });
 });
+const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
 
-// Add this code to your script.js file
-const scrollToTopButton = document.getElementById('scroll-to-top');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 200) {
