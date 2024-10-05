@@ -2,6 +2,8 @@
 
 **PathSphere** is an open-source platform designed to help students, educators, and professionals access resources such as scholarships, job opportunities, and community discussions. Our goal is to create a comprehensive hub that bridges gaps in educational and career resources.
 
+Join the discord link for more information related to this repo https://discord.gg/FZxBRpTEeH
+
 ## 🌟 Features
 
 - **Scholarship Finder**: 
