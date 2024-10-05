@@ -313,7 +313,7 @@ footer {
   align-items: flex-start;
   justify-content: space-between;
   padding: 30px 100px;
-  background-color: var(--primary-color);
+  background-color: #f9f9f9;
   color: var(--secondary-color);
   flex-wrap: wrap;
   gap: 20px;
