@@ -83,85 +83,85 @@ PathSphere can be significantly improved with additional front-end features. Her
 
 <a href="https://github.com/aditya-bhaumik/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=aditya-bhaumik/Pathsphere" />
-</a><br>
+</a>
 <a href="https://github.com/ShireenKachroo/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=ShireenKachroo" />
-</a><br>
+</a>
 <a href="https://github.com/Apoorva57/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Apoorva57" />
-</a><br>
+</a>
 <a href="https://github.com/AmanKumar1115/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=AmanKumar1115" />
-</a><br>
+</a>
 <a href="https://github.com/ezDecode/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=ezDecode" />
-</a><br>
+</a>
 <a href="https://github.com/sahhoArjun097/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=sahhoArjun097" /> 
-</a><br>
+</a>
 <a href="https://github.com/PavaniKudulla/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=PavaniKudulla" />
-</a><br>
+</a>
 <a href="https://github.com/Devanshu1603/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Devanshu1603" />
-</a><br>
+</a>
 <a href="https://github.com/rajatsinghal02/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=rajatsinghal02" /> 
-</a><br>
+</a>
 <a href="https://github.com/Pooja3Bhattarai/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Pooja3Bhattarai" /> 
-</a><br>
+</a>
 <a href="https://github.com/devxMani/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=devxMani" /> 
-</a><br>
+</a>
 <a href="https://github.com/Web-Dev-Learner/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Web-Dev-Learner" /> 
-</a><br>
+</a>
 <a href="https://github.com/priyashuu/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=priyashuu" /> 
-</a><br>
+</a>
 <a href="https://github.com/Itachii27/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Itachii27" /> 
-</a><br>
+</a>
 <a href="https://github.com/Bhanuprakash842/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Bhanuprakash842" />
-</a><br>
+</a>
 <a href="https://github.com/Sujal1201/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Sujal1201" />
-</a><br>
+</a>
 <a href="https://github.com/Sapta-Dev27/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Sapta-Dev27" />
-</a><br>
+</a>
 <a href="https://github.com/BVaishnavi15/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=BVaishnavi15" />
-</a><br>
+</a>
 <a href="https://github.com/Gauravtb2253/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Gauravtb2253" />
-</a><br>
+</a>
 <a href="https://github.com/karthik-kiran-29/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=karthik-kiran-29" /> 
-</a><br>
+</a>
 <a href="https://github.com/ShrishtiSingh26/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=ShrishtiSingh26" />
-</a><br>
+</a>
 <a href="https://github.com/myselfshivams/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=myselfshivams" /> 
-</a><br>
+</a>
 <a href="https://github.com/SCR01/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=SCR01" /> 
-</a><br>
+</a>
 <a href="https://github.com/Mohitranag18/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Mohitranag18" /> 
-</a><br>
+</a>
 <a href="https://github.com/sriharsha0x1/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=sriharsha0x1" /> 
-</a><br>
+</a>
 <a href="https://github.com/shreyad2806/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=shreyad2806" /> 
-</a><br>
+</a>
 <a href="https://github.com/770navyasharma/Pathsphere/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=770navyasharma" />
-</a><br>
+</a>
 
 
 
