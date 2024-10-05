@@ -739,3 +739,24 @@ body {
     transition: all 0.3s ease; 
     opacity: 0; 
 }
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+  width: 0.8em;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+  border-radius: 100vw;
+  margin-block:.5em ;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #ff9800;
+  border-radius: 100vw;
+} 
+@supports (scrollbar-color:#ff9800){
+  *{
+      scrollbar-color:#ff9800;
+  }
+}
