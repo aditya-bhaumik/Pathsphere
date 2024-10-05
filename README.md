@@ -81,33 +81,91 @@ PathSphere can be significantly improved with additional front-end features. Her
 
 ## Contributors
 
-- **[Aditya Bhaumik](https://github.com/aditya-bhaumik)**
-- **[Shireen Kachroo](https://github.com/ShireenKachroo)**
-- **[Apoorva S](https://github.com/Apoorva57)**
-- **[Aman Kumar](https://github.com/AmanKumar1115)**
-- **[ezDecode](https://github.com/ezDecode)**
-- **[Sahho Arjun](https://github.com/sahhoArjun097)**
-- **[Pavani Kudulla](https://github.com/PavaniKudulla)**
-- **[Devanshu](https://github.com/Devanshu1603)**
-- **[Rajat Singh](https://github.com/rajatsinghal02)**
-- **[Pooja Bhattarai](https://github.com/Pooja3Bhattarai)**
-- **[Dev Mani](https://github.com/devxMani)**
-- **[Web Dev Learner](https://github.com/Web-Dev-Learner)**
-- **[Priya Shuu](https://github.com/priyashuu)**
-- **[Itachii27](https://github.com/Itachii27)**
-- **[Bhanu Prakash](https://github.com/Bhanuprakash842)**
-- **[Sujal T](https://github.com/Sujal1201)**
-- **[Sapta Dev](https://github.com/Sapta-Dev27)**
-- **[Vaishnavi](https://github.com/BVaishnavi15)**
-- **[Gaurav](https://github.com/Gauravtb2253)**
-- **[Karthik Kiran](https://github.com/karthik-kiran-29)**
-- **[Shrishti Singh](https://github.com/ShrishtiSingh26)**
-- **[Myself Shivam](https://github.com/myselfshivams)**
-- **[SCR01](https://github.com/SCR01)**
-- **[Mohit Ranag](https://github.com/Mohitranag18)**
-- **[Sri Harsha](https://github.com/sriharsha0x1)**
-- **[Shreyad](https://github.com/shreyad2806)**
-- **[Navya Sharma](https://github.com/770navyasharma)**
+<a href="https://github.com/aditya-bhaumik/Pathsphere/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=aditya-bhaumik/Pathsphere" alt="Contributors" />
+</a><br>
+<a href="https://github.com/aditya-bhaumik">
+    <img src="https://contrib.rocks/image?repo=aditya-bhaumik" alt="Aditya Bhaumik"/> Aditya Bhaumik
+</a><br>
+<a href="https://github.com/ShireenKachroo">
+    <img src="https://contrib.rocks/image?repo=ShireenKachroo" alt="Shireen Kachroo"/> Shireen Kachroo
+</a><br>
+<a href="https://github.com/Apoorva57">
+    <img src="https://contrib.rocks/image?repo=Apoorva57" alt="Apoorva S"/> Apoorva S
+</a><br>
+<a href="https://github.com/AmanKumar1115">
+    <img src="https://contrib.rocks/image?repo=AmanKumar1115" alt="Aman Kumar"/> Aman Kumar
+</a><br>
+<a href="https://github.com/ezDecode">
+    <img src="https://contrib.rocks/image?repo=ezDecode" alt="ezDecode"/> ezDecode
+</a><br>
+<a href="https://github.com/sahhoArjun097">
+    <img src="https://contrib.rocks/image?repo=sahhoArjun097" alt="Sahho Arjun"/> Sahho Arjun
+</a><br>
+<a href="https://github.com/PavaniKudulla">
+    <img src="https://contrib.rocks/image?repo=PavaniKudulla" alt="Pavani Kudulla"/> Pavani Kudulla
+</a><br>
+<a href="https://github.com/Devanshu1603">
+    <img src="https://contrib.rocks/image?repo=Devanshu1603" alt="Devanshu"/> Devanshu
+</a><br>
+<a href="https://github.com/rajatsinghal02">
+    <img src="https://contrib.rocks/image?repo=rajatsinghal02" alt="Rajat Singh"/> Rajat Singh
+</a><br>
+<a href="https://github.com/Pooja3Bhattarai">
+    <img src="https://contrib.rocks/image?repo=Pooja3Bhattarai" alt="Pooja Bhattarai"/> Pooja Bhattarai
+</a><br>
+<a href="https://github.com/devxMani">
+    <img src="https://contrib.rocks/image?repo=devxMani" alt="Dev Mani"/> Dev Mani
+</a><br>
+<a href="https://github.com/Web-Dev-Learner">
+    <img src="https://contrib.rocks/image?repo=Web-Dev-Learner" alt="Web Dev Learner"/> Web Dev Learner
+</a><br>
+<a href="https://github.com/priyashuu">
+    <img src="https://contrib.rocks/image?repo=priyashuu" alt="Priya Shuu"/> Priya Shuu
+</a><br>
+<a href="https://github.com/Itachii27">
+    <img src="https://contrib.rocks/image?repo=Itachii27" alt="Itachii27"/> Itachii27
+</a><br>
+<a href="https://github.com/Bhanuprakash842">
+    <img src="https://contrib.rocks/image?repo=Bhanuprakash842" alt="Bhanu Prakash"/> Bhanu Prakash
+</a><br>
+<a href="https://github.com/Sujal1201">
+    <img src="https://contrib.rocks/image?repo=Sujal1201" alt="Sujal T"/> Sujal T
+</a><br>
+<a href="https://github.com/Sapta-Dev27">
+    <img src="https://contrib.rocks/image?repo=Sapta-Dev27" alt="Sapta Dev"/> Sapta Dev
+</a><br>
+<a href="https://github.com/BVaishnavi15">
+    <img src="https://contrib.rocks/image?repo=BVaishnavi15" alt="Vaishnavi"/> Vaishnavi
+</a><br>
+<a href="https://github.com/Gauravtb2253">
+    <img src="https://contrib.rocks/image?repo=Gauravtb2253" alt="Gaurav"/> Gaurav
+</a><br>
+<a href="https://github.com/karthik-kiran-29">
+    <img src="https://contrib.rocks/image?repo=karthik-kiran-29" alt="Karthik Kiran"/> Karthik Kiran
+</a><br>
+<a href="https://github.com/ShrishtiSingh26">
+    <img src="https://contrib.rocks/image?repo=ShrishtiSingh26" alt="Shrishti Singh"/> Shrishti Singh
+</a><br>
+<a href="https://github.com/myselfshivams">
+    <img src="https://contrib.rocks/image?repo=myselfshivams" alt="Myself Shivam"/> Myself Shivam
+</a><br>
+<a href="https://github.com/SCR01">
+    <img src="https://contrib.rocks/image?repo=SCR01" alt="SCR01"/> SCR01
+</a><br>
+<a href="https://github.com/Mohitranag18">
+    <img src="https://contrib.rocks/image?repo=Mohitranag18" alt="Mohit Ranag"/> Mohit Ranag
+</a><br>
+<a href="https://github.com/sriharsha0x1">
+    <img src="https://contrib.rocks/image?repo=sriharsha0x1" alt="Sri Harsha"/> Sri Harsha
+</a><br>
+<a href="https://github.com/shreyad2806">
+    <img src="https://contrib.rocks/image?repo=shreyad2806" alt="Shreyad"/> Shreyad
+</a><br>
+<a href="https://github.com/770navyasharma">
+    <img src="https://contrib.rocks/image?repo=770navyasharma" alt="Navya Sharma"/> Navya Sharma
+</a><br>
+
 
 
 By implementing these enhancements, you can make PathSphere more interactive and engaging while keeping it entirely front-end focused. Your contributions will help provide a richer experience for users and make the platform more versatile and useful.
