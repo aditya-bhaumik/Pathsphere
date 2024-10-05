@@ -1,34 +1,46 @@
-# Title With Issue Number
+<!-- Thank you for sending a pull request :heart: -->
 
-Please provide a descriptive title for the pull request.
+## Issues Identification
+
+Closes: #(issue number)
 
 ## Description
 
-Please include a summary of the changes and the related issue. Include relevant motivation and context. List any dependencies required for this change.
+### Summary
+A brief description of what this pull request does and why it is needed.
 
-Fixes #(issue)
+### Details
+Include any detailed information about the changes in this pull request.
 
-## Related Issues
+## Types of Changes
 
-Please link any related issues here.
+_Please check the boxes that apply_
 
-## Type of Change
-
-Please delete options that are not relevant.
-
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Bugfix (non-breaking change that fixes an issue)
+- [ ] New feature (non-breaking change that adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
-
-## Testing
-
-Has this been tested? (Y/N)
+- [ ] Documentation update (Documentation content changed)
+- [ ] Other (please describe):
 
 ## Checklist
 
+_Please check the boxes that apply_
+
 - [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my code
+- [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
 - [ ] My changes generate no new warnings
+- [ ] My changes do not break the current system and pass all existing test cases
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+
+## Screenshots
+
+If applicable, please attach screenshots of the changes made to the user interface.
+
+## Additional Information
+
+Please provide any other information that is relevant to this pull request.
+
+<!-- We're looking forward to merging your contribution!! -->
