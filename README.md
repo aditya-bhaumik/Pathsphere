@@ -81,6 +81,13 @@ PathSphere can be significantly improved with additional front-end features. Her
 
 By implementing these enhancements, you can make PathSphere more interactive and engaging while keeping it entirely front-end focused. Your contributions will help provide a richer experience for users and make the platform more versatile and useful.
 
+### Contibutors
+
+<a href="https://github.com/aditya-bhaumik/Pathsphere/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=aditya-bhaumik/Pathsphere" />
+</a>
+
+Thanks for Contributing!
 
 📄 License
 This project is licensed under the MIT License
