@@ -2,7 +2,7 @@
 <center>
 <img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-PATHSPHERE"/>
 </center>
-**PathSphere** is an open-source platform designed to help students, educators, and professionals access resources such as scholarships, job opportunities, and community discussions. Our goal is to create a comprehensive hub that bridges gaps in educational and career resources.
+__PathSphere__ is an open-source platform designed to help students, educators, and professionals access resources such as scholarships, job opportunities, and community discussions. Our goal is to create a comprehensive hub that bridges gaps in educational and career resources.
 
 <div align="center">
 <p>
