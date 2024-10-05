@@ -1,0 +1,15 @@
+name: Greetings 🐦‍🔥
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Hi there! Thanks for opening this issue. We appreciate your contribution to this open-source project. We aim to respond or assign your issue as soon as possible."
+        pr-message: "Thank you, ${{ github.actor }}, for creating this pull request and contributing to Pathsphere! 💗\n\n The maintainers will review this Pull Request and provide feedback as soon as possible! 😇\nWe appreciate your patience and contribution, Keep up the great work! 😀"
