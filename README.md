@@ -82,89 +82,91 @@ PathSphere can be significantly improved with additional front-end features. Her
 ## Contributors
 
 <a href="https://github.com/aditya-bhaumik/Pathsphere/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=aditya-bhaumik/Pathsphere" alt="Contributors" />
+    <img src="https://contrib.rocks/image?repo=aditya-bhaumik/Pathsphere" />
 </a><br>
 <a href="https://github.com/aditya-bhaumik">
-    <img src="https://contrib.rocks/image?repo=aditya-bhaumik" alt="Aditya Bhaumik"/> Aditya Bhaumik
+    <img src="https://contrib.rocks/image?repo=aditya-bhaumik" /> Aditya Bhaumik
 </a><br>
 <a href="https://github.com/ShireenKachroo">
-    <img src="https://contrib.rocks/image?repo=ShireenKachroo" alt="Shireen Kachroo"/> Shireen Kachroo
+    <img src="https://contrib.rocks/image?repo=ShireenKachroo" /> Shireen Kachroo
 </a><br>
 <a href="https://github.com/Apoorva57">
-    <img src="https://contrib.rocks/image?repo=Apoorva57" alt="Apoorva S"/> Apoorva S
+    <img src="https://contrib.rocks/image?repo=Apoorva57" /> Apoorva S
 </a><br>
 <a href="https://github.com/AmanKumar1115">
-    <img src="https://contrib.rocks/image?repo=AmanKumar1115" alt="Aman Kumar"/> Aman Kumar
+    <img src="https://contrib.rocks/image?repo=AmanKumar1115" /> Aman Kumar
 </a><br>
 <a href="https://github.com/ezDecode">
-    <img src="https://contrib.rocks/image?repo=ezDecode" alt="ezDecode"/> ezDecode
+    <img src="https://contrib.rocks/image?repo=ezDecode" /> ezDecode
 </a><br>
 <a href="https://github.com/sahhoArjun097">
-    <img src="https://contrib.rocks/image?repo=sahhoArjun097" alt="Sahho Arjun"/> Sahho Arjun
+    <img src="https://contrib.rocks/image?repo=sahhoArjun097" /> Sahho Arjun
 </a><br>
 <a href="https://github.com/PavaniKudulla">
-    <img src="https://contrib.rocks/image?repo=PavaniKudulla" alt="Pavani Kudulla"/> Pavani Kudulla
+    <img src="https://contrib.rocks/image?repo=PavaniKudulla" /> Pavani Kudulla
 </a><br>
 <a href="https://github.com/Devanshu1603">
-    <img src="https://contrib.rocks/image?repo=Devanshu1603" alt="Devanshu"/> Devanshu
+    <img src="https://contrib.rocks/image?repo=Devanshu1603" /> Devanshu
 </a><br>
 <a href="https://github.com/rajatsinghal02">
-    <img src="https://contrib.rocks/image?repo=rajatsinghal02" alt="Rajat Singh"/> Rajat Singh
+    <img src="https://contrib.rocks/image?repo=rajatsinghal02" /> Rajat Singh
 </a><br>
 <a href="https://github.com/Pooja3Bhattarai">
-    <img src="https://contrib.rocks/image?repo=Pooja3Bhattarai" alt="Pooja Bhattarai"/> Pooja Bhattarai
+    <img src="https://contrib.rocks/image?repo=Pooja3Bhattarai" /> Pooja Bhattarai
 </a><br>
 <a href="https://github.com/devxMani">
-    <img src="https://contrib.rocks/image?repo=devxMani" alt="Dev Mani"/> Dev Mani
+    <img src="https://contrib.rocks/image?repo=devxMani" /> Dev Mani
 </a><br>
 <a href="https://github.com/Web-Dev-Learner">
-    <img src="https://contrib.rocks/image?repo=Web-Dev-Learner" alt="Web Dev Learner"/> Web Dev Learner
+    <img src="https://contrib.rocks/image?repo=Web-Dev-Learner" /> Web Dev Learner
 </a><br>
 <a href="https://github.com/priyashuu">
-    <img src="https://contrib.rocks/image?repo=priyashuu" alt="Priya Shuu"/> Priya Shuu
+    <img src="https://contrib.rocks/image?repo=priyashuu" /> Priya Shuu
 </a><br>
 <a href="https://github.com/Itachii27">
-    <img src="https://contrib.rocks/image?repo=Itachii27" alt="Itachii27"/> Itachii27
+    <img src="https://contrib.rocks/image?repo=Itachii27" /> Itachii27
 </a><br>
 <a href="https://github.com/Bhanuprakash842">
-    <img src="https://contrib.rocks/image?repo=Bhanuprakash842" alt="Bhanu Prakash"/> Bhanu Prakash
+    <img src="https://contrib.rocks/image?repo=Bhanuprakash842" /> Bhanu Prakash
 </a><br>
 <a href="https://github.com/Sujal1201">
-    <img src="https://contrib.rocks/image?repo=Sujal1201" alt="Sujal T"/> Sujal T
+    <img src="https://contrib.rocks/image?repo=Sujal1201" /> Sujal T
 </a><br>
 <a href="https://github.com/Sapta-Dev27">
-    <img src="https://contrib.rocks/image?repo=Sapta-Dev27" alt="Sapta Dev"/> Sapta Dev
+    <img src="https://contrib.rocks/image?repo=Sapta-Dev27" /> Sapta Dev
 </a><br>
 <a href="https://github.com/BVaishnavi15">
-    <img src="https://contrib.rocks/image?repo=BVaishnavi15" alt="Vaishnavi"/> Vaishnavi
+    <img src="https://contrib.rocks/image?repo=BVaishnavi15" /> Vaishnavi
 </a><br>
 <a href="https://github.com/Gauravtb2253">
-    <img src="https://contrib.rocks/image?repo=Gauravtb2253" alt="Gaurav"/> Gaurav
+    <img src="https://contrib.rocks/image?repo=Gauravtb2253" /> Gaurav
 </a><br>
 <a href="https://github.com/karthik-kiran-29">
-    <img src="https://contrib.rocks/image?repo=karthik-kiran-29" alt="Karthik Kiran"/> Karthik Kiran
+    <img src="https://contrib.rocks/image?repo=karthik-kiran-29" /> Karthik Kiran
 </a><br>
 <a href="https://github.com/ShrishtiSingh26">
-    <img src="https://contrib.rocks/image?repo=ShrishtiSingh26" alt="Shrishti Singh"/> Shrishti Singh
+    <img src="https://contrib.rocks/image?repo=ShrishtiSingh26" /> Shrishti Singh
 </a><br>
 <a href="https://github.com/myselfshivams">
-    <img src="https://contrib.rocks/image?repo=myselfshivams" alt="Myself Shivam"/> Myself Shivam
+    <img src="https://contrib.rocks/image?repo=myselfshivams" /> Myself Shivam
 </a><br>
 <a href="https://github.com/SCR01">
-    <img src="https://contrib.rocks/image?repo=SCR01" alt="SCR01"/> SCR01
+    <img src="https://contrib.rocks/image?repo=SCR01" /> SCR01
 </a><br>
 <a href="https://github.com/Mohitranag18">
-    <img src="https://contrib.rocks/image?repo=Mohitranag18" alt="Mohit Ranag"/> Mohit Ranag
+    <img src="https://contrib.rocks/image?repo=Mohitranag18" /> Mohit Ranag
 </a><br>
 <a href="https://github.com/sriharsha0x1">
-    <img src="https://contrib.rocks/image?repo=sriharsha0x1" alt="Sri Harsha"/> Sri Harsha
+    <img src="https://contrib.rocks/image?repo=sriharsha0x1" /> Sri Harsha
 </a><br>
 <a href="https://github.com/shreyad2806">
-    <img src="https://contrib.rocks/image?repo=shreyad2806" alt="Shreyad"/> Shreyad
+    <img src="https://contrib.rocks/image?repo=shreyad2806" /> Shreyad
 </a><br>
 <a href="https://github.com/770navyasharma">
-    <img src="https://contrib.rocks/image?repo=770navyasharma" alt="Navya Sharma"/> Navya Sharma
+    <img src="https://contrib.rocks/image?repo=770navyasharma" /> Navya Sharma
 </a><br>
+
+
 
 
 
