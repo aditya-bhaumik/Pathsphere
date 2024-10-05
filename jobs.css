@@ -90,6 +90,9 @@ nav a:hover {
     top: 10px;
     color: #888;
 }
+.content-wrapper{
+    flex: 1;
+}
 .job-list {
     display: flex;
     flex-wrap: wrap;
@@ -101,11 +104,16 @@ nav a:hover {
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
-    width: 300px;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     background-color:  var(--primary-color);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
+
 .job-item:hover {
     transform: scale(1.05);
 }
@@ -148,9 +156,7 @@ nav a:hover {
     .search-bar input {
         width: 80%;
     }
-    .job-item {
-        width: 100%;
-    }
+
 }
 /*-----------job listings-----------*/ 
 * {
@@ -253,15 +259,7 @@ nav a:hover {
     text-align: center;
 }
 
-.job-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-}
+
 
 .card {
     width: 100%;
@@ -338,21 +336,131 @@ nav a:hover {
     background-color: #4CAF50; /* Green color on hover */
 }
 
-@media (max-width: 600px) {
+
+
+
+/* Medium screens (600px - 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
     .card-body h5 {
+        font-size: 22px;
+    }
+
+    .card-body h6 {
+        font-size: 18px;
+    }
+
+    .card-body p {
+        font-size: 15px;
+    }
+
+    .apply-btn button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+/* Large screens (900px - 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+    .card {
+        width: 280px; /* Fixed width for larger screens */
+    }
+
+    .card-body h5 {
+        font-size: 24px;
+    }
+
+    .card-body h6 {
+        font-size: 18px;
+    }
+
+    .card-body p {
+        font-size: 16px;
+    }
+
+    .apply-btn {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .apply-btn button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Extra large screens (1200px - 1400px) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .card {
+        width: 320px; /* Larger fixed width for big screens */
+    }
+
+    .card-body h5 {
+        font-size: 26px;
+    }
+
+    .card-body h6 {
         font-size: 20px;
+    }
+
+    .card-body p {
+        font-size: 18px;
+    }
+
+    .apply-btn button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    .job-listings {
+        padding: 30px 90px;
+        width: 100%;
+        margin: auto;
+    }
+    .job-item {
+        padding: 15px;
+      
+        margin-bottom: 20px; /* Remove margins to take up full width */
+        width: 100% !important; /* Set width to viewport width for full screen coverage */
+    }
+
+    .card {
+        width: 100%; /* Full width card */
+        padding: 10px;
+    }
+
+    .card-body {
+        padding: 15px;
+        text-align: center; /* Center-align text for mobile */
+    }
+
+    .card-body h5 {
+        font-size: 20px; /* Slightly larger for readability */
     }
 
     .card-body h6 {
         font-size: 16px;
     }
-
     .card-body p {
         font-size: 14px;
     }
 
+    .apply-btn {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
     .apply-btn button {
-        padding: 6px 16px;
+        padding: 12px 20px;
         font-size: 14px;
+        margin-top: 10px;
+        width: 90%; /* Button takes up nearly full width */
+    }
+
+    .location {
+        font-size: 12px;
+        margin-bottom: 10px;
     }
 }
