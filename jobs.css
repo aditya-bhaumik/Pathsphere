@@ -14,34 +14,8 @@ body {
     --primary-color:#000000;
     --secondary-color:#f4f4f4;
 }
-header {
-    background-color:  var(--primary-color);
-    padding: 20px;
-    color:  var(--secondary-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 80px;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav .logo img {
-    width: 50px;
-    margin-right: 10px;
-}
-nav a {
-    color:  var(--secondary-color);
-    text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s;
-}
-nav a:hover {
-    color: red;
-    border-radius: 5px;
-}
+
+
 .hero-class {
     background-image: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
