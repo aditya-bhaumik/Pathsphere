@@ -1,4 +1,4 @@
-Name: 🐞 Bug Report
+name: 🐞 Bug Report
 ---
 description: Report a bug found in the Pathsphere source code
 labels: ["bug", "GSSoC24 Extd."]
