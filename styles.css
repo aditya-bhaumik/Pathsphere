@@ -129,7 +129,7 @@
     color: #7965ea;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     nav ul li a:hover {
       color: #ff6f61;
       background-color: rgba(
