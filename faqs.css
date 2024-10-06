@@ -29,19 +29,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.logo,
-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 0.25rem;
-}
-#icon,
-img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
+
 input,
 button,
 textarea {
