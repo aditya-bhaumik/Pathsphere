@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
 * {
   padding: 0px;
   margin: 0px;
@@ -17,7 +17,7 @@ body {
 }
 body {
   line-height: 1;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -60,7 +60,7 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
 }
-[class*="__container"] {
+[class*='__container'] {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 15px;
@@ -100,7 +100,7 @@ h6 {
 }
 
 .title::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -239,7 +239,7 @@ h6 {
   }
 }
 .accordions__icon::before {
-  content: "";
+  content: '';
   width: 1.5625rem;
   height: 0.3125rem;
   background-color: #191a23;
@@ -255,7 +255,7 @@ h6 {
   }
 }
 .accordions__icon::after {
-  content: "";
+  content: '';
   width: 1.5625rem;
   height: 0.3125rem;
   background-color: #191a23;
@@ -315,7 +315,7 @@ h6 {
 }
 
 .darkmode .faq-container {
-  background-color: #333; 
+  background-color: #333;
   color: black;
 }
 
@@ -330,7 +330,7 @@ h6 {
     padding: 0.5rem;
   }
   .accordions__title {
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
   .process__title {
     display: flex;
@@ -338,7 +338,8 @@ h6 {
     align-items: center;
   }
 }
-.accordions__number, .accordions__title {
+.accordions__number,
+.accordions__title {
   color: black;
 }
 

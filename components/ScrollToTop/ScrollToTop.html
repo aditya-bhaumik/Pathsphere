@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <base href="/Pathsphere/"> -->
+    <!-- uncomment above line if deploying to github pages -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="scroll-up-btn">
+      <span class="material-symbols-outlined"> arrow_upward </span>
+    </button>
+    <script>
+      const btn = document.querySelector('.scroll-up-btn');
+      btn.addEventListener('click', () => {
+        document.documentElement.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      });
+    </script>
+  </body>
+  <script src="/components/ScrollToTop/ScrollToTop.js"></script>
+</html>
