@@ -13,39 +13,16 @@
     <!-- <style>
         Removed css code from here and created a new file jobs.css
     </style> -->
-    <script>
-      // Function to filter jobs based on search input
-      function filterJobs() {
-        const input = document
-          .getElementById('searchInput')
-          .value.toLowerCase();
-        const items = document.getElementsByClassName('job-item');
-
-        Array.from(items).forEach((item) => {
-          const title = item
-            .getElementsByTagName('h2')[0]
-            .textContent.toLowerCase();
-          if (title.includes(input)) {
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      }
-
-      // Function to simulate the application process
-      function applyForJob(jobTitle) {
-        alert(`You have applied for the ${jobTitle}.`);
-      }
-    </script>
 
     <!-- >>>>>>> main -->
   </head>
   <body>
     <main style="position: absolute">
-      <section class="hero">
-        <h1>Jobs</h1>
-        <p>Explore job opportunities for educators and professionals.</p>
+      <section class="hero-class" id="job-hero-section">
+        <div class="hero-class-inner">
+          <h1>Jobs</h1>
+          <p>Explore job opportunities for educators and professionals.</p>
+        </div>
       </section>
 
       <div class="search-bar">
@@ -53,7 +30,7 @@
         <button id="search-button">Search</button>
       </div>
       <div class="job-listings">
-        <h3>Job Listings</h3>
+        <h2>Job Listings</h2>
         <div id="jobs" class="main">
           <!-- Cards will be generated here by JavaScript -->
         </div>
