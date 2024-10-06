@@ -924,3 +924,39 @@
       opacity: 0; 
   }
 }
+
+
+/* Styling of key features  of PathSphere */
+
+.text-content h3{
+  text-align: center;
+  margin-top: 10px;
+}
+.text-content .para{
+  text-align: center;
+}
+.feature-list{
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-left: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-list h6 , p{
+  text-align: center;
+}
+
+.feature-list i {
+  margin-left: 30px;
+}
+
+.feature-info{
+  /* border: 2px solid red; */
+  padding: 50px;
+  gap: 2;
+  text-align: center;
+  
+}
