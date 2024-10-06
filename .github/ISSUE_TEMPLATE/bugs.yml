@@ -1,0 +1,74 @@
+name: '🐞 Bug Report'
+description: 'Report a bug found in the Pathsphere source code'
+labels: ['bug', 'GSSoC24 Extd.']
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 'Description'
+      description: 'A brief description of the issue, including what you tried and what did not work.'
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: 'Steps to Reproduce'
+      description: 'Please list the steps needed to reproduce the issue.'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: 'Expected Behavior'
+      description: 'Describe what you expected to happen.'
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: 'Actual Behavior'
+      description: 'Describe what actually happened.'
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 'Screenshots'
+      description: 'Please add screenshots if applicable (recommended).'
+
+  - type: textarea
+    id: additional_information
+    attributes:
+      label: 'Additional Information'
+      description: 'Is there anything else we should know about this bug?'
+
+  - type: checkboxes
+    id: browser
+    attributes:
+      label: 'What browser are you seeing the problem on?'
+      options:
+        - label: 'Firefox'
+        - label: 'Chrome'
+        - label: 'Safari'
+        - label: 'Microsoft Edge'
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 'Checklist'
+      description: 'Please ensure you have completed the following:'
+      options:
+        - label: 'I have checked the [existing issues](https://github.com/aditya-bhaumik/Pathsphere/issues)'
+          required: true
+        - label: 'I have read the [Contributing Guidelines](https://github.com/aditya-bhaumik/Pathsphere/blob/main/contributing.md)'
+          required: true
+        - label: 'I want to work on this issue. (optional)'
+
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you for taking the time to report this issue! Your feedback is greatly appreciated.**
+
+        You can also join the Discord community [here](https://discord.gg/FZxBRpTEeH).
+        Feel free to check out other amazing repositories of the Techsphere [here](https://github.com/aditya-bhaumik/Pathsphere).

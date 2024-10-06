@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Jobs</title>
     <!-- Added a favicon -->
 	<link rel="icon" type="image/x-icon" href="images\pathsphere.png">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="jobs.css">
@@ -16,6 +18,13 @@
     </style> -->
     <script>
         // Function to filter jobs based on search input
+
+	    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('active');
         function filterJobs() {
             const input = document.getElementById('searchInput').value.toLowerCase();
             const items = document.getElementsByClassName('job-item');
@@ -39,25 +48,42 @@
     
 <!-- >>>>>>> main -->
 </head>
+
 <body>
-    <header>
-        <nav style="position: relative; bottom: 10px;">
-            <a href="index.html" class="logo"><img src="/P (1).png" alt="PathSphere Logo"> PathSphere</a>          
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="scholarships.html">Scholarships</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-            <img src="images/dark.png" id="icon" alt="">
-        </nav>
-    </header>
+ 
+   <header>
+
+    <nav id="navbar"> <!-- Add an ID to the nav -->
+      <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
+      <ul id="tabs">
+        <li class="tab"><a href="index.html">Home</a></li>
+        <li class="tab"><a href="scholarships.html">Scholarships</a></li>
+        <li class="tab"><a href="jobs.html">Jobs</a></li>
+        <li class="tab"><a href="forum.html">Forum</a></li>
+        <li class="tab"><a href="faqs.html">FAQs</a></li>
+        <li class="tab"><a href="blog.html">Blog</a></li>
+      </ul>
+
+      </nav>
+      <div class="cursor"></div>
+
+
+      <img src="images/dark.png" id="icon" alt="">
+
+    </nav>
+  </header>
     <main style="position: absolute;">
-        <section class="hero">
-            <h1>Jobs</h1>
-            <p>Explore job opportunities for educators and professionals.</p>
+        <section class="hero-class" id = "job-hero-section">
+            <div class="hero-class-inner">
+                <h1>Jobs</h1>
+                <p>Explore job opportunities for educators and professionals.</p>
+            </div>
         </section>
         
         <div class="search-bar">
@@ -66,41 +92,53 @@
         </div>
         <div class="job-listings">
             
-            <h3>Job Listings</h3>
+            <h2>Job Listings</h2>
             <div id="jobs" class="main">
                 <!-- Cards will be generated here by JavaScript -->
             </div>
         </div>
     </main>
 
-    <div class="footer-container" style="position: relative; top: 3000px;">
+    <div class="footer-container" style="position: relative; top: 3700px;">
         <div class="footer-description">
             <h3>PathSphere</h3>
-            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and educators with job openings. It features dynamic search tools and community discussions to enhance access to educational and career resources.</p>
+            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and
+                educators with job openings. It features dynamic search tools and community discussions to enhance
+                access to educational and career resources.</p>
         </div>
         <div class="footer-list">
             <h3>Quick Links</h3>
             <ul>
+
                 <li><a href="index.html" style="color:  var(--secondary-color);">Home</a></li>
                 <li><a href="scholarships.html" style="color:  var(--secondary-color);">Scholarships</a></li>
                 <li><a href="jobs.html" style="color:  var(--secondary-color);">Jobs</a></li>
+                <li><a href="about.html"  style="color:  var(--secondary-color);">About Us</a></li>  
                 <li><a href="forum.html" style="color:  var(--secondary-color);">Forum</a></li>
+
             </ul>
         </div>
         <div class="footer-list">
             <h3>Follow Us On</h3>
-            <ul class="social-icons">
-                <li><a href="https://github.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com" target="_blank" style="color:  var(--secondary-color);"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank" style="color:  var(--secondary-color);"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
+            <div class="social-icons">
+                <ul>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </ul>
+              </div>
         </div>
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+    <button class="scroll-up-btn">
+        <span class="material-symbols-outlined">
+arrow_upward
+</span>  </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
     <script src="jobs.js"></script>
+    <!-- Add this code before the closing body tag -->
 </body>
 </html>
