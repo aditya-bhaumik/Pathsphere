@@ -14,36 +14,51 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="cursor.css">
 </head>
 
 <body>
-   <header>
-
-    <nav id="navbar"> <!-- Add an ID to the nav -->
-      <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
-      <button class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="menu">
-      <ul id="tabs">
-        <li class="tab"><a href="index.html">Home</a></li>
-        <li class="tab"><a href="scholarships.html">Scholarships</a></li>
-        <li class="tab"><a href="jobs.html">Jobs</a></li>
-        <li class="tab"><a href="forum.html">Forum</a></li>
-        <li class="tab"><a href="faqs.html">FAQs</a></li>
-        <li class="tab"><a href="blog.html">Blog</a></li>
-      </ul>
-
-      </nav>
-      <div class="cursor"></div>
 
 
-      <img src="images/dark.png" id="icon" alt="">
+    <div class="cursor"></div> 
+    <div class="cursor-tail"></div>
+    <div class="small-dots">
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+    </div>
 
-    </nav>
-  </header>
+    <script src="cursor.js" defer></script>
+   
+
+    <header>
+
+        <nav id="navbar">
+            <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="menu"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        
+            <img src="images/dark.png" id="icon" alt="">
+        </nav>
+    </header>
+
     <main>
         <section class="hero">
             <h1>Forum</h1>

@@ -12,64 +12,76 @@
   <!-- Added a favicon -->
   <link rel="icon" type="image/x-icon" href="images\pathsphere.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Added a favicon -->
+	  <link rel="icon" type="image/x-icon" href="images\pathsphere.png">
+    <link rel="stylesheet" type="text/css" href="cursor.css">
+    <link rel="stylesheet" href="styles.css">  
 
-  <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body id="blog-page"> <!-- or class="blog-page" -->
+
+
+
+    <div class="cursor"></div> 
+    <div class="cursor-tail"></div>
+    <div class="small-dots">
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+        <div class="small-dot"></div>
+    </div>
+
+    <script src="cursor.js" defer></script>
+
+
   <button class="scroll-up-btn">
-   <span class="material-symbols-outlined">
-arrow_upward
-</span>
-  </button>
+        <i class="arrow-up" style=" width: 15px; height: 15px;"></i>
+   </button> 
+    <header>
 
-  
-  <header>
+        <nav id="navbar"> <!-- Add an ID to the nav -->
+            <a href="index.html" class="logo">PathSphere</a>
 
-    <nav id="navbar"> <!-- Add an ID to the nav -->
-      <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
-      <button class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="menu">
-      <ul id="tabs">
-        <li class="tab"><a href="index.html">Home</a></li>
-        <li class="tab"><a href="scholarships.html">Scholarships</a></li>
-        <li class="tab"><a href="jobs.html">Jobs</a></li>
-        <li class="tab"><a href="forum.html">Forum</a></li>
-        <li class="tab"><a href="faqs.html">FAQs</a></li>
-        <li class="tab"><a href="blog.html">Blog</a></li>
-      </ul>
+             <ul>
 
-      </nav>
-      <div class="cursor"></div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#faqs">FAQs</a></li>
 
+                <li><a href="blog.html">Blog</a></li> <!-- Include blog in the nav -->
+            </ul>
 
-      <img src="images/dark.png" id="icon" alt="">
+            <img src="images/dark.png" id="icon" alt="">
 
-    </nav>
-  </header>
+        </nav>
+    </header>
 
-  <main>
+    <main>
 
-    <section class="hero">
-      <div class="left">
-        <h1>Welcome to PathSphere</h1>
-        <p>Your gateway to educational and professional resources</p>
+ <section class="hero">
+            <div class="left">
+            <h1>Welcome to PathSphere</h1>
+            <p>Your gateway to educational and professional resources</p>
 
-        <div class="search-container">
-          <a href="scholarships.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            Find Scholarships
-          </a>
+            <div class="search-container">
+                <a href="scholarships.html" class="btn">
+                 <i class="fa-solid fa-magnifying-glass"></i>
+                  Find Scholarships
+              </a>
+            
+         <a href="jobs.html" class="btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+		 Find Jobs
+         </a>
+           </div>
 
-          <a href="jobs.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            Find Jobs
-          </a>
-        </div>
     </section>
     <section class="features">
       <div class="feature">
