@@ -89,6 +89,15 @@ PathSphere can be significantly improved with additional front-end features. Her
 8. **💡Localization and Theming**:
    - Add support for multiple themes (e.g., light and dark mode) using CSS variables and JavaScript.
    - Implement localization by allowing users to select different languages for the interface, using JavaScript to switch between different language files.<br>
+## 🛠️ Tech Stack
+
+- **HTML5**: For structuring the content of the web pages, ensuring semantic and accessible markup.
+- **CSS3**: To design and style the user interface, providing responsive and visually appealing layouts.
+- **JavaScript**: For adding interactivity, dynamic content, and enhancing user experience on the front-end.
+- **Git**: Version control to track changes in code, enabling collaboration and code history management.
+- **GitHub**: For hosting repositories, facilitating collaboration, and enabling continuous integration and deployment workflows.
+- **Docker**: Containerization for ensuring consistent development, testing, and production environments. It allows packaging the application along with its dependencies for seamless deployment across different platforms.<br>
+
 
 ## 🚀 How to Contribute to This Project 🚀
 
