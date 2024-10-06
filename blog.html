@@ -7,6 +7,7 @@
     <title>Blogs</title>
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="images\pathsphere.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,7 +28,7 @@
             font-size: 36px;
             color: #333;
             margin-bottom: 30px;
-            margin-top: 30px;
+            /* margin-top: 30px; */
         }
 
         .heading span {
@@ -81,8 +82,8 @@
         .newsletter {
             height: 150px;
             width: 100%;
-            background-color: bisque;
-            margin-top: 30px;
+            background-color: #f9f9f9;
+            margin: 30px 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -142,7 +143,7 @@
 
         .copyright {
             font-size: 1rem;
-            margin-top: 40px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
 
@@ -180,22 +181,41 @@
     
 
     <header>
-        <nav>
-            <a href="index.html" class="logo">PathSphere</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="scholarships.html">Scholarships</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="faqs.html">FAQs</a></li> <!--fixed the FAQ issue#112 -->
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-            <img src="images/dark.png" id="icon" alt="">
-        </nav>
-    </header>
+
+    <nav id="navbar"> <!-- Add an ID to the nav -->
+      <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
+      <ul id="tabs">
+        <li class="tab"><a href="index.html">Home</a></li>
+        <li class="tab"><a href="scholarships.html">Scholarships</a></li>
+        <li class="tab"><a href="jobs.html">Jobs</a></li>
+        <li class="tab"><a href="forum.html">Forum</a></li>
+        <li class="tab"><a href="faqs.html">FAQs</a></li>
+        <li class="tab"><a href="blog.html">Blog</a></li>
+      </ul>
+
+      </nav>
+      <div class="cursor"></div>
+
+
+      <img src="images/dark.png" id="icon" alt="">
+
+    </nav>
+  </header>
 
     <main>
+        <!-- hero section -->
+        <section class="hero">
+            <div class="left">
+            <h1>Scholarship Blogs</h1>
+            <p>Your Ultimate Guide to Scholarships: Funding Your Dreams Made Easy</p>
+           </div>
+        </section>
 
         <!-- Blogs Section Starts Here -->
         <section class="blogs-section" id="blogs">
@@ -293,11 +313,43 @@
             </div>
         </div>
     </main>
+    <!-- footer section -->
+    <div class="footer-container">
+        <div class="footer-description">
+            <h3>PathSphere</h3>
+            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and
+                educators with job openings. It features dynamic search tools and community discussions to enhance
+                access to educational and career resources.</p>
+        </div>
+        <div class="footer-list">
+            <h3>Quick links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+        </div>
+        <div class="footer-list">
+            <h3>Follow us on</h3>
+            <div class="social-icons">
+                <ul>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </ul>
+              </div>
+        </div>
+    </div>
 
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    <button id="scroll-to-top" title="Scroll to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <button class="scroll-up-btn">
+        <span class="material-symbols-outlined">
+            arrow_upward
+            </span>  </button>
     <script>
         document.querySelectorAll('.like-button').forEach(button => {
             button.addEventListener('click', function () {

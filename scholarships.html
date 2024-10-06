@@ -8,6 +8,7 @@
     <title>Scholarships</title>
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="images\pathsphere.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -60,38 +61,6 @@
         .darkmode {
             --primary-color: #333;
             --secondary-color: #f4f4f4;
-        }
-
-        header {
-            padding: 20px;
-            color: var(--secondary-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 40px;
-        }
-
-        nav .logo img {
-            width: 50px;
-            margin-right: 10px;
-        }
-
-        nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            padding: 10px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            color: red;
-            border-radius: 5px;
         }
 
         .hero {
@@ -247,24 +216,36 @@
 
     
     <header>
-        <nav>
-            <a href="index.html" class="logo"><img src="/P (1).png" alt="PathSphere Logo"> PathSphere</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="scholarships.html">Scholarships</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="blog.html">Blog</a></li>
 
-            </ul>
-            <img src="images/dark.png" id="icon" alt="">
-        </nav>
-    </header>
+    <nav id="navbar"> <!-- Add an ID to the nav -->
+      <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
+      <ul id="tabs">
+        <li class="tab"><a href="index.html">Home</a></li>
+        <li class="tab"><a href="scholarships.html">Scholarships</a></li>
+        <li class="tab"><a href="jobs.html">Jobs</a></li>
+        <li class="tab"><a href="forum.html">Forum</a></li>
+        <li class="tab"><a href="faqs.html">FAQs</a></li>
+        <li class="tab"><a href="blog.html">Blog</a></li>
+      </ul>
+
+      </nav>
+      <div class="cursor"></div>
+
+
+      <img src="images/dark.png" id="icon" alt="">
+
+    </nav>
+  </header>
     <main style="position: absolute;">
         <section class="hero">
             <h1>Scholarships</h1>
+            
             <p>Find scholarships that match your academic profile and needs.</p>
         </section>
 
@@ -382,9 +363,10 @@
         </div>
     </div>
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    <button id="scroll-to-top" title="Scroll to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <button class="scroll-up-btn">
+        <span class="material-symbols-outlined">
+            arrow_upward
+            </span>    </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
