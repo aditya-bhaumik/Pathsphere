@@ -12,14 +12,14 @@
 </head>
 <!-- Add an ID to the body tag or a specific class to the blog section -->
 
-<body id="blog-page"> <!-- or class="blog-page" -->
+<body> <!-- or class="blog-page" -->
 
-  <main>
+    <main>
 
-    <section class="hero">
-      <div class="left">
-        <h1>Welcome to PathSphere</h1>
-        <p>Your gateway to educational and professional resources</p>
+  <section class="hero">
+            <div class="left">
+            <h1>Welcome to PathSphere</h1>
+            <p>Your gateway to educational and professional resources</p>
 
         <div class="search-container">
           <a href="/pages/scholarships/scholarships.html" class="btn">
@@ -33,8 +33,7 @@
           </a>
         </div>
     </section>
-    <section class="features">
-      <div class="feature">
+
     <section class="features">
       <div class="feature">
 
@@ -110,9 +109,6 @@
             </div>
           </div>
         </div>
-        <div class="image-content">
-          <img src="/images/features.png" alt="PathSphere Features">
-        </div>
       </div>
     </div>
     </section>
@@ -123,6 +119,7 @@
   </script>
   <script>
     prependComponent("Navbar");
+    prependComponent('Cursor');
     prependComponent("ScrollToTop");
     appendComponent("Footer");
   </script>

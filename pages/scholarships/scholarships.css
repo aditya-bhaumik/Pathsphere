@@ -141,3 +141,55 @@ nav a:hover {
     width: 100%;
   }
 }
+
+@media (max-width: 800px) {
+  .footer-container {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .footer-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #0077b5;
+  }
+}
