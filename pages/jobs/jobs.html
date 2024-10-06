@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <base href="/Pathsphere/"> -->
+    <!-- uncomment above line if deploying to github pages -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs</title>
+    <!-- Added a favicon -->
+    <link rel="icon" type="image/x-icon" href="../..images\pathsphere.png" />
+    <link rel="stylesheet" href="./jobs.css" />
+    <!-- <<<<<<< enhanceFAQ -->
+    <!-- <style>
+        Removed css code from here and created a new file jobs.css
+    </style> -->
+
+    <!-- >>>>>>> main -->
+  </head>
+  <body>
+    <main style="position: absolute">
+      <section class="hero-class" id="job-hero-section">
+        <div class="hero-class-inner">
+          <h1>Jobs</h1>
+          <p>Explore job opportunities for educators and professionals.</p>
+        </div>
+      </section>
+
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search jobs..." />
+        <button id="search-button">Search</button>
+      </div>
+      <div class="job-listings">
+        <h2>Job Listings</h2>
+        <div id="jobs" class="main">
+          <!-- Cards will be generated here by JavaScript -->
+        </div>
+      </div>
+    </main>
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+      prependComponent('Navbar');
+      prependComponent('Cursor');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+    </script>
+    <script src="./jobs.js"></script>
+  </body>
+</html>
