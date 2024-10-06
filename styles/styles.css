@@ -104,7 +104,10 @@ nav {
 
 .logo:hover {
   color: #ff6f61;
+ 
+  
 }
+
 #icon {
   width: 30px;
   cursor: pointer;
@@ -310,6 +313,12 @@ main {
 .hero .left {
   width: 60%;
 }
+.hero .left h1 {
+  font-size: 50px;
+  text-shadow: #007bff;
+}
+
+
 .hero .right {
   width: 40%;
 }
