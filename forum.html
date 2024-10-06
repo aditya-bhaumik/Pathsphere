@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
     <div class="cursor"></div> 
     <div class="cursor-tail"></div>
     <div class="small-dots">
@@ -27,11 +28,21 @@
         <div class="small-dot"></div>
         <div class="small-dot"></div>
     </div>
+
     <script src="cursor.js" defer></script>
    
+
     <header>
-        <nav>
-            <a href="index.html" class="logo"><img src="/P (1).png">PathSphere</a>
+
+        <nav id="navbar">
+            <a href="index.html" class="logo"><img src="logo.png" alt="PathSphere Logo"> PathSphere</a>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="menu"> 
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="scholarships.html">Scholarships</a></li>
@@ -41,6 +52,8 @@
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
+        </nav>
+        
             <img src="images/dark.png" id="icon" alt="">
         </nav>
     </header>
