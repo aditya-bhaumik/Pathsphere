@@ -323,7 +323,8 @@
     padding: 10px;
   }
   .hero .left {
-    width: 60%;
+    width: 50%; 
+    text-align: left;
   }
   .hero .right {
     width: 40%;
