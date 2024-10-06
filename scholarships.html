@@ -145,8 +145,57 @@
             color: var(--secondary-color);
             padding: 20px;
             text-align: center;
+            
             margin-top: 20px;
         }
+  @media (max-width:800px) {
+            .footer-container {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+            display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+            margin-top: 20px;
+        }
+        .footer-description{
+            display: flex;
+           flex-direction: column;
+           justify-content: center;
+        }
+        .footer-list{
+            display: flex;
+            flex-direction: column;
+        }
+        .social-icons {
+    display: flex;                
+    justify-content: center;      
+    align-items: center;          
+    padding: 10px;              
+}
+
+.social-icons ul {
+    list-style: none;           
+    padding: 0;                
+    margin: 0;                  
+    display: flex;               
+}
+
+.social-icons a {
+    margin: 0 10px;            
+    color: #333;             
+    text-decoration: none;         
+    font-size: 24px;              
+    transition: color 0.3s;       
+}
+
+.social-icons a:hover {
+    color: #0077b5;              
+}
+ 
+}
 
         .footer-list {
             margin: 20px 0;
@@ -313,10 +362,10 @@
                 <p>Deadline: July 15, 2024</p>
                 <a href="#" class="apply-btn" onclick="applyForScholarship('Veteran Scholarship')">Apply Now</a>
             </div>
+            
         </section>
-    </main>
-
-    <div class="footer-container" style="position: relative; top:1700px; border-top: 1px solid black;">
+        
+    <div class="footer-container" style="position: relative; border-top: 1px solid  black;">
         <div class="footer-description">
             <h3>PathSphere</h3>
             <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and
@@ -337,15 +386,18 @@
             <h3>Follow Us On</h3>
             <div class="social-icons">
                 <ul>
-                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="#"><i class="fa-brands fa-github"></i></a>
-                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 </ul>
-              </div>
+            </div>
         </div>
+        
     </div>
+    </main>
+
     <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
     <button class="scroll-up-btn">
         <span class="material-symbols-outlined">
