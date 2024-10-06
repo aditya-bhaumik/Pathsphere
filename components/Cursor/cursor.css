@@ -1,0 +1,92 @@
+body {
+  cursor: none; /* Hide the default cursor */
+  background-color: #f0f0f0; /* Background color */
+}
+
+.cursor {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #ff0707; /* Cursor color */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent cursor from interacting with elements */
+  transition: transform 0.01s ease-out;
+  animation: pulse 1s infinite;
+  z-index: 10001;
+}
+
+.cursor-copy {
+  position: fixed;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #ff0707; /* Cursor color */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent cursor from interacting with elements */
+  transition: transform 0.01s ease-out;
+  animation: pulse 1s infinite;
+  z-index: 10001;
+}
+
+.cursor-copy::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(226, 106, 106, 0.2); /* Hover color */
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.1s ease-out;
+}
+
+.cursor:hover::before {
+  transform: scale(1);
+}
+.cursor-tail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(121, 67, 5, 0.2); /* Tail color */
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  filter: blur(8px); /* Blur effect */
+}
+.small-dots {
+  position: absolute;
+  pointer-events: none; /* Prevent small dots from interacting with elements */
+}
+
+.small-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+
+  background-color: #b75d04; /* Small dot color */
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* You can add more styles and animations here */
