@@ -496,6 +496,14 @@
   background-color: #fffefe;
   box-shadow: 0 0 25px #0c0909ef;
 }
+.copyright {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
   .footer-container {
@@ -672,10 +680,8 @@
   }
   
   .forum-post:hover {
-  /* <<<<<<< enhanceFAQ */
     background-color: var(--primary-color);
       background-color:  var(--primary-color);
-  /* >>>>>>> main */
   }
   .blog-post h2 {
     margin-bottom: 0.5rem;
@@ -729,11 +735,8 @@
     background-color: #0056b3;
   
   html { scroll-behavior: smooth; }
-  
-  
+   
   }
-  
-  
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -927,5 +930,91 @@
       pointer-events: none; 
       transition: all 0.3s ease; 
       opacity: 0; 
+  }
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #333;
+}
+
+.text-content p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.feature-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-item i {
+  font-size: 2em;
+  color: #007bff;
+  margin-right: 20px;
+}
+
+.feature-item h6 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+  text-align: left;
+}
+
+.feature-item p {
+  margin: 5px 0 0;
+  color: #666;
+  text-align: left;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .feature-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-item {
+    flex: 1 1 100%;
   }
 }
