@@ -469,8 +469,12 @@ footer {
   color: var(--secondary-color);
 }
 
+.social-icons {
+  display: flex;
+}
 .social-icons a {
   display: inline-flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 2.5rem;
@@ -576,7 +580,7 @@ footer {
     .footer-container {
       padding: 20px;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
 
     .footer-list,
