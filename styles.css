@@ -37,7 +37,6 @@
   }
   
   .scroll-up-btn {
-    all: unset;
     position: fixed;
     bottom: 25px;
     right: 30px;
@@ -45,19 +44,9 @@
     width: 40px;
     background-color:#ffa500;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
+    border: none;
     justify-content: center;
     cursor: pointer;
-  }
-  .scroll-up-btn .arrow-up {
-    width:23px;
-    height:23px;
-    border-left: 3px solid #f9f9f9;
-    border-bottom: 3px solid #f9f9f9;
-    transform: rotate(135deg);
-    margin-bottom: -9px;
-    pointer-events: none;
   }
   body {
     font-family: Arial, sans-serif;
