@@ -80,17 +80,54 @@ nav a:hover {
   background-color: var(--primary-color);
   color: black;
   font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.scholarship-item h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+
+.scholarship-item:hover {
+  transform: scale(1.05);
 }
 
-.scholarship-item p {
+.scholarship-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.scholarship-content {
+  padding: 20px;
+}
+
+.scholarship-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.scholarship-content p {
+  font-size: 14px;
+  color: #555;
   margin: 5px 0;
-  font-size: 1.1em;
-  color: black;
+}
+
+.scholarship-content p strong {
+  font-weight: bold;
+}
+
+.apply-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 150px;
+
 }
 
 .scholarship-item .apply-btn {
