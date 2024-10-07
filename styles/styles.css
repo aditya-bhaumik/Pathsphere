@@ -504,7 +504,7 @@ footer {
   font-size: small;
 }
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (min-width: 768px) { /*changed max-width to min-width*/
   .footer-container {
     display: flex;
     align-items: flex-start;
