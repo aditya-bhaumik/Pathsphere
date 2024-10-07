@@ -3,11 +3,9 @@
   <head>
     <!-- <base href="/Pathsphere/"> -->
     <!-- uncomment above line if deploying to github pages -->
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scholarships</title>
-    <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png" />
     <link rel="stylesheet" href="./scholarships.css" />
   </head>
@@ -15,12 +13,10 @@
     <main>
       <section class="hero">
         <h1>Scholarships</h1>
-
         <p>Find scholarships that match your academic profile and needs.</p>
       </section>
 
       <div class="search-bar">
-        <!-- <i class="fas fa-search"></i> -->
         <input
           type="text"
           id="searchInput"
@@ -31,127 +27,143 @@
       </div>
 
       <section class="scholarship-list">
+        <!-- Scholarship Item 1 -->
         <div class="scholarship-item">
           <h2>Global Student Scholarship</h2>
           <p>Amount: $5,000</p>
           <p>Eligibility: International students with a GPA above 3.0</p>
           <p>Deadline: December 31, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Global Student Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship supports international students to continue their education without financial burdens.</p>
+            <p>Requirements: Submit an essay, recommendation letters, and proof of GPA.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Global Student Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 2 -->
         <div class="scholarship-item">
           <h2>STEM Excellence Scholarship</h2>
           <p>Amount: $10,000</p>
           <p>Eligibility: Students pursuing STEM majors</p>
           <p>Deadline: March 15, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('STEM Excellence Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship encourages excellence in STEM fields by providing financial aid for students.</p>
+            <p>Requirements: Submit a project proposal, academic records, and a personal statement.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('STEM Excellence Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 3 -->
         <div class="scholarship-item">
           <h2>Community Service Scholarship</h2>
           <p>Amount: $2,500</p>
           <p>Eligibility: Must have 100+ hours of community service</p>
           <p>Deadline: June 1, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Community Service Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship recognizes students who are dedicated to community service and volunteer work.</p>
+            <p>Requirements: Submit a community impact statement and volunteer hours verification.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Community Service Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 4 -->
         <div class="scholarship-item">
           <h2>Artistry in Education Scholarship</h2>
           <p>Amount: $3,000</p>
           <p>Eligibility: Students majoring in Fine Arts</p>
           <p>Deadline: August 15, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Artistry in Education Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship supports students in fine arts with a passion for creativity and innovation.</p>
+            <p>Requirements: Portfolio submission and personal statement are required.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Artistry in Education Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 5 -->
         <div class="scholarship-item">
           <h2>Tech Innovators Scholarship</h2>
           <p>Amount: $4,000</p>
-          <p>
-            Eligibility: High school seniors pursuing a career in technology
-          </p>
+          <p>Eligibility: High school seniors pursuing a career in technology</p>
           <p>Deadline: November 30, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Tech Innovators Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship is designed to support future technology innovators and leaders.</p>
+            <p>Requirements: Submit an innovation project or essay describing your goals in technology.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Tech Innovators Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 6 -->
         <div class="scholarship-item">
           <h2>Future Leaders Scholarship</h2>
           <p>Amount: $5,500</p>
           <p>Eligibility: Students with leadership experience</p>
           <p>Deadline: January 15, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Future Leaders Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship is awarded to students who demonstrate leadership potential.</p>
+            <p>Requirements: Submit a resume highlighting leadership roles and an essay on leadership values.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Future Leaders Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 7 -->
         <div class="scholarship-item">
           <h2>Green Earth Scholarship</h2>
           <p>Amount: $3,500</p>
           <p>Eligibility: Students majoring in Environmental Science</p>
           <p>Deadline: February 28, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Green Earth Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>Requirements: Submit an environmental project proposal and a statement on sustainability goals.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Green Earth Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 8 -->
         <div class="scholarship-item">
           <h2>International Peace Scholarship</h2>
           <p>Amount: $6,000</p>
           <p>Eligibility: Open to international students</p>
           <p>Deadline: April 1, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('International Peace Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship supports international students dedicated to promoting peace and understanding.</p>
+            <p>Requirements: Submit a statement on peace-building goals and a letter of recommendation.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('International Peace Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 9 -->
         <div class="scholarship-item">
           <h2>Women in Tech Scholarship</h2>
           <p>Amount: $7,000</p>
           <p>Eligibility: Female students pursuing tech-related fields</p>
           <p>Deadline: September 30, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Women in Tech Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship encourages and supports women pursuing careers in technology and STEM fields.</p>
+            <p>Requirements: Submit a personal statement on your tech career goals and a portfolio of relevant work.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Women in Tech Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
+
+        <!-- Scholarship Item 10 -->
         <div class="scholarship-item">
           <h2>Veteran Scholarship</h2>
           <p>Amount: $8,000</p>
           <p>Eligibility: Veterans and dependents</p>
           <p>Deadline: July 15, 2024</p>
-          <a
-            href="#"
-            class="apply-btn"
-            onclick="applyForScholarship('Veteran Scholarship')"
-            >Apply Now</a
-          >
+          <div class="scholarship-details" style="display: none;">
+            <p>This scholarship is available to veterans and their families to support educational advancement.</p>
+            <p>Requirements: Submit proof of veteran status and a personal statement describing career goals.</p>
+          </div>
+          <a href="#" class="apply-btn" onclick="applyForScholarship('Veteran Scholarship')">Apply Now</a>
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
         </div>
       </section>
     </main>
@@ -162,6 +174,17 @@
       prependComponent('Cursor');
       prependComponent('ScrollToTop');
       appendComponent('Footer');
+
+      function toggleDetails(button) {
+        const details = button.previousElementSibling;
+        if (details.style.display === "none") {
+          details.style.display = "block";
+          button.textContent = "Read Less";
+        } else {
+          details.style.display = "none";
+          button.textContent = "Read More";
+        }
+      }
     </script>
     <script src="./scholarships.js"></script>
   </body>
