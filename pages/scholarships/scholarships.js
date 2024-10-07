@@ -17,3 +17,21 @@ function filterScholarships() {
 function applyForScholarship(scholarshipName) {
   alert(`You have applied for the ${scholarshipName}.`);
 }
+
+// Function to toggle display of scholarship details for a specific card
+function toggleDetails(button) {
+  // Get the specific card that contains the clicked button
+  const scholarshipItem = button.closest('.scholarship-item');
+  
+  // Find the details section within the specific card
+  const details = scholarshipItem.querySelector('.scholarship-details');
+
+  // Toggle the visibility of the details section
+  if (details.style.display === 'none' || details.style.display === '') {
+    details.style.display = 'block';
+    button.textContent = 'Read Less';
+  } else {
+    details.style.display = 'none';
+    button.textContent = 'Read More';
+  }
+}
