@@ -1,74 +1,59 @@
+// cursor.js
+
 const cursor = document.querySelector('.cursor');
 const cursorTail = document.querySelector('.cursor-tail');
 const smallDots = document.querySelectorAll('.small-dot');
 const cursorCopy = document.querySelector('.cursor-copy');
-//const cursorContainer = document.getElementById('custom-cursor-container');
-document.addEventListener('click', function (event) {
-  var cursors = document.querySelector('.cursor');
-  var tail = document.querySelector('.cursor-tail');
-  tail.style.top = event.clientY + 'px';
-  tail.style.left = event.clientX + 'px';
-  cursors.style.zIndex = 1000;
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  var smallDots = document.querySelectorAll('.small-dot');
-  if (smallDots.length === 0) {
-    for (var i = 0; i < 10; i++) {
-      var dot = document.createElement('div');
-      dot.className = 'small-dot';
-      document.body.appendChild(dot);
-    }
-  }
-});
-
-let smallDotPositions = [];
-// Initialize small dot positions
-smallDots.forEach((dot, index) => {
-  smallDotPositions.push({
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-  });
-  dot.style.left = smallDotPositions[index].x + 'px';
-  dot.style.top = smallDotPositions[index].y + 'px';
-});
 
 document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-  cursorCopy.style.left = e.clientX + 'px';
-  cursorCopy.style.top = e.clientY + 'px';
-  // Calculate the distance between the cursor and the previous position
-  const distance = Math.sqrt(
-    Math.pow(e.movementX, 2) + Math.pow(e.movementY, 2)
-  );
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    cursorCopy.style.left = e.clientX + 'px';
+    cursorCopy.style.top = e.clientY + 'px';
 
-  // Scale up the tail when the cursor is moving
-  if (distance > 0) {
+    // Update tail position
+    cursorTail.style.left = e.clientX + 'px';
+    cursorTail.style.top = e.clientY + 'px';
+
+    // Show the custom cursor and tail
+    cursor.style.display = 'block';
+    cursorCopy.style.display = 'block';
     cursorTail.style.transform = 'scale(1)';
     cursorTail.style.opacity = '1';
-  } else {
+});
+
+// Hide cursor elements when mouse leaves the viewport
+document.addEventListener('mouseleave', () => {
+    cursor.style.display = 'none';
+    cursorCopy.style.display = 'none';
+    cursorTail.style.opacity = '0';
+});
+
+// Hide the tail when not moving
+document.addEventListener('mouseout', () => {
     cursorTail.style.transform = 'scale(0)';
     cursorTail.style.opacity = '0';
-  }
+});
 
-  // Update the tail position
-  cursorTail.style.left = e.clientX + 'px';
-  cursorTail.style.top = e.clientY + 'px';
+// Initialize small dot positions
+smallDots.forEach((dot) => {
+    dot.style.left = `${Math.random() * window.innerWidth}px`;
+    dot.style.top = `${Math.random() * window.innerHeight}px`;
+});
 
-  smallDots.forEach((dot, index) => {
-    const dx = e.clientX - smallDotPositions[index].x;
-    const dy = e.clientY - smallDotPositions[index].y;
-    const distanceToCursor = Math.sqrt(dx * dx + dy * dy);
+// Update small dot positions on mouse move
+document.addEventListener('mousemove', (e) => {
+    smallDots.forEach((dot) => {
+        const dx = e.clientX - parseFloat(dot.style.left);
+        const dy = e.clientY - parseFloat(dot.style.top);
+        const distanceToCursor = Math.sqrt(dx * dx + dy * dy);
 
-    if (distanceToCursor > 5) {
-      smallDotPositions[index].x += dx / 5;
-      smallDotPositions[index].y += dy / 5;
-      dot.style.left = smallDotPositions[index].x + 'px';
-      dot.style.top = smallDotPositions[index].y + 'px';
-      dot.style.opacity = 1;
-    } else {
-      dot.style.opacity = 0;
-    }
-  });
+        if (distanceToCursor > 50) {
+            dot.style.opacity = '1';
+            dot.style.left = `${parseFloat(dot.style.left) + dx / 10}px`;
+            dot.style.top = `${parseFloat(dot.style.top) + dy / 10}px`;
+        } else {
+            dot.style.opacity = '0';
+        }
+    });
 });
