@@ -2,36 +2,33 @@
 <html lang="en">
 
 <head>
-  <!-- <base href="/Pathsphere/"> -->
-  <!-- uncomment above line if deploying to github pages -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PathSphere | Home</title>
-  <!-- Added a favicon -->
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<!-- Add an ID to the body tag or a specific class to the blog section -->
-<style>
+   <!-- Include Font Awesome for icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="/styles/styles.css"> <!-- Add your CSS file if needed -->
+ 
+ 
+   <style>
+ 
+ 
+ 
+ .hidden-text {
+   display: none;/* Hide by default */
+ }
+ 
+ .feature-item:hover .hidden-text {
+   display: block; /* Show when hovering over the feature item */
+ }
 
+ h6{
+  font-size:20px !important;
+ }
 
-
-  .hidden-text {
-    display: none;/* Hide by default */
-  }
-  
-  .feature-item:hover .hidden-text {
-    display: block; /* Show when hovering over the feature item */
-  }
-  
-  h6{
-    font-size:20px !important;
-   }
-  
-  </style>
-  
-<body>
+ </style>
+ </head>
+ <body>
 
     <main>
 
@@ -57,85 +54,79 @@
     <section class="features">
       <div class="feature">
 
-        <img src="/images/sicon.png" alt="">
+        <img src="/images/sicon.png" alt="Scholarships Icon">
         <h2>Scholarships</h2>
         <p>Discover scholarships tailored to your needs and academic performance.</p>
         <a href="/pages/scholarships/scholarships.html" class="btn">Explore</a>
       </div>
       <div class="feature">
 
-        <img src="/images/jicon.png" alt="">
+        <img src="/images/jicon.png" alt="Jobs Icon">
         <h2>Jobs</h2>
         <p>Find job opportunities for educators and professionals.</p>
         <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
       </div>
       <div class="feature">
 
-        <img src="/images/ficon.png" alt="">
+        <img src="/images/ficon.png" alt="Forum Icon">
         <h2>Forum</h2>
         <p>Join discussions, ask questions, and connect with others.</p>
         <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
       </div>
     </section>
-    <div class="container">
-      <div class="row">
-        <div class="text-content">
-          <h3>Key Features of PathSphere</h3>
-          <p>Connecting students to scholarships and educators to job opportunities with powerful tools and community
-            support.</p>
-          <div class="feature-list">
-            <div class="feature-item">
-              <i class="fas fa-search"></i>
-              <div>
-                <h6>Scholarship Search</h6>
-                <p>Find scholarships easily, quickly.</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-briefcase"></i>
-              <div>
-                <h6>Job Portal</h6>
-                <p>Job opportunities tailored for educators.</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-users"></i>
-              <div>
-                <h6>Community Forums</h6>
-                <p>Share resources, advice, experiences.</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-bell"></i>
-              <div>
-                <h6>Instant Notifications</h6>
-                <p>Get real-time important updates.</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-bookmark"></i>
-              <div>
-                <h6>Save & Track</h6>
-                <p>Bookmark and monitor application progress.</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-tools"></i>
-              <div>
-                <h6>Resume Builder</h6>
-                <p>Create a professional profile easily.</p>
-              </div>
+    <section class="key-features">
+      <div class="container">
+        <h3>Key Features of PathSphere</h3>
+        <p style="text-align:center">Connecting students to scholarships and educators to job opportunities with powerful tools and community support.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <i class="fas fa-search"></i>
+            <div>
+              <h6 >Scholarship Search</h6>
+              <p class="hidden-text">Find scholarships easily, quickly.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          <div class="feature-item">
+            <i class="fas fa-briefcase"></i>
+            <div>
+              <h6>Job Portal</h6>
+              <p class="hidden-text">Job opportunities tailored for educators.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <h6>Community Forums</h6>
+              <p class="hidden-text">Share resources, advice, experiences.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-bell"></i>
+            <div>
+              <h6 >Instant Notifications</h6>
+              <p class="hidden-text">Get real-time important updates.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-bookmark"></i>
+            <div>
+              <h6 >Save & Track</h6>
+              <p class="hidden-text">Bookmark and monitor application progress.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-tools"></i>
+            <div>
+              <h6>Resume Builder</h6>
+              <p class="hidden-text">Create a professional profile easily.</p>
+            </div>
+            </div>
+            </div>
+            </div>
     </section>
-    </br></br></br>
 
   </main>
-  <script src="/scripts/componentLoader.js">
-  </script>
+  <script src="/scripts/componentLoader.js"></script>
   <script>
     prependComponent("Navbar");
     prependComponent('Cursor');
