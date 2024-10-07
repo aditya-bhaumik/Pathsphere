@@ -4,14 +4,17 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: #f4f4f4;
   --secondary-color: #333;
 }
+
 .darkmode {
   --primary-color: #333;
   --secondary-color: #f4f4f4;
 }
+
 header {
   padding: 20px;
   color: var(--secondary-color);
@@ -19,49 +22,58 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
 }
+
 nav .logo img {
   width: 50px;
   margin-right: 10px;
 }
+
 nav a {
   color: var(--primary-color);
   text-decoration: none;
   padding: 10px;
   transition: background-color 0.3s;
 }
+
 nav a:hover {
   color: red;
   border-radius: 5px;
 }
+
 .hero {
   background-color: #4caf50;
   color: var(--primary-color);
   padding: 30px;
   text-align: center;
 }
+
 .search-bar {
   margin: 20px auto;
   text-align: center;
   position: relative;
 }
+
 .search-bar input {
   padding: 10px;
   width: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .search-bar i {
   position: absolute;
   left: 10px;
   top: 10px;
   color: #888;
 }
+
 .scholarship-list {
   display: flex;
   flex-wrap: wrap;
@@ -113,6 +125,35 @@ nav a:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Read More Button Styling */
+.scholarship-item .read-more-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scholarship-item .read-more-btn:hover {
+  background-color: #66bb6a;
+  transform: translateY(-3px);
+}
+
+/* Scholarship Details Styling */
+.scholarship-details {
+  margin-top: 15px;
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  display: none; /* Initially hidden */
+}
+
 .footer-container {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -120,25 +161,47 @@ nav a:hover {
   text-align: center;
   margin-top: 20px;
 }
+
 .footer-list {
   margin: 20px 0;
 }
+
 .footer-list h3 {
   margin-bottom: 10px;
 }
+
 .social-icons li {
   display: inline;
   margin: 0 10px;
 }
+
 .copyright {
   margin-top: 10px;
 }
+
+/* Media Queries */
 @media (max-width: 600px) {
   .search-bar input {
     width: 80%;
   }
+
   .scholarship-item {
     width: 100%;
+  }
+
+  .scholarship-item h2 {
+    font-size: 1.3em;
+  }
+
+  .scholarship-item p,
+  .scholarship-details p {
+    font-size: 1em;
+  }
+
+  .scholarship-item .apply-btn,
+  .scholarship-item .read-more-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
   }
 }
 
@@ -191,6 +254,11 @@ nav a:hover {
 
   .social-icons a:hover {
     color: #0077b5;
+  }
+
+  .scholarship-item {
+    width: 90%;
+    margin: 10px;
   }
 }
 
