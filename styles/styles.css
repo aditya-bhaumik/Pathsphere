@@ -6,15 +6,72 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
 }
-:root {
-  --primary-color: #f4f4f4;
-  --secondary-color: #333;
+
+
+
+.footer-container{
+  position: relative;
+  bottom: 60px;
+  height: 220px;
 }
-.darkmode {
-  --primary-color: #333;
-  --secondary-color: #f4f4f4;
+
+main{
+  position: relative;
+  bottom:60px;
 }
+.darkmode main{
+  background-color: black;
+}
+
+.darkmode .copyright{
+  background-color: black;
+  color: #fff;
+}
+.darkmode .scroll-up-btn{
+  z-index: 1000;
+}
+
+.darkmode .feature{
+  background-color: #333;
+}
+
+.darkmode .feature p{
+ color: #fff;
+}
+
+.darkmode .feature h2{
+  color: #fff;
+ }
+
+ .darkmode .text-content h3{
+  color: #fff;
+ }
+
+ .darkmode .text-content p{
+  color: #fff;
+ }
+
+ .darkmode .feature-item{
+  background: #333;
+ }
+
+ .darkmode .feature-item h6{
+  color: #fff;
+ }
+
+.darkmode .footer-container{
+  background-color: black;
+  border-top: 2px solid #fff;
+  color: #fff;
+}
+
+.darkmode .social-icons li a:hover{
+  background-color: #333 ;
+}
+
+
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
@@ -496,12 +553,13 @@ footer {
   box-shadow: 0 0 25px #0c0909ef;
 }
 .copyright {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: small;
+  height: 60px;
+  position: relative;
+  bottom: 60px;
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -870,6 +928,7 @@ footer {
     background-color: #333;
     height: 50px;
     width: 50px;
+    z-index: 1000;
   }
 
   .scroll-up-btn:hover {

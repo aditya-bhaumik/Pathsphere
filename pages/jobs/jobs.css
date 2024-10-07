@@ -6,14 +6,7 @@ body {
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #f4f4f4;
-  --secondary-color: #333;
-}
-.darkmode {
-  --primary-color: #000000;
-  --secondary-color: #f4f4f4;
-}
+
 
 .hero-class {
   background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -329,4 +322,27 @@ body {
     padding: 6px 16px;
     font-size: 14px;
   }
+}
+
+.darkmode .job-item{
+  background-color: #333;
+  border: 2px solid #fff;
+}
+
+.darkmode .job-item .card{
+  background-color: #333;
+}
+.darkmode .job-item .apply-btn{
+  background-color: #333;
+  border: 2px solid #fff;
+}
+
+.darkmode .job-item .card-body h5{
+  color: #fff;
+}
+.darkmode .job-item .card-body h6{
+  color: #fff;
+}
+.darkmode .job-item .card-body p{
+  color: #fff;
 }

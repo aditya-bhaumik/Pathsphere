@@ -148,3 +148,44 @@
     width: 100%;
   }
 }
+
+.darkmode .blogs-section .heading{
+  color: #fff;
+}
+
+.darkmode main{
+  background-color: black;
+}
+
+.darkmode .blogs-section{
+  background-color: black;
+}
+
+.darkmode .blog-card{
+  background-color: #333;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.darkmode .blog-content p{
+  color: #fff;
+}
+
+.darkmode .blog-content h3{
+  color: #fff;
+}
+
+.darkmode .newsletter{
+  background-color: black;
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid #fff;
+}
+
+.darkmode .newsletter-left{
+  color: #fff;
+}
+
+.darkmode .newsletter-left h1{
+  color: #fff;
+}
+
