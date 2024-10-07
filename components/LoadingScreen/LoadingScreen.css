@@ -1,0 +1,56 @@
+#LoadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#LoadingScreen.loading {
+  color: white;
+  font-size: 2rem;
+}
+
+#LoadingScreen.loading span {
+  color: #f1c40f;
+}
+
+#LoadingScreen.loading span:nth-child(1) {
+  animation: blink 1s infinite;
+}
+
+#LoadingScreen.loading span:nth-child(2) {
+  animation: blink 1s infinite;
+  animation-delay: 0.1s;
+}
+
+#LoadingScreen.loading span:nth-child(3) {
+  animation: blink 1s infinite;
+  animation-delay: 0.2s;
+}
+
+#LoadingScreen.loading span:nth-child(4) {
+  animation: blink 1s infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#LoadingScreen.loaded {
+  display: none;
+}

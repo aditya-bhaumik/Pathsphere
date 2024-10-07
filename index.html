@@ -9,6 +9,9 @@
   <title>PathSphere | Home</title>
   <!-- Added a favicon -->
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
+  <script src="/scripts/componentLoader.js">
+  </script>
+
 </head>
 <!-- Add an ID to the body tag or a specific class to the blog section -->
 
@@ -115,13 +118,12 @@
     </br></br></br>
 
   </main>
-  <script src="/scripts/componentLoader.js">
-  </script>
   <script>
     prependComponent("Navbar");
     prependComponent('Cursor');
     prependComponent("ScrollToTop");
-    appendComponent("Footer");
+    appendComponent('Footer');
+    waitTillComponentsLoaded();
   </script>
 </body>
 
