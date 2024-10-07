@@ -561,28 +561,49 @@ footer {
     color: var(--secondary-color);
   }
 
-  .social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: transparent;
-    border: 0.2rem solid #1a0202;
-    font-size: 1.2rem;
-    border-radius: 50%;
-    margin: 0.2rem 0.5rem 0.2rem 0;
-    transition: 0.3s ease;
-    color: var(--secondary-color) #b74b4b;
-    text-decoration: none;
-  }
+  /* Style the social media icons */
+.social-media {
+    text-align: center;
+    margin-top: 50px;
+}
 
-  .social-icons a:hover {
-    color: black;
-    transform: scale(1.3) translateY(-5px);
-    background-color: #fffefe;
-    box-shadow: 0 0 25px #0c0909ef;
-  }
+.social-icon {
+    width: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* The pop-up background */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+}
+
+/* Pop-up content */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin: 100px auto;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
   /* Responsive Styles */
   @media (max-width: 768px) {
     .footer-container {
