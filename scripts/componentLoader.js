@@ -151,10 +151,21 @@ const waitTillComponentsLoaded = async () => {
   showContent();
 };
 
-document.addEventListener('DOMContentLoaded', hideContent);
+const loadLoadingScreen = async () => {
+  await prependComponent('LoadingScreen');
+  document.body.style.display = '';
+};
 
-console.log('Loading components...');
+const init = async () => {
+  while (!document.body) {
+    await new Promise((resolve) => setTimeout(resolve, 100));
+  }
+  await loadLoadingScreen();
 
-prependComponent('LoadingScreen');
-prependComponent('GlobalStyles');
-prependComponent('GlobalScripts');
+  console.log('Loading components...');
+
+  await prependComponent('GlobalStyles');
+  await prependComponent('GlobalScripts');
+};
+
+init();
