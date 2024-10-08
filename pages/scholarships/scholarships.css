@@ -298,3 +298,12 @@ nav a:hover {
     margin: 10px;
   }
 }
+
+.darkmode .scholarship-item{
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.darkmode .scholarship-item p{
+  color: #fff;
+}
