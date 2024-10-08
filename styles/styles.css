@@ -1076,3 +1076,117 @@ h3 {
     flex: 1 1 100%;
   }
 }
+.social-icons li {
+  display: inline-block; /* Make icons display inline */
+  margin: 0 10px; /* Space between icons */
+  border-radius: 50%; /* Make the container circular */
+  width: 50px; /* Set width for the circular container */
+  height: 50px; /* Set height for the circular container */
+  position: relative; /* Position relative for the pseudo-element */
+}
+
+.social-icons li::before {
+  content: ''; /* Pseudo-element for hover effect */
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%; /* Match the circle */
+  background-color: transparent; /* Default transparent */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  z-index: -1; /* Place it behind the icon */
+}
+
+.social-icons li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #555; /* Default icon color */
+  font-size: 28px; /* Increase the size of the icons */
+  padding: 5px; /* Add padding around the icon */
+  transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+/* Hover Effects for Custom IDs */
+#github:hover::before {
+  background-color: lightyellow; /* Change background to light yellow on hover */
+}
+
+#instagram:hover::before {
+  background-color: lightyellow; /* Change background to light yellow on hover */
+}
+
+#twitter:hover::before {
+  background-color: lightyellow; /* Change background to light yellow on hover */
+}
+
+#facebook:hover::before {
+  background-color: lightyellow; /* Change background to light yellow on hover */
+}
+
+#linkedin:hover::before {
+  background-color: lightyellow; /* Change background to light yellow on hover */
+}
+
+/* Change Icon Colors on Hover */
+#github:hover a .fab.fa-github {
+  color: #211F1F; /* GitHub brand color */
+}
+
+#instagram:hover a .fab.fa-instagram {
+  color: #C13584; /* Instagram brand color */
+}
+
+#twitter:hover a .fa-brands.fa-x-twitter {
+  color: #1DA1F2; /* Twitter brand color */
+}
+
+#facebook:hover a .fab.fa-facebook {
+  color: #1877F2; /* Facebook brand color */
+}
+
+#linkedin:hover a .fab.fa-linkedin {
+  color: #0077B5; /* LinkedIn brand color */
+}
+.social-icons li {
+  display: inline-block; /* Make icons display inline */
+  margin: 0 10px; /* Space between icons */
+  border-radius: 50%; /* Make the container circular */
+  width: 50px; /* Set width for the circular container */
+  height: 50px; /* Set height for the circular container */
+  position: relative; /* Position relative for the pseudo-element */
+  overflow: hidden; /* Ensures the background doesn't overflow */
+}
+
+.social-icons li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #555; /* Default icon color */
+  font-size: 28px; /* Increase the size of the icons */
+  padding: 5px; /* Add padding around the icon */
+  transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+/* Change Icon Background Color on Hover */
+.social-icons li:hover {
+  background-color: lightyellow; /* Change background to light yellow on hover */
+}
+
+/* Change Icon Colors on Hover */
+#github:hover a .fab.fa-github {
+  color: #211F1F; /* GitHub brand color */
+}
+
+#instagram:hover a .fab.fa-instagram {
+  color: #C13584; /* Instagram brand color */
+}
+
+#twitter:hover a .fa-brands.fa-x-twitter {
+  color: #1DA1F2; /* Twitter brand color */
+}
+
+#facebook:hover a .fab.fa-facebook {
+  color: #1877F2; /* Facebook brand color */
+}
+
+#linkedin:hover a .fab.fa-linkedin {
+  color: #0077B5; /* LinkedIn brand color */
+}
