@@ -897,3 +897,17 @@ nav {
     background: #0066cc; /* Active link background */
     color: white; /* Active link text color */
 }
+.btn-star {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    margin-left: auto; /* Push to the right */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.btn-star:hover {
+    background-color: #218838; /* Darker green on hover */
+}

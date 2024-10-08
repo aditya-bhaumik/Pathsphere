@@ -6,27 +6,56 @@
     <title>PathSphere | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add custom styles for the star button */
+        .btn-star {
+            background-color: #4a4a4a; /* Black-grey mixture background */
+            color: white; /* White text */
+            font-weight: bold; /* Bold text */
+            padding: 5px 15px; /* Reduced padding for more compact button */
+            border: none; /* No border */
+            border-radius: 50px; /* More rounded corners for a pill-shaped button */
+            text-decoration: none; /* Remove underline */
+            margin-left: 20px; /* Margin for spacing from navbar */
+            margin-top: 10px; /* Add margin for spacing from top */
+            display: inline-flex; /* Use flexbox to center content */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            gap: 8px; /* Gap between star and text */
+            width: fit-content; /* Auto width for button */
+            transition: background 0.3s; /* Transition for hover effect */
+        }
+
+        .btn-star:hover {
+            background-color: #6c6c6c; /* Slightly lighter grey on hover */
+        }
+
+        nav {
+            display: flex; /* Use flexbox to arrange items */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between logo, navbar, and button */
+        }
+    </style>
 </head>
 <body id="blog-page">
     <header>
-        
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="PathSphere Logo" class="logo-image">
-                </a>
-                <ul id="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="scholarships.html">Scholarships</a></li>
-                    <li><a href="jobs.html">Jobs</a></li>
-                    <li><a href="forum.html">Forum</a></li>
-                    <li><a href="#faqs">FAQs</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </nav>
-        
-        
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="PathSphere Logo" class="logo-image">
+            </a>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <a href="https://github.com/aditya-bhaumik/Pathsphere" class="btn-star" target="_blank">
+                ⭐ Star us on GitHub
+            </a>
+        </nav>
     </header>
-    
 
     <main>
         <section class="hero">
@@ -76,6 +105,7 @@
             </div>
         </section>
     </main>
+    
     <div class="footer-container">
         <div class="footer-description">
             <h3>PathSphere</h3>
@@ -106,4 +136,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
