@@ -4,17 +4,15 @@ const fetchComponent = async (componentName) => {
       `/components/${componentName}/${componentName}.html`
     );
     const html = await res.text();
-
+    
     const parser = new DOMParser();
-
+    
     const doc = parser.parseFromString(html, 'text/html');
-
+    
     const components = doc.body.querySelectorAll('body > :not(script)') || [];
-
     const styles = doc.querySelectorAll('link[rel="stylesheet"], style') || [];
-
     const scripts = doc.querySelectorAll('script') || [];
-
+    
     return [components, styles, scripts];
   } catch (e) {
     console.error(
@@ -29,15 +27,15 @@ const prependComponent = async (
   targetElement = document.body
 ) => {
   const [component, styles, scripts] = await fetchComponent(componentName);
-
+  
   styles.forEach((style) => {
     document.head.appendChild(style);
   });
-
+  
   component.forEach((element) => {
     targetElement.prepend(element);
   });
-
+  
   scripts.forEach((script) => {
     const scriptTag = document.createElement('script');
     scriptTag.src = script.src;
@@ -50,15 +48,15 @@ const appendComponent = async (
   targetElement = document.body
 ) => {
   const [component, styles, scripts] = await fetchComponent(componentName);
-
+  
   styles.forEach((style) => {
     document.head.appendChild(style);
   });
-
+  
   component.forEach((element) => {
     targetElement.appendChild(element);
   });
-
+  
   scripts.forEach((script) => {
     const scriptTag = document.createElement('script');
     scriptTag.src = script.src;
@@ -71,15 +69,15 @@ const insertComponentBefore = async (
   BeforeElement = document.body
 ) => {
   const [component, styles, scripts] = await fetchComponent(componentName);
-
+  
   styles.forEach((style) => {
     document.head.appendChild(style);
   });
-
+  
   component.forEach((element) => {
     BeforeElement.before(element);
   });
-
+  
   scripts.forEach((script) => {
     const scriptTag = document.createElement('script');
     scriptTag.src = script.src;
@@ -92,15 +90,15 @@ const insertComponentAfter = async (
   AfterElement = document.body
 ) => {
   const [component, styles, scripts] = await fetchComponent(componentName);
-
+  
   styles.forEach((style) => {
     document.head.appendChild(style);
   });
-
+  
   component.forEach((element) => {
     AfterElement.after(element);
   });
-
+  
   scripts.forEach((script) => {
     const scriptTag = document.createElement('script');
     scriptTag.src = script.src;
