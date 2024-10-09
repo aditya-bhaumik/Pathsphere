@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - PathSphere</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .nav a {
+            margin-left: 1rem;
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .rating {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .star {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .star path {
+            fill: #ddd;
+            transition: fill 0.2s;
+        }
+        .star.active path,
+        .star:hover path,
+        .star:hover ~ .star path {
+            fill: #FFD700;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 1rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color: #f0ad4e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #ec971f;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="path-to-logo.png" alt="PathSphere Logo">
+            <span>PathSphere</span>
+        </div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Scholarships</a>
+            <a href="#">Jobs</a>
+            <a href="#">Forum</a>
+            <a href="#">FAQs</a>
+            <a href="#">Blog</a>
+            <a href="#">Feedback</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Tell Us What You Think!</h1>
+        <p>Share your thoughts on how we're doing and where we can enhance our service.</p>
+        
+        <div class="rating">
+            <svg class="star" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+        </div>
+        
+        <form id="feedbackForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label for="feedback">Your Feedback</label>
+            <select id="feedback" required>
+                <option value="">Select your feedback type</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="complaint">Complaint</option>
+                <option value="praise">Praise</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="4" placeholder="Enter your message here" required></textarea>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        let rating = 0;
+
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                rating = index + 1;
+                updateStars();
+            });
+        });
+
+        function updateStars() {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert(`Thank you for your ${rating}-star feedback!`);
+            this.reset();
+            rating = 0;
+            updateStars();
+        });
+    </script>
+</body>
+</html>
+
