@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #4caf50;
+    transition: width 0.5s ease;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    transition: background-color 0.5s ease;
+}
+
+.circle.active {
+    background-color: #4caf50;
+}
+
+.stages p {
+    margin: 0;
+}
+
+.stages .active {
+    font-weight: bold;
+}
