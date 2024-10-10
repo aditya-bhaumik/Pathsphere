@@ -7,6 +7,12 @@
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
 
+<style>
+  #feature1:hover, #feature2:hover, #feature3:hover{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
 
 h6{
   font-size:20px !important;
@@ -40,19 +46,19 @@ h6{
     </section>
 
     <section class="features">
-      <div class="feature">
+      <div class="feature" id="feature1">
         <img src="/images/sicon.png" alt="Scholarships Icon">
         <h2>Scholarships</h2>
         <p>Discover scholarships tailored to your needs and academic performance.</p>
         <a href="/pages/scholarships/scholarships.html" class="btn">Explore</a>
       </div>
-      <div class="feature">
+      <div class="feature" id="feature2">
         <img src="/images/jicon.png" alt="Jobs Icon">
         <h2>Jobs</h2>
         <p>Find job opportunities for educators and professionals.</p>
         <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
       </div>
-      <div class="feature">
+      <div class="feature" id="feature3">
         <img src="/images/ficon.png" alt="Forum Icon">
         <h2>Forum</h2>
         <p>Join discussions, ask questions, and connect with others.</p>
