@@ -162,6 +162,11 @@ div.email input{
         cursor:pointer;
     
     }
+     button:hover{
+        background-color: #333;
+        color:white;
+
+    }
     label.sch{
         margin-bottom: 20px;
     }
