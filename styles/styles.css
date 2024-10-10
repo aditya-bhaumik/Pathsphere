@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 /* Reset default margin and padding */
@@ -32,13 +32,16 @@ main{
 .darkmode .scroll-up-btn{
   z-index: 1000;
 }
-
-.darkmode .feature{
-  background-color: #333;
+.darkmode .featues .feature{
+  background-color: #7965ea;
+  border-width: 2px ysellow;
 }
+/*.darkmode .feature{
+  background-color: #333;
+}*/
 
 .darkmode .feature p{
- color: #fff;
+ color: #ad4d4d;
 }
 
 .darkmode .feature h2{
@@ -99,7 +102,7 @@ main{
   right: 30px;
   height: 40px;
   width: 40px;
-  background-color: #ffa500;
+  background-color: #ffa505;
   border-radius: 50%;
   border: none;
   justify-content: center;
@@ -109,9 +112,12 @@ body {
   font-family: Arial, sans-serif;
   color: var(--secondary-color);
   background: var(--primary-color);
+  background-color: coral;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  border-width: 3px;
+  border-color: black;
 }
 #icon {
   width: 30px;
@@ -127,7 +133,7 @@ header {
 
   padding: 10px 0;
   position: fixed;
-  border: 2px solid black;
+  border: 2px solid brown;
   border-radius: 50px;
   background: rgb(255, 255, 255);
   width: 100%;
@@ -185,7 +191,7 @@ nav ul li a {
   color: var(--seondary-color);
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
   text-decoration: none;
   color: black;
   font-family: 'Playpen Sans', cursive;
@@ -196,7 +202,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #7965ea;
+  color: orchid;
 }
 
 @media (max-width: 1000px) {
@@ -258,7 +264,7 @@ nav ul li a:hover {
     color: black;
     font-family: 'Playpen Sans', cursive;
     font-optical-sizing: auto;
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 400;
     font-style: normal;
   }
