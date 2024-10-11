@@ -2,7 +2,7 @@ const fetchComponent = async (componentName) => {
   try {
     // Adjusted the fetch path to navigate to the components folder correctly
     const res = await fetch(
-      `/pathsphere/components/${componentName}/${componentName}.html`
+      `/components/${componentName}/${componentName}.html`
     );
 
     // Check if the response is OK
