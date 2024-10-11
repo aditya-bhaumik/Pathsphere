@@ -1,6 +1,5 @@
 const fetchComponent = async (componentName) => {
   try {
-    // Adjusted the fetch path to navigate to the components folder correctly
     const res = await fetch(
       `/components/${componentName}/${componentName}.html`
     );
