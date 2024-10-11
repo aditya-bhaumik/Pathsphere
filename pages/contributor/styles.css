@@ -17,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(to right, #2563eb, #7c3aed);
+  background-color: #bfdbfe;
   color: white;
   text-align: center;
 }
@@ -185,6 +185,7 @@ body {
   color: white;
   padding: 4rem 1rem;
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .contribute h2 {
@@ -229,56 +230,6 @@ body {
   background-color: #bfdbfe;
 }
 
-footer {
-  background-color: #1f2937;
-  color: white;
-  padding: 3rem 1rem;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  max-width: 64rem;
-  margin: 0 auto;
-}
-
-.footer-info {
-  text-align: center;
-}
-
-.footer-info h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.footer-info p {
-  color: #9ca3af;
-}
-
-.footer-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.footer-nav a {
-  color: #d1d5db;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-nav a:hover {
-  color: white;
-}
-
-.footer-year {
-  text-align: center;
-  color: #9ca3af;
-  margin-top: 2rem;
-}
-
 @media (min-width: 640px) {
   .hero h1 {
       font-size: 3.75rem;
@@ -295,14 +246,5 @@ footer {
 
   #emailForm input {
       width: auto;
-  }
-
-  .footer-content {
-      flex-direction: row;
-      justify-content: space-between;
-  }
-
-  .footer-info {
-      text-align: left;
   }
 }

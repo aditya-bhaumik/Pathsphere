@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../../images/pathsphere.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StationGuide Contributors</title>
     <link href="styles.css" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -16,7 +18,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 id="heroTitle">Our Amazing Contributors</h1>
-            <p id="heroSubtitle">Shaping the future of StationGuide, one commit at a time</p>
+            <p id="heroSubtitle">Shaping the future of Pathsphere, one commit at a time</p>
             <a href="#contribute" class="cta-button">Become a Contributor</a>
         </div>
     </section>
@@ -51,22 +53,25 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>StationGuide</h3>
-                <p>Building a better future for public transportation.</p>
-            </div>
-            <nav class="footer-nav">
-                <a href="#">Home</a>
-                <a href="#">Documentation</a>
-                <a href="https://github.com/dhairyagothi/StationGuide" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="#">Contact</a>
-            </nav>
-        </div>
-        <div class="footer-year">© <span id="currentYear"></span> StationGuide. All rights reserved.</div>
-    </footer>
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+        prependComponent("Navbar");
+        prependComponent('Cursor');
+        prependComponent("ScrollToTop");
+        appendComponent("Footer");
+    </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "7akUzokCgwR0gNp0m-qQF",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="7akUzokCgwR0gNp0m-qQF"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </body>
 
 </html>

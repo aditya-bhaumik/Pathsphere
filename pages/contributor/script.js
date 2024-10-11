@@ -4,29 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadingIndicator = document.getElementById('loading');
   const emailForm = document.getElementById('emailForm');
   const emailInput = document.getElementById('email');
-  const currentYear = document.getElementById('currentYear');
-  const heroTitle = document.getElementById('heroTitle');
-  const heroSubtitle = document.getElementById('heroSubtitle');
-
-  // Animate hero section
-  function animateHero() {
-      heroTitle.style.opacity = '0';
-      heroTitle.style.transform = 'translateY(20px)';
-      heroSubtitle.style.opacity = '0';
-      heroSubtitle.style.transform = 'translateY(20px)';
-
-      setTimeout(() => {
-          heroTitle.style.transition = 'opacity 0.8s, transform 0.8s';
-          heroTitle.style.opacity = '1';
-          heroTitle.style.transform = 'translateY(0)';
-      }, 100);
-
-      setTimeout(() => {
-          heroSubtitle.style.transition = 'opacity 0.8s, transform 0.8s';
-          heroSubtitle.style.opacity = '1';
-          heroSubtitle.style.transform = 'translateY(0)';
-      }, 300);
-  }
 
   // Fetch contributors and repo stats
   async function fetchData() {
@@ -112,9 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(`Thank you for signing up with ${emailValue}!`);
       emailInput.value = '';
   });
-
-  // Set current year in footer
-  currentYear.textContent = new Date().getFullYear();
 
   // Initialize
   animateHero();
