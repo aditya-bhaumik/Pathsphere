@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.hero {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #bfdbfe;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 64rem;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #bfdbfe;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #bfdbfe;
+}
+
+.stats, .contributors {
+  padding: 4rem 1rem;
+}
+
+.stats {
+  background-color: white;
+}
+
+.contributors {
+  background-color: #f3f4f6;
+}
+
+.stats h2, .contributors h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.stats-container, .contributors-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.stat-card, .contributor-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contributor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.stat-card p {
+  color: #6b7280;
+}
+
+.contributor-card img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 4px solid #3b82f6;
+}
+
+.contributor-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contributor-card p {
+  font-size: 0.875rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.contributor-card .contributions {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.contributor-card a {
+  display: inline-flex;
+  align-items: center;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contributor-card a:hover {
+  color: #1e40af;
+}
+
+.contributor-card svg {
+  margin-right: 0.5rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.contribute {
+  background-color: #2563eb;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contribute h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contribute p {
+  font-size: 1.25rem;
+  color: #bfdbfe;
+  margin-bottom: 2rem;
+}
+
+#emailForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#emailForm input {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  width: 100%;
+  max-width: 20rem;
+}
+
+#emailForm button {
+  padding: 0.75rem 2rem;
+  background-color: white;
+  color: #2563eb;
+  font-weight: bold;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#emailForm button:hover {
+  background-color: #bfdbfe;
+}
+
+@media (min-width: 640px) {
+  .hero h1 {
+      font-size: 3.75rem;
+  }
+
+  .hero p {
+      font-size: 1.875rem;
+  }
+
+  #emailForm {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  #emailForm input {
+      width: auto;
+  }
+}

@@ -2,12 +2,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
 }
+/*Testimonial section*/
+#testimonials {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 30px);
+  max-width: calc(33.333% - 30px);
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.rounded-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.font-weight-bold {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.my-3 {
+  margin: 1rem 0;
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.fas.fa-star, 
+.fas.fa-star-half-alt {
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+.pe-2 {
+  padding-right: 0.5rem;
+}
+
+.fa-quote-left {
+  color: #e2e8f0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-body p {
+  color: #4a5568;
+  line-height: 1.625;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  #testimonials {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/*testimonial section end*/
+
 
 .footer-container{
   position: relative;
