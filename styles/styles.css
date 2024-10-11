@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-/* Reset default margin and padding */
+
 * {
   margin: 0;
   padding: 0;
@@ -113,6 +114,7 @@
   justify-content: center;
 }
 
+
 .mb-4 {
   margin-bottom: 1.5rem;
 }
@@ -149,12 +151,15 @@
 
 /*testimonial section end*/
 
+
 .footer-container{
   position: relative;
   bottom: 60px;
   height: 220px;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 main{
   position: relative;
   bottom:60px;
@@ -209,9 +214,6 @@ main{
   background-color: #333 ;
 }
 
-
-/* Scroll Bar */
-
 ::-webkit-scrollbar {
   width: 0.8em;
 }
@@ -231,18 +233,6 @@ main{
   }
 }
 
-.scroll-up-btn {
-  position: fixed;
-  bottom: 25px;
-  right: 30px;
-  height: 40px;
-  width: 40px;
-  background-color: #ffa500;
-  border-radius: 50%;
-  border: none;
-  justify-content: center;
-  cursor: pointer;
-}
 body {
   font-family: Arial, sans-serif;
   color: var(--secondary-color);
@@ -320,15 +310,12 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--seondary-color);
+  color: var(--secondary-color);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.3em;
   transition: color 0.3s ease;
-  text-decoration: none;
-  color: black;
   font-family: 'Playpen Sans', cursive;
   font-optical-sizing: auto;
-  font-size: 1.3em;
   font-weight: 400;
   font-style: normal;
 }
@@ -345,7 +332,7 @@ nav ul li a:hover {
       255,
       255,
       0.1
-    ); /* Subtle background change for touch devices */
+    ); 
   }
 
   header {
@@ -482,12 +469,12 @@ main {
   padding: 100px 20px;
   margin-top: 60px;
   display: flex;
-  /* justify-content: center; */
+
   align-items: center;
   gap: 50px;
   background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826');
   background-repeat: no-repeat;
-  /* width: 100vw; */
+
   background-size: cover;
   height: 100vh;
 }
@@ -533,33 +520,33 @@ main {
 .feature {
   text-align: center;
   padding: 20px;
-  background: var(--secondary-color); /* Use secondary color for dark mode */
+  background: var(--secondary-color); 
   border-radius: 5px;
   gap: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for contrast */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   width: 30%;
   margin-bottom: 20px;
-  transition: transform 0.2s; /* Add transition for scaling effect */
+  transition: transform 0.2s; 
 }
 
 .feature:hover {
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1.05); 
 }
 
 .feature img {
-  max-width: 100%; /* Ensure images are responsive */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; 
+  height: auto; 
 }
 
 .feature h2 {
-  font-size: 24px; /* Increase heading size for better visibility */
-  color: var(--primary-color); /* Light text color for contrast */
-  margin: 10px 0; /* Add margin for spacing */
+  font-size: 24px; 
+  color: var(--primary-color); 
+  margin: 10px 0; 
 }
 
 .feature p {
-  color: var(--primary-color); /* Light text color for better readability */
-  margin-bottom: 15px; /* Spacing between text and button */
+  color: var(--primary-color); 
+  margin-bottom: 15px; 
 }
 
 .toggle-icon {
@@ -586,7 +573,6 @@ main {
   background-color: #b88830;
 }
 
-/* Popup Animation */
 @keyframes popup {
   0% {
     transform: scale(1);
@@ -699,7 +685,7 @@ footer {
   position: relative;
   bottom: 60px;
 }
-/* Responsive Styles */
+
 @media (max-width: 768px) {
   .footer-container {
     display: flex;
@@ -779,7 +765,7 @@ footer {
     background-color: #fffefe;
     box-shadow: 0 0 25px #0c0909ef;
   }
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .footer-container {
       padding: 20px;
@@ -854,7 +840,7 @@ footer {
     padding: 15px 0;
     border-bottom: 1px solid var(--primary-color);
     transition: background-color 0.2s;
-  } /*  Fixed Missing a closing bracket here */
+  } 
   .blog-header {
     text-align: center;
     padding: 2rem;
@@ -952,7 +938,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch; /* Ensure both columns stretch to the same height */
+    align-items: stretch; 
   }
 
   .text-content {
@@ -988,11 +974,11 @@ footer {
     font-size: 30px;
     margin-right: 20px;
     color: #3498db;
-    background-color: rgba(52, 152, 219, 0.1); /* Light background */
-    border-radius: 50%; /* Circular background */
-    padding: 10px; /* Padding around the icon */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+    background-color: rgba(52, 152, 219, 0.1); 
+    border-radius: 50%; 
+    padding: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, background-color 0.3s; 
   }
 
   .feature-item h6 {
@@ -1006,7 +992,6 @@ footer {
     color: #555;
   }
 
-  /* Updated image content for better responsiveness and enhanced style */
   .image-content {
     flex-basis: 45%;
     display: flex;
@@ -1016,20 +1001,18 @@ footer {
 
   .image-content img {
     width: 100%;
-    height: auto; /* Ensure image maintains its aspect ratio */
-    border-radius: 12px; /* Enhance border radius for smoother corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a deeper shadow for better depth */
-    object-fit: cover; /* Ensure the image fills the container */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+    height: auto; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
   }
 
-  /* Add a hover effect for better interaction */
   .image-content img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
   }
 
-  /* Responsive adjustments */
   @media (max-width: 992px) {
     .text-content,
     .image-content {
@@ -1041,37 +1024,11 @@ footer {
     }
 
     .image-content img {
-      height: auto; /* Reset the image height for smaller screens */
-      object-fit: contain; /* Ensure the image is fully visible on small screens */
+      height: auto; 
+      object-fit: contain; 
     }
   }
 
-  #scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-  }
-
-  .scroll-up-btn {
-    background-color: #333;
-    height: 50px;
-    width: 50px;
-    z-index: 1000;
-  }
-
-  .scroll-up-btn:hover {
-    background-color: #555;
-  }
   .cursor {
     position: absolute;
     height: 5px;
@@ -1128,7 +1085,7 @@ footer {
     opacity: 0;
   }
 }
-/* General Styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -1202,7 +1159,6 @@ h3 {
   text-align: left;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .feature-item {
     flex: 1 1 calc(50% - 20px);
@@ -1213,4 +1169,39 @@ h3 {
   .feature-item {
     flex: 1 1 100%;
   }
+}
+
+.scroll-top{
+  position: fixed;
+  bottom: 12px;
+  right: 80px;
+  background-color: #00ff40;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10000;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.scroll-top, .fa-arrow-up{
+  font-size: 20px;
+}
+.scroll-top .fa-arrow-up{
+  transition: 0.2s ease-out;
+	color: #fff;
+	transition: 0.2s ease-out;
+}
+
+.scroll-top:hover {
+	background-color: #34947c;
+}
+.scroll-top:hover .fa-arrow-up {
+	transform: translateY(-4px);
 }
