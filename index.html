@@ -1,121 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="./images/pathsphere.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
-
-
-
-</head>
-
-<body>
-
-  <main>
-
-
-    <section class="hero">
-      <div class="left">
-        <h1>Welcome to PathSphere</h1>
-        <p>Your gateway to educational and professional resources</p>
-        <div class="search-container">
-          <a href="/pages/scholarships/scholarships.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            Find Scholarships
-          </a>
-          <a href="/pages/jobs/jobs.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            Find Jobs
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="feature">
-        <img src="/images/sicon.png" alt="Scholarships Icon">
-        <h2>Scholarships</h2>
-        <p>Discover scholarships tailored to your needs and academic performance.</p>
-        <a href="/pages/scholarships/scholarships.html" class="btn">Explore</a>
-      </div>
-      <div class="feature">
-        <img src="/images/jicon.png" alt="Jobs Icon">
-        <h2>Jobs</h2>
-        <p>Find job opportunities for educators and professionals.</p>
-        <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
-      </div>
-      <div class="feature">
-        <img src="/images/ficon.png" alt="Forum Icon">
-        <h2>Forum</h2>
-        <p>Join discussions, ask questions, and connect with others.</p>
-        <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
-      </div>
-    </section>
-
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-briefcase"></i>
-            <div>
-              <h6>Job Portal</h6>
-              <p class="hidden-text">Job opportunities tailored for educators.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-users"></i>
-            <div>
-              <h6>Community Forums</h6>
-              <p class="hidden-text">Share resources, advice, experiences.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-bell"></i>
-            <div>
-              <h6 >Instant Notifications</h6>
-              <p class="hidden-text">Get real-time important updates.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-bookmark"></i>
-            <div>
-              <h6 >Save & Track</h6>
-              <p class="hidden-text">Bookmark and monitor application progress.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-tools"></i>
-            <div>
-              <h6>Resume Builder</h6>
-              <p class="hidden-text">Create a professional profile easily.</p>
-            </div>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="left">
+          <h1>Welcome to PathSphere</h1>
+          <p>Your gateway to educational and professional resources</p>
+          <div class="search-container">
+            <a href="./pages/scholarship-feature/scholarships.html" class="btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Find Scholarships
+            </a>
+            <a href="./pages/jobs/jobs.html" class="btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Find Jobs
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-  <a class="scroll-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
-  </main>
+      </section>
 
-  <script src="/scripts/componentLoader.js"></script>
-  <script>
-    prependComponent("Navbar");
-    prependComponent('Cursor');
-    appendComponent("Footer");  
-  </script>
-  <script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "7akUzokCgwR0gNp0m-qQF",
-    domain: "www.chatbase.co"
-    }
+      <section class="features">
+        <div class="feature">
+          <img src="./images/sicon.png" alt="Scholarships Icon" />
+          <h2>Scholarships</h2>
+          <p>
+            Discover scholarships tailored to your needs and academic
+            performance.
+          </p>
+          <a href="./pages/scholarship-feature/scholarships.html" class="btn"
+            >Explore</a
+          >
+        </div>
+        <div class="feature">
+          <img src="./images/jicon.png" alt="Jobs Icon" />
+          <h2>Jobs</h2>
+          <p>Find job opportunities for educators and professionals.</p>
+          <a href="./pages/jobs/jobs.html" class="btn">Browse Jobs</a>
+        </div>
+        <div class="feature">
+          <img src="./images/ficon.png" alt="Forum Icon" />
+          <h2>Forum</h2>
+          <p>Join discussions, ask questions, and connect with others.</p>
+          <a href="./pages/forum/forum.html" class="btn">Join the Forum</a>
+        </div>
+      </section>
+
+      <section class="more-features">
+        <div class="feature-item">
+          <i class="fas fa-briefcase"></i>
+          <div>
+            <h6>Job Portal</h6>
+            <p class="hidden-text">Job opportunities tailored for educators.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-users"></i>
+          <div>
+            <h6>Community Forums</h6>
+            <p class="hidden-text">Share resources, advice, experiences.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-bell"></i>
+          <div>
+            <h6>Instant Notifications</h6>
+            <p class="hidden-text">Get real-time important updates.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-bookmark"></i>
+          <div>
+            <h6>Save & Track</h6>
+            <p class="hidden-text">
+              Bookmark and monitor application progress.
+            </p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-tools"></i>
+          <div>
+            <h6>Resume Builder</h6>
+            <p class="hidden-text">Create a professional profile easily.</p>
+          </div>
+        </div>
+      </section>
+
+      <a class="scroll-top" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </main>
+
+    <script src="./scripts/componentLoader.js"></script>
+    <script>
+      prependComponent("Navbar");
+      prependComponent("Cursor");
+      appendComponent("Footer");
+    </script>
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "7akUzokCgwR0gNp0m-qQF",
+        domain: "www.chatbase.co",
+      };
     </script>
     <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="7akUzokCgwR0gNp0m-qQF"
-    domain="www.chatbase.co"
-    defer>
-    </script>
-
-</body>
-
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="7akUzokCgwR0gNp0m-qQF"
+      domain="www.chatbase.co"
+      defer
+    ></script>
+  </body>
 </html>

@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 0;
+}
+p {
+  text-align: center;
+}
+.scholarship-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  width: 300px; /* Adjusted width for smaller card */
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--primary-color);
+  color: black;
+  font-family: "Arial", sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect on card */
+.card:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+.scholarship-image {
+  width: 100%;
+  height: 140px; /* Reduced height */
+  object-fit: cover;
+}
+
+.scholarship-content {
+  padding: 20px;
+}
+
+.scholarship-content h2 {
+  font-size: 18px; /* Reduced font size for scholarship name */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.scholarship-content p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.scholarship-content p strong {
+  font-weight: bold;
+}
+
+.apply-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.scholarship-item .apply-btn {
+  display: inline-block;
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scholarship-item .apply-btn:hover {
+  background-color: #ffb74d;
+  transform: translateY(-3px);
+}
+
+.card img {
+  border-radius: 10px;
+  width: 100%; /* Keeping the width responsive */
+  height: 140px; /* Reduced height for smaller image */
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 18px; /* Reduced font size for the scholarship name */
+  margin: 10px 0;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card a,
+.card button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #248b6f;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.card a:hover,
+.card button:hover {
+  background-color: #1c6057;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 24px;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal p {
+  font-size: 16px;
+  color: #333;
+}
+
+.modal a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #248b6f;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.modal a:hover {
+  background-color: #1c6057;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.search-bar input {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}

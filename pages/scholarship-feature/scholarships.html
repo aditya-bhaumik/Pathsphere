@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarships</title>
+    <!-- Added a favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/pathsphere/images/pathsphere.png"
+    />
+    <link rel="stylesheet" href="./scholarships.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <h1>Scholarships</h1>
+        <p class="subtext">
+          Find scholarships that match your academic profile and needs.
+        </p>
+      </section>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for scholarships..."
+          aria-label="Search Scholarships"
+          onkeyup="filterScholarships()"
+        />
+      </div>
+
+      <div id="scholarship-container" class="scholarship-container"></div>
+
+      <div id="scholarship-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-modal" class="close-btn">&times;</span>
+          <div id="modal-info"></div>
+        </div>
+      </div>
+
+      <script>
+        const container = document.getElementById("scholarship-container");
+        const modal = document.getElementById("scholarship-modal");
+        const closeModal = document.getElementById("close-modal");
+        const modalInfo = document.getElementById("modal-info");
+        let scholarships = []; // Global variable to store scholarship data
+
+        function displayScholarships(data) {
+          scholarships = data; // Stores the fetched scholarships
+          container.innerHTML = ""; // Clears the container
+
+          scholarships.forEach((scholarship, index) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            card.innerHTML = `
+                    <img src="${scholarship.image}" alt="${scholarship.scholarship_name}">
+                    <h2>${scholarship.scholarship_name}</h2>
+                    <p>${scholarship.listing_awards}</p>
+                    <div class="buttons">
+                        <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
+                        <button class="read-more" data-index="${index}">Read More</button>
+                    </div>
+                `;
+
+            container.appendChild(card);
+          });
+
+          // Adds event listeners to Read More buttons
+          document.querySelectorAll(".read-more").forEach((button) => {
+            button.addEventListener("click", (e) => {
+              const index = e.target.getAttribute("data-index");
+              showDetails(scholarships[index]);
+            });
+          });
+        }
+
+        function filterScholarships() {
+          const input = document.getElementById("searchInput");
+          const filter = input.value.toLowerCase();
+          const cards = container.getElementsByClassName("card");
+
+          Array.from(cards).forEach((card) => {
+            const title = card.querySelector("h2").textContent.toLowerCase();
+            card.style.display = title.includes(filter) ? "" : "none";
+          });
+        }
+
+        function showDetails(scholarship) {
+          modalInfo.innerHTML = `
+                <h2>${scholarship.scholarship_name}</h2>
+                <p><strong>Award:</strong> ${scholarship.listing_awards}</p>
+                <p><strong>Eligibility:</strong> ${scholarship.eligibility}</p>
+                <p><strong>Start Date:</strong> ${scholarship.start_date}</p>
+                <p><strong>Deadline:</strong> ${scholarship.deadline}</p>
+                <p><strong>Last Date:</strong> ${scholarship.last_date}</p>
+                <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
+            `;
+
+          modal.style.display = "flex";
+        }
+
+        function fetchAndProcessExcel() {
+          const fileUrl = "buddy4study.xlsx";
+
+          fetch(fileUrl)
+            .then((response) => response.arrayBuffer())
+            .then((data) => {
+              const workbook = XLSX.read(data, { type: "array" });
+
+              const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+              const jsonData = XLSX.utils.sheet_to_json(firstSheet, {
+                header: 1,
+              });
+
+              // Converts the extracted data to an array of objects
+              const scholarships = jsonData.slice(1).map((row) => ({
+                apply_now: row[0],
+                image: row[1],
+                scholarship_name: row[2],
+                listing_awards: row[3],
+                eligibility: row[4],
+                start_date: row[5],
+                deadline: row[6],
+                last_date: row[7],
+              }));
+
+              console.log("Loaded Scholarships:", scholarships);
+              displayScholarships(scholarships);
+            })
+            .catch((error) =>
+              console.error("Error loading the Excel file:", error)
+            );
+        }
+
+        closeModal.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+
+        document.addEventListener("DOMContentLoaded", fetchAndProcessExcel);
+      </script>
+    </main>
+
+    <script src="/pathsphere/scripts/componentLoader.js"></script>
+    <script>
+      prependComponent("Navbar");
+      // prependComponent("Navbar", document.getElementById("navbar"));
+      prependComponent("Cursor");
+      prependComponent("ScrollToTop");
+      appendComponent("Footer");
+
+      function toggleDetails(button) {
+        const details = button.previousElementSibling;
+        if (details.style.display === "none") {
+          details.style.display = "block";
+          button.textContent = "Read Less";
+        } else {
+          details.style.display = "none";
+          button.textContent = "Read More";
+        }
+      }
+    </script>
+  </body>
+</html>

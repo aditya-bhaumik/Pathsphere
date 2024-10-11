@@ -1,24 +1,28 @@
 const fetchComponent = async (componentName) => {
   try {
+    // Adjusted the fetch path to navigate to the components folder correctly
     const res = await fetch(
-      `/components/${componentName}/${componentName}.html`
+      `/pathsphere/components/${componentName}/${componentName}.html`
     );
+
+    // Check if the response is OK
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
     const html = await res.text();
-
     const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
 
-    const doc = parser.parseFromString(html, 'text/html');
-
-    const components = doc.body.querySelectorAll('body > :not(script)') || [];
-
+    // Select components, styles, and scripts from the fetched HTML
+    const components = doc.body.querySelectorAll("body > :not(script)") || [];
     const styles = doc.querySelectorAll('link[rel="stylesheet"], style') || [];
-
-    const scripts = doc.querySelectorAll('script') || [];
+    const scripts = doc.querySelectorAll("script") || [];
 
     return [components, styles, scripts];
   } catch (e) {
     console.error(
-      'error while fetching component, please check if the given name is correct',
+      "Error while fetching component, please check if the given name is correct",
       e
     );
   }
@@ -39,7 +43,7 @@ const prependComponent = async (
   });
 
   scripts.forEach((script) => {
-    const scriptTag = document.createElement('script');
+    const scriptTag = document.createElement("script");
     scriptTag.src = script.src;
     document.body.appendChild(scriptTag);
   });
@@ -60,7 +64,7 @@ const appendComponent = async (
   });
 
   scripts.forEach((script) => {
-    const scriptTag = document.createElement('script');
+    const scriptTag = document.createElement("script");
     scriptTag.src = script.src;
     document.body.appendChild(scriptTag);
   });
@@ -81,7 +85,7 @@ const insertComponentBefore = async (
   });
 
   scripts.forEach((script) => {
-    const scriptTag = document.createElement('script');
+    const scriptTag = document.createElement("script");
     scriptTag.src = script.src;
     document.body.appendChild(scriptTag);
   });
@@ -102,8 +106,17 @@ const insertComponentAfter = async (
   });
 
   scripts.forEach((script) => {
-    const scriptTag = document.createElement('script');
+    const scriptTag = document.createElement("script");
     scriptTag.src = script.src;
     document.body.appendChild(scriptTag);
   });
 };
+
+// Optional: Export functions if you want to use them in other files
+// export {
+//   fetchComponent,
+//   prependComponent,
+//   appendComponent,
+//   insertComponentBefore,
+//   insertComponentAfter,
+// };
