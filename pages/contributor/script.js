@@ -91,6 +91,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Initialize
-  animateHero();
   fetchData();
 });
