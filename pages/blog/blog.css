@@ -102,7 +102,7 @@
   min-height: 50px;
   width: 250px;
   padding: 0 1rem;
-  color: #fff;
+  color:black;
   font-size: 15px;
   border: 1px solid #088178;
   border-radius: 6px 0 0 6px;
@@ -147,4 +147,79 @@
   .blog-card {
     width: 100%;
   }
+}
+
+.darkmode .blogs-section .heading{
+  color: #fff;
+}
+
+.darkmode main{
+  background-color: black;
+}
+
+.darkmode .blogs-section{
+  background-color: black;
+}
+
+.darkmode .blog-card{
+  background-color: #333;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.darkmode .blog-content p{
+  color: #fff;
+}
+
+.darkmode .blog-content h3{
+  color: #fff;
+}
+
+.darkmode .newsletter{
+  background-color: black;
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid #fff;
+}
+
+.darkmode .newsletter-left{
+  color: #fff;
+}
+
+.darkmode .newsletter-left h1{
+  color: #fff;
+}
+
+.scroll-top{
+  position: fixed;
+  bottom: 12px;
+  right: 80px;
+  background-color: #00ff40;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10000;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.scroll-top, .fa-arrow-up{
+  font-size: 20px;
+}
+.scroll-top .fa-arrow-up{
+  transition: 0.2s ease-out;
+	color: #fff;
+	transition: 0.2s ease-out;
+}
+
+.scroll-top:hover {
+	background-color: #34947c;
+}
+.scroll-top:hover .fa-arrow-up {
+	transform: translateY(-4px);
 }

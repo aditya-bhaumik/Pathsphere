@@ -4,14 +4,17 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: #f4f4f4;
   --secondary-color: #333;
 }
+
 .darkmode {
   --primary-color: #333;
   --secondary-color: #f4f4f4;
 }
+
 header {
   padding: 20px;
   color: var(--secondary-color);
@@ -19,49 +22,58 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
 }
+
 nav .logo img {
   width: 50px;
   margin-right: 10px;
 }
+
 nav a {
   color: var(--primary-color);
   text-decoration: none;
   padding: 10px;
   transition: background-color 0.3s;
 }
+
 nav a:hover {
   color: red;
   border-radius: 5px;
 }
+
 .hero {
   background-color: #4caf50;
   color: var(--primary-color);
   padding: 30px;
   text-align: center;
 }
+
 .search-bar {
   margin: 20px auto;
   text-align: center;
   position: relative;
 }
+
 .search-bar input {
   padding: 10px;
   width: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .search-bar i {
   position: absolute;
   left: 10px;
   top: 10px;
   color: #888;
 }
+
 .scholarship-list {
   display: flex;
   flex-wrap: wrap;
@@ -80,17 +92,54 @@ nav a:hover {
   background-color: var(--primary-color);
   color: black;
   font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.scholarship-item h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+
+.scholarship-item:hover {
+  transform: scale(1.05);
 }
 
-.scholarship-item p {
+.scholarship-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.scholarship-content {
+  padding: 20px;
+}
+
+.scholarship-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.scholarship-content p {
+  font-size: 14px;
+  color: #555;
   margin: 5px 0;
-  font-size: 1.1em;
-  color: black;
+}
+
+.scholarship-content p strong {
+  font-weight: bold;
+}
+
+.apply-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 150px;
+
 }
 
 .scholarship-item .apply-btn {
@@ -113,6 +162,35 @@ nav a:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Read More Button Styling */
+.scholarship-item .read-more-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scholarship-item .read-more-btn:hover {
+  background-color: #66bb6a;
+  transform: translateY(-3px);
+}
+
+/* Scholarship Details Styling */
+.scholarship-details {
+  margin-top: 15px;
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  display: none; /* Initially hidden */
+}
+
 .footer-container {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -120,25 +198,47 @@ nav a:hover {
   text-align: center;
   margin-top: 20px;
 }
+
 .footer-list {
   margin: 20px 0;
 }
+
 .footer-list h3 {
   margin-bottom: 10px;
 }
+
 .social-icons li {
   display: inline;
   margin: 0 10px;
 }
+
 .copyright {
   margin-top: 10px;
 }
+
+/* Media Queries */
 @media (max-width: 600px) {
   .search-bar input {
     width: 80%;
   }
+
   .scholarship-item {
     width: 100%;
+  }
+
+  .scholarship-item h2 {
+    font-size: 1.3em;
+  }
+
+  .scholarship-item p,
+  .scholarship-details p {
+    font-size: 1em;
+  }
+
+  .scholarship-item .apply-btn,
+  .scholarship-item .read-more-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
   }
 }
 
@@ -192,4 +292,53 @@ nav a:hover {
   .social-icons a:hover {
     color: #0077b5;
   }
+
+  .scholarship-item {
+    width: 90%;
+    margin: 10px;
+  }
+}
+
+.darkmode .scholarship-item{
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.darkmode .scholarship-item p{
+  color: #fff;
+}
+
+.scroll-top{
+  position: fixed;
+  bottom: 12px;
+  right: 80px;
+  background-color: #00ff40;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10000;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.scroll-top, .fa-arrow-up{
+  font-size: 20px;
+}
+.scroll-top .fa-arrow-up{
+  transition: 0.2s ease-out;
+	color: #fff;
+	transition: 0.2s ease-out;
+}
+
+.scroll-top:hover {
+	background-color: #34947c;
+}
+.scroll-top:hover .fa-arrow-up {
+	transform: translateY(-4px);
 }

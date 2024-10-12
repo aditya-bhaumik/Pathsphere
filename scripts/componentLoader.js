@@ -4,22 +4,25 @@ const fetchComponent = async (componentName) => {
     const res = await fetch(
       `/components/${componentName}/${componentName}.html`
     );
+
+    // Check if the response is OK
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
     const html = await res.text();
-
     const parser = new DOMParser();
-
     const doc = parser.parseFromString(html, 'text/html');
 
+    // Select components, styles, and scripts from the fetched HTML
     const components = doc.body.querySelectorAll('body > :not(script)') || [];
-
     const styles = doc.querySelectorAll('link[rel="stylesheet"], style') || [];
-
     const scripts = doc.querySelectorAll('script') || [];
 
     return [components, styles, scripts];
   } catch (e) {
     console.error(
-      'error while fetching component, please check if the given name is correct',
+      'Error while fetching component, please check if the given name is correct',
       e
     );
   }
