@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <base href="/Pathsphere/"> -->
-    <!-- uncomment above line if deploying to github pages -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jobs</title>
-    <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
     <link rel="stylesheet" href="./jobs.css" />
-    <!-- <<<<<<< enhanceFAQ -->
-    <!-- <style>
-        Removed css code from here and created a new file jobs.css
-    </style> -->
-
-    <!-- >>>>>>> main -->
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <main>
@@ -29,32 +25,38 @@
         <input type="text" id="search-input" placeholder="Search jobs..." />
         <button id="search-button">Search</button>
       </div>
+
       <div class="job-listings">
         <h2>Job Listings</h2>
         <div id="jobs" class="main">
           <!-- Cards will be generated here by JavaScript -->
         </div>
       </div>
-      <a class="scroll-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
+
+      <a class="scroll-top" href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
     </main>
+
     <script src="/scripts/componentLoader.js"></script>
     <script>
       prependComponent('Navbar');
       prependComponent('Cursor');
       appendComponent('Footer');
     </script>
+
     <script src="./jobs.js"></script>
     <script>
       window.embeddedChatbotConfig = {
-      chatbotId: "7akUzokCgwR0gNp0m-qQF",
-      domain: "www.chatbase.co"
-      }
-      </script>
-      <script
+        chatbotId: "7akUzokCgwR0gNp0m-qQF",
+        domain: "www.chatbase.co",
+      };
+    </script>
+    <script
       src="https://www.chatbase.co/embed.min.js"
       chatbotId="7akUzokCgwR0gNp0m-qQF"
       domain="www.chatbase.co"
-      defer>
-      </script>
+      defer
+    ></script>
   </body>
 </html>

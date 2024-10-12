@@ -380,3 +380,70 @@ body {
 .scroll-top:hover .fa-arrow-up {
 	transform: translateY(-4px);
 }
+/* Job Item Styling */
+.job-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card-body {
+  padding: 10px 0;
+}
+
+.location {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.apply-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.apply-btn button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.apply-btn button:hover {
+  background-color: #45a049;
+}
+
+/* Salary and Tools Styling */
+.card-body p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.card-body p strong {
+  font-weight: bold;
+}
