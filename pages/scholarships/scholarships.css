@@ -1,8 +1,13 @@
-body {
+body { 
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url('https://themilwaukeechapterofthelinksinc.com/wp-content/uploads/2024/05/the-worlds-most-well-known-scholarship-opportunities-platforms.webp?w=1000');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 :root {
