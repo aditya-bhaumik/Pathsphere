@@ -115,25 +115,26 @@ function filterJobs(searchTerm) {
 function generateJobCards() {
   const jobContainer = document.getElementById("jobs");
   jobContainer.innerHTML = jobListings
-    .map(
-      (job) => `
-      <div class="job-item">
-         <div class="card">
-           <div class="card-body">
+    .map((job, index) => {
+      const aosDirection = index % 2 === 0 ? 'left' : 'right'; // Alternates between 'left' and 'right'
+      return `
+        <div class="job-item" data-aos="fade-${aosDirection}" data-aos-duration="1200" data-aos-delay="150">
+          <div class="card">
+            <div class="card-body">
               <h5>${job.title}</h5>
-               <h6>${job.company}</h6>
-              
+              <h6>${job.company}</h6>
               <p>${job.description}</p>
-           </div>
-  <div class="apply-btn">
-  <span class="location">${job.location}</span>
-  <button>Apply Now</button>
-  </div>
-  </div>
-</div>
-    `
-    )
+            </div>
+            <div class="apply-btn">
+              <span class="location">${job.location}</span>
+              <button>Apply Now</button>
+            </div>
+          </div>
+        </div>
+      `;
+    })
     .join("");
 }
 
 generateJobCards();
+AOS.init(); // Initialize AOS after generating job cards

@@ -44,3 +44,8 @@ document.querySelectorAll('.read-more').forEach((button) => {
       additionalContent.style.display === 'block' ? 'Read less' : 'Read more';
   });
 });
+
+
+    AOS.init();
+
+

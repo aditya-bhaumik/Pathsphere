@@ -9,6 +9,9 @@
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png" />
     <link rel="stylesheet" href="./blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
   </head>
 
   <body>
@@ -24,13 +27,14 @@
       </section>
 
       <!-- Blogs Section Starts Here -->
-      <section class="blogs-section" id="blogs">
+      <section class="blogs-section" id="blogs" >
         <h1 class="heading">Scholarship <span>Blogs</span></h1>
         <div class="blogs-container">
           <!-- Blog 1 -->
           <div
             class="blog-card"
             onclick="redirectToBlog('https://example.com/blog1')"
+            data-aos="fade-right" data-aos-duration="1200" data-aos-delay="150"
           >
             <div class="blog-image">
               <img src="/images/sc1.jpg" alt="Scholarship Blog 1" />
@@ -49,6 +53,7 @@
           <div
             class="blog-card"
             onclick="redirectToBlog('https://example.com/blog2')"
+            data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150"
           >
             <div class="blog-image">
               <img src="/images/sc2.webp" alt="Scholarship Blog 2" />
@@ -67,6 +72,7 @@
           <div
             class="blog-card"
             onclick="redirectToBlog('https://example.com/blog2')"
+            data-aos="fade-left" data-aos-duration="1200" data-aos-delay="150"
           >
             <div class="blog-image">
               <img src="/images/sc3.jpeg" alt="Scholarship Blog 2" />
@@ -84,6 +90,7 @@
           <div
             class="blog-card"
             onclick="redirectToBlog('https://example.com/blog2')"
+            data-aos="fade-right" data-aos-duration="1200" data-aos-delay="150"
           >
             <div class="blog-image">
               <img src="/images/sc4.jpg" alt="Scholarship Blog 2" />
@@ -105,6 +112,7 @@
           <div
             class="blog-card"
             onclick="redirectToBlog('https://example.com/blog2')"
+            data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150"
           >
             <div class="blog-image">
               <img src="/images/sc5.jpg" alt="Scholarship Blog 2" />
@@ -124,6 +132,7 @@
           <div
             class="blog-card"
             onclick="redirectToBlog('https://example.com/blog2')"
+            data-aos="fade-left" data-aos-duration="1200" data-aos-delay="150"
           >
             <div class="blog-image">
               <img src="/images/sc6.jpg" alt="Scholarship Blog 2" />
@@ -143,15 +152,16 @@
 
       <div class="newsletter">
         <div class="newsletter-left">
-          <h1>Sign Up for Newsletters</h1>
-          <p>
+          <h1 data-aos="fade-down" data-aos-duration="1200" data-aos-delay="150">Sign Up for Newsletters</h1>
+          <p  >
             Get updates in your E-mail about
-            <span>latest deals and products</span>
+            <span >latest deals and products</span>
           </p>
         </div>
         <div class="newsletter-right">
           <div class="input-group">
             <input
+              data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150"
               type="email"
               class="input"
               id="newsletter-input"
@@ -160,6 +170,7 @@
               autocomplete="off"
             />
             <input
+            data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150"
               class="button--submit subscribe-button"
               value="Subscribe"
               type="submit"
