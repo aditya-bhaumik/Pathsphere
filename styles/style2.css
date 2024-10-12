@@ -1,0 +1,100 @@
+/* Container Styles */
+.newsletter-container {
+      width: 100%;
+      max-width: 700px;
+      padding: 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+}
+
+/* Title and Description */
+.newsletter-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: rgb(12, 12, 12);
+}
+
+.newsletter-description {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: rgb(7, 7, 7);
+}
+
+/* Success Message */
+.subscription-message {
+      font-size: 1.75rem;
+      font-weight: bold;
+      background-color: #10b981;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      color: white;
+      animation: pulse 1s infinite;
+}
+
+.hidden {
+      display: none;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+      0% {
+            transform: scale(1);
+      }
+
+      50% {
+            transform: scale(1.05);
+      }
+
+      100% {
+            transform: scale(1);
+      }
+}
+
+/* Form Styles */
+.newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+}
+
+/* Input Field */
+.newsletter-input {
+      padding: 1rem;
+      font-size: 1.25rem;
+      border-radius: 10px;
+      border: 2px solid #f97316;
+      /* Updated to match orange theme */
+      color: rgb(12, 12, 12);
+}
+
+.newsletter-input::placeholder {
+      color: rgba(22, 20, 20, 0.5);
+}
+
+/* Button Styles */
+.newsletter-btn {
+      padding: 1rem;
+      font-size: 1.25rem;
+      background-color: #f97316;
+      /* Orange button */
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+}
+
+.newsletter-btn:hover {
+      background-color: #fb923c;
+      /* Lighter orange on hover */
+}
+
+/* Footer Text */
+.newsletter-footer-text {
+      margin-top: 1rem;
+      color: rgba(22, 20, 20, 0.8);
+      font-size: 0.875rem;
+}
