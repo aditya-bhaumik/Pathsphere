@@ -1,14 +1,43 @@
-body { 
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-image: url('https://themilwaukeechapterofthelinksinc.com/wp-content/uploads/2024/05/the-worlds-most-well-known-scholarship-opportunities-platforms.webp?w=1000');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+:root {
+    --main-bg-color: rgba(255, 255, 255, 0.8); /* Example variable */
+    --primary-font: 'Arial', sans-serif; /* Example variable */
 }
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('https://themilwaukeechapterofthelinksinc.com/wp-content/uploads/2024/05/the-worlds-most-well-known-scholarship-opportunities-platforms.webp?w=1000');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #333; /* Ensure text color is readable */
+    text-align: center; /* Center content for clarity */
+    background-color: rgba(255, 255, 255, 0.5); /* Temporary background color for testing */
+}
+
+.scroll-top:hover .fa-arrow-up {
+    transform: translateY(-4px);
+}
+
+/* Example styles for headings and paragraphs */
+h1 {
+    margin: 20px;
+}
+
+p {
+    margin: 10px;
+}
+
+/* Example media query for responsiveness */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
 
 :root {
   --primary-color: #f4f4f4;
