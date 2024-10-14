@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <base href="/Pathsphere/"> -->
-    <!-- uncomment above line if deploying to github pages -->
+    <link rel="stylesheet" href="/styles/styles.css" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jobs</title>
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png" />
     <link rel="stylesheet" href="./jobs.css" />
-    <link rel="stylesheet" href="/styles/essential.css" />
     <!-- <<<<<<< enhanceFAQ -->
     <!-- <style>
         Removed css code from here and created a new file jobs.css
@@ -30,6 +29,7 @@
         <input type="text" id="search-input" placeholder="Search jobs..." />
         <button id="search-button">Search</button>
       </div>
+
       <div class="job-listings">
         <h2>Job Listings</h2>
         <div id="jobs" class="main">
@@ -37,6 +37,7 @@
         </div>
       </div>
     </main>
+
     <script src="/scripts/componentLoader.js"></script>
     <script>
       prependComponent('Navbar');
@@ -46,5 +47,6 @@
       appendComponent('ChatBot');
       waitTillComponentsLoaded();
     </script>
+    <script src="./jobs.js"></script>
   </body>
 </html>

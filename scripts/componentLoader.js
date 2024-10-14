@@ -150,14 +150,6 @@ const insertComponentAfter = async (
   console.log('Component loaded:', componentName);
 };
 
-const hideContent = () => {
-  // make body children invisible
-  const bodyChildren = document.body.children;
-  Array.from(bodyChildren).forEach((child) => {
-    child.style.visibility = 'hidden';
-  });
-};
-
 const showContent = async () => {
   // remove loading screen
   const loadingScreen = document.getElementById('LoadingScreen');
@@ -187,14 +179,15 @@ const waitTillComponentsLoaded = async (callback = showContent) => {
 
   // load scripts
   for (const script of scripts) {
-    const scriptTag = document.createElement('script');
+    const newScript = document.createElement('script');
+    const href = script.src;
     const innerScript = script.innerHTML;
-    if (innerScript) {
-      scriptTag.innerHTML = innerScript;
+    if (href) {
+      newScript.src = href;
     } else {
-      scriptTag.src = script.src;
+      newScript.innerHTML = innerScript;
     }
-    await document.body.appendChild(scriptTag);
+    document.body.appendChild(newScript);
   }
 
   // call the callback by default show content
@@ -202,7 +195,9 @@ const waitTillComponentsLoaded = async (callback = showContent) => {
 };
 
 const loadLoadingScreen = async () => {
+  // add loading screen
   await prependComponent('LoadingScreen');
+  // show the body content after loading screen is loaded
   document.body.style.display = '';
 };
 

@@ -1,38 +1,53 @@
 const jobListings = [
   {
-      id: 1,
-      title: "Software Engineer",
-      company: "Tech Corp",
-      location: "New York, USA",
-      description: "Develop and maintain web applications using modern frameworks.",
+    id: 1,
+    title: "Software Engineer",
+    company: "Tech Corp",
+    location: "New York, USA",
+    description: "Develop and maintain web applications using modern frameworks.",
+    salary: "$90K - $120K",
+    tools: ["JavaScript", "React", "Node.js"],
+    logo: "./job_images/manage.png",
   },
   {
-      id: 2,
-      title: "Data Scientist",
-      company: "DataSolutions",
-      location: "San Francisco, USA",
-      description: "Analyze large datasets to extract insights and support decision-making.",
+    id: 2,
+    title: "Data Scientist",
+    company: "DataSolutions",
+    location: "San Francisco, USA",
+    description: "Analyze large datasets to extract insights and support decision-making.",
+    salary: "$110K - $150K",
+    tools: ["Python", "R", "TensorFlow"],
+    logo: "./job_images/data_science.jpeg", // updated path
   },
   {
-      id: 3,
-      title: "UI/UX Designer",
-      company: "Creative Minds",
-      location: "London, UK",
-      description: "Design intuitive and responsive interfaces for web and mobile applications.",
+    id: 3,
+    title: "UI/UX Designer",
+    company: "Creative Minds",
+    location: "London, UK",
+    description: "Design intuitive and responsive interfaces for web and mobile applications.",
+    salary: "$70K - $100K",
+    tools: ["Sketch", "Figma", "Adobe XD"],
+    logo: "./job_images/design.jpg",
   },
   {
-      id: 4,
-      title: "Project Manager",
-      company: "Business Solutions",
-      location: "Toronto, Canada",
-      description: "Oversee project execution and ensure timely delivery within scope and budget.",
+    id: 4,
+    title: "Project Manager",
+    company: "Business Solutions",
+    location: "Toronto, Canada",
+    description: "Oversee project execution and ensure timely delivery within scope and budget.",
+    salary: "$100K - $130K",
+    tools: ["Jira", "Asana", "Trello"],
+    logo: "./job_images/innovation.png",
   },
   {
-      id: 5,
-      title: "DevOps Engineer",
-      company: "CloudTech",
-      location: "Berlin, Germany",
-      description: "Implement CI/CD pipelines, automate infrastructure, and manage cloud services.",
+    id: 5,
+    title: "DevOps Engineer",
+    company: "CloudTech",
+    location: "Berlin, Germany",
+    description: "Implement CI/CD pipelines, automate infrastructure, and manage cloud services.",
+    salary: "$95K - $140K",
+    tools: ["Docker", "Kubernetes", "AWS"],
+    logo: "./job_images/download.png",
   },
   {
       id: 6,
@@ -40,6 +55,9 @@ const jobListings = [
       company: "SecureWorks",
       location: "Sydney, Australia",
       description: "Monitor and analyze security systems to prevent data breaches and cyberattacks.",
+      salary: "$105K - $160K",
+      tools: ["Network Security", "Penetration Testing", "Firewalls", "Encryption", "Azure"],
+      logo: "./job_images/secure.png",
   },
   {
       id: 7,
@@ -47,6 +65,9 @@ const jobListings = [
       company: "InnoTech",
       location: "Paris, France",
       description: "Build end-to-end solutions, from front-end to back-end, for enterprise applications.",
+      salary: "$100K - $150K",
+      tools: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"],
+      logo: "./job_images/fullstack.jpeg",
   },
   {
       id: 8,
@@ -54,6 +75,9 @@ const jobListings = [
       company: "Brandify",
       location: "Dubai, UAE",
       description: "Develop and execute marketing campaigns to enhance brand visibility and engagement.",
+      salary: "$70K - $110K",
+      tools: ["SEO", "Google Analytics", "Social Media", "Content Marketing", "Brand Strategy"],
+      logo: "./job_images/market.png",
   },
   {
       id: 9,
@@ -61,6 +85,9 @@ const jobListings = [
       company: "Crypto Solutions",
       location: "Singapore",
       description: "Design, implement, and maintain blockchain technologies and decentralized apps.",
+      salary: "$120K - $180K",
+      tools: ["Ethereum", "Solidity", "Smart Contracts", "DeFi", "Cryptography"],
+      logo: "./job_images/download (2).png",
   },
   {
       id: 10,
@@ -68,10 +95,12 @@ const jobListings = [
       company: "NextGen",
       location: "Austin, USA",
       description: "Drive the product development lifecycle from ideation to market launch.",
+      salary: "$130K - $200K",
+      tools: ["Agile", "Scrum", "JIRA", "Stakeholder Management", "Product Roadmap"],
+      logo: "./job_images/product.png",
   },
   // Add more job listings as needed
 ];
-
 
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
@@ -118,19 +147,23 @@ function generateJobCards() {
     .map(
       (job) => `
       <div class="job-item">
-         <div class="card">
-           <div class="card-body">
-              <h5>${job.title}</h5>
-               <h6>${job.company}</h6>
-              
-              <p>${job.description}</p>
-           </div>
-  <div class="apply-btn">
-  <span class="location">${job.location}</span>
-  <button>Apply Now</button>
-  </div>
-  </div>
-</div>
+        <div class="card">
+          <div class="card-header">
+            <img src="${job.logo}" alt="${job.company} Logo" class="company-logo">
+          </div>
+          <div class="card-body">
+            <h5>${job.title}</h5>
+            <h6>${job.company}</h6>
+            <span class="location">${job.location}</span>
+            <p>${job.description}</p>
+            <p><strong>Salary:</strong> ${job.salary}</p>
+            <p><strong>Required Tools:</strong> ${job.tools.join(", ")}</p>
+          </div>
+          <div class="apply-btn">
+            <button>Apply Now</button>
+          </div>
+        </div>
+      </div>
     `
     )
     .join("");

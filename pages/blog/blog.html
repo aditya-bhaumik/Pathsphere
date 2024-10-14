@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/styles/styles.css" />
     <!-- <base href="/Pathsphere/"> -->
     <!-- uncomment above line if deploying to github pages -->
     <meta charset="UTF-8" />
@@ -142,33 +143,23 @@
       </section>
       <!-- Blogs Section Ends Here -->
 
-      <div class="newsletter">
-        <div class="newsletter-left">
-          <h1>Sign Up for Newsletters</h1>
-          <p>
-            Get updates in your E-mail about
-            <span>latest deals and products</span>
-          </p>
-        </div>
-        <div class="newsletter-right">
-          <div class="input-group">
-            <input
-              type="email"
-              class="input"
-              id="newsletter-input"
-              name="Email"
-              placeholder="saptarshi2027paul@gmail.com"
-              autocomplete="off"
-            />
-            <input
-              class="button--submit subscribe-button"
-              value="Subscribe"
-              type="submit"
-              id="subscribe-button"
-            />
-          </div>
-        </div>
+    <div class="newsletter">
+      <div class="newsletter-left">
+        <h1>Sign Up for Newsletters</h1>
+        <p>
+          Get updates in your E-mail about
+          <span>latest deals and products</span>
+        </p>
       </div>
+      <div class="newsletter-right">
+        <div class="input-group">
+          <input type="email" class="input" id="newsletter-input" name="Email" placeholder="saptarshi2027paul@gmail.com"
+            autocomplete="off" />
+          <input class="button--submit subscribe-button" value="Subscribe" type="submit" id="subscribe-button" />
+        </div>
+        <p id="subscription-message" class="subscription-message"></p>
+      </div>
+      <div id="toast-container" class="toast-container"></div>
     </main>
     <script>
       window.embeddedChatbotConfig = {
