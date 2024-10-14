@@ -158,10 +158,10 @@ const showContent = async () => {
   loadingScreen.classList.add('loaded');
 
   // show body content
-  const bodyChildren = document.body.children;
-  Array.from(bodyChildren).forEach((child) => {
-    child.style.visibility = 'visible';
-  });
+  // const bodyChildren = document.body.children;
+  // Array.from(bodyChildren).forEach((child) => {
+  //   child.style.visibility = 'visible';
+  // });
 };
 
 const waitTillComponentsLoaded = async (callback = showContent) => {
@@ -198,7 +198,7 @@ const loadLoadingScreen = async () => {
   // add loading screen
   await prependComponent('LoadingScreen');
   // show the body content after loading screen is loaded
-  document.body.style.display = '';
+  document.body.style.visibility = 'visible';
 };
 
 const init = async () => {
