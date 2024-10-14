@@ -197,6 +197,7 @@ const waitTillComponentsLoaded = async (callback = showContent) => {
 const loadLoadingScreen = async () => {
   // add loading screen
   await prependComponent('LoadingScreen');
+  await waitTillComponentsLoaded(() => {});
   // show the body content after loading screen is loaded
   document.body.style.visibility = 'visible';
 };
@@ -209,7 +210,6 @@ const init = async () => {
   // add loading screen
   await loadLoadingScreen();
   // complete mounting the loadingscreen
-  await waitTillComponentsLoaded(() => {});
 
   console.log('Loading components...');
 
