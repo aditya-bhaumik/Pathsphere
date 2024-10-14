@@ -1,6 +1,10 @@
 const componentsToBeLoaded = [];
+const styles = [];
+const scripts = [];
+
 const fetchComponent = async (componentName) => {
   try {
+    // fetch content from server
     const res = await fetch(
       `/components/${componentName}/${componentName}.html`
     );
@@ -10,6 +14,7 @@ const fetchComponent = async (componentName) => {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
 
+    // parse content
     const html = await res.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
@@ -19,6 +24,7 @@ const fetchComponent = async (componentName) => {
     const styles = doc.querySelectorAll('link[rel="stylesheet"], style') || [];
     const scripts = doc.querySelectorAll('script') || [];
 
+    // return component, styles and scripts
     return [components, styles, scripts];
   } catch (e) {
     console.error(
@@ -28,6 +34,47 @@ const fetchComponent = async (componentName) => {
   }
 };
 
+const prepareComponent = async (stylesToLoad, scriptsToLoad) => {
+  // iterate through styles to be loaded
+  stylesToLoad.forEach((style) => {
+    // get the href
+    const href = style.href;
+    // get the innerstyle
+    const innerStyle = style.innerHTML;
+    // if its empty then its redundant no need to inject
+    if (!href && !innerStyle) return;
+
+    // if the same content exists in the lists then dont add it to list
+    if (
+      (href && styles.find((s) => s.href === href)) ||
+      (innerStyle && styles.find((s) => s.innerHTML === innerStyle))
+    )
+      return;
+    // add style to html. this is done to avoid styles not loading properly
+    document.head.appendChild(style);
+  });
+
+  //  iterate through scripts to be loaded
+  scriptsToLoad.forEach((script) => {
+    // get the innerHTML
+    const innerScript = script.innerHTML;
+    //  get the src
+    const src = script.src;
+
+    // if its empty then its redundant no need to inject
+    if (!innerScript && !src) return;
+
+    // if the same content exists in the lists then dont add it to list
+    if (
+      (innerScript && scripts.find((s) => s.innerHTML === innerScript)) ||
+      (src && scripts.find((s) => s.src === src))
+    )
+      return;
+    // push to scripts list. its not injected directly right now to avoid loading scripts before all the html content is loaded
+    scripts.push(script);
+  });
+};
+
 const prependComponent = async (
   componentName,
   targetElement = document.body
@@ -35,30 +82,21 @@ const prependComponent = async (
   componentsToBeLoaded.push(componentName);
   try {
     const [component, styles, scripts] = await fetchComponent(componentName);
-    styles.forEach((style) => {
-      document.head.appendChild(style);
-    });
-
+    prepareComponent(styles, scripts);
     component.forEach((element) => {
       while (!targetElement) {
         targetElement = document.body;
       }
       targetElement.prepend(element);
     });
-
-    scripts.forEach((script) => {
-      const scriptTag = document.createElement('script');
-      scriptTag.src = script.src;
-      document.body.appendChild(scriptTag);
-    });
-    componentsToBeLoaded.pop();
-    console.log('Component loaded:', componentName);
   } catch (e) {
     console.error(
       'error while fetching component, please check if the given name is correct',
       e
     );
   }
+  componentsToBeLoaded.pop();
+  console.log('Component loaded:', componentName);
 };
 
 const appendComponent = async (
@@ -68,20 +106,14 @@ const appendComponent = async (
   componentsToBeLoaded.push(componentName);
   const [component, styles, scripts] = await fetchComponent(componentName);
 
-  styles.forEach((style) => {
-    document.head.appendChild(style);
-  });
+  prepareComponent(styles, scripts);
 
   component.forEach((element) => {
     targetElement.appendChild(element);
   });
 
-  scripts.forEach((script) => {
-    const scriptTag = document.createElement('script');
-    scriptTag.src = script.src;
-    document.body.appendChild(scriptTag);
-  });
   componentsToBeLoaded.pop();
+  console.log('Component loaded:', componentName);
 };
 
 const insertComponentBefore = async (
@@ -91,20 +123,14 @@ const insertComponentBefore = async (
   componentsToBeLoaded.push(componentName);
   const [component, styles, scripts] = await fetchComponent(componentName);
 
-  styles.forEach((style) => {
-    document.head.appendChild(style);
-  });
+  prepareComponent(styles, scripts);
 
   component.forEach((element) => {
     BeforeElement.before(element);
   });
 
-  scripts.forEach((script) => {
-    const scriptTag = document.createElement('script');
-    scriptTag.src = script.src;
-    document.body.appendChild(scriptTag);
-  });
   componentsToBeLoaded.pop();
+  console.log('Component loaded:', componentName);
 };
 
 const insertComponentAfter = async (
@@ -114,44 +140,65 @@ const insertComponentAfter = async (
   componentsToBeLoaded.push(componentName);
   const [component, styles, scripts] = await fetchComponent(componentName);
 
-  styles.forEach((style) => {
-    document.head.appendChild(style);
-  });
+  prepareComponent(styles, scripts);
 
   component.forEach((element) => {
     AfterElement.after(element);
   });
 
-  scripts.forEach((script) => {
-    const scriptTag = document.createElement('script');
-    scriptTag.src = script.src;
-    document.body.appendChild(scriptTag);
-  });
   componentsToBeLoaded.pop();
+  console.log('Component loaded:', componentName);
 };
 
 const hideContent = () => {
+  // make body children invisible
   const bodyChildren = document.body.children;
   Array.from(bodyChildren).forEach((child) => {
-    child.style.visibility = 'hidden'; // You can also use 'display: none' if needed
+    child.style.visibility = 'hidden';
   });
 };
 
-const showContent = () => {
+const showContent = async () => {
+  // remove loading screen
+  const loadingScreen = document.getElementById('LoadingScreen');
+  loadingScreen.classList.remove('loading');
+  // await new Promise((resolve) => setTimeout(resolve, 5000));
+  loadingScreen.classList.add('loaded');
+
+  // show body content
   const bodyChildren = document.body.children;
   Array.from(bodyChildren).forEach((child) => {
-    child.style.visibility = 'visible'; // You can also use 'display: block' if needed
+    child.style.visibility = 'visible';
   });
 };
 
-const waitTillComponentsLoaded = async () => {
+const waitTillComponentsLoaded = async (callback = showContent) => {
+  // wait till all components are loaded
   while (componentsToBeLoaded.length > 0) {
     await new Promise((resolve) => setTimeout(resolve, 100));
   }
-  const loadingScreen = document.getElementById('LoadingScreen');
-  loadingScreen.classList.remove('loading');
-  loadingScreen.classList.add('loaded');
-  showContent();
+
+  // ! commented because this method is deprecated
+  // load styles and scripts
+  // for (const style of styles) {
+  //   document.head.appendChild(style);
+  //   console.log('Style loaded:', style);
+  // }
+
+  // load scripts
+  for (const script of scripts) {
+    const scriptTag = document.createElement('script');
+    const innerScript = script.innerHTML;
+    if (innerScript) {
+      scriptTag.innerHTML = innerScript;
+    } else {
+      scriptTag.src = script.src;
+    }
+    await document.body.appendChild(scriptTag);
+  }
+
+  // call the callback by default show content
+  callback();
 };
 
 const loadLoadingScreen = async () => {
@@ -160,10 +207,14 @@ const loadLoadingScreen = async () => {
 };
 
 const init = async () => {
+  // wait till body tag is loaded
   while (!document.body) {
     await new Promise((resolve) => setTimeout(resolve, 100));
   }
+  // add loading screen
   await loadLoadingScreen();
+  // complete mounting the loadingscreen
+  await waitTillComponentsLoaded(() => {});
 
   console.log('Loading components...');
 
