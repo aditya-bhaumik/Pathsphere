@@ -18,18 +18,59 @@ document.querySelectorAll('.submit-comment').forEach((button) => {
 });
 
 // Subscribe button functionality
-document
-  .getElementById('subscribe-button')
-  .addEventListener('click', function () {
-    const emailInput = document.getElementById('newsletter-input');
+document.addEventListener('DOMContentLoaded', function() {
+  const subscribeButton = document.getElementById('subscribe-button');
+  const emailInput = document.getElementById('newsletter-input');
+  const toastContainer = document.getElementById('toast-container');
+
+  function showToast(message, type = 'success') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type === 'success' ? 'toast-success' : 'toast-error'}`;
+    
+    const icon = document.createElement('span');
+    icon.className = 'toast-icon';
+    icon.innerHTML = type === 'success' ? '✓' : '✗';
+    
+    const messageSpan = document.createElement('span');
+    messageSpan.className = 'toast-message';
+    messageSpan.textContent = message;
+    
+    const closeButton = document.createElement('button');
+    closeButton.className = 'toast-close';
+    closeButton.innerHTML = '&times;';
+    closeButton.onclick = () => {
+      toast.remove();
+    };
+    
+    toast.appendChild(icon);
+    toast.appendChild(messageSpan);
+    toast.appendChild(closeButton);
+    
+    toastContainer.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.classList.add('show');
+    }, 10);
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => {
+        toast.remove();
+      }, 300);
+    }, 3000);
+  }
+
+  subscribeButton.addEventListener('click', function() {
     const email = emailInput.value.trim();
     if (email) {
-      alert(`Thank you for subscribing with ${email}!`);
-      emailInput.value = ''; // Clear the input
+      // Here you would typically send the email to your server or newsletter service
+      showToast('Thank you for subscribing!', 'success');
+      emailInput.value = '';
     } else {
-      alert('Please enter a valid email address.');
+      showToast('Please enter a valid email address.', 'error');
     }
   });
+});
 
 // Read more functionality
 document.querySelectorAll('.read-more').forEach((button) => {
