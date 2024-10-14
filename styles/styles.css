@@ -270,9 +270,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
+
 }
 
 .logo {
@@ -344,7 +345,7 @@ nav ul li a:hover {
     background: rgba(0, 0, 0, 0.1);
     height: 10vh;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     margin-top: 10px;
     margin-left: 0;
     display: flex;
@@ -541,8 +542,25 @@ main {
   width: 30%;
   margin-bottom: 20px;
   transition: transform 0.2s; 
-}
 
+}
+@media (max-width:700px) 
+{
+  .features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .feature{
+    width: 100%;
+    height: 100%;
+  }
+  
+}
 .feature:hover {
   transform: scale(1.05); 
 }
@@ -553,14 +571,20 @@ main {
 }
 
 .feature h2 {
+
+  font-size: 24px;
+  color: var(--primary-color);
+
   font-size: 24px; 
   color: var(--primary-color); 
+
   margin: 10px 0; 
 }
 
 .feature p {
   color: var(--primary-color); 
-  margin-bottom: 15px; 
+  margin-bottom: 15px
+
 }
 
 .toggle-icon {
@@ -1064,6 +1088,7 @@ footer {
   }
   .navbar {
     position: relative;
+    width: 100%;
   }
 
   #tabs {
@@ -1185,6 +1210,7 @@ h3 {
   }
 }
 
+
 .scroll-top{
   position: fixed;
   bottom: 12px;
@@ -1219,3 +1245,4 @@ h3 {
 .scroll-top:hover .fa-arrow-up {
 	transform: translateY(-4px);
 }
+
