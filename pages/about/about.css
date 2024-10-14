@@ -1,9 +1,27 @@
 /* Adding style for about page */
+
 /* General Section Styling */
-.content-section {
-  padding: 60px 20px;
-  background-color: #ffffff;
+h2 {
+  margin-top: 10px;
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem; /* Adjust the size according to your needs */
+  font-weight: bold;
+  color: #FFB400; /* Orange color */
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #F7A700, #00C2FF); /* Orange to Blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Apply gradient to text */
+}
+
+.content-section {
+  padding: 40px 20px; /* Add padding to the section */
+  background-color: #ffffff; /* White background for the section */
+  text-align: center; /* Center the section text */
 }
 
 .content-section h1,
@@ -14,140 +32,265 @@
 }
 
 .bg-highlight {
-  background: #587561;
+  background: #8ABFA3;
+  margin: 0;
+  width: 100%;
+  height: 350px;
+  padding: 0;
 }
 
 .bg-light {
   background-color: #fafafa;
 }
 
-/* Grid Layout for Cards */
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  display: grid; /* Use CSS grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+  justify-items: center; /* Center cards within the grid */
+  margin: 10px 0; /* Margin for spacing between cards */
 }
 
 /* General Card Styling */
 .content-card,
 .offering-card,
 .team-card {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Light background for cards */
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  padding: 20px; /* Inner padding for card content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  text-align: center; /* Center the text within the card */
 }
 
 .content-card:hover,
 .offering-card:hover,
 .team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
 }
 
-/* Specific Offering Card Styling */
-.offering-card i {
+/* CSS Styling for the Vision Section */
+.Vision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height to cover the view */
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Light background for the outer area */
+}
+
+.Vision .container {
+  width: 80%; /* Adjust width based on your preference */
+  background: linear-gradient(to bottom, #F19ED2, #FFD09B); /* Gradient background for the content */
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  color: #fff; /* White text */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.Vision .container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
+}
+
+.Vision h1,
+.Vision h3 {
   font-size: 2.5em;
-  color: #28a745;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  color: #000000; /* Light green for the main heading */
+  text-align: left; /* Align headings to the left */
+  transition: transform 0.3s ease; /* Smooth transition for scale effect */
 }
 
-.offering-card h3 {
-  font-size: 1.6em;
-  margin-bottom: 10px;
-  color: #333;
+.Vision h1:hover,
+.Vision h3:hover {
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
-.offering-card p {
-  font-size: 1em;
-  color: #777;
+.Vision h3 {
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+  color: #000000; /* Slightly different shade for subheadings */
+  text-align: left; /* Align subheadings to the left */
+  opacity: 0.75; /* Reduced opacity for h3 */
 }
 
-/* Team Card Specific Styles */
+.Vision p {
+  font-size: 1.2em;
+  margin: 0 0 20px;
+  line-height: 1.5;
+  text-align: left; /* Align paragraphs to the left */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  border-bottom: 2px solid #ccc; /* Add a line after each paragraph */
+  padding-bottom: 10px; /* Add some bottom padding for better spacing */
+}
+
+.Vision p:hover {
+  color: #ff00b3; /* Change text color on hover */
+}
+
+.cards-grid {
+  display: grid; /* Use CSS grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+  justify-items: center; /* Center cards within the grid */
+  margin: 10px 0; /* Margin for spacing between cards */
+}
+
+.team-card {
+  background-color: #f9f9f9; /* Light background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden; /* Prevent overflow of content */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  padding: 20px; /* Inner padding for card content */
+  text-align: center; /* Center the text within the card */
+}
+
+.team-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
 .team-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  object-fit: cover;
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make images circular */
+  border: 3px solid #FFB400; /* Border color matching the theme */
+  margin-bottom: 15px; /* Space below the image */
+  transition: transform 0.3s; /* Smooth transition for image scaling */
+}
+
+.team-card img:hover {
+  transform: scale(1.05); /* Scale image slightly on hover */
 }
 
 .team-card h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 1.5em; /* Font size for names */
+  margin: 15px 0 5px; /* Margin for spacing */
+  color: #333; /* Dark color for names */
 }
 
 .team-card p {
-  font-size: 1em;
-  color: #777;
+  font-size: 1.1em; /* Font size for titles */
+  margin: 0 0 15px; /* Margin for spacing */
+  color: #777; /* Lighter color for titles */
 }
 
-/* Responsive Design */
+/* Offer Section */
+.offer {
+  background-color: #03346E;
+}
+
+.offer h2 {
+  color: #fff; /* Heading color */
+}
+
+.offering-card {
+  background-color: #FEF9D9; /* Light background for offering cards */
+}
+
+/* Icon Styling */
+.offering-card i {
+  font-size: 3em; /* Size for icons */
+  color: #FFB400; /* Color matching your theme */
+  margin-bottom: 15px; /* Space below the icon */
+}
+
+.offering-card h3 {
+  font-size: 1.5em; /* Font size for headings */
+  margin: 15px 0 5px; /* Margin for spacing */
+  color: #333; /* Dark color for headings */
+}
+
+.offering-card p {
+  font-size: 1.1em; /* Font size for descriptions */
+  color: #777; /* Lighter color for descriptions */
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Space from the bottom */
+  right: 20px; /* Space from the right */
+  background-color: #FFB400; /* Button color matching the theme */
+  color: white; /* Text color */
+  border-radius: 50%; /* Circular button */
+  padding: 15px; /* Padding for the button */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  font-size: 1.5em; /* Font size for the icon */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.scroll-top:hover {
+  background-color: #f39c12; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
+  h2 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
   .content-section h1,
   .content-section h2 {
-    font-size: 2em;
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .Vision {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Allow auto height */
+    padding: 20px; /* Add padding */
+  }
+
+  .Vision .container {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .Vision h1,
+  .Vision h3 {
+    font-size: 2rem; /* Adjust heading sizes */
+  }
+
+  .Vision p {
+    font-size: 1em; /* Adjust paragraph size */
   }
 
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 0 10px;
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+  }
+
+  .scroll-top {
+    font-size: 1.2em; /* Adjust icon size */
+    padding: 10px; /* Adjust padding */
   }
 }
 
 @media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem; /* Further adjust heading size for very small screens */
+  }
+
   .content-section h1,
   .content-section h2 {
-    font-size: 1.8em;
+    font-size: 1.5rem; /* Further adjust font size */
   }
 
-  .cards-grid {
-    grid-template-columns: 1fr;
+  .Vision h1,
+  .Vision h3 {
+    font-size: 1.8rem; /* Further adjust heading sizes */
   }
 
-  .team-card img {
-    width: 80%;
+  .Vision p {
+    font-size: 0.9em; /* Further adjust paragraph size */
   }
-}
-.scroll-top{
-  position: fixed;
-  bottom: 12px;
-  right: 80px;
-  background-color: #00ff40;
-  color: #fff;
-  border: none;
-  padding: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10000;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-.scroll-top, .fa-arrow-up{
-  font-size: 20px;
-}
-.scroll-top .fa-arrow-up{
-  transition: 0.2s ease-out;
-	color: #fff;
-	transition: 0.2s ease-out;
-}
 
-.scroll-top:hover {
-	background-color: #34947c;
-}
-.scroll-top:hover .fa-arrow-up {
-	transform: translateY(-4px);
-}
+  .scroll-top {
+    bottom: 10px; /* Adjust position */
+    right: 10px; /* Adjust position */
+    padding: 10px; /* Adjust padding */
+  }
+};
