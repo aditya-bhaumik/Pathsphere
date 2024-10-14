@@ -2,210 +2,275 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pathsphere.png">
+    <style>
+        :root {
+            --primary-color: #f0f0f0;
+            --secondary-color: #333;
+            --error-color: red;
+            --success-color: #28a745;
+        }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: var(--primary-color);
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .contact-form-container {
+            background-color: var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.875rem;
+            display: none; /* Hidden by default */
+        }
+
+        .submit-button {
+            background-color: var(--success-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: darkgreen;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
-
-  <main>
-
-
-    <section class="hero">
-      <div class="left">
-        <h1>Welcome to PathSphere</h1>
-        <p>Your gateway to educational and professional resources</p>
-        <div class="search-container">
-          <a href="/pages/scholarship-feature/scholarships.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            Find Scholarships
-          </a>
-          <a href="/pages/jobs/jobs.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            Find Jobs
-          </a>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="/P (1).png" alt="PathSphere Logo">PathSphere</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Contact Us</h1>
+            <p>Fill the form below, and we will reach out to you!</p>
+        </section>
+        <section class="contact">
+            <div class="contact-form-container">
+                <h1>Submit Your Details</h1>
+                <form id="contactForm" aria-live="polite">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-description">
+            <h3>PathSphere</h3>
+            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and educators with job openings. It features dynamic search tools and community discussions to enhance access to educational and career resources.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="feature">
-        <img src="/images/sicon.png" alt="Scholarships Icon">
-        <h2>Scholarships</h2>
-        <p>Discover scholarships tailored to your needs and academic performance.</p>
-        <a href="/pages/scholarship-feature/scholarships.html" class="btn">Explore</a>
-      </div>
-      <div class="feature">
-        <img src="/images/jicon.png" alt="Jobs Icon">
-        <h2>Jobs</h2>
-        <p>Find job opportunities for educators and professionals.</p>
-        <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
-      </div>
-      <div class="feature">
-        <img src="/images/ficon.png" alt="Forum Icon">
-        <h2>Forum</h2>
-        <p>Join discussions, ask questions, and connect with others.</p>
-        <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
-      </div>
-      <div class="feature">
-       <h2>Testimonials</h2>
-        <p>Here are the testimonials and reviews.</p>
-        <a href="/pages/testimonials/testimonials.html" class="btn">Explore</a>
-      </div>
-    </section>
-
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-briefcase"></i>
-            <div>
-              <h6>Job Portal</h6>
-              <p class="hidden-text">Job opportunities tailored for educators.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-users"></i>
-            <div>
-              <h6>Community Forums</h6>
-              <p class="hidden-text">Share resources, advice, experiences.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-bell"></i>
-            <div>
-              <h6 >Instant Notifications</h6>
-              <p class="hidden-text">Get real-time important updates.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-bookmark"></i>
-            <div>
-              <h6 >Save & Track</h6>
-              <p class="hidden-text">Bookmark and monitor application progress.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-tools"></i>
-            <div>
-              <h6>Resume Builder</h6>
-              <p class="hidden-text">Create a professional profile easily.</p>
-            </div>
-          </div>
+        <div class="footer-list">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
         </div>
-      </div>
-    </section>
-
-    
-    <section id="testimonials">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-md-10 text-center">
-            <h3 class="fw-bold mb-4">What Our Users Say</h3>
-            <p class="mb-4">
-              Discover how PathSphere has helped students and professionals across India achieve their educational and career goals. Read their success stories and experiences.
-            </p>
-          </div>
+        <div class="footer-list">
+            <h3>Follow Us On</h3>
+            <ul class="social-icons">
+                <li><a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://x.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
         </div>
-        <div class="row flex-row">
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Priya Sharma">
-                </div>
-                <h5 class="font-weight-bold">Priya Sharma</h5>
-                <h6 class="font-weight-bold my-3">Computer Science Student at IIT Delhi</h6>
-                <ul class="list-unstyled d-flex flex-row">
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                </ul>
-                <p>
-                  <i class="fas fa-quote-left pe-2"></i>
-                  PathSphere helped me secure a prestigious that covered my entire tuition at IIT Delhi. The platform's scholarship matching system and application guidance were invaluable. I'm especially grateful for the mentorship community that helped me prepare for my interviews.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Rajesh Kumar">
-                </div>
-                <h5 class="font-weight-bold">Riya Saxena</h5>
-                <h6 class="font-weight-bold my-3">Research Scholar at IISC Bangalore</h6>
-                <ul class="list-unstyled d-flex flex-row">
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star-half-alt"></i></li>
-                </ul>
-                <p>
-                  <i class="fas fa-quote-left pe-2"></i>
-                  As a first-generation college student, navigating higher education was challenging. PathSphere's forum connected me with experienced mentors who guided me through the research scholarship application process. Today, I'm pursuing my dream in environmental science research.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(15).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Ananya Patel">
-                </div>
-                <h5 class="font-weight-bold">Ananya Patel</h5>
-                <h6 class="font-weight-bold my-3">EdTech Professional at Byju's</h6>
-                <ul class="list-unstyled d-flex flex-row">
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                </ul>
-                <p>
-                  <i class="fas fa-quote-left pe-2"></i>
-                  PathSphere's job portal specifically focused on education sector helped me land my dream role. The platform's resources for interview preparation and resume building were exceptional. I particularly appreciated the webinars with industry experts.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+    </footer>
 
-  <a class="scroll-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-  </main>
+            let isValid = true;
 
-  <script src="/scripts/componentLoader.js"></script>
-  <script>
-    prependComponent("Navbar");
-    prependComponent('Cursor');
-    appendComponent("Footer");  
-  </script>
-  <script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "7akUzokCgwR0gNp0m-qQF",
-    domain: "www.chatbase.co"
-    }
+            // Clear previous error messages
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("messageError").innerText = "";
+
+            // Name validation
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Please enter your name.";
+                isValid = false;
+            }
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "" || !emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email.";
+                isValid = false;
+            }
+
+            // Phone validation
+            if (phone === "") {
+                document.getElementById("phoneError").innerText = "Please enter your phone number.";
+                isValid = false;
+            }
+
+            // Message validation
+            if (message === "") {
+                document.getElementById("messageError").innerText = "Please enter your message.";
+                isValid = false;
+            }
+
+            // If valid, you can submit the form or perform any actions
+            if (isValid) {
+                alert("Your message has been sent successfully!");
+                // Here you could send the form data to your server if needed
+                // e.g., using fetch or XMLHttpRequest
+            }
+        });
     </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="7akUzokCgwR0gNp0m-qQF"
-    domain="www.chatbase.co"
-    defer>
-    </script>
-
 </body>
 
 </html>
