@@ -108,3 +108,96 @@ footer {
     background: #333;
     color: #fff;
 }
+
+/* for signup page */
+.form{
+    box-sizing: border-box;
+    margin: 60px;
+    padding:80px;
+    
+}
+h3{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top:30px;
+}
+div.name input{
+  height:30px;
+  width:380px;
+  border-radius:8px;
+  margin-bottom:20px;
+  padding:5px;
+}
+div.email input{
+    height:30px;
+    width:380px;
+    border-radius:8px;
+    margin-bottom:20px;
+    padding:5px;
+}
+
+
+    div.feedback textarea{
+        border-radius:8px;
+        padding:5px;
+        margin-bottom: 20px;
+    }
+    div.sign{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    div.jobs{
+        align-self: flex-start;
+        margin-left:345px;
+        margin-bottom: 20px;
+        
+    }
+
+    div.button button{
+        height:30px;
+        width:80px;
+        border-radius:7px;
+        margin-bottom:20px;
+        padding:5px;
+        cursor:pointer;
+    
+    }
+     button:hover{
+        background-color: #333;
+        color:white;
+
+    }
+    /* for scholarship page */
+
+
+    label.sch{
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    
+    div.dropdown{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+
+    select{
+        font-size:20px;
+    }
+    select:hover{
+        background-color: #333;
+        color:#fff;
+    }
+    select{
+        height:60px;
+        width:250px;
+        border-radius: 8px;
+        cursor:pointer;
+    }
+    
