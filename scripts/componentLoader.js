@@ -154,7 +154,7 @@ const showContent = async () => {
   // remove loading screen
   const loadingScreen = document.getElementById('LoadingScreen');
   loadingScreen.classList.remove('loading');
-  // await new Promise((resolve) => setTimeout(resolve, 5000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   loadingScreen.classList.add('loaded');
 
   // show body content
