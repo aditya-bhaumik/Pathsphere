@@ -344,7 +344,7 @@ nav ul li a:hover {
     background: rgba(0, 0, 0, 0.1);
     height: 10vh;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     margin-top: 10px;
     margin-left: 0;
     display: flex;
@@ -1087,6 +1087,7 @@ footer {
   }
   .navbar {
     position: relative;
+    width: 100%;
   }
 
   #tabs {
