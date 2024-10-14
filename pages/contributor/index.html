@@ -1,77 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="../../images/pathsphere.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="../../images/pathsphere.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PathSphere Contributors</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 id="heroTitle">Our Amazing Contributors</h1>
-            <p id="heroSubtitle">Shaping the future of Pathsphere, one commit at a time</p>
-            <a href="#contribute" class="cta-button">Become a Contributor</a>
-        </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 id="heroTitle">Our Amazing Contributors</h1>
+        <p id="heroSubtitle">
+          Shaping the future of Pathsphere, one commit at a time
+        </p>
+        <a href="#contribute" class="cta-button">Become a Contributor</a>
+      </div>
     </section>
 
     <!-- Stats Section -->
     <section class="stats">
-        <h2>Project Statistics</h2>
-        <div id="stats" class="stats-container">
-            <!-- Stat Cards will be inserted here -->
-        </div>
+      <h2>Project Statistics</h2>
+      <div id="stats" class="stats-container">
+        <!-- Stat Cards will be inserted here -->
+      </div>
     </section>
 
     <!-- Contributors Grid -->
     <section class="contributors">
-        <h2>Meet Our Contributors</h2>
-        <div id="contributors" class="contributors-container">
-            <div id="loading" class="loading">
-                <div class="spinner"></div>
-            </div>
+      <h2>Meet Our Contributors</h2>
+      <div id="contributors" class="contributors-container">
+        <div id="loading" class="loading">
+          <div class="spinner"></div>
         </div>
+      </div>
     </section>
 
     <!-- Call to Action -->
     <section id="contribute" class="contribute">
-        <div class="contribute-content">
-            <h2>Ready to Make an Impact?</h2>
-            <p>Join our community and help shape the future of StationGuide.</p>
-            <form id="emailForm">
-                <input type="email" id="email" placeholder="Enter your email" required />
-                <button type="submit">Get Started</button>
-            </form>
-        </div>
+      <div class="contribute-content">
+        <h2>Ready to Make an Impact?</h2>
+        <p>Join our community and help shape the future of StationGuide.</p>
+        <form id="emailForm">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Get Started</button>
+        </form>
+      </div>
     </section>
 
     <script src="/scripts/componentLoader.js"></script>
     <script>
-        prependComponent("Navbar");
-        prependComponent('Cursor');
-        prependComponent("ScrollToTop");
-        appendComponent("Footer");
+      prependComponent('Navbar');
+      prependComponent('Cursor');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+      appendComponent('ChatBot');
+      waitTillComponentsLoaded();
     </script>
-    <script>
-        window.embeddedChatbotConfig = {
-        chatbotId: "7akUzokCgwR0gNp0m-qQF",
-        domain: "www.chatbase.co"
-        }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="7akUzokCgwR0gNp0m-qQF"
-        domain="www.chatbase.co"
-        defer>
-    </script>
-</body>
-
+  </body>
 </html>

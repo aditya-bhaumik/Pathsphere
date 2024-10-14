@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="/styles/styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
 
-
-
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
 </head>
 
-<body>
+<body class="light">
 
   <main>
 
@@ -189,27 +189,19 @@
       </div>
     </section>
 
-  <a class="scroll-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
+  
 
   </main>
+  <script src="/scripts/componentLoader.js">
+  </script>
 
-  <script src="/scripts/componentLoader.js"></script>
   <script>
     prependComponent("Navbar");
     prependComponent('Cursor');
-    appendComponent("Footer");  
-  </script>
-  <script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "7akUzokCgwR0gNp0m-qQF",
-    domain: "www.chatbase.co"
-    }
-  </script>
-  <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="7akUzokCgwR0gNp0m-qQF"
-    domain="www.chatbase.co"
-    defer>
+    prependComponent("ScrollToTop");
+    appendComponent('Footer');
+    appendComponent('ChatBot');
+    waitTillComponentsLoaded();
   </script>
 
 </body>
