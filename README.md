@@ -89,6 +89,40 @@ PathSphere can be significantly improved with additional front-end features. Her
 8. **💡Localization and Theming**:
    - Add support for multiple themes (e.g., light and dark mode) using CSS variables and JavaScript.
    - Implement localization by allowing users to select different languages for the interface, using JavaScript to switch between different language files.<br>
+
+## Roadmap 🚀
+
+### 2024
+
+| Quarter   | Planned Features                                         | Description                                                |
+|-----------|--------------------------------------------------------|------------------------------------------------------------|
+| **Q4 2024** | **🔍 Enhanced Search Functionality**                  | - Implement advanced search filters for scholarships and job opportunities. <br> - Enable real-time filtering based on user input. |
+|           | **👤 User Profiles**                                   | - Develop a user profile section for managing saved scholarships and job listings. <br> - Allow users to customize their profiles with preferences and personal details. |
+
+### 2025
+
+| Quarter   | Planned Features                                         | Description                                                |
+|-----------|--------------------------------------------------------|------------------------------------------------------------|
+| **Q1 2025** | **✨ Interactive Features**                            | - Introduce interactive elements such as like/dislike buttons, comment sections, and ratings for forum posts. <br> - Enable dynamic content loading based on user interactions (e.g., tabbed navigation, accordions). |
+|           | **📊 Progress Tracking**                              | - Implement a progress tracker for scholarship applications and job searches. <br> - Include visual indicators such as progress bars and checklists. |
+
+| Quarter   | Planned Features                                         | Description                                                |
+|-----------|--------------------------------------------------------|------------------------------------------------------------|
+| **Q2 2025** | **📋 Customizable Dashboards**                        | - Allow users to create personalized dashboards with drag-and-drop functionality. <br> - Enable users to add shortcuts to favorite scholarships, jobs, and discussions. |
+|           | **🎨 Visual Enhancements**                             | - Enhance UI with advanced CSS animations and transitions for a more engaging experience. <br> - Improve layout responsiveness using CSS Grid and Flexbox. |
+
+| Quarter   | Planned Features                                         | Description                                                |
+|-----------|--------------------------------------------------------|------------------------------------------------------------|
+| **Q3 2025** | **🌍 Localization and Theming**                       | - Implement support for multiple themes (e.g., light and dark mode). <br> - Add localization features to allow users to select different languages for the interface. |
+
+| Quarter   | Planned Features                                         | Description                                                |
+|-----------|--------------------------------------------------------|------------------------------------------------------------|
+| **Q4 2025** | **📱 Mobile App Development**                         | - Begin development of a mobile application to extend access to PathSphere on mobile devices. <br> - Ensure seamless synchronization between web and mobile applications. |
+
+### Future Milestones
+- 🔄 **Continuous Integration of User Feedback** for ongoing improvements.
+- 📅 **Regular Updates** to the scholarship and job opportunity databases to ensure the latest information is available.
+
 ## 🛠️ Tech Stack
 
 - **HTML5**: For structuring the content of the web pages, ensuring semantic and accessible markup.
