@@ -65,6 +65,13 @@
         </div>
       </div>
     </div>
-    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+    <div class="copyright">&copy;&nbsp;<span id="Currentyear"> &nbsp;</span>&nbsp;PathSphere. All rights reserved.</div>
+
+    <script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Update the content of the span with the current year
+        document.getElementById('Currentyear').textContent = currentYear;
+    </script>
   </body>
 </html>
