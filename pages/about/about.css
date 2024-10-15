@@ -13,7 +13,7 @@ h2 {
   }
   
   .highlight {
-    background: linear-gradient(90deg, #F7A700, #00C2FF); /* Orange to Blue gradient */
+    background: linear-gradient(90deg, #F7A700, #e64b4b); /* Orange to Blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Apply gradient to text */
   }
