@@ -108,3 +108,24 @@ footer {
     background: #333;
     color: #fff;
 }
+/* forum page */
+.forum{
+    box-sizing:border-box;
+    padding-left:30px;
+    padding-top: 30px;
+    margin:20px 30px 20px 10px
+}
+button{
+    box-sizing: border-box;
+    margin:5px;
+    padding:3px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: black;
+    color:white;
+}
+.Note{
+    font-weight: bold;
+}
