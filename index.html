@@ -2,34 +2,31 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="/styles/styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Home - PathSphere</title>
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body class="light">
-
   <main>
-
     <section class="hero">
       <div class="left">
         <h1>Welcome to PathSphere</h1>
         <p>Your gateway to educational and professional resources</p>
         <div class="search-container">
-          <a href="/pages/scholarship-feature/scholarships.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="/pages/scholarship-feature/scholarships.html" class="btn" aria-label="Find Scholarships">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             Find Scholarships
           </a>
-          <a href="/pages/jobs/jobs.html" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="/pages/jobs/jobs.html" class="btn" aria-label="Find Jobs">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             Find Jobs
           </a>
-          <a href="/pages/login-signup/login-signup.html" class="btn">
-            <i class="fa-solid fa-user-plus"></i>
+          <a href="/pages/login-signup/login-signup.html" class="btn" aria-label="Register">
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
             Register
           </a>
         </div>
@@ -37,75 +34,75 @@
     </section>
 
     <section class="features">
-      <div class="feature">
-        <img src="/images/sicon.png" alt="Scholarships Icon">
+      <article class="feature">
+        <img src="/images/sicon.png" alt="Icon representing scholarships">
         <h2>Scholarships</h2>
         <p>Discover scholarships tailored to your needs and academic performance.</p>
         <a href="/pages/scholarship-feature/scholarships.html" class="btn">Explore</a>
-      </div>
-      <div class="feature">
-        <img src="/images/jicon.png" alt="Jobs Icon">
+      </article>
+      <article class="feature">
+        <img src="/images/jicon.png" alt="Icon representing jobs">
         <h2>Jobs</h2>
-        <p>Find job
-           opportunities for educators and professionals.</p>
+        <p>Find job opportunities for educators and professionals.</p>
         <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
-      </div>
-      <div class="feature">
-        <img src="/images/ficon.png" alt="Forum Icon">
+      </article>
+      <article class="feature">
+        <img src="/images/ficon.png" alt="Icon representing forum">
         <h2>Forum</h2>
         <p>Join discussions, ask questions, and connect with others.</p>
         <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
-      </div>
-      <div class="feature">
+      </article>
+      <article class="feature">
         <h2>Testimonials</h2>
         <p>Here are the testimonials and reviews.</p>
         <a href="/pages/testimonials/testimonials.html" class="btn">Explore</a>
-      </div>
-      <div class="feature">
+      </article>
+      <article class="feature">
         <h2>Login</h2>
         <p>Access your account to manage your applications and profile.</p>
         <a href="/pages/login-signup/login-signup.html" class="btn">
-          <i class="fa-solid fa-sign-in-alt"></i>
+          <i class="fa-solid fa-sign-in-alt" aria-hidden="true"></i>
           Login
         </a>
-      </div>
+      </article>
     </section>
 
-    <div class="feature-item">
-      <i class="fas fa-briefcase"></i>
-      <div>
-        <h6>Job Portal</h6>
-        <p class="hidden-text">Job opportunities tailored for educators.</p>
-      </div>
-    </div>
-    <div class="feature-item">
-      <i class="fas fa-users"></i>
-      <div>
-        <h6>Community Forums</h6>
-        <p class="hidden-text">Share resources, advice, experiences.</p>
-      </div>
-    </div>
-    <div class="feature-item">
-      <i class="fas fa-bell"></i>
-      <div>
-        <h6>Instant Notifications</h6>
-        <p class="hidden-text">Get real-time important updates.</p>
-      </div>
-    </div>
-    <div class="feature-item">
-      <i class="fas fa-bookmark"></i>
-      <div>
-        <h6>Save & Track</h6>
-        <p class="hidden-text">Bookmark and monitor application progress.</p>
-      </div>
-    </div>
-    <div class="feature-item">
-      <i class="fas fa-tools"></i>
-      <div>
-        <h6>Resume Builder</h6>
-        <p class="hidden-text">Create a professional profile easily.</p>
-      </div>
-    </div>
+    <section class="feature-list">
+      <article class="feature-item" aria-labelledby="job-portal">
+        <i class="fas fa-briefcase" aria-hidden="true"></i>
+        <div>
+          <h6 id="job-portal">Job Portal</h6>
+          <p class="hidden-text">Job opportunities tailored for educators.</p>
+        </div>
+      </article>
+      <article class="feature-item" aria-labelledby="community-forums">
+        <i class="fas fa-users" aria-hidden="true"></i>
+        <div>
+          <h6 id="community-forums">Community Forums</h6>
+          <p class="hidden-text">Share resources, advice, experiences.</p>
+        </div>
+      </article>
+      <article class="feature-item" aria-labelledby="instant-notifications">
+        <i class="fas fa-bell" aria-hidden="true"></i>
+        <div>
+          <h6 id="instant-notifications">Instant Notifications</h6>
+          <p class="hidden-text">Get real-time important updates.</p>
+        </div>
+      </article>
+      <article class="feature-item" aria-labelledby="save-track">
+        <i class="fas fa-bookmark" aria-hidden="true"></i>
+        <div>
+          <h6 id="save-track">Save & Track</h6>
+          <p class="hidden-text">Bookmark and monitor application progress.</p>
+        </div>
+      </article>
+      <article class="feature-item" aria-labelledby="resume-builder">
+        <i class="fas fa-tools" aria-hidden="true"></i>
+        <div>
+          <h6 id="resume-builder">Resume Builder</h6>
+          <p class="hidden-text">Create a professional profile easily.</p>
+        </div>
+      </article>
     </section>
 
     <section id="testimonials">
@@ -136,7 +133,7 @@
                 </ul>
                 <p>
                   <i class="fas fa-quote-left pe-2"></i>
-                  PathSphere helped me secure a prestigious that covered my entire tuition at IIT Delhi. The platform's scholarship matching system and application guidance were invaluable. I'm especially grateful for the mentorship community that helped me prepare for my interviews.
+                  PathSphere helped me secure a prestigious scholarship that covered my entire tuition at IIT Delhi. The platform's scholarship matching system and application guidance were invaluable. I'm especially grateful for the mentorship community that helped me prepare for my interviews.
                 </p>
               </div>
             </div>
@@ -145,7 +142,7 @@
             <div class="card">
               <div class="card-body py-4 mt-2">
                 <div class="d-flex justify-content-center mb-4">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Rajesh Kumar">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Riya Saxena">
                 </div>
                 <h5 class="font-weight-bold">Riya Saxena</h5>
                 <h6 class="font-weight-bold my-3">Research Scholar at IISC Bangalore</h6>
@@ -180,7 +177,7 @@
                 </ul>
                 <p>
                   <i class="fas fa-quote-left pe-2"></i>
-                  PathSphere's job portal specifically focused on education sector helped me land my dream role. The platform's resources for interview preparation and resume building were exceptional. I particularly appreciated the webinars with industry experts.
+                  PathSphere's job portal specifically focused on the education sector helped me land my dream role. The platform's resources for interview preparation and resume building were exceptional. I particularly appreciated the webinars with industry experts.
                 </p>
               </div>
             </div>
@@ -188,13 +185,9 @@
         </div>
       </div>
     </section>
-
-  
-
   </main>
-  <script src="/scripts/componentLoader.js">
-  </script>
 
+  <script src="/scripts/componentLoader.js"></script>
   <script>
     prependComponent("Navbar");
     prependComponent('Cursor');
@@ -203,7 +196,6 @@
     appendComponent('ChatBot');
     waitTillComponentsLoaded();
   </script>
-
 </body>
 
 </html>
