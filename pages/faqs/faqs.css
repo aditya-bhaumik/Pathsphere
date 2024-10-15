@@ -168,6 +168,9 @@ h6 {
 @media (max-width: 479.98px) {
   .accordions__item {
     border-radius: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
