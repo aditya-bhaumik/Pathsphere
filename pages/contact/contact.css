@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f7f7f7;
-  color: #333;
+  color: #000;
 }
 
 main {
@@ -29,6 +29,21 @@ h1 {
   margin-bottom: 30px;
 }
 
+.heading {
+  height: 35px;
+  width: 100%;
+  background-color: rgb(40, 40, 154);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.contact-form-container h1 {
+  color: #fff;
+}
+
 .contact {
   background-color: #fff;
   padding: 40px;
@@ -44,32 +59,42 @@ h1 {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Align items center vertically */
+  margin-bottom: 25px;
 }
 
 .form-group label {
-  display: block;
+  width: 150px; /* Fixed width for labels */
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-right: 15px; /* Space between label and input */
+  color: #333;
+  font-size: 16px;
 }
 
 .form-group input,
 .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  flex: 1; /* Allow input to fill remaining space */
+  padding: 12px 15px;
+  border: 1px solid #ccc; /* Grayish border */
+  border-radius: 8px;
   font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #161313; /* Slightly darker gray on hover */
+  background-color: #fff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #4caf50;
+  border-color: #0f2d10; /* Green border on focus */
+  background-color: #fff;
   outline: none;
-}
-
-textarea {
-  resize: vertical;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
 }
 
 .error-message {
@@ -79,7 +104,7 @@ textarea {
 }
 
 .submit-button {
-  background-color: #4caf50;
+  background-color: #402cb4;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -98,11 +123,11 @@ textarea {
   .contact {
     padding: 20px;
   }
-  
+
   .hero {
     padding: 15px;
   }
-  
+
   .submit-button {
     width: 100%;
   }

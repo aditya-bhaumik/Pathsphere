@@ -3,6 +3,7 @@ document
   .addEventListener('submit', function (event) {
     event.preventDefault();
 
+    // Hide all previous error messages
     const errorElements = document.querySelectorAll('.error-message');
     errorElements.forEach((el) => (el.style.display = 'none'));
 
@@ -48,9 +49,13 @@ document
       isValid = false;
     }
 
-    // If form is valid, you can submit it or perform any other action
+    // If form is valid, display success message
     if (isValid) {
-      alert('Form submitted successfully!');
-      // You can also submit the form here using AJAX or similar methods
+      document.getElementById('successMessage').textContent =
+        'Thank you for contacting us! We will reach you soon.';
+      document.getElementById('successMessage').style.display = 'block';
+
+      // Optionally, you could clear the form fields
+      document.getElementById('contactForm').reset();
     }
   });
