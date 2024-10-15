@@ -64,7 +64,7 @@ body {
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .rounded-circle {
@@ -482,8 +482,9 @@ main {
   padding: 100px 20px;
   margin-top: 60px;
   display: flex;
-
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 50px;
   background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826');
   background-repeat: no-repeat;
@@ -503,7 +504,7 @@ main {
   padding: 10px;
 }
 .hero .left {
-  width: 60%;
+  width: 100%;
 }
 .hero .right {
   width: 40%;
