@@ -1,0 +1,104 @@
+
+/* Overall container styling */
+.container {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+/* Main title styling */
+.container h1 {
+  text-align: center;
+  color: #97136e; /* Keeping your original color */
+  font-size: 2.5rem;
+}
+
+/* Forum sections layout */
+.sections {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Forum-section cards */
+.forum-section {
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 28%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.forum-section:hover {
+  transform: scale(1.05);
+}
+
+/* Forum-section title and paragraph */
+.forum-section h2 {
+  color: #ffbb00; /* Yellow theme */
+  margin-bottom: 10px;
+}
+
+.forum-section p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Forum posts inside cards */
+.forum-post {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.post-details {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* New Post button */
+.new-post-button {
+  display: inline-block;
+  background-color: #ffbb00; /* Yellow theme */
+  color: #333;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.new-post-button:hover {
+  background-color: #ffbb00;
+}
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+  .sections {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+  }
+
+  .forum-section {
+    width: 70vw;
+    position: relative;
+  }
+}
