@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="../forum/forum.css" />
+
     <!-- <base href="/Pathsphere/"> -->
     <!-- uncomment above line if deploying to github pages -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forum</title>
     <!-- Added a favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
+    <link rel="icon" type="image/x-icon" href="../..images/pathsphere.png" />
   </head>
 
   <body>
@@ -21,8 +23,10 @@
       <div class="container">
         <h1 style="color: rgb(151, 13, 110)">Community Discussions</h1>
 
-        <!-- Section 1: Scholarships Discussion -->
-        <div class="forum-section">
+        <div class="sections">
+
+          <!-- Section 1: Scholarships Discussion -->
+          <div class="forum-section">
           <h2>Scholarships</h2>
           <p>Find and share scholarship opportunities worldwide.</p>
 
@@ -46,10 +50,10 @@
           </div>
 
           <a href="#" class="new-post-button">New Post</a>
-        </div>
-
-        <!-- Section 2: Job Opportunities Discussion -->
-        <div class="forum-section">
+          </div>
+        
+          <!-- Section 2: Job Opportunities Discussion -->
+          <div class="forum-section">
           <h2>Job Opportunities</h2>
           <p>Explore job opportunities, internships, and career advice.</p>
 
@@ -69,10 +73,10 @@
           </div>
 
           <a href="#" class="new-post-button">New Post</a>
-        </div>
-
-        <!-- Section 3: General Discussions -->
-        <div class="forum-section">
+          </div>
+        
+          <!-- Section 3: General Discussions -->
+          <div class="forum-section">
           <h2>General Discussions</h2>
           <p>
             Ask questions, share advice, or discuss any educational or
@@ -95,27 +99,19 @@
           </div>
 
           <a href="#" class="new-post-button">New Post</a>
+          </div>
+
         </div>
       </div>
-      <a class="scroll-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
     </main>
     <script src="/scripts/componentLoader.js"></script>
     <script>
       prependComponent('Navbar');
       prependComponent('Cursor');
+      prependComponent('ScrollToTop');
       appendComponent('Footer');
+      appendComponent('ChatBot');
+      waitTillComponentsLoaded();
     </script>
-    <script>
-      window.embeddedChatbotConfig = {
-      chatbotId: "7akUzokCgwR0gNp0m-qQF",
-      domain: "www.chatbase.co"
-      }
-      </script>
-      <script
-      src="https://www.chatbase.co/embed.min.js"
-      chatbotId="7akUzokCgwR0gNp0m-qQF"
-      domain="www.chatbase.co"
-      defer>
-      </script>
   </body>
 </html>

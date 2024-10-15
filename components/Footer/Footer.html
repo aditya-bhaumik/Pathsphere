@@ -23,6 +23,7 @@
         <h3>Quick links</h3>
         <ul>
           <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about/about.html">About us</a></li>
           <li>
             <a href="/pages/scholarships/scholarships.html">Scholarships</a>
           </li>
@@ -65,13 +66,13 @@
         </div>
       </div>
     </div>
-    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/scripts/script.js"></script>
+    <div class="copyright">&copy;&nbsp;<span id="Currentyear"> &nbsp;</span>&nbsp;PathSphere. All rights reserved.</div>
+
+    <script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Update the content of the span with the current year
+        document.getElementById('Currentyear').textContent = currentYear;
+    </script>
   </body>
 </html>
