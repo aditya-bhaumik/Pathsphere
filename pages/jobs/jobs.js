@@ -19,7 +19,7 @@ const jobListings = [
     description: "Analyze large datasets to extract insights and support decision-making.",
     salary: "$110K - $150K",
     tools: ["Python", "R", "TensorFlow"],
-    daysPosted: "12 hours ago",
+    daysPosted: "12 days ago",
     logo: "./job_images/data_science.jpeg", // updated path
   },
   {
