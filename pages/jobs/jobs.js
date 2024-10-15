@@ -7,7 +7,9 @@ const jobListings = [
     description: "Develop and maintain web applications using modern frameworks.",
     salary: "$90K - $120K",
     tools: ["JavaScript", "React", "Node.js"],
+    daysPosted: "5 hours ago",
     logo: "./job_images/manage.png",
+    
   },
   {
     id: 2,
@@ -17,6 +19,7 @@ const jobListings = [
     description: "Analyze large datasets to extract insights and support decision-making.",
     salary: "$110K - $150K",
     tools: ["Python", "R", "TensorFlow"],
+    daysPosted: "12 hours ago",
     logo: "./job_images/data_science.jpeg", // updated path
   },
   {
@@ -27,6 +30,7 @@ const jobListings = [
     description: "Design intuitive and responsive interfaces for web and mobile applications.",
     salary: "$70K - $100K",
     tools: ["Sketch", "Figma", "Adobe XD"],
+    daysPosted: "6 hours ago",
     logo: "./job_images/design.jpg",
   },
   {
@@ -37,6 +41,7 @@ const jobListings = [
     description: "Oversee project execution and ensure timely delivery within scope and budget.",
     salary: "$100K - $130K",
     tools: ["Jira", "Asana", "Trello"],
+    daysPosted: "9 hours ago",
     logo: "./job_images/innovation.png",
   },
   {
@@ -47,6 +52,7 @@ const jobListings = [
     description: "Implement CI/CD pipelines, automate infrastructure, and manage cloud services.",
     salary: "$95K - $140K",
     tools: ["Docker", "Kubernetes", "AWS"],
+    daysPosted: "12 hours ago",
     logo: "./job_images/download.png",
   },
   {
@@ -57,6 +63,7 @@ const jobListings = [
       description: "Monitor and analyze security systems to prevent data breaches and cyberattacks.",
       salary: "$105K - $160K",
       tools: ["Network Security", "Penetration Testing", "Firewalls", "Encryption", "Azure"],
+      daysPosted: "1 day ago",
       logo: "./job_images/secure.png",
   },
   {
@@ -67,6 +74,7 @@ const jobListings = [
       description: "Build end-to-end solutions, from front-end to back-end, for enterprise applications.",
       salary: "$100K - $150K",
       tools: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"],
+      daysPosted: "1 day ago",
       logo: "./job_images/fullstack.jpeg",
   },
   {
@@ -77,6 +85,7 @@ const jobListings = [
       description: "Develop and execute marketing campaigns to enhance brand visibility and engagement.",
       salary: "$70K - $110K",
       tools: ["SEO", "Google Analytics", "Social Media", "Content Marketing", "Brand Strategy"],
+      daysPosted: "2 days ago ago",
       logo: "./job_images/market.png",
   },
   {
@@ -87,6 +96,7 @@ const jobListings = [
       description: "Design, implement, and maintain blockchain technologies and decentralized apps.",
       salary: "$120K - $180K",
       tools: ["Ethereum", "Solidity", "Smart Contracts", "DeFi", "Cryptography"],
+      daysPosted: "5 days ago",
       logo: "./job_images/download (2).png",
   },
   {
@@ -97,6 +107,7 @@ const jobListings = [
       description: "Drive the product development lifecycle from ideation to market launch.",
       salary: "$130K - $200K",
       tools: ["Agile", "Scrum", "JIRA", "Stakeholder Management", "Product Roadmap"],
+      daysPosted: "8 days ago",
       logo: "./job_images/product.png",
   },
   // Add more job listings as needed
@@ -158,6 +169,7 @@ function generateJobCards() {
             <p>${job.description}</p>
             <p><strong>Salary:</strong> ${job.salary}</p>
             <p><strong>Required Tools:</strong> ${job.tools.join(", ")}</p>
+            <p><strong>Days Posted:</strong>${job.daysPosted}</p>
           </div>
           <div class="apply-btn">
             <button>Apply Now</button>
