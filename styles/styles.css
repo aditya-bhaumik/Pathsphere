@@ -1195,3 +1195,28 @@ h3 {
     flex: 1 1 100%;
   }
 }
+.forum{
+  background-color: lightseagreen;
+  height:100%;
+  width:100%;
+}
+.forum-section{
+  margin:10px;
+  font-size:20px;
+  
+  
+}
+.post-title{
+  margin:10px;
+
+}
+
+a.new{
+  box-sizing: border-box;
+  margin-top:10px;
+  cursor:pointer;
+  text-decoration: none;
+}
+a.new :hover{
+  font-size: 20px;
+}

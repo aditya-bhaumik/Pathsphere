@@ -22,6 +22,7 @@
       <!-- Add discussion forum elements here -->
 
       <div class="container">
+        <div class="forum">
         <h1 style="color: rgb(151, 13, 110)">Community Discussions</h1>
 
         <!-- Section 1: Scholarships Discussion -->
@@ -47,8 +48,8 @@
             </div>
             <div class="post-details">Posted by Emily | 8 replies</div>
           </div>
-
-          <a href="#" class="new-post-button">New Post</a>
+         
+          <a href="#" class="new">Create Post</a>
         </div>
 
         <!-- Section 2: Job Opportunities Discussion -->
@@ -57,9 +58,7 @@
           <p>Explore job opportunities, internships, and career advice.</p>
 
           <div class="forum-post">
-            <div class="post-title">
-              Top companies hiring software engineers in 2024
-            </div>
+            <div class="post-title">Top companies hiring software engineers in 2024</div>
             <div class="post-details">Posted by John | 10 replies</div>
           </div>
           <div class="forum-post">
@@ -70,8 +69,11 @@
             <div class="post-title">Remote job opportunities for designers</div>
             <div class="post-details">Posted by David | 6 replies</div>
           </div>
+          
+         
 
-          <a href="#" class="new-post-button">New Post</a>
+
+          <a href="#" class="new">Create Post</a>
         </div>
 
         <!-- Section 3: General Discussions -->
@@ -96,9 +98,13 @@
             <div class="post-title">Online communities for educators</div>
             <div class="post-details">Posted by Sophia | 7 replies</div>
           </div>
-
-          <a href="#" class="new-post-button">New Post</a>
+           <div class="forum-post">
+            <p class="write_your_thoughts"></p>
+           </div>
+         
+          <a href="#" class="new">Create post</a>
         </div>
+      </div>
       </div>
     </main>
     <script src="/scripts/componentLoader.js"></script>
@@ -109,6 +115,7 @@
       appendComponent('Footer');
       appendComponent('ChatBot');
       waitTillComponentsLoaded();
+      
     </script>
   </body>
 </html>
