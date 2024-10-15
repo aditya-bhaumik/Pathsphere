@@ -41,7 +41,7 @@ const jobListings = [
     description: "Oversee project execution and ensure timely delivery within scope and budget.",
     salary: "$100K - $130K",
     tools: ["Jira", "Asana", "Trello"],
-    daysPosted: "9 hours ago",
+    daysPosted: "9 days ago",
     logo: "./job_images/innovation.png",
   },
   {
