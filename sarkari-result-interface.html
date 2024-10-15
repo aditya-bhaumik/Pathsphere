@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page - Sarkari Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .faq-section {
+            margin-top: 30px;
+        }
+
+        .faq {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .faq h3 {
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .faq-content {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .category {
+            flex: 1 1 30%;
+            margin: 15px;
+            padding: 20px;
+            background-color: #e9ecef;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .category a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Help Page - Sarkari Results</h1>
+        <p>Find all the information you need about jobs, scholarships, and more</p>
+    </header>
+
+    <div class="container">
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <h3>How can I apply for the latest government jobs?</h3>
+                <div class="faq-content">
+                    <p>To apply for the latest government jobs, visit the 'Jobs' section, choose your preferred job category, and follow the application process outlined in the job post.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <h3>How do I check my result?</h3>
+                <div class="faq-content">
+                    <p>You can check your results by navigating to the 'Results' section and entering your roll number and other required details.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <h3>What are the eligibility criteria for scholarships?</h3>
+                <div class="faq-content">
+                    <p>Eligibility criteria for scholarships vary depending on the scheme. Please refer to the 'Scholarships' section for more details on specific scholarships.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="category-section">
+            <h2>Categories</h2>
+            <div class="category-list">
+                <div class="category">
+                    <a href="#">Government Jobs</a>
+                </div>
+                <div class="category">
+                    <a href="#">Results</a>
+                </div>
+                <div class="category">
+                    <a href="#">Scholarships</a>
+                </div>
+                <div class="category">
+                    <a href="#">Exams</a>
+                </div>
+                <div class="category">
+                    <a href="#">Admit Cards</a>
+                </div>
+                <div class="category">
+                    <a href="#">Answer Keys</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sarkari Results Help Page | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Toggle FAQ answers
+        const faqHeaders = document.querySelectorAll('.faq h3');
+
+        faqHeaders.forEach(faqHeader => {
+            faqHeader.addEventListener('click', () => {
+                const faqContent = faqHeader.nextElementSibling;
+                faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+</body>
+</html>
