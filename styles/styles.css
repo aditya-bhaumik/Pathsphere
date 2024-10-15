@@ -3,14 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
+ 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scrollbar-width: none;
-}
 
+  margin:  0;
+  padding:  0;
+  box-sizing:  border-box;
+  scrollbar-width:  none;
+  text-align:  center;
+
+}
+ 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
