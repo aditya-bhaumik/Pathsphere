@@ -2,200 +2,121 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - PathSphere</title>
-  <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
-  <link rel="stylesheet" href="/styles/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - PathSphere</title>
+    <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body class="light">
-  <main>
-    <section class="hero">
-      <div class="left">
-        <h1>Welcome to PathSphere</h1>
-        <p>Your gateway to educational and professional resources</p>
-        <div class="search-container">
-          <a href="/pages/scholarship-feature/scholarships.html" class="btn" aria-label="Find Scholarships">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            Find Scholarships
-          </a>
-          <a href="/pages/jobs/jobs.html" class="btn" aria-label="Find Jobs">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            Find Jobs
-          </a>
-          <a href="/pages/login-signup/login-signup.html" class="btn" aria-label="Register">
-            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
-            Register
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <section class="features">
-      <article class="feature">
-        <img src="/images/sicon.png" alt="Icon representing scholarships">
-        <h2>Scholarships</h2>
-        <p>Discover scholarships tailored to your needs and academic performance.</p>
-        <a href="/pages/scholarship-feature/scholarships.html" class="btn">Explore</a>
-      </article>
-      <article class="feature">
-        <img src="/images/jicon.png" alt="Icon representing jobs">
-        <h2>Jobs</h2>
-        <p>Find job opportunities for educators and professionals.</p>
-        <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
-      </article>
-      <article class="feature">
-        <img src="/images/ficon.png" alt="Icon representing forum">
-        <h2>Forum</h2>
-        <p>Join discussions, ask questions, and connect with others.</p>
-        <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
-      </article>
-      <article class="feature">
-        <h2>Testimonials</h2>
-        <p>Here are the testimonials and reviews.</p>
-        <a href="/pages/testimonials/testimonials.html" class="btn">Explore</a>
-      </article>
-      <article class="feature">
-        <h2>Login</h2>
-        <p>Access your account to manage your applications and profile.</p>
-        <a href="/pages/login-signup/login-signup.html" class="btn">
-          <i class="fa-solid fa-sign-in-alt" aria-hidden="true"></i>
-          Login
-        </a>
-      </article>
-    </section>
-
-    <section class="feature-list">
-      <article class="feature-item" aria-labelledby="job-portal">
-        <i class="fas fa-briefcase" aria-hidden="true"></i>
-        <div>
-          <h6 id="job-portal">Job Portal</h6>
-          <p class="hidden-text">Job opportunities tailored for educators.</p>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/index.html" aria-label="PathSphere - Home">
+                <img src="/images/logo.png" alt="PathSphere Logo">
+            </a>
         </div>
-      </article>
-      <article class="feature-item" aria-labelledby="community-forums">
-        <i class="fas fa-users" aria-hidden="true"></i>
-        <div>
-          <h6 id="community-forums">Community Forums</h6>
-          <p class="hidden-text">Share resources, advice, experiences.</p>
-        </div>
-      </article>
-      <article class="feature-item" aria-labelledby="instant-notifications">
-        <i class="fas fa-bell" aria-hidden="true"></i>
-        <div>
-          <h6 id="instant-notifications">Instant Notifications</h6>
-          <p class="hidden-text">Get real-time important updates.</p>
-        </div>
-      </article>
-      <article class="feature-item" aria-labelledby="save-track">
-        <i class="fas fa-bookmark" aria-hidden="true"></i>
-        <div>
-          <h6 id="save-track">Save & Track</h6>
-          <p class="hidden-text">Bookmark and monitor application progress.</p>
-        </div>
-      </article>
-      <article class="feature-item" aria-labelledby="resume-builder">
-        <i class="fas fa-tools" aria-hidden="true"></i>
-        <div>
-          <h6 id="resume-builder">Resume Builder</h6>
-          <p class="hidden-text">Create a professional profile easily.</p>
-        </div>
-      </article>
-    </section>
-
-    <section id="testimonials">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-md-10 text-center">
-            <h3 class="fw-bold mb-4">What Our Users Say</h3>
-            <p class="mb-4">
-              Discover how PathSphere has helped students and professionals across India achieve their educational and career goals. Read their success stories and experiences.
-            </p>
-          </div>
-        </div>
-        <div class="row flex-row">
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Priya Sharma">
-                </div>
-                <h5 class="font-weight-bold">Priya Sharma</h5>
-                <h6 class="font-weight-bold my-3">Computer Science Student at IIT Delhi</h6>
-                <ul class="list-unstyled d-flex flex-row">
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                </ul>
-                <p>
-                  <i class="fas fa-quote-left pe-2"></i>
-                  PathSphere helped me secure a prestigious scholarship that covered my entire tuition at IIT Delhi. The platform's scholarship matching system and application guidance were invaluable. I'm especially grateful for the mentorship community that helped me prepare for my interviews.
-                </p>
-              </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="/index.html" aria-label="Home">Home</a></li>
+                <li><a href="/pages/scholarship-feature/scholarships.html" aria-label="Scholarships">Scholarships</a></li>
+                <li><a href="/pages/jobs/jobs.html" aria-label="Jobs">Jobs</a></li>
+                <li><a href="/pages/forum/forum.html" aria-label="Forum">Forum</a></li>
+                <li><a href="/pages/testimonials/testimonials.html" aria-label="Testimonials">Testimonials</a></li>
+            </ul>
+        </nav>
+        <div class="auth-links">
+            <a href="/pages/login-signup/login-signup.html" class="btn" aria-label="Login/Register">Login/Register</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Riya Saxena">
-                </div>
-                <h5 class="font-weight-bold">Riya Saxena</h5>
-                <h6 class="font-weight-bold my-3">Research Scholar at IISC Bangalore</h6>
-                <ul class="list-unstyled d-flex flex-row">
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star-half-alt"></i></li>
-                </ul>
-                <p>
-                  <i class="fas fa-quote-left pe-2"></i>
-                  As a first-generation college student, navigating higher education was challenging. PathSphere's forum connected me with experienced mentors who guided me through the research scholarship application process. Today, I'm pursuing my dream in environmental science research.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body py-4 mt-2">
-                <div class="d-flex justify-content-center mb-4">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(15).webp" class="rounded-circle shadow-1-strong" width="100" height="100" alt="Ananya Patel">
-                </div>
-                <h5 class="font-weight-bold">Ananya Patel</h5>
-                <h6 class="font-weight-bold my-3">EdTech Professional at Byju's</h6>
-                <ul class="list-unstyled d-flex flex-row">
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                </ul>
-                <p>
-                  <i class="fas fa-quote-left pe-2"></i>
-                  PathSphere's job portal specifically focused on the education sector helped me land my dream role. The platform's resources for interview preparation and resume building were exceptional. I particularly appreciated the webinars with industry experts.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </main>
+    </header>
 
-  <script src="/scripts/componentLoader.js"></script>
-  <script>
-    prependComponent("Navbar");
-    prependComponent('Cursor');
-    prependComponent("ScrollToTop");
-    appendComponent('Footer');
-    appendComponent('ChatBot');
-    waitTillComponentsLoaded();
-  </script>
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to PathSphere</h1>
+            <p>Your gateway to educational and professional resources</p>
+            <div class="search-container">
+                <a href="/pages/scholarship-feature/scholarships.html" class="btn">
+                    <i class="fa-solid fa-magnifying-glass"></i> Find Scholarships
+                </a>
+                <a href="/pages/jobs/jobs.html" class="btn">
+                    <i class="fa-solid fa-magnifying-glass"></i> Find Jobs
+                </a>
+                <a href="/pages/login-signup/login-signup.html" class="btn">
+                    <i class="fa-solid fa-user-plus"></i> Register
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature">
+                <img src="/images/sicon.png" alt="Scholarships Icon">
+                <h2>Scholarships</h2>
+                <p>Discover scholarships tailored to your needs and academic performance.</p>
+                <a href="/pages/scholarship-feature/scholarships.html" class="btn">Explore</a>
+            </div>
+            <div class="feature">
+                <img src="/images/jicon.png" alt="Jobs Icon">
+                <h2>Jobs</h2>
+                <p>Find job opportunities for educators and professionals.</p>
+                <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
+            </div>
+            <div class="feature">
+                <img src="/images/ficon.png" alt="Forum Icon">
+                <h2>Forum</h2>
+                <p>Join discussions, ask questions, and connect with others.</p>
+                <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
+            </div>
+            <div class="feature">
+                <h2>Testimonials</h2>
+                <p>Here are the testimonials and reviews.</p>
+                <a href="/pages/testimonials/testimonials.html" class="btn">Explore</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h3>What Our Users Say</h3>
+            <div class="testimonial">
+                <h4>Priya Sharma</h4>
+                <p>PathSphere helped me secure a prestigious scholarship at IIT Delhi. The platform's resources were invaluable.</p>
+            </div>
+            <div class="testimonial">
+                <h4>Riya Saxena</h4>
+                <p>PathSphere's forum connected me with mentors who guided me through the scholarship application process.</p>
+            </div>
+            <div class="testimonial">
+                <h4>Ananya Patel</h4>
+                <p>PathSphere's job portal helped me land my dream role in the EdTech sector.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PathSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+        prependComponent("Navbar");
+        prependComponent('Cursor');
+        prependComponent("ScrollToTop");
+        appendComponent('Footer');
+        appendComponent('ChatBot');
+        waitTillComponentsLoaded();
+    </script>
+
 </body>
 
 </html>
