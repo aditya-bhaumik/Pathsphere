@@ -7,7 +7,7 @@ const jobListings = [
     description: "Develop and maintain web applications using modern frameworks.",
     salary: "$90K - $120K",
     tools: ["JavaScript", "React", "Node.js"],
-    daysPosted: "5 hours ago",
+    daysPosted: "5 days ago",
     logo: "./job_images/manage.png",
     
   },
