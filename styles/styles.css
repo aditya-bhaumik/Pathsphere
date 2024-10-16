@@ -3,14 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
+ 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scrollbar-width: none;
-}
 
+  margin:  0;
+  padding:  0;
+  box-sizing:  border-box;
+  scrollbar-width:  none;
+  text-align:  center;
+
+}
+ 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -63,8 +66,9 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+
 .card-body {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .rounded-circle {
@@ -482,8 +486,9 @@ main {
   padding: 100px 20px;
   margin-top: 60px;
   display: flex;
-
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 50px;
   background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826');
   background-repeat: no-repeat;
@@ -493,9 +498,18 @@ main {
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
   margin: 0;
   padding: 5px;
+  text-decoration: none;         /* No underline by default */
+  transition: all 0.3s ease;     /* Smooth transition for hover effects */
+}
+
+/* Hover state */
+.hero h1:hover {
+  text-decoration: underline;    /* Underline on hover */
+  color: #ffa500;                /* Change color on hover (optional) */
+  transform: scale(1.05);        /* Slight pop-out effect */
 }
 
 .hero p {
@@ -503,7 +517,7 @@ main {
   padding: 10px;
 }
 .hero .left {
-  width: 60%;
+  width: 100%;
 }
 .hero .right {
   width: 40%;
@@ -540,6 +554,7 @@ main {
   width: 30%;
   margin-bottom: 20px;
   transition: transform 0.2s;
+  background-color: #e7e7e7;
 }
 @media (max-width: 700px) {
   .features {
@@ -1189,4 +1204,151 @@ h3 {
   .feature-item {
     flex: 1 1 100%;
   }
+}
+
+
+
+.scroll-top{
+  position: fixed;
+  bottom: 12px;
+  right: 80px;
+  background-color: #00ff40;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10000;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.scroll-top, .fa-arrow-up{
+  font-size: 20px;
+}
+.scroll-top .fa-arrow-up{
+  transition: 0.2s ease-out;
+	color: #fff;
+	transition: 0.2s ease-out;
+}
+
+.scroll-top:hover {
+	background-color: #34947c;
+}
+.scroll-top:hover .fa-arrow-up {
+	transform: translateY(-4px);
+}
+
+
+.star-rating{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-rating li{
+  padding: 0 1px;
+  list-style: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.Sharing{
+	position: relative;
+	z-index: 1;
+}
+.Sharing .circle-share{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background-color: #fbbf24;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 2px #1f2d3a;
+	cursor: pointer;
+	text-align: center;
+}
+.Sharing .circle-share .fa-share-alt{
+	line-height: 50px;
+	color: #fff;
+}
+.Sharing ul{
+	list-style-type: none;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background-color: #fff;
+	top: -50px;
+	left: -50px;
+	z-index: -1;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 2px #1f2d3a,
+				0px 0px 0px 5px #fff;
+	transform: scale(.3) rotate(-180deg);
+	transition: .5s ease-in;
+}
+.Sharing:hover ul{
+	transform: scale(1) rotate(0deg);	
+}
+.Sharing ul:before,
+.Sharing ul:after{
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	background-color: #1f2d3a;
+	top: 50%;
+}
+.Sharing ul:before{
+	left: -1px;
+	transform: rotate(45deg);
+}
+.Sharing ul:after{
+	right: -1px;
+	transform: rotate(-45deg);
+}
+.Sharing ul li a{
+	text-decoration: none;
+	font-size: 25px;
+}
+.Sharing ul li:first-of-type a{
+	color: #3b5999;
+}
+.Sharing ul li:nth-of-type(2) a{
+	color: #25D366;
+}
+.Sharing ul li:nth-of-type(3) a{
+	color: black;
+}
+.Sharing ul li:last-of-type a{
+	color: #e4405f;
+}
+
+.Sharing ul li:first-of-type{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 10px;
+}
+.Sharing ul li:nth-of-type(2){
+	position: absolute;
+	left: 10px;
+	transform: translateY(-50%);
+	top: 50%;	
+}
+.Sharing ul li:nth-of-type(3){
+	position: absolute;
+	right: 10px;
+	transform: translateY(-50%);
+	top: 50%;	
+}
+.Sharing ul li:last-of-type{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 10px;	
 }
