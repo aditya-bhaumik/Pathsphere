@@ -554,6 +554,7 @@ main {
   width: 30%;
   margin-bottom: 20px;
   transition: transform 0.2s;
+  background-color: #e7e7e7;
 }
 @media (max-width: 700px) {
   .features {
