@@ -5,24 +5,174 @@
     <!-- uncomment above line if deploying to github pages -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./forum.css" />
     <title>Forum</title>
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
+
+    <!-- bootstrap-links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    
   </head>
 
   <body>
-    <main>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+
+          <div class="community-forum d-flex flex-column justify-content-center">
+            
+            <h1 class="com-head">Community Forum</h1>
+            <h2 class="com-head2">Engage, Learn and Collabrate</h2>
+            <p class="com-pera">"Join the conversation, share your insights, and connect with experts across various fields. Together, we grow stronger!"</p>
+          </div>
+
+          <h1 class="com-diss">Community Discussions</h1>
+
+          
+            <div class="diss d-flex flex-column justify-content-center">
+                <h2 class="diss-head">Scholarships Discussion</h2>
+                <p class="diss-pera">Find and Share Scholarship opportunities worls wide.</p>
+
+                <div class="diss-slides d-flex flex-row justify-content-between">
+
+                    <div class="dis-card d-flex flex-column justify-content-center">
+                      <p class="diss-top">Best scholarships for undergraduates in 2024...</p>
+                      <div class="d-flex flex-row justify-content-between mt-3">
+                        <p class="posted">Posted By ALEX  | <a class="replies">5 Replies</a></p>
+                        <button class="join mb-2">JOIN</button>
+                      </div>
+                    </div>
+
+                    <div class="dis-card d-flex flex-column justify-content-center">
+                      <p class="diss-top">How to write a strong scholarship Essay...</p>
+                      <div class="d-flex flex-row justify-content-between mt-3">
+                        <p class="posted">Posted By Jennie | <a class="replies">20 Replies</a></p>
+                        <button class="join mb-2">JOIN</button>
+                      </div>                      
+                    </div>
+
+                    <div class="dis-card d-flex flex-column justify-content-center">
+                      <p class="diss-top">Scholarship for international Students...</p>
+                      <div class="d-flex flex-row justify-content-between mt-3">
+                        <p class="posted">Posted By Eva smith  | <a class="replies">14 Replies</a></p>
+                        <button class="join mb-2">JOIN</button>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-end">
+                  <button class="more mt-5 mb-1">See More ></button>
+                </div>
+            </div>
+
+
+            <div class="diss d-flex flex-column justify-content-center">
+              <h2 class="diss-head">Job Opportunities</h2>
+              <p class="diss-pera">Explore job opportunities, internship and career advice.</p>
+
+              <div class="diss-slides d-flex flex-row justify-content-between">
+
+                  <div class="dis-card d-flex flex-column justify-content-center">
+                    <p class="diss-top">Top MNCs Hiring software engineers in 2024...</p>
+                    <div class="d-flex flex-row justify-content-between mt-3">
+                      <p class="posted">Posted By Lisa  | <a class="replies">6 Replies</a></p>
+                      <button class="join mb-2">JOIN</button>
+                    </div>
+                  </div>
+
+                  <div class="dis-card d-flex flex-column justify-content-center">
+                    <p class="diss-top">Interview Tips from industry experts...</p>
+                    <div class="d-flex flex-row justify-content-between mt-3">
+                      <p class="posted">Posted By aiman | <a class="replies">8 Replies</a></p>
+                      <button class="join mb-2">JOIN</button>
+                    </div>                      
+                  </div>
+
+                  <div class="dis-card d-flex flex-column justify-content-center">
+                    <p class="diss-top">Remote job opportunities for UIUX Designers...</p>
+                    <div class="d-flex flex-row justify-content-between mt-3">
+                      <p class="posted">Posted By Insiya khan | <a class="replies">14 Replies</a></p>
+                      <button class="join mb-2">JOIN</button>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="d-flex flex-row justify-content-end">
+                <button class="more mt-5 mb-1">See More ></button>
+              </div>
+            </div>
+
+          <div class="diss d-flex flex-column justify-content-center">
+            <h2 class="diss-head">General Discussions</h2>
+            <p class="diss-pera">Ask questions, share advice and discuss any career & eduction related query.</p>
+
+            <div class="diss-slides d-flex flex-row justify-content-between">
+
+                <div class="dis-card d-flex flex-column justify-content-center">
+                  <p class="diss-top">How to maintain work study balance? ...</p>
+                  <div class="d-flex flex-row justify-content-between mt-3">
+                    <p class="posted">Posted By Diana | <a class="replies">5 Replies</a></p>
+                    <button class="join mb-2">JOIN</button>
+                  </div>
+                </div>
+
+                <div class="dis-card d-flex flex-column justify-content-center">
+                  <p class="diss-top">Best resources to learn data science ...</p>
+                  <div class="d-flex flex-row justify-content-between mt-3">
+                    <p class="posted">Posted By Chris | <a class="replies">13 Replies</a></p>
+                    <button class="join mb-2">JOIN</button>
+                  </div>                      
+                </div>
+
+                <div class="dis-card d-flex flex-column justify-content-center">
+                  <p class="diss-top">Online community for educators...</p>
+                  <div class="d-flex flex-row justify-content-between mt-3">
+                    <p class="posted">Posted By Sophia swift  | <a class="replies">25 Replies</a></p>
+                    <button class="join mb-2">JOIN</button>
+                  </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-end">
+              <button class="more mt-5 mb-1">See More ></button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+      prependComponent('Navbar');
+      prependComponent('Cursor');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+      appendComponent('ChatBot');
+      waitTillComponentsLoaded();
+    </script>
+
+  </body>
+</html>
+    <!-- <main>
       <section class="hero">
         <h1>Forum</h1>
         <p>Join discussions, ask questions, and connect with others.</p>
-      </section>
+      </section> -->
       <!-- Add discussion forum elements here -->
 
-      <div class="container">
-        <h1 style="color: rgb(151, 13, 110)">Community Discussions</h1>
+      <!-- <div class="container">
+        <h1 style="color: rgb(151, 13, 110)">Community Discussions</h1> -->
 
         <!-- Section 1: Scholarships Discussion -->
-        <div class="forum-section">
+        <!-- <div class="forum-section">
           <h2>Scholarships</h2>
           <p>Find and share scholarship opportunities worldwide.</p>
 
@@ -46,10 +196,10 @@
           </div>
 
           <a href="#" class="new-post-button">New Post</a>
-        </div>
+        </div> -->
 
         <!-- Section 2: Job Opportunities Discussion -->
-        <div class="forum-section">
+        <!-- <div class="forum-section">
           <h2>Job Opportunities</h2>
           <p>Explore job opportunities, internships, and career advice.</p>
 
@@ -69,10 +219,10 @@
           </div>
 
           <a href="#" class="new-post-button">New Post</a>
-        </div>
+        </div> -->
 
         <!-- Section 3: General Discussions -->
-        <div class="forum-section">
+        <!-- <div class="forum-section">
           <h2>General Discussions</h2>
           <p>
             Ask questions, share advice, or discuss any educational or
@@ -118,4 +268,4 @@
       defer>
       </script>
   </body>
-</html>
+</html> -->
