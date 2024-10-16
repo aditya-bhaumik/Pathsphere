@@ -6,6 +6,9 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/styles/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Document</title>
   </head>
   <body>
@@ -23,12 +26,15 @@
         <h3>Quick links</h3>
         <ul>
           <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about/about.html">About us</a></li>
+          <li><a href="/pages/contact/contact.html">Contact Us</a></li>
           <li>
             <a href="/pages/scholarships/scholarships.html">Scholarships</a>
           </li>
           <li><a href="/pages/jobs/jobs.html">Jobs</a></li>
           <li><a href="/pages/forum/forum.html">Forum</a></li>
           <li><a href="/pages/contributor/index.html">Contributor</a></li>
+          <li><a href="/pages/privacypolicy/privacypolicy.html">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="footer-list">
@@ -64,14 +70,41 @@
           <img style="height: 25px;width: 200px;margin-top: 10px;" src="https://hits.sh/pathsphere.netlify.app.svg?label=Website%20Visitors&extraCount=1627&color=ffffff&labelColor=D4931D" alt="web-views">
         </div>
       </div>
+      <div class="Sharing">
+        <div class="circle-share">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    
     </div>
-    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/scripts/script.js"></script>
+    <div class="copyright">&copy;&nbsp;<span id="Currentyear"> &nbsp;</span>&nbsp;PathSphere. All rights reserved.</div>
+
+    <script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Update the content of the span with the current year
+        document.getElementById('Currentyear').textContent = currentYear;
+        document.addEventListener("DOMContentLoaded", function() {
+            const shareButton = document.querySelector('.share');
+            const socialMenu = document.querySelector('.social');
+            // Ensure the elements exist
+            if (shareButton && socialMenu) {
+                shareButton.addEventListener('click', function() {
+                    // Toggle the 'active' class for both the button and the social menu
+                    this.classList.toggle('active');
+                    socialMenu.classList.toggle('active');
+                });
+            } else {
+                console.error("Share button or social menu not found");
+            }
+        });
+        
+    </script>
   </body>
 </html>

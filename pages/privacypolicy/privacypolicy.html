@@ -1,74 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="../../images/pathsphere.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PathSphere Contributors</title>
-    <link href="styles.css" rel="stylesheet" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="script.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy</title>
+  <link rel="icon" type="image/x-icon" href="/images/pathsphere.png" />
+  <link rel="stylesheet" href="PrivacyPolicy.css">
+</head>
+<body>
+  <main>
+  <div class="background-container">
+    <div class="policy-container">
+      <h1>Privacy Policy</h1>
+      <p class="center-text">Welcome to our Privacy Policy page. Your privacy is critically important to us.</p>
 
-  <body>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1 id="heroTitle">Our Amazing Contributors</h1>
-        <p id="heroSubtitle">
-          Shaping the future of Pathsphere, one commit at a time
-        </p>
-        <a href="#contribute" class="cta-button">Become a Contributor</a>
-      </div>
-    </section>
+      <h2>1. Information We Collect</h2>
+      <p>We collect several types of information for various purposes to provide and improve our service to you.</p>
 
-    <!-- Stats Section -->
-    <section class="stats">
-      <h2>Project Statistics</h2>
-      <div id="stats" class="stats-container">
-        <!-- Stat Cards will be inserted here -->
-      </div>
-    </section>
+      <h2>2. How We Use Your Information</h2>
+      <p>We use the data we collect to operate, maintain, and improve our services. This includes using your data to understand how users interact with our services and to communicate updates.</p>
 
-    <!-- Contributors Grid -->
-    <section class="contributors">
-      <h2>Meet Our Contributors</h2>
-      <div id="contributors" class="contributors-container">
-        <div id="loading" class="loading">
-          <div class="spinner"></div>
-        </div>
-      </div>
-    </section>
+      <h2>3. Cookies</h2>
+      <p>We use cookies and similar tracking technologies to track the activity on our website and hold certain information.</p>
 
-    <!-- Call to Action -->
-    <section id="contribute" class="contribute">
-      <div class="contribute-content">
-        <h2>Ready to Make an Impact?</h2>
-        <p>Join our community and help shape the future of StationGuide.</p>
-        <form id="emailForm">
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Get Started</button>
-        </form>
-      </div>
-    </section>
+      <h2>4. Data Protection Rights</h2>
+      <p>You have the right to access, update, or delete your personal information. If you make a request, we have one month to respond to you.</p>
 
-    <script src="/scripts/componentLoader.js"></script>
-    <script>
-      prependComponent('Navbar');
-      prependComponent('Cursor');
-      prependComponent('ScrollToTop');
-      appendComponent('Footer');
-      appendComponent('ChatBot');
-      waitTillComponentsLoaded();
-    </script>
+      <h2>5. Changes to This Privacy Policy</h2>
+      <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.</p>
+
+      <h2>6. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us.</p>
+    </div>
+  </div>
+</body>
+<a class="scroll-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
+</main>
+
+<script src="/scripts/componentLoader.js"></script>
+<script>
+  prependComponent("Navbar");
+  prependComponent("Cursor");
+  appendComponent("Footer");
+</script>
+<script>
+  window.embeddedChatbotConfig = {
+    chatbotId: "7akUzokCgwR0gNp0m-qQF",
+    domain: "www.chatbase.co",
+  };
+</script>
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="7akUzokCgwR0gNp0m-qQF"
+  domain="www.chatbase.co"
+  defer
+></script>
 
 <div class="circle-container">
   <div class="circle"></div>
@@ -164,5 +150,4 @@
 
 
 </script>
-  </body>
 </html>
