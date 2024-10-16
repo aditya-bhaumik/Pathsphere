@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/styles/styles.css" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scholarships</title>
@@ -12,7 +10,9 @@
       type="image/x-icon"
       href="/pathsphere/images/pathsphere.png"
     />
+    <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="stylesheet" href="./scholarships.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> <!-- Include Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
   </head>
 
@@ -37,9 +37,9 @@
 
       <div id="scholarship-container" class="scholarship-container"></div>
 
-      <div id="scholarship-modal" class="modal">
+      <div id="scholarship-modal" class="modal" role="dialog" aria-hidden="true">
         <div class="modal-content">
-          <span id="close-modal" class="close-btn">&times;</span>
+          <span id="close-modal" class="close-btn" aria-label="Close modal">&times;</span>
           <div id="modal-info"></div>
         </div>
       </div>
@@ -60,14 +60,14 @@
             card.classList.add('card');
 
             card.innerHTML = `
-                    <img src="${scholarship.image}" alt="${scholarship.scholarship_name}">
-                    <h2>${scholarship.scholarship_name}</h2>
-                    <p>${scholarship.listing_awards}</p>
-                    <div class="buttons">
-                        <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
-                        <button class="read-more" data-index="${index}">Read More</button>
-                    </div>
-                `;
+              <img src="${scholarship.image}" alt="${scholarship.scholarship_name}">
+              <h2>${scholarship.scholarship_name}</h2>
+              <p>${scholarship.listing_awards}</p>
+              <div class="buttons">
+                  <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
+                  <button class="read-more" data-index="${index}">Read More</button>
+              </div>
+            `;
 
             container.appendChild(card);
           });
@@ -94,16 +94,17 @@
 
         function showDetails(scholarship) {
           modalInfo.innerHTML = `
-                <h2>${scholarship.scholarship_name}</h2>
-                <p><strong>Award:</strong> ${scholarship.listing_awards}</p>
-                <p><strong>Eligibility:</strong> ${scholarship.eligibility}</p>
-                <p><strong>Start Date:</strong> ${scholarship.start_date}</p>
-                <p><strong>Deadline:</strong> ${scholarship.deadline}</p>
-                <p><strong>Last Date:</strong> ${scholarship.last_date}</p>
-                <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
-            `;
+            <h2>${scholarship.scholarship_name}</h2>
+            <p><strong>Award:</strong> ${scholarship.listing_awards}</p>
+            <p><strong>Eligibility:</strong> ${scholarship.eligibility}</p>
+            <p><strong>Start Date:</strong> ${scholarship.start_date}</p>
+            <p><strong>Deadline:</strong> ${scholarship.deadline}</p>
+            <p><strong>Last Date:</strong> ${scholarship.last_date}</p>
+            <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
+          `;
 
           modal.style.display = 'flex';
+          modal.setAttribute('aria-hidden', 'false'); // Set modal visibility for accessibility
         }
 
         function fetchAndProcessExcel() {
@@ -115,12 +116,10 @@
               const workbook = XLSX.read(data, { type: 'array' });
 
               const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-              const jsonData = XLSX.utils.sheet_to_json(firstSheet, {
-                header: 1,
-              });
+              const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
 
               // Converts the extracted data to an array of objects
-              const scholarships = jsonData.slice(1).map((row) => ({
+              scholarships = jsonData.slice(1).map((row) => ({
                 apply_now: row[0],
                 image: row[1],
                 scholarship_name: row[2],
@@ -134,18 +133,18 @@
               console.log('Loaded Scholarships:', scholarships);
               displayScholarships(scholarships);
             })
-            .catch((error) =>
-              console.error('Error loading the Excel file:', error)
-            );
+            .catch((error) => console.error('Error loading the Excel file:', error));
         }
 
         closeModal.addEventListener('click', () => {
           modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true'); // Hide modal for accessibility
         });
 
         window.addEventListener('click', (e) => {
           if (e.target === modal) {
             modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true'); // Hide modal for accessibility
           }
         });
 

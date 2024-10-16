@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <base href="/Pathsphere/"> -->
-    <!-- uncomment above line if deploying to github pages -->
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/styles/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Document</title>
   </head>
   <body>
@@ -52,7 +48,7 @@
           </li>
           <li>
             <a href="https://x.com" target="_blank"
-              ><i class="fa-brands fa-x-twitter"></i
+              ><i class="fab fa-twitter"></i
             ></a>
           </li>
           <li>
@@ -70,18 +66,17 @@
           <img style="height: 25px;width: 200px;margin-top: 10px;" src="https://hits.sh/pathsphere.netlify.app.svg?label=Website%20Visitors&extraCount=1627&color=ffffff&labelColor=D4931D" alt="web-views">
         </div>
       </div>
-      <div class="Sharing">
+      <div class="sharing">
         <div class="circle-share">
           <i class="fas fa-share-alt"></i>
         </div>
         <ul>
           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
           <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
         </ul>
       </div>
-    
     </div>
     <div class="copyright">&copy;&nbsp;<span id="Currentyear"> &nbsp;</span>&nbsp;PathSphere. All rights reserved.</div>
 
@@ -91,8 +86,8 @@
         // Update the content of the span with the current year
         document.getElementById('Currentyear').textContent = currentYear;
         document.addEventListener("DOMContentLoaded", function() {
-            const shareButton = document.querySelector('.share');
-            const socialMenu = document.querySelector('.social');
+            const shareButton = document.querySelector('.circle-share');
+            const socialMenu = document.querySelector('.sharing ul');
             // Ensure the elements exist
             if (shareButton && socialMenu) {
                 shareButton.addEventListener('click', function() {
@@ -104,7 +99,6 @@
                 console.error("Share button or social menu not found");
             }
         });
-        
     </script>
   </body>
 </html>

@@ -1,0 +1,306 @@
+/* Navbar styles */
+.navbar {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #D4931D; /* Logo in gold */
+    text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li {
+    position: relative;
+  }
+  
+  .navbar .nav-links a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #8A2BE2; /* Purple color on hover */
+  }
+  
+  /* Underline animation on hover */
+  .navbar .nav-links a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #8A2BE2; /* Purple underline */
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .navbar .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar .nav-links li {
+      margin-bottom: 10px;
+    }
+  }
+  
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic body styling */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Hero section */
+  /* Hero section */
+.hero {
+    background: url('/images/hero-bg.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero .left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700; /* Make the text bold */
+    color: #8400ff; /* Set the text color to a gold shade */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a shadow for better contrast */
+    animation: slideIn 1.5s ease-in-out; /* Animation for text */
+  }
+  
+  .hero p {
+    font-size: 1.5rem; /* Increase the font size slightly */
+    margin-bottom: 2rem;
+    color: #f4f4f4; /* Lighten the color for contrast */
+    animation: fadeIn 3s ease-in-out; /* Animation for the paragraph */
+  }
+  
+  /* Button animations */
+  .search-container .btn {
+    background-color: #D4931D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .search-container .btn:hover {
+    background-color: #b77517;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive changes */
+  @media (max-width: 768px) {
+    .hero .left h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  
+  /* Features section */
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #fff;
+  }
+  
+  .feature {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 20%;
+  }
+  
+  .feature img {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .feature .btn {
+    background-color: #D4931D;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  /* Testimonials */
+  /* Testimonial section styles */
+#testimonials {
+    background-color: #f8f9fa; /* Light background for contrast */
+  }
+  
+  .testimonials-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 20px 0; /* Adds padding for the container */
+    scroll-snap-type: x mandatory; /* Enables snap on scroll */
+  }
+  
+  .testimonial-card {
+    scroll-snap-align: start; /* Aligns each card when scrolling */
+    flex: 0 0 auto; /* Prevents cards from shrinking */
+    margin-right: 20px; /* Spacing between cards */
+  }
+  
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    color: #ffd700; /* Gold color for stars */
+  }
+  
+  .star-rating li {
+    margin: 0 2px; /* Adds space between stars */
+  }
+  
+  .star-rating i {
+    font-size: 1.2em; /* Adjust star size */
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth; /* Adds smooth scrolling behavior */
+  }
+  
+  /* Optional: Hide scrollbar in some browsers */
+  .testimonials-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome and Safari */
+  }
+  
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Utility classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .py-5 {
+    padding: 50px 0;
+  }
+  
+  .btn {
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #b77517;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .hero .left h1 {
+      font-size: 2rem;
+    }
+  }
+  
