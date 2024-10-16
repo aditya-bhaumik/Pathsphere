@@ -16,29 +16,6 @@
   color: #97136e; /* Keeping your original color */
   font-size: 2.5rem;
 }
-.content1{
-  top: 30%;
-  position: absolute;
-  transform: translateY(-50%);
-  color: #fff;
-}
-.content1 h1{
-  font-size: 100px;
-  font-weight: 600;
-}
-.content1 h1:hover{
-  color: #ffbb00;
-
-}
-.content1 h2{
-  font-size: 30px;
-  font-weight: 600;
-  padding-left: 5pc;
-}
-.content1 h2 span{
-  padding-top: 40px;
-  color: #ffbb00;
-}
 
 /* Forum sections layout */
 .sections {
@@ -48,41 +25,7 @@
   flex-wrap: wrap;
   position: relative;
 }
-.hero1 {
-  width: 100vw;
-  height: 120vh;
-  background-image: url(https://github.com/shriyadindi/comingsoonpage/blob/main/background.png?raw=true);
-  background-position: center;
-  background-size: cover;
-  padding: 0 8%;
-}
-.hero1 .left {
-  width: 100%;
-}
-.hero1 .right {
-  width: 40%;
-}
-.hero1 .right img {
-  width: 500px;
-  height: 300px;
-}
-.rocket{
-  width: 250px;
-  position: absolute;
-  right: 5%;
-  bottom: 0;
-  animation: rocket 4s linear infinite;
-}
-@keyframes rocket{
-  0%{
-      bottom: 0;
-      opacity: 0;
-  }
-  100%{
-      bottom: 200%;
-      opacity: 1;
-  }
-}
+
 /* Forum-section cards */
 .forum-section {
   background-color: #fff;
