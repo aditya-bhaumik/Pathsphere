@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/styles/styles.css" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scholarships</title>
@@ -43,19 +45,19 @@
       </div>
 
       <script>
-        const container = document.getElementById("scholarship-container");
-        const modal = document.getElementById("scholarship-modal");
-        const closeModal = document.getElementById("close-modal");
-        const modalInfo = document.getElementById("modal-info");
+        const container = document.getElementById('scholarship-container');
+        const modal = document.getElementById('scholarship-modal');
+        const closeModal = document.getElementById('close-modal');
+        const modalInfo = document.getElementById('modal-info');
         let scholarships = []; // Global variable to store scholarship data
 
         function displayScholarships(data) {
           scholarships = data; // Stores the fetched scholarships
-          container.innerHTML = ""; // Clears the container
+          container.innerHTML = ''; // Clears the container
 
           scholarships.forEach((scholarship, index) => {
-            const card = document.createElement("div");
-            card.classList.add("card");
+            const card = document.createElement('div');
+            card.classList.add('card');
 
             card.innerHTML = `
                     <img src="${scholarship.image}" alt="${scholarship.scholarship_name}">
@@ -71,22 +73,22 @@
           });
 
           // Adds event listeners to Read More buttons
-          document.querySelectorAll(".read-more").forEach((button) => {
-            button.addEventListener("click", (e) => {
-              const index = e.target.getAttribute("data-index");
+          document.querySelectorAll('.read-more').forEach((button) => {
+            button.addEventListener('click', (e) => {
+              const index = e.target.getAttribute('data-index');
               showDetails(scholarships[index]);
             });
           });
         }
 
         function filterScholarships() {
-          const input = document.getElementById("searchInput");
+          const input = document.getElementById('searchInput');
           const filter = input.value.toLowerCase();
-          const cards = container.getElementsByClassName("card");
+          const cards = container.getElementsByClassName('card');
 
           Array.from(cards).forEach((card) => {
-            const title = card.querySelector("h2").textContent.toLowerCase();
-            card.style.display = title.includes(filter) ? "" : "none";
+            const title = card.querySelector('h2').textContent.toLowerCase();
+            card.style.display = title.includes(filter) ? '' : 'none';
           });
         }
 
@@ -101,16 +103,16 @@
                 <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
             `;
 
-          modal.style.display = "flex";
+          modal.style.display = 'flex';
         }
 
         function fetchAndProcessExcel() {
-          const fileUrl = "buddy4study.xlsx";
+          const fileUrl = 'buddy4study.xlsx';
 
           fetch(fileUrl)
             .then((response) => response.arrayBuffer())
             .then((data) => {
-              const workbook = XLSX.read(data, { type: "array" });
+              const workbook = XLSX.read(data, { type: 'array' });
 
               const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
               const jsonData = XLSX.utils.sheet_to_json(firstSheet, {
@@ -129,46 +131,141 @@
                 last_date: row[7],
               }));
 
-              console.log("Loaded Scholarships:", scholarships);
+              console.log('Loaded Scholarships:', scholarships);
               displayScholarships(scholarships);
             })
             .catch((error) =>
-              console.error("Error loading the Excel file:", error)
+              console.error('Error loading the Excel file:', error)
             );
         }
 
-        closeModal.addEventListener("click", () => {
-          modal.style.display = "none";
+        closeModal.addEventListener('click', () => {
+          modal.style.display = 'none';
         });
 
-        window.addEventListener("click", (e) => {
+        window.addEventListener('click', (e) => {
           if (e.target === modal) {
-            modal.style.display = "none";
+            modal.style.display = 'none';
           }
         });
 
-        document.addEventListener("DOMContentLoaded", fetchAndProcessExcel);
+        document.addEventListener('DOMContentLoaded', fetchAndProcessExcel);
       </script>
     </main>
 
     <script src="/scripts/componentLoader.js"></script>
     <script>
-      prependComponent("Navbar");
-      // prependComponent("Navbar", document.getElementById("navbar"));
-      prependComponent("Cursor");
-      prependComponent("ScrollToTop");
-      appendComponent("Footer");
+      prependComponent('Navbar');
+      prependComponent('Cursor');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+      appendComponent('ChatBot');
+      waitTillComponentsLoaded();
 
       function toggleDetails(button) {
         const details = button.previousElementSibling;
-        if (details.style.display === "none") {
-          details.style.display = "block";
-          button.textContent = "Read Less";
+        if (details.style.display === 'none') {
+          details.style.display = 'block';
+          button.textContent = 'Read Less';
         } else {
-          details.style.display = "none";
-          button.textContent = "Read More";
+          details.style.display = 'none';
+          button.textContent = 'Read More';
         }
       }
+    </script>
+    <div class="circle-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <style>
+      .circle {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        pointer-events: none;
+        background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
+        transition: transform 0.1s, left 0.1s, top 0.1s;
+      }
+  
+      .circle-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+      }
+    </style>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+  
+        circles.forEach(function (circle) {
+          circle.x = 0;
+          circle.y = 0;
+        });
+  
+        window.addEventListener("mousemove", function (e) {
+          coords.x = e.pageX;
+          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+        });
+  
+        function animateCircles() {
+          let x = coords.x;
+          let y = coords.y;
+  
+          circles.forEach(function (circle, index) {
+            circle.style.left = `${x - 12}px`;
+            circle.style.top = `${y - 12}px`;
+            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+  
+            const nextCircle = circles[index + 1] || circles[0];
+            circle.x = x;
+            circle.y = y;
+  
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+          });
+  
+          requestAnimationFrame(animateCircles);
+        }
+  
+        animateCircles();
+      });
+  
+  
     </script>
   </body>
 </html>

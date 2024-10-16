@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign up</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="login-signup.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">PathSphere</div>
+            <div class="card-description">
+                Your gateway to educational and professional resources</div>
+        </div>
+        <div class="tabs">
+            <button type="button" class="tab-link active" data-tab="login">Login</button>
+            <button type="button" class="tab-link" data-tab="signup">Sign Up</button>
+        </div>
+        <div class="tab-container">
+            <div class="tab-content active" id="login">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                        <div class="error" id="login-email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('login-password')"></i>
+                        <div class="error" id="login-password-error"></div>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#" onclick="openModal()">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn" id="login-btn">Login</button>
+                    <div class="success" id="login-success">Login successful!</div>
+                </form>
+            </div>
+            <div class="tab-content" id="signup">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        <div class="error" id="signup-email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('signup-password')"></i>
+                        <div class="error" id="signup-password-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('signup-confirm-password')"></i>
+                        <div class="error" id="signup-confirm-password-error"></div>
+                    </div>
+                    <button type="submit" class="btn" id="signup-btn">Sign Up</button>
+                    <div class="success" id="signup-success">Signup successful!</div>
+                </form>
+                <div class="already-have-account">
+                    <a href="#" onclick="switchToLogin()">Already have an account? Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p>By continuing, you agree to our Terms of Service and Privacy Policy</p>
+        </div>
+    </div>
+
+    <!-- Password Recovery Modal -->
+    <div id="passwordRecoveryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Password Recovery</h2>
+            <form id="password-recovery-form">
+                <div class="form-group">
+                    <label for="recovery-email">Email</label>
+                    <input type="email" id="recovery-email" placeholder="Enter your email" required>
+                    <div class="error" id="recovery-email-error"></div>
+                </div>
+                <button type="submit" class="btn">Send Recovery Email</button>
+                <div class="success" id="recovery-success">Recovery email sent!</div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="login-signup.js"></script>
+</body>
+</html>

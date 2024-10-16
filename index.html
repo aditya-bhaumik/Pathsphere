@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="/styles/styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
-
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
 </head>
 
-<body>
+<body class="light">
 
   <main>
-
 
     <section class="hero">
       <div class="left">
@@ -29,6 +27,10 @@
           <a href="/pages/jobs/jobs.html" class="btn">
             <i class="fa-solid fa-magnifying-glass"></i>
             Find Jobs
+          </a>
+          <a href="/pages/login-signup/login-signup.html" class="btn">
+            <i class="fa-solid fa-user-plus"></i>
+            Register
           </a>
         </div>
       </div>
@@ -44,7 +46,8 @@
       <div class="feature">
         <img src="/images/jicon.png" alt="Jobs Icon">
         <h2>Jobs</h2>
-        <p>Find job opportunities for educators and professionals.</p>
+        <p>Find job
+           opportunities for educators and professionals.</p>
         <a href="/pages/jobs/jobs.html" class="btn">Browse Jobs</a>
       </div>
       <div class="feature">
@@ -54,54 +57,57 @@
         <a href="/pages/forum/forum.html" class="btn">Join the Forum</a>
       </div>
       <div class="feature">
-       <h2>Testimonials</h2>
+        <h2>Testimonials</h2>
         <p>Here are the testimonials and reviews.</p>
         <a href="/pages/testimonials/testimonials.html" class="btn">Explore</a>
       </div>
-    </section>
-
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-briefcase"></i>
-            <div>
-              <h6>Job Portal</h6>
-              <p class="hidden-text">Job opportunities tailored for educators.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-users"></i>
-            <div>
-              <h6>Community Forums</h6>
-              <p class="hidden-text">Share resources, advice, experiences.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-bell"></i>
-            <div>
-              <h6 >Instant Notifications</h6>
-              <p class="hidden-text">Get real-time important updates.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-bookmark"></i>
-            <div>
-              <h6 >Save & Track</h6>
-              <p class="hidden-text">Bookmark and monitor application progress.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-tools"></i>
-            <div>
-              <h6>Resume Builder</h6>
-              <p class="hidden-text">Create a professional profile easily.</p>
-            </div>
-          </div>
-        </div>
+      <div class="feature">
+        <h2>Login</h2>
+        <p>Access your account to manage your applications and profile.</p>
+        <a href="/pages/login-signup/login-signup.html" class="btn">
+          <i class="fa-solid fa-sign-in-alt"></i>
+          Login
+        </a>
       </div>
     </section>
 
-    
+    <div class="feature-item">
+      <i class="fas fa-briefcase"></i>
+      <div>
+        <h6>Job Portal</h6>
+        <p class="hidden-text">Job opportunities tailored for educators.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-users"></i>
+      <div>
+        <h6>Community Forums</h6>
+        <p class="hidden-text">Share resources, advice, experiences.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-bell"></i>
+      <div>
+        <h6>Instant Notifications</h6>
+        <p class="hidden-text">Get real-time important updates.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-bookmark"></i>
+      <div>
+        <h6>Save & Track</h6>
+        <p class="hidden-text">Bookmark and monitor application progress.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-tools"></i>
+      <div>
+        <h6>Resume Builder</h6>
+        <p class="hidden-text">Create a professional profile easily.</p>
+      </div>
+    </div>
+    </section>
+
     <section id="testimonials">
       <div class="container py-5">
         <div class="row justify-content-center">
@@ -121,7 +127,7 @@
                 </div>
                 <h5 class="font-weight-bold">Priya Sharma</h5>
                 <h6 class="font-weight-bold my-3">Computer Science Student at IIT Delhi</h6>
-                <ul class="list-unstyled d-flex flex-row">
+                <ul class="list-unstyled star-rating">
                   <li><i class="fas fa-star"></i></li>
                   <li><i class="fas fa-star"></i></li>
                   <li><i class="fas fa-star"></i></li>
@@ -143,7 +149,7 @@
                 </div>
                 <h5 class="font-weight-bold">Riya Saxena</h5>
                 <h6 class="font-weight-bold my-3">Research Scholar at IISC Bangalore</h6>
-                <ul class="list-unstyled d-flex flex-row">
+                <ul class="list-unstyled star-rating">
                   <li><i class="fas fa-star"></i></li>
                   <li><i class="fas fa-star"></i></li>
                   <li><i class="fas fa-star"></i></li>
@@ -165,7 +171,7 @@
                 </div>
                 <h5 class="font-weight-bold">Ananya Patel</h5>
                 <h6 class="font-weight-bold my-3">EdTech Professional at Byju's</h6>
-                <ul class="list-unstyled d-flex flex-row">
+                <ul class="list-unstyled star-rating">
                   <li><i class="fas fa-star"></i></li>
                   <li><i class="fas fa-star"></i></li>
                   <li><i class="fas fa-star"></i></li>
@@ -183,28 +189,118 @@
       </div>
     </section>
 
-  <a class="scroll-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
+  
 
   </main>
+  <script src="/scripts/componentLoader.js">
+  </script>
 
-  <script src="/scripts/componentLoader.js"></script>
   <script>
     prependComponent("Navbar");
     prependComponent('Cursor');
-    appendComponent("Footer");  
+    prependComponent("ScrollToTop");
+    appendComponent('Footer');
+    appendComponent('ChatBot');
+    waitTillComponentsLoaded();
   </script>
-  <script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "7akUzokCgwR0gNp0m-qQF",
-    domain: "www.chatbase.co"
+
+
+<!-- CursorTrail effect -->
+
+<div class="circle-container">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+<style>
+  .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
+    transition: transform 0.1s, left 0.1s, top 0.1s;
+  }
+
+  .circle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    circles.forEach(function (circle) {
+      circle.x = 0;
+      circle.y = 0;
+    });
+
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.pageX;
+      coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+    });
+
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+        circle.style.left = `${x - 12}px`;
+        circle.style.top = `${y - 12}px`;
+        circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        circle.x = x;
+        circle.y = y;
+
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
     }
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="7akUzokCgwR0gNp0m-qQF"
-    domain="www.chatbase.co"
-    defer>
-    </script>
+
+    animateCircles();
+  });
+
+
+</script>
 
 </body>
 

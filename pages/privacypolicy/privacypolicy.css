@@ -1,0 +1,62 @@
+/* Background container for the privacy policy page */
+.background-container {
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #908388 10%, #63605e 100%,#363333 30%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+.policy-container {
+    padding: 32px;
+    max-width: 800px;
+    margin: 170px auto; /* Add top margin to account for the fixed navbar */
+    background-color: rgba(77, 71, 71, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+  }
+  
+  .policy-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+/* Typography */
+h1 {
+    font-family: 'Montserrat', Arial, sans-serif; 
+    font-size: 2.5rem; /* Larger and more prominent heading */
+    color: #1a1818;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-family: 'Future2', Arial, sans-serif;
+    font-size: 1.75rem; /* Slightly smaller than h1 */
+    color: #1a1818;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-family: Arial, sans-serif; /* Clean and easy to read */
+    font-size: 1.125rem; /* Slightly larger for readability */
+    font-weight: 300; /* Light font-weight for modern look */
+    line-height: 1.6; /* Increase line spacing for readability */
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  .center-text {
+    text-align: center;
+    font-family: Arial, sans-serif; /* Optional: Choose your preferred font */
+    font-size: 1.125rem; /* Adjust size if needed */
+    margin: 20px 0; /* Adds space above and below the text */
+  }  
+
+  
