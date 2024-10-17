@@ -69,7 +69,10 @@ git add .
 7. **Now to commit**
 
 ```bash
-git commit -m "added readme Co-authored-by: your github username <your email related to github> Co-authored-by: aditya-bhaumik <adi.b98120@gmail.com>"
+git commit -m "added readme 
+
+Co-authored-by: your github username <your email related to github> 
+Co-authored-by: aditya-bhaumik <adi.b98120@gmail.com>"
 ```
 
 8. **Push your local commits to the remote repository**
