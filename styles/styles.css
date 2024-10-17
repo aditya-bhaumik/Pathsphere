@@ -1206,6 +1206,26 @@ h3 {
   }
 }
 
+.forum{
+  background-color: lightseagreen;
+  height:100%;
+  width:100%;
+}
+.forum-section{
+  margin:10px;
+  font-size:20px;
+  
+  
+}
+
+a.new{
+  box-sizing: border-box;
+  margin-top:10px;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+
 
 
 .scroll-top{
@@ -1255,6 +1275,7 @@ h3 {
   padding: 0 1px;
   list-style: none;
 }
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
