@@ -1,6 +1,11 @@
-# <p align="center">**✨PathSphere✨**
-<img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-PATHSPHERE"/>
-</p>
+<div align = "center">
+    <h1>✨PathSphere✨</h1>
+</div>
+
+<div align = "center">
+    <img src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome+to+PATHSPHERE!" />
+</div>
+
 
 **PathSphere** is an open-source platform designed to help students, educators, and professionals access resources such as scholarships, job opportunities, and community discussions. Our goal is to create a comprehensive hub that bridges gaps in educational and career resources.
 
@@ -141,5 +146,12 @@ PathSphere can be significantly improved with additional front-end features. Her
 By implementing these enhancements, you can make PathSphere more interactive and engaging while keeping it entirely front-end focused. Your contributions will help provide a richer experience for users and make the platform more versatile and useful.
 
 
-📄 License
-This project is licensed under the MIT License
+## 📜 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## ⭐ Star the Repo
+If you find this project useful, please give it a star! ⭐ It helps others discover this project and encourages us to keep improving.
+
+---
+
+Thank you for your support! 🚀
