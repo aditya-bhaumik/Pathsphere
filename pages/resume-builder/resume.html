@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
-    <link rel="stylesheet" href="/pages/resume-builder/resume.css">
+    <link rel="stylesheet" href="resume.css">
 </head>
+
 <body>
     <div class="container">
-       <div id="header1">
+        <div id="header1">
             <h1>Resume Builder</h1>
-            <p style="text-align: center;">Fill in your details to build your professional resume.</p>
-       </div> 
-
+            <p>Fill in your details to build your professional resume.</p>
+        </div>
         <form id="resumeForm">
             <section class="form-section">
                 <h2>Objective:</h2>
-                <br>
                 <div class="form-field">
                     <input type="text" id="objective" name="objective" placeholder="Objective of your application" required>
                 </div>
-                <br>
+            </section>
+
+            <section class="form-section">
                 <h2>Personal Details:</h2>
-                <br>
                 <div class="form-group">
                     <div class="form-field">
                         <label for="name">Name</label>
@@ -36,98 +37,123 @@
                         <label for="phone">Phone</label>
                         <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
                     </div>
-
-
                     <div class="form-field">
                         <label for="linkedin">LinkedIn</label>
                         <input type="text" id="linkedin" name="linkedin" placeholder="www.linkedin.com/john" required>
                     </div>
-
                 </div>
             </section>
 
-            <!-- <section class="form-section"> -->
+            <section class="form-section">
                 <h2>Education:</h2>
-                <br>
-                <!-- <textarea id="education" name="education" rows="4" placeholder="Add your educational qualifications" style="height:auto; width: 100%;"></textarea> -->
                 <div class="form-field">
-                    <label for="education1"></label>
                     <input type="text" id="education1" name="education" placeholder="Most recent" required>
-                </div> 
-
+                </div>
                 <div class="form-field">
-                    <label for="education2"></label>
                     <input type="text" id="education2" name="education" placeholder="Previous recent" required>
                 </div>
-                <br>
-            
-        <!-- </section> -->
+            </section>
 
             <section class="form-section">
                 <h2>Experience:</h2>
-                <br>
-                <textarea id="experience" name="experience" rows="4" placeholder="Add your work experience" style="height: auto; width: 100%;"></textarea>
+                <div class="form-field">
+                    <textarea id="experience" name="experience" rows="4" placeholder="Add your work experience"></textarea>
+                </div>
             </section>
 
             <section class="form-section">
                 <h2>Projects:</h2>
-                <br>
-                <textarea id="project" name="project" rows="4" placeholder="Add your project work" style="height: auto; width: 100%;"></textarea>
+                <div class="form-field">
+                    <textarea id="project" name="project" rows="4" placeholder="Add your project work"></textarea>
+                </div>
             </section>
 
             <section class="form-section">
                 <h2>Skills:</h2>
-                <br>
-                <input type="text" id="skills" name="skills" placeholder="e.g., JavaScript, React, Python" style="height: auto; width: 100%;">
+                <div class="form-field">
+                    <input type="text" id="skills" name="skills" placeholder="e.g., JavaScript, React, Python">
+                </div>
             </section>
 
             <section class="form-section">
                 <h2>Achievements:</h2>
-                <br>
-                <textarea id="achievements" name="achievements" rows="4" placeholder="Add your achievements" style="height: auto; width: 100%;"></textarea>
+                <div class="form-field">
+                    <textarea id="achievements" name="achievements" rows="4" placeholder="Add your achievements"></textarea>
+                </div>
             </section>
 
-            
             <section class="form-section">
                 <h2>Choose Template:</h2>
-                <br>
-                <select id="templateSelector">
-                    <option value="template1">Classic Template</option>
-                    <option value="template2">Modern Template</option>
-                </select>
+                <div class="form-field">
+                    <select id="templateSelector">
+                        <option value="template1">Classic Template</option>
+                        <option value="template2">Modern Template</option>
+                    </select>
+                </div>
             </section>
 
             <button type="button" onclick="generateResume()">Generate Resume</button>
         </form>
 
-        
         <div id="resumePreview">
             <h2>Preview:</h2>
-            <br>
-            <div id="resumeContent">
-               
-            </div>
+            <div id="resumeContent"></div>
             <button id="downloadBtn" onclick="downloadResume()">Download PDF</button>
         </div>
-        <br>
     </div>
-    <br>
-    <br><br>
-    <br>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script src="/pages/resume-builder/resume.js"></script>
-    
     <script src="/scripts/componentLoader.js"></script>
     <script>
-      prependComponent('Navbar');
-      prependComponent('Cursor');
-      prependComponent('ScrollToTop');
-      appendComponent('Footer');
-      appendComponent('ChatBot');
-      waitTillComponentsLoaded();
-    </script>
-    
-    
-</body>
-</html>
+        prependComponent('Navbar');
+        prependComponent('Cursor');
+        prependComponent('ScrollToTop');
+        appendComponent('Footer');
+        appendComponent('ChatBot');
+        waitTillComponentsLoaded();
 
+        // Function to generate resume preview and download
+        function generateResume() {
+            const resumeContent = document.getElementById("resumeContent");
+            const objective = document.getElementById("objective").value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const linkedin = document.getElementById("linkedin").value;
+            const education1 = document.getElementById("education1").value;
+            const education2 = document.getElementById("education2").value;
+            const experience = document.getElementById("experience").value;
+            const project = document.getElementById("project").value;
+            const skills = document.getElementById("skills").value;
+            const achievements = document.getElementById("achievements").value;
+
+            resumeContent.innerHTML = `
+                <h3>${name}</h3>
+                <p style="color: black;">Email: ${email}</p>
+                <p style="color: black;">Phone: ${phone}</p>
+                <p style="color: black;">LinkedIn: ${linkedin}</p>
+                <h4>Objective</h4>
+                <p>${objective}</p>
+                <h4>Education</h4>
+                <p>${education1}</p>
+                <p>${education2}</p>
+                <h4>Experience</h4>
+                <p>${experience}</p>
+                <h4>Projects</h4>
+                <p>${project}</p>
+                <h4>Skills</h4>
+                <p>${skills}</p>
+                <h4>Achievements</h4>
+                <p>${achievements}</p>
+            `;
+        }
+
+        function downloadResume() {
+            const element = document.getElementById('resumeContent');
+            html2pdf(element);
+        }
+    </script>
+</body>
+
+</html>
