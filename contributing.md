@@ -60,12 +60,15 @@ cd Pathsphere
 git checkout -b <your_branch_name>
 ```
 
-6. **Make changes**
-
-7. **Stage your changes and commit**
+6. **To make changes**
 
 ```bash
 git add .
+```
+
+7. **Now to commit**
+
+```bash
 git commit -m "added readme Co-authored-by: your github username <your email related to github> Co-authored-by: aditya-bhaumik <adi.b98120@gmail.com>"
 ```
 
