@@ -1,4 +1,4 @@
-
+/* 
 * {
     margin: 0;
     padding: 0;
@@ -120,7 +120,7 @@ button:hover {
 }
 
 /* Template 1: Classic Style */
-.template1 {
+/* .template1 {
     font-family: 'Georgia', serif;
 }
 
@@ -142,7 +142,7 @@ button:hover {
 }
 
 /* Template 2: Modern Style */
-.template2 {
+/* .template2 {
     font-family: 'Arial', sans-serif;
     background-color: #f3f4f6;
     border-radius: 10px;
@@ -163,4 +163,189 @@ button:hover {
 .template2 h4 {
     font-size: 1.6rem;
     color: #1a1d21;
+} */
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --text-color: #fff; /* Changed text color to white */
+    --secondary-text-color: rgba(255, 255, 255, 0.7); /* Changed secondary text color to a lighter shade of white */
+    --background-color: transparent; /* Removed background color */
+    --container-bg-color: transparent; /* Removed container background color */
+    --border-color: #ddd;
+    --focus-color: #007bff;
+    --preview-bg-color: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://i.pinimg.com/originals/6f/7c/63/6f7c63991726d61d63730682e791d78c.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Removed background color */
+    /* Removed backdrop-filter for blur effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+#header1 {
+    text-align: center;
+    margin: 110px 0 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+p {
+    color: var(--secondary-text-color);
+    font-size: 1.1rem;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+}
+
+.form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--text-color); /* Ensure label color is white */
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    color: var(--text-color); /* Set input text color to white */
+    background-color: transparent; /* Make input background transparent */
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--focus-color);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+#resumePreview {
+    margin-top: 40px;
+    color: white;
+}
+
+#resumeContent {
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    background-color: var(--preview-bg-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: black/* Set resume content text color to white */
+}
+
+#downloadBtn {
+    margin-top: 20px;
+}
+
+/* Template styles */
+.template1 {
+    font-family: 'Georgia', serif;
+    padding: 30px;
+}
+
+.template1 h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.template1 p {
+    color: #fff; /* Changed to white */
+    margin-bottom: 20px;
+}
+
+.template1 h4 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.template2 {
+    font-family: 'Arial', sans-serif;
+    /* Removed background color */
+    color: var(--text-color);
+}
+
+.template2 h3 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #fff; /* Changed to white */
+}
+
+.template2 p {
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.template2 h4 {
+    font-size: 1.6rem;
+    color: #fff; /* Changed to white */
+}
+
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
 }
