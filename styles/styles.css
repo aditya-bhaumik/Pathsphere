@@ -991,9 +991,13 @@ footer {
   }
 
   .feature-item {
+   
     display: flex;
-    align-items: center;
-    width: 48%;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    
   }
 
   .feature-item i {
@@ -1189,4 +1193,21 @@ h3 {
   .feature-item {
     flex: 1 1 100%;
   }
+}
+
+.why-us {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin-top: 30px;
+}
+.why-us p {
+  text-align: center;
+}
+.about {
+  display: flex ;
+  justify-content: space-around;
+  padding: 10px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
