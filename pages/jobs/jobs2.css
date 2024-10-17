@@ -1,0 +1,177 @@
+body {
+    overflow-x: hidden;
+    width:100%;
+    background-color: #e9e6e6;
+    
+  }
+.container-fluid
+{
+    max-width: 100%; 
+    background-color: #e9e6e6;
+    align-items:center;
+}
+
+.page-headings 
+{
+    margin-top:50px;
+    text-align:center;
+    font-family:Nunito;
+    
+}
+
+.heading-pera 
+{
+    font-size: 15px;
+    text-align:center;
+    
+}
+
+.heading-head 
+{
+    font-family:Nunito;
+    font-size: 60px;
+    text-align:center;
+}
+.carousel-size 
+{
+    margin-top:80px;
+    width:100%;
+    height:80vh;
+}
+
+
+.carousel-images 
+{
+    height:80vh;
+    width:100%;
+}
+
+.search-bar 
+{
+    
+    height:3%;
+    width:50%;
+    background-color: black;
+    border-radius:40px;
+    padding:5px;
+    align-items: center;
+    padding-left:15px;
+    padding-top:6px;
+    margin:auto;
+    margin-top:30px;
+    
+}
+.searching 
+{
+    height:90%;
+    width:80%;
+    border-radius: 40px;
+    padding:15px;
+    color:#767272;
+}
+.search-button 
+{
+    width:17%;
+    height:90%;
+    background-color: #ffffff;
+    color:#000000;
+    border-radius:30px;
+}
+
+.job-widges 
+{
+    height:50%;
+    width:100%;
+    border-color: #000000;
+    background-color: #e9e6e6;
+    padding:30px;
+    /* margin-top:1%; */
+}
+
+.job-card 
+{
+    height:55%;
+    width:50%;
+    border-color: black;
+    background-color: #ffffff;
+    padding:35px;
+    border-radius:20px;
+    padding-right: 50px;
+    margin:2%;
+}
+
+.company-name 
+{
+    font-family:Tahoma;
+    font-size:18px;
+    color:#525050
+}
+
+.comp-logo 
+{
+    height:45px ;
+    width:45px;
+    margin-left: auto;
+}
+
+.job-name 
+{
+    font-family:Tahoma;
+    font-size:25px;
+    font-weight:bold ;
+}
+
+.location-details 
+{
+    margin-right:40px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.det-name 
+{
+    margin-left:13px;
+    font-weight: bold;
+    font-family: Georgia;
+    margin-bottom: 5px;
+}
+.det-ans 
+{
+    font-size: 16px;
+    font-weight: 500;
+    color:#747272;
+}
+.apply-sec 
+{
+    height:100%;
+    width:100%;
+    
+}
+.apply-button 
+{
+    height:80%;
+    width:40%;
+    border-radius: 25px;
+    color:#ffffff;
+    background-color: #000000;
+    font-family: Arial;
+    font-weight:600;
+}
+
+.loading 
+{
+    margin:50px;
+    background-color: black;
+    height:50px;
+    width:20%;
+    color:white;
+    font-weight: 500;
+    border-radius: 15px;
+    margin-left:100px;
+}
+
+.load-box 
+{
+    height:20%;
+    width:100%;
+}

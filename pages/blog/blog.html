@@ -7,10 +7,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs</title>
+    <style>
+    .neat-button {
+      background-color: #2C7D62;
+      color: white;
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     
+    }
+
+    .neat-button:hover {
+      background-color: #dd0b0b; 
+      color: white;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+      text-decoration: none;
+    }
+  </style>
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png" />
     <link rel="stylesheet" href="./blog.css" />
     <link rel="stylesheet" href="/styles/essential.css" />
+    
   </head>
 
   <body>
@@ -44,6 +69,10 @@
                 encourages students pursuing careers in research in basic
                 sciences.
               </p>
+              <a href="https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/school/kishore-vaigyanik-protsahan-yojana-kvpy" 
+              class="neat-button" target="_blank"style="margin-top: 50px;">
+            Visit
+           </a>
             </div>
           </div>
 
@@ -62,6 +91,10 @@
                 students.Open for: Class 9 students with a family income below
                 ₹1.5 lakh per annum.Scholarship Amount: ₹12,000 per annum.
               </p>
+              <a href="https://www.buddy4study.com/article/nmms"
+              class="neat-button" target="_blank" style="margin-top: 23px;">
+            Visit
+           </a>
             </div>
           </div>
 
@@ -79,6 +112,10 @@
                 Provided to the children of ex-servicemen and ex-coast guard
                 personnel.Scholarship Amount: ₹2,500 to ₹3,000 per month.
               </p>
+              <a href="https://www.desw.gov.in/prime-ministers-scholarship-scheme-pmss" 
+              class="neat-button" target="_blank" style="margin-top: 50px;">
+            Visit
+           </a>
             </div>
           </div>
 
@@ -100,6 +137,10 @@
                 from economically weaker sections.Scholarship Amount: ₹10,000
                 per annum (UG), ₹20,000 per annum (PG).
               </p>
+              <a href="https://www.education.gov.in/scholarships-education-loan-0" 
+              class="neat-button" target="_blank">
+            Visit
+           </a>
             </div>
           </div>
 
@@ -119,6 +160,10 @@
                 technical diploma or degree program.Scholarship Amount: ₹30,000
                 per annum + tuition fees.
               </p>
+              <a href="https://www.buddy4study.com/page/aicte-pragati-scholarship-for-girls" 
+              class="neat-button" target="_blank">
+            Visit
+           </a>
             </div>
           </div>
 
@@ -137,6 +182,10 @@
                 (INSPIRE) program by the Department of Science and
                 Technology.Scholarship Amount: ₹80,000 per annum.
               </p>
+              <a href="https://online-inspire.gov.in/" 
+              class="neat-button" target="_blank">
+            Visit
+           </a>
             </div>
           </div>
         </div>
@@ -165,12 +214,105 @@
     <script src="/scripts/componentLoader.js"></script>
     <script>
       prependComponent('Navbar');
-      prependComponent('Cursor');
       prependComponent('ScrollToTop');
       appendComponent('Footer');
       appendComponent('ChatBot');
       waitTillComponentsLoaded();
     </script>
     <script src="./blog.js"></script>
+    <div class="circle-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <style>
+      .circle {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        pointer-events: none;
+        background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
+        transition: transform 0.1s, left 0.1s, top 0.1s;
+      }
+  
+      .circle-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+      }
+    </style>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+  
+        circles.forEach(function (circle) {
+          circle.x = 0;
+          circle.y = 0;
+        });
+  
+        window.addEventListener("mousemove", function (e) {
+          coords.x = e.pageX;
+          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+        });
+  
+        function animateCircles() {
+          let x = coords.x;
+          let y = coords.y;
+  
+          circles.forEach(function (circle, index) {
+            circle.style.left = `${x - 12}px`;
+            circle.style.top = `${y - 12}px`;
+            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+  
+            const nextCircle = circles[index + 1] || circles[0];
+            circle.x = x;
+            circle.y = y;
+  
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+          });
+  
+          requestAnimationFrame(animateCircles);
+        }
+  
+        animateCircles();
+      });
+  
+  
+    </script>
   </body>
 </html>

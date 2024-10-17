@@ -10,7 +10,7 @@
   padding:  0;
   box-sizing:  border-box;
   scrollbar-width:  none;
-  text-align:  center;
+  
 
 }
  
@@ -498,9 +498,18 @@ main {
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
   margin: 0;
   padding: 5px;
+  text-decoration: none;         /* No underline by default */
+  transition: all 0.3s ease;     /* Smooth transition for hover effects */
+}
+
+/* Hover state */
+.hero h1:hover {
+  text-decoration: underline;    /* Underline on hover */
+  color: #ffa500;                /* Change color on hover (optional) */
+  transform: scale(1.05);        /* Slight pop-out effect */
 }
 
 .hero p {
@@ -545,6 +554,7 @@ main {
   width: 30%;
   margin-bottom: 20px;
   transition: transform 0.2s;
+  background-color: #e7e7e7;
 }
 @media (max-width: 700px) {
   .features {
@@ -1363,4 +1373,3 @@ a.new{
 	transform: translateX(-50%);
 	bottom: 10px;	
 }
-
