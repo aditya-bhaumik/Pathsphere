@@ -169,8 +169,8 @@ button:hover {
     /* --primary-hover-color: #0056b3; */
     --text-color: #fff; /* Changed text color to white */
     --secondary-text-color: rgba(255, 255, 255, 0.7); /* Changed secondary text color to a lighter shade of white */
-    --background-color: transparent; /* Removed background color */
-    --container-bg-color: transparent; /* Removed container background color */
+/*     --background-color: transparent; /* Removed background color */ */
+/*     --container-bg-color: transparent; /* Removed container background color */ */
     --border-color: #ddd;
     /* --focus-color: #007bff; */
     --preview-bg-color: #f9f9f9;
