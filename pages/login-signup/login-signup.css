@@ -303,3 +303,27 @@ div.tab-content{
     display:none;
 }
 
+/* Add styles for the back button */
+.btn-home {
+    position: fixed; /* Fix position to the top left */
+    top: 10px; /* Adjust the distance from the top */
+    left: 10px; /* Adjust the distance from the left */
+    padding: 5px 10px; /* Smaller padding for a smaller button */
+    width: 100px; /* Set the width to 100px */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.btn-home:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+.btn-home:focus {
+    outline: none; /* Remove default outline */
+}
