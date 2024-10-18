@@ -165,14 +165,14 @@ button:hover {
     color: #1a1d21;
 } */
 :root {
-    --primary-color: #007bff;
-    --primary-hover-color: #0056b3;
+    /* --primary-color: #007bff; */
+    /* --primary-hover-color: #0056b3; */
     --text-color: #fff; /* Changed text color to white */
     --secondary-text-color: rgba(255, 255, 255, 0.7); /* Changed secondary text color to a lighter shade of white */
     --background-color: transparent; /* Removed background color */
     --container-bg-color: transparent; /* Removed container background color */
     --border-color: #ddd;
-    --focus-color: #007bff;
+    /* --focus-color: #007bff; */
     --preview-bg-color: #f9f9f9;
 }
 
@@ -181,10 +181,9 @@ button:hover {
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('https://i.pinimg.com/originals/6f/7c/63/6f7c63991726d61d63730682e791d78c.gif');
+    background-image: url('4a3499c6b5cca368ec4e3717f9077114.gif');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -369,6 +368,6 @@ button:hover {
 }
 .feature-icon {
     font-size: 3rem;
-    color: #3498db;
+    /* color: #3498db; */
     margin-bottom: 1rem;
 }
