@@ -182,21 +182,44 @@ main {
   bottom: 60px;
 }
 .darkmode main {
-  background-color: black;
+  background-color: #121212;
 }
 
 .darkmode .copyright {
-  background-color: black;
+  background-color: #3C3D37;
   color: #fff;
 }
 .darkmode .scroll-up-btn {
   z-index: 1000;
 }
 
-.darkmode .feature {
-  background-color: #333;
+.darkmode .feature { 
+  background-color: #202020;
 }
-
+.darkmode .why-us h1{
+  color: #fff;
+}
+.darkmode .why-us p{
+  color: #8d8a8a;
+}
+.darkmode #testimonials{
+  background-color: #202020;
+}
+.darkmode .card{
+  background-color: #121212;
+}
+.darkmode .card h5{
+  color: #fff;
+}
+.darkmode .card h6{
+  color: #fff;
+}
+.darkmode #testimonials h3{
+  color: #fff;
+} 
+.darkmode #testimonials h3+p{
+  color: #8d8a8a;
+} 
 .darkmode .feature p {
   color: #fff;
 }
@@ -214,7 +237,7 @@ main {
 }
 
 .darkmode .feature-item {
-  background: #333;
+  background: #202020;
 }
 
 .darkmode .feature-item h6 {
@@ -222,13 +245,13 @@ main {
 }
 
 .darkmode .footer-container {
-  background-color: black;
+  background-color: #121212;
   border-top: 2px solid #fff;
   color: #fff;
 }
 
 .darkmode .social-icons li a:hover {
-  background-color: #333;
+  background-color: #202020;
 }
 
 ::-webkit-scrollbar {
