@@ -14,13 +14,22 @@ body, html {
 
 .community-forum
 {
+    position: relative;
     background-image: url("./forum.images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg");
     background-size: cover;
     height:90vh;
     width:100%;
     text-align: center;
     margin-top: 20px;
-    
+}
+
+.backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
 }
 
 .com-head 
@@ -43,6 +52,10 @@ body, html {
     font-size:1rem;
     text-decoration: wavy;
     font-style: italic;
+}
+
+.com-head, .com-head2, .com-pera{
+    z-index: 1;
 }
 
 .com-diss 

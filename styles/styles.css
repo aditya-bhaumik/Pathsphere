@@ -1,19 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
- 
 * {
-
-  margin:  0;
-  padding:  0;
-  box-sizing:  border-box;
-  scrollbar-width:  none;
-  
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
 }
- 
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -31,7 +27,7 @@ body {
 #testimonials {
   background-color: #f8f9fa;
   padding: 80px 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .container {
@@ -65,7 +61,6 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
-
 
 .card-body {
   padding: 1.5rem;
@@ -323,7 +318,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.3em;
   transition: color 0.3s ease;
-  font-family: 'Playpen Sans', cursive;
+  font-family: "Playpen Sans", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -395,7 +390,7 @@ nav ul li a:hover {
   ul li a {
     text-decoration: none;
     color: black;
-    font-family: 'Playpen Sans', cursive;
+    font-family: "Playpen Sans", cursive;
     font-optical-sizing: auto;
     font-size: 1.3em;
     font-weight: 400;
@@ -490,26 +485,44 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 50px;
-  background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826');
+  background-image: url("https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826");
   background-repeat: no-repeat;
-
   background-size: cover;
   height: 100vh;
 }
-
+.hero-para {
+  position: relative;
+  opacity: 1;
+}
+.hero-heading {
+  position: relative;
+  opacity: 1;
+}
+.left {
+  position: relative;
+  opacity: 1;
+}
+.backdrop {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(5px);
+}
 .hero h1 {
   font-size: 50px;
   margin: 0;
   padding: 5px;
-  text-decoration: none;         /* No underline by default */
-  transition: all 0.3s ease;     /* Smooth transition for hover effects */
+  text-decoration: none; /* No underline by default */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 /* Hover state */
 .hero h1:hover {
-  text-decoration: underline;    /* Underline on hover */
-  color: #ffa500;                /* Change color on hover (optional) */
-  transform: scale(1.05);        /* Slight pop-out effect */
+  text-decoration: underline; /* Underline on hover */
+  color: #ffa500; /* Change color on hover (optional) */
+  transform: scale(1.05); /* Slight pop-out effect */
 }
 
 .hero p {
@@ -1006,13 +1019,11 @@ footer {
   }
 
   .feature-item {
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
     height: 100%;
-    
   }
 
   .feature-item i {
@@ -1220,45 +1231,42 @@ h3 {
   text-align: center;
 }
 .about {
-  display: flex ;
+  display: flex;
   justify-content: space-around;
   padding: 10px;
   margin-bottom: 50px;
   margin-top: 50px;
 }
-@media(max-width: 700px) {
-    .about {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-    }
+@media (max-width: 700px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
 }
 
-
-.forum{
+.forum {
   background-color: lightseagreen;
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
 }
-.forum-section{
-  margin:10px;
-  font-size:20px;
-
-
+.forum-section {
+  margin: 10px;
+  font-size: 20px;
 }
 
-a.new{
+a.new {
   box-sizing: border-box;
-  margin-top:10px;
-  cursor:pointer;
+  margin-top: 10px;
+  cursor: pointer;
   text-decoration: none;
 }
 
-.scroll-top{
+.scroll-top {
   position: fixed;
   bottom: 12px;
   right: 80px;
@@ -1278,125 +1286,121 @@ a.new{
   text-decoration: none;
 }
 
-.scroll-top .fa-arrow-up{
+.scroll-top .fa-arrow-up {
   transition: 0.2s ease-out;
-	color: #fff;
-	transition: 0.2s ease-out;
+  color: #fff;
+  transition: 0.2s ease-out;
 }
 
 .scroll-top:hover {
-	background-color: #34947c;
+  background-color: #34947c;
 }
 .scroll-top:hover .fa-arrow-up {
-	transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
-
-.star-rating{
-  display:flex;
+.star-rating {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-
-.star-rating li{
+.star-rating li {
   padding: 0 1px;
   list-style: none;
-
 }
- @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-.Sharing{
-	position: relative;
-	z-index: 1;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.Sharing {
+  position: relative;
+  z-index: 1;
 }
-.Sharing .circle-share{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	background-color: #fbbf24;
-	border-radius: 50%;
-	box-shadow: 0px 0px 0px 2px #1f2d3a;
-	cursor: pointer;
-	text-align: center;
+.Sharing .circle-share {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 2px #1f2d3a;
+  cursor: pointer;
+  text-align: center;
 }
-.Sharing .circle-share .fa-share-alt{
-	line-height: 50px;
-	color: #fff;
+.Sharing .circle-share .fa-share-alt {
+  line-height: 50px;
+  color: #fff;
 }
-.Sharing ul{
-	list-style-type: none;
-	position: absolute;
-	width: 150px;
-	height: 150px;
-	background-color: #fff;
-	top: -50px;
-	left: -50px;
-	z-index: -1;
-	border-radius: 50%;
-	box-shadow: 0px 0px 0px 2px #1f2d3a,
-				0px 0px 0px 5px #fff;
-	transform: scale(.3) rotate(-180deg);
-	transition: .5s ease-in;
+.Sharing ul {
+  list-style-type: none;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  top: -50px;
+  left: -50px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 2px #1f2d3a, 0px 0px 0px 5px #fff;
+  transform: scale(0.3) rotate(-180deg);
+  transition: 0.5s ease-in;
 }
-.Sharing:hover ul{
-	transform: scale(1) rotate(0deg);	
+.Sharing:hover ul {
+  transform: scale(1) rotate(0deg);
 }
 .Sharing ul:before,
-.Sharing ul:after{
-	content: '';
-	position: absolute;
-	height: 1px;
-	width: 100%;
-	background-color: #1f2d3a;
-	top: 50%;
+.Sharing ul:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #1f2d3a;
+  top: 50%;
 }
-.Sharing ul:before{
-	left: -1px;
-	transform: rotate(45deg);
+.Sharing ul:before {
+  left: -1px;
+  transform: rotate(45deg);
 }
-.Sharing ul:after{
-	right: -1px;
-	transform: rotate(-45deg);
+.Sharing ul:after {
+  right: -1px;
+  transform: rotate(-45deg);
 }
-.Sharing ul li a{
-	text-decoration: none;
-	font-size: 25px;
+.Sharing ul li a {
+  text-decoration: none;
+  font-size: 25px;
 }
-.Sharing ul li:first-of-type a{
-	color: #3b5999;
+.Sharing ul li:first-of-type a {
+  color: #3b5999;
 }
-.Sharing ul li:nth-of-type(2) a{
-	color: #25D366;
+.Sharing ul li:nth-of-type(2) a {
+  color: #25d366;
 }
-.Sharing ul li:nth-of-type(3) a{
-	color: black;
+.Sharing ul li:nth-of-type(3) a {
+  color: black;
 }
-.Sharing ul li:last-of-type a{
-	color: #e4405f;
+.Sharing ul li:last-of-type a {
+  color: #e4405f;
 }
 
-.Sharing ul li:first-of-type{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 10px;
+.Sharing ul li:first-of-type {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
 }
-.Sharing ul li:nth-of-type(2){
-	position: absolute;
-	left: 10px;
-	transform: translateY(-50%);
-	top: 50%;	
+.Sharing ul li:nth-of-type(2) {
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+  top: 50%;
 }
-.Sharing ul li:nth-of-type(3){
-	position: absolute;
-	right: 10px;
-	transform: translateY(-50%);
-	top: 50%;	
+.Sharing ul li:nth-of-type(3) {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-50%);
+  top: 50%;
 }
-.Sharing ul li:last-of-type{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 10px;	
+.Sharing ul li:last-of-type {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
 }
