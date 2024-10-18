@@ -307,17 +307,22 @@ nav {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  height: fit-content;
-  color: var(--secondary-color);
+  display: flex; /* Align logo text and image horizontally */
+  align-items: center; /* Vertically align the text with the menu items */
+  font-size: 24px; /* Match this to the font size of other menu items */
+  font-weight: bold; /* Set to 'normal' to match other items */
+  color: var(--secondary-color); /* Adjust color to be consistent */
   text-decoration: none;
+  padding: 8px 12px; /* Add padding similar to the menu items */
   transition: color 0.3s ease;
-  img {
-    width: 50px;
-    height: 50px;
-  }
 }
+
+.logo img {
+  width: 30px; /* Adjust the logo image size to fit better with text */
+  height: 30px;
+  margin-right: 8px; /* Add space between the image and text */
+}
+
 
 .logo:hover {
   color: #ff6f61;
