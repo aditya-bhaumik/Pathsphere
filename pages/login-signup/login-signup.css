@@ -126,7 +126,23 @@ body {
     margin-bottom: 8px;
     font-weight: bold; /* Make labels bold */
 }
+ .icon {
+     margin-right: 8px;
+     /* Space between the icon and the label text */
+     font-size: 16px;
+     /* Adjust icon size */
+     line-height: 1;
+     /* Ensure icon and text are aligned */
+ }
 
+ label {
+     padding-top: 2px;
+     /* Remove default margin from the label */
+     display: flex;
+     /* Set display to flex for proper alignment */
+     align-items: center;
+     /* Vertically center the icon and text */
+ }
 .form-group input {
     width: 100%;
     padding: 8px;
