@@ -66,7 +66,7 @@ p {
     width: 100%;
     height: 160px;
     /* Slightly taller image */
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 15px;
     /* Added space between image and text */
 }
@@ -122,6 +122,17 @@ p {
     /* Increased hover lift for a more engaging feel */
 }
 
+
+/* Spacing for button container */
+
+.buttons {
+    margin-top: 20px;
+    /* More space above the button section */
+}
+
+
+/* Modal styling */
+
 .modal {
     display: none;
     position: fixed;
@@ -135,6 +146,9 @@ p {
     align-items: center;
 }
 
+
+/* Modal content box */
+
 .modal-content {
     background-color: white;
     padding: 20px;
@@ -142,6 +156,9 @@ p {
     max-width: 500px;
     width: 90%;
 }
+
+
+/* Close button for modal */
 
 .close-btn {
     float: right;
@@ -184,66 +201,6 @@ p {
     background-color: #1c6057;
 }
 
-.interaction {
-    margin-top: 15px;
-}
-
-.like-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.like-btn:hover {
-    background-color: #45a049;
-}
-
-.like-count {
-    font-weight: bold;
-}
-
-.comments-section {
-    margin-top: 15px;
-}
-
-.comments-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.comments-list li {
-    background-color: #f4f4f4;
-    margin-bottom: 8px;
-    padding: 8px;
-    border-radius: 5px;
-}
-
-.comment-input {
-    width: 100%;
-    height: 40px;
-    margin-top: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.submit-comment {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-.submit-comment:hover {
-    background-color: #0056b3;
-}
-
 
 /* Search bar styling */
 
@@ -266,5 +223,39 @@ p {
 
 .search-bar input:focus {
     outline: none;
-    border: 1px solid #007bff;
+    border: 1px solid #1c6057;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: #1c6057;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.pagination button:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+}
+
+#page-info {
+    margin: 0 15px;
+    font-size: 1.1em;
+    font-weight: bold;
 }

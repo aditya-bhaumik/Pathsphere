@@ -4,10 +4,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-y: auto;
     background-color: #f0f0f0;
     margin: 10px; /* Reduced gap around body */
     animation: backgroundAnimation 5s infinite alternate;
 }
+
 
 @keyframes backgroundAnimation {
     0% {
@@ -291,4 +293,27 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
     cursor: pointer;
+}
+div.tab-content{
+    height:50vh;
+    overflow: auto;
+    
+}
+.tab-content::-webkit-scrollbar{
+    display:none;
+}
+
+.success-message {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 192, 203, 0.8); /* Pink translucent background */
+    color: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    text-align: center;
 }

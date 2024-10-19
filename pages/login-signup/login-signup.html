@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="login-signup.css">
 </head>
 <body>
+    <div class="content">
     <div class="card">
         <div class="card-header">
             <div class="card-title">PathSphere</div>
@@ -43,7 +44,9 @@
                 <form id="signup-form">
                     <div class="form-group">
                         <label for="signup-name">Name</label>
-                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                        <input type="text" id="signup-name" placeholder="Enter your name" required pattern="[a-zA-Z ]+"
+                                oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+                                oninput="this.setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="signup-email">Email</label>
@@ -91,6 +94,9 @@
             </form>
         </div>
     </div>
+    </div>
+    <!-- Success message container -->
+    <div id="signup-success-message" class="success-message">Your account was created successfully. Please login to access the website</div>
     
     <script src="login-signup.js"></script>
 </body>

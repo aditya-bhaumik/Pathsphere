@@ -1,46 +1,54 @@
+:root {
+    /* --primary-color: #007bff; */
+    /* --primary-hover-color: #0056b3; */
+    --text-color: #fff; /* Changed text color to white */
+    --secondary-text-color: rgba(255, 255, 255, 0.7); /* Changed secondary text color to a lighter shade of white */
+    --border-color: #ddd;
+    /* --focus-color: #007bff; */
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #797070;
+    background-image: url('pages/resume-builder/4a3499c6b5cca368ec4e3717f9077114.gif');
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     padding: 20px;
+    line-height: 1.6;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    
 }
 
-#header1{
+#header1 {
     text-align: center;
-    margin-bottom: 30px;
-    line-height: 40px;
-    margin-top: 110px;
+    margin: 110px 0 30px;
 }
 
 h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 p {
-    color: #777;
+    color: var(--secondary-text-color);
     font-size: 1.1rem;
 }
 
 .form-section {
     margin-bottom: 30px;
+    color: white;
 }
 
 .form-group {
@@ -57,18 +65,23 @@ p {
 label {
     font-weight: bold;
     margin-bottom: 8px;
+    color: var(--text-color); /* Ensure label color is white */
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease;
+    color: var(--text-color); /* Set input text color to white */
+    background-color: transparent; /* Make input background transparent */
 }
 
-input:focus, textarea:focus {
-    border-color: #007bff;
+input:focus,
+textarea:focus {
+    border-color: var(--focus-color);
     outline: none;
 }
 
@@ -77,7 +90,7 @@ textarea {
 }
 
 button {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 12px 20px;
@@ -90,23 +103,70 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-hover-color);
 }
 
 #resumePreview {
     margin-top: 40px;
+    color: white;
 }
 
 #resumeContent {
     padding: 30px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    background-color: var(--preview-bg-color);
     border-radius: 8px;
     font-size: 1rem;
+    color: black/* Set resume content text color to white */
 }
 
 #downloadBtn {
     margin-top: 20px;
+}
+
+/* Template styles */
+.template1 {
+    font-family: 'Georgia', serif;
+    padding: 30px;
+}
+
+.template1 h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.template1 p {
+    color: #fff; /* Changed to white */
+    margin-bottom: 20px;
+}
+
+.template1 h4 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.template2 {
+    font-family: 'Arial', sans-serif;
+    /* Removed background color */
+    color: var(--text-color);
+}
+
+.template2 h3 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #fff; /* Changed to white */
+}
+
+.template2 p {
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.template2 h4 {
+    font-size: 1.6rem;
+    color: #fff; /* Changed to white */
 }
 
 @media (max-width: 768px) {
@@ -118,49 +178,26 @@ button:hover {
         width: 100%;
     }
 }
-
-/* Template 1: Classic Style */
-.template1 {
-    font-family: 'Georgia', serif;
+.features {
+    background-color: transparent;
+    padding: 3rem 0;
+    margin: 3rem 0;
+    color: white;
 }
-
-.template1 h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #333;
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
 }
-
-.template1 p {
-    color: #555;
-    margin-bottom: 10px;
+.feature-item {
+    width: 30%;
+    min-width: 250px;
+    margin: 1rem;
+    text-align: center;
 }
-
-.template1 h4 {
-    font-size: 1.4rem;
-    margin-top: 20px;
-    color: #1a1c1f;
-}
-
-/* Template 2: Modern Style */
-.template2 {
-    font-family: 'Arial', sans-serif;
-    background-color: #f3f4f6;
-    border-radius: 10px;
-    color: #333;
-}
-
-.template2 h3 {
-    font-size: 2rem;
-    margin-bottom: 8px;
-    color: #12171c;
-}
-
-.template2 p {
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.template2 h4 {
-    font-size: 1.6rem;
-    color: #1a1d21;
+.feature-icon {
+    font-size: 3rem;
+    /* color: #3498db; */
+    margin-bottom: 1rem;
 }

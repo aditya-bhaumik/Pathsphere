@@ -3,11 +3,9 @@
 
 <head>
     <link rel="stylesheet" href="/styles/styles.css" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scholarships</title>
-    <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/pathsphere/images/pathsphere.png" />
     <link rel="stylesheet" href="./scholarships.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
@@ -28,6 +26,12 @@
 
         <div id="scholarship-container" class="scholarship-container"></div>
 
+        <div class="pagination">
+            <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+            <span id="page-info"></span>
+            <button id="next-btn" onclick="changePage(1)">Next</button>
+        </div>
+
         <div id="scholarship-modal" class="modal">
             <div class="modal-content">
                 <span id="close-modal" class="close-btn">&times;</span>
@@ -40,13 +44,28 @@
             const modal = document.getElementById('scholarship-modal');
             const closeModal = document.getElementById('close-modal');
             const modalInfo = document.getElementById('modal-info');
-            let scholarships = []; // Global variable to store scholarship data
+            const pageInfo = document.getElementById('page-info');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let scholarships = [];
+            let currentPage = 1;
+            const scholarshipsPerPage = 9;
 
             function displayScholarships(data) {
-                scholarships = data; // Stores the fetched scholarships
-                container.innerHTML = ''; // Clears the container
+                scholarships = data;
+                container.innerHTML = '';
+                const totalPages = Math.ceil(scholarships.length / scholarshipsPerPage);
 
-                scholarships.forEach((scholarship, index) => {
+                if (currentPage > totalPages) {
+                    currentPage = totalPages;
+                }
+
+                const startIndex = (currentPage - 1) * scholarshipsPerPage;
+                const endIndex = startIndex + scholarshipsPerPage;
+
+                const scholarshipsToDisplay = scholarships.slice(startIndex, endIndex);
+
+                scholarshipsToDisplay.forEach((scholarship, index) => {
                     const card = document.createElement('div');
                     card.classList.add('card');
 
@@ -56,13 +75,16 @@
                     <p>${scholarship.listing_awards}</p>
                     <div class="buttons">
                         <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
-                        <button class="read-more" data-index="${index}">Read More</button>
-                        <!-- Likes Section -->
-            <div class="like-section">
-                <button class="like-btn" onclick="handleLike(this)">
-                    <i class="fas fa-thumbs-up"></i> Like <span class="like-count">0</span>
-                </button>
-                <!-- Comments Section -->
+                        <button class="read-more" data-index="${startIndex + index}">Read More</button>
+                        </div>
+                    <!-- Likes and Comments functionality -->
+    <div class="interaction">
+        <!-- Likes Button -->
+        <button class="like-btn" onclick="increaseLikes(this)">
+            <i class="fa fa-thumbs-up"></i> Like <span class="like-count">0</span>
+        </button>
+
+        <!-- Comments Section -->
         <div class="comments-section">
             <h4>Comments:</h4>
             <ul class="comments-list">
@@ -77,7 +99,10 @@
                     container.appendChild(card);
                 });
 
-                // Adds event listeners to Read More buttons
+                pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+                prevBtn.disabled = currentPage === 1;
+                nextBtn.disabled = currentPage === totalPages;
+
                 document.querySelectorAll('.read-more').forEach((button) => {
                     button.addEventListener('click', (e) => {
                         const index = e.target.getAttribute('data-index');
@@ -89,12 +114,12 @@
             function filterScholarships() {
                 const input = document.getElementById('searchInput');
                 const filter = input.value.toLowerCase();
-                const cards = container.getElementsByClassName('card');
+                const filteredScholarships = scholarships.filter(scholarship =>
+                    scholarship.scholarship_name.toLowerCase().includes(filter)
+                );
 
-                Array.from(cards).forEach((card) => {
-                    const title = card.querySelector('h2').textContent.toLowerCase();
-                    card.style.display = title.includes(filter) ? '' : 'none';
-                });
+                currentPage = 1;
+                displayScholarships(filteredScholarships);
             }
 
             function showDetails(scholarship) {
@@ -126,8 +151,7 @@
                             header: 1,
                         });
 
-                        // Converts the extracted data to an array of objects
-                        const scholarships = jsonData.slice(1).map((row) => ({
+                        scholarships = jsonData.slice(1).map((row) => ({
                             apply_now: row[0],
                             image: row[1],
                             scholarship_name: row[2],
@@ -144,6 +168,16 @@
                     .catch((error) =>
                         console.error('Error loading the Excel file:', error)
                     );
+            }
+
+            function changePage(direction) {
+                const totalPages = Math.ceil(scholarships.length / scholarshipsPerPage);
+                currentPage += direction;
+
+                if (currentPage < 1) currentPage = 1;
+                if (currentPage > totalPages) currentPage = totalPages;
+
+                displayScholarships(scholarships);
             }
 
             closeModal.addEventListener('click', () => {
@@ -199,83 +233,7 @@
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
     </div>
-    <style>
-        .circle {
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            pointer-events: none;
-            background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
-            transition: transform 0.1s, left 0.1s, top 0.1s;
-        }
-        
-        .circle-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-        }
-    </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const coords = {
-                x: 0,
-                y: 0
-            };
-            const circles = document.querySelectorAll(".circle");
-
-            circles.forEach(function(circle) {
-                circle.x = 0;
-                circle.y = 0;
-            });
-
-            window.addEventListener("mousemove", function(e) {
-                coords.x = e.pageX;
-                coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-            });
-
-            function animateCircles() {
-                let x = coords.x;
-                let y = coords.y;
-
-                circles.forEach(function(circle, index) {
-                    circle.style.left = `${x - 12}px`;
-                    circle.style.top = `${y - 12}px`;
-                    circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-
-                    const nextCircle = circles[index + 1] || circles[0];
-                    circle.x = x;
-                    circle.y = y;
-
-                    x += (nextCircle.x - x) * 0.3;
-                    y += (nextCircle.y - y) * 0.3;
-                });
-
-                requestAnimationFrame(animateCircles);
-            }
-
-            animateCircles();
-        });
-        zzz
-    </script>
 </body>
 
 </html>
