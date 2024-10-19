@@ -213,3 +213,23 @@ function switchToLogin() {
     loginContent.classList.add('active');
     animateTabContent(loginContent);
 }
+
+document.getElementById("signup-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+    // Assuming signup is successful:
+    showSignupSuccessMessage();
+
+    // Clear the form
+    document.getElementById("signup-form").reset();
+});
+
+function showSignupSuccessMessage() {
+    var messageBox = document.getElementById("signup-success-message");
+    messageBox.style.display = "block"; // Show the message
+
+    // Hide the message after 3 seconds
+    setTimeout(function() {
+        messageBox.style.display = "none";
+    }, 3000);
+}
