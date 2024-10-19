@@ -182,21 +182,44 @@ main {
   bottom: 60px;
 }
 .darkmode main {
-  background-color: black;
+  background-color: #121212;
 }
 
 .darkmode .copyright {
-  background-color: black;
+  background-color: #3C3D37;
   color: #fff;
 }
 .darkmode .scroll-up-btn {
   z-index: 1000;
 }
 
-.darkmode .feature {
-  background-color: #333;
+.darkmode .feature { 
+  background-color: #202020;
 }
-
+.darkmode .why-us h1{
+  color: #fff;
+}
+.darkmode .why-us p{
+  color: #8d8a8a;
+}
+.darkmode #testimonials{
+  background-color: #202020;
+}
+.darkmode .card{
+  background-color: #121212;
+}
+.darkmode .card h5{
+  color: #fff;
+}
+.darkmode .card h6{
+  color: #fff;
+}
+.darkmode #testimonials h3{
+  color: #fff;
+} 
+.darkmode #testimonials h3+p{
+  color: #8d8a8a;
+} 
 .darkmode .feature p {
   color: #fff;
 }
@@ -214,7 +237,7 @@ main {
 }
 
 .darkmode .feature-item {
-  background: #333;
+  background: #202020;
 }
 
 .darkmode .feature-item h6 {
@@ -222,13 +245,13 @@ main {
 }
 
 .darkmode .footer-container {
-  background-color: black;
+  background-color: #121212;
   border-top: 2px solid #fff;
   color: #fff;
 }
 
 .darkmode .social-icons li a:hover {
-  background-color: #333;
+  background-color: #202020;
 }
 
 ::-webkit-scrollbar {
@@ -1006,9 +1029,13 @@ footer {
   }
 
   .feature-item {
+   
     display: flex;
-    align-items: center;
-    width: 48%;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    
   }
 
   .feature-item i {
@@ -1206,7 +1233,53 @@ h3 {
   }
 }
 
+.why-us {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin-top: 30px;
+}
+.why-us p {
+  text-align: center;
+}
+.about {
+  display: flex ;
+  justify-content: space-around;
+  padding: 10px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+@media(max-width: 700px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+}
 
+
+.forum{
+  background-color: lightseagreen;
+  height:100%;
+  width:100%;
+}
+.forum-section{
+  margin:10px;
+  font-size:20px;
+
+
+}
+
+a.new{
+  box-sizing: border-box;
+  margin-top:10px;
+  cursor:pointer;
+  text-decoration: none;
+}
 
 .scroll-top{
   position: fixed;
@@ -1227,9 +1300,7 @@ h3 {
   align-items: center;
   text-decoration: none;
 }
-.scroll-top, .fa-arrow-up{
-  font-size: 20px;
-}
+
 .scroll-top .fa-arrow-up{
   transition: 0.2s ease-out;
 	color: #fff;
@@ -1251,13 +1322,13 @@ h3 {
   align-items: center;
 }
 
+
 .star-rating li{
   padding: 0 1px;
   list-style: none;
+
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .Sharing{
 	position: relative;
 	z-index: 1;

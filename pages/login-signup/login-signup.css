@@ -4,10 +4,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-y: auto;
     background-color: #f0f0f0;
     margin: 10px; /* Reduced gap around body */
     animation: backgroundAnimation 5s infinite alternate;
 }
+
 
 @keyframes backgroundAnimation {
     0% {
@@ -292,3 +294,12 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+div.tab-content{
+    height:50vh;
+    overflow: auto;
+    
+}
+.tab-content::-webkit-scrollbar{
+    display:none;
+}
+
