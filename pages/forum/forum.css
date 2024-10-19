@@ -25,9 +25,11 @@ body, html {
 
 .com-head 
 {
+    
     color:white;
     font: 5rem Afacad Flux;
     font-weight:lighter;
+    font-size: 3.5rem;
     /* -webkit-text-stroke: 2px white; */
     text-shadow: 4px 4px 8px rgba(71, 70, 70, 0.922);
 }
@@ -52,7 +54,7 @@ body, html {
     font-style:italic;
     background-color:#e9e9e9;
     border-radius:50px;
-    height:70px;
+    height:15%;
     padding-top:10px;
     border:black solid 1px;
 }
@@ -100,7 +102,8 @@ body, html {
 .dis-card 
 {
     height:100%;
-    width:30%;
+    width:90%;
+    margin:10px;
     border:rgba(172, 172, 172, 0.551) solid 2px;
     border-radius: 15px;
     padding:15px;
@@ -139,7 +142,7 @@ body, html {
 
 .more {
 
-    width:10%;
+    width:20%;
     height:50%;
     border-radius: 10px;
     color:white;

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="/styles/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scholarships</title>
-    <link rel="icon" type="image/x-icon" href="/pathsphere/images/pathsphere.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="./scholarships.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
 </head>
 
 <body>
+
     <div class="gtranslate_wrapper"></div>
     <script>
     window.gtranslateSettings = {
@@ -47,77 +49,120 @@
         <div class="modal-content">
             <span id="close-modal" class="close-btn">&times;</span>
             <div id="modal-info"></div>
+
+    <main>
+        <section class="hero">
+            <h1>Scholarships</h1>
+            <p class="subtext">
+                Find scholarships that match your academic profile and needs.
+            </p>
+        </section>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+
         </div>
-    </div>
 
-    <script>
-        const container = document.getElementById('scholarship-container');
-        const modal = document.getElementById('scholarship-modal');
-        const closeModal = document.getElementById('close-modal');
-        const modalInfo = document.getElementById('modal-info');
-        const pageInfo = document.getElementById('page-info');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        let scholarships = []; 
-        let currentPage = 1; 
-        const scholarshipsPerPage = 9; 
+        <div id="scholarship-container" class="scholarship-container"></div>
 
-        function displayScholarships(data) {
-            scholarships = data; 
-            container.innerHTML = ''; 
-            const totalPages = Math.ceil(scholarships.length / scholarshipsPerPage); 
+        <div class="pagination">
+            <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+            <span id="page-info"></span>
+            <button id="next-btn" onclick="changePage(1)">Next</button>
+        </div>
 
-            if (currentPage > totalPages) {
-                currentPage = totalPages;
-            }
+        <div id="scholarship-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close-btn">&times;</span>
+                <div id="modal-info"></div>
+            </div>
+        </div>
 
-            const startIndex = (currentPage - 1) * scholarshipsPerPage;
-            const endIndex = startIndex + scholarshipsPerPage;
+        <script>
+            const container = document.getElementById('scholarship-container');
+            const modal = document.getElementById('scholarship-modal');
+            const closeModal = document.getElementById('close-modal');
+            const modalInfo = document.getElementById('modal-info');
+            const pageInfo = document.getElementById('page-info');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let scholarships = [];
+            let currentPage = 1;
+            const scholarshipsPerPage = 9;
 
-            const scholarshipsToDisplay = scholarships.slice(startIndex, endIndex);
+            function displayScholarships(data) {
+                scholarships = data;
+                container.innerHTML = '';
+                const totalPages = Math.ceil(scholarships.length / scholarshipsPerPage);
 
-            scholarshipsToDisplay.forEach((scholarship, index) => {
-                const card = document.createElement('div');
-                card.classList.add('card');
+                if (currentPage > totalPages) {
+                    currentPage = totalPages;
+                }
 
-                card.innerHTML = `
+                const startIndex = (currentPage - 1) * scholarshipsPerPage;
+                const endIndex = startIndex + scholarshipsPerPage;
+
+                const scholarshipsToDisplay = scholarships.slice(startIndex, endIndex);
+
+                scholarshipsToDisplay.forEach((scholarship, index) => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+
+                    card.innerHTML = `
                     <img src="${scholarship.image}" alt="${scholarship.scholarship_name}">
                     <h2>${scholarship.scholarship_name}</h2>
                     <p>${scholarship.listing_awards}</p>
                     <div class="buttons">
                         <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
                         <button class="read-more" data-index="${startIndex + index}">Read More</button>
+                        </div>
+                    <!-- Likes and Comments functionality -->
+    <div class="interaction">
+        <!-- Likes Button -->
+        <button class="like-btn" onclick="increaseLikes(this)">
+            <i class="fa fa-thumbs-up"></i> Like <span class="like-count">0</span>
+        </button>
+
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <h4>Comments:</h4>
+            <ul class="comments-list">
+                <!-- Comments will be appended here -->
+            </ul>
+            <textarea placeholder="Add a comment..." class="comment-input"></textarea>
+            <button class="submit-comment" onclick="submitComment(this)">Post</button>
+        </div>
                     </div>
                 `;
 
-                container.appendChild(card);
-            });
-
-            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-            prevBtn.disabled = currentPage === 1;
-            nextBtn.disabled = currentPage === totalPages; 
-
-            document.querySelectorAll('.read-more').forEach((button) => {
-                button.addEventListener('click', (e) => {
-                    const index = e.target.getAttribute('data-index');
-                    showDetails(scholarships[index]);
+                    container.appendChild(card);
                 });
-            });
-        }
 
-        function filterScholarships() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toLowerCase();
-            const filteredScholarships = scholarships.filter(scholarship => 
-                scholarship.scholarship_name.toLowerCase().includes(filter)
-            );
+                pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+                prevBtn.disabled = currentPage === 1;
+                nextBtn.disabled = currentPage === totalPages;
 
-            currentPage = 1; 
-            displayScholarships(filteredScholarships);
-        }
+                document.querySelectorAll('.read-more').forEach((button) => {
+                    button.addEventListener('click', (e) => {
+                        const index = e.target.getAttribute('data-index');
+                        showDetails(scholarships[index]);
+                    });
+                });
+            }
 
-        function showDetails(scholarship) {
-            modalInfo.innerHTML = `
+            function filterScholarships() {
+                const input = document.getElementById('searchInput');
+                const filter = input.value.toLowerCase();
+                const filteredScholarships = scholarships.filter(scholarship =>
+                    scholarship.scholarship_name.toLowerCase().includes(filter)
+                );
+
+                currentPage = 1;
+                displayScholarships(filteredScholarships);
+            }
+
+            function showDetails(scholarship) {
+                modalInfo.innerHTML = `
                 <h2>${scholarship.scholarship_name}</h2>
                 <p><strong>Award:</strong> ${scholarship.listing_awards}</p>
                 <p><strong>Eligibility:</strong> ${scholarship.eligibility}</p>
@@ -127,104 +172,107 @@
                 <a href="${scholarship.apply_now}" target="_blank">Apply Now</a>
             `;
 
-            modal.style.display = 'flex';
-        }
-
-        function fetchAndProcessExcel() {
-            const fileUrl = 'buddy4study.xlsx';
-
-            fetch(fileUrl)
-                .then((response) => response.arrayBuffer())
-                .then((data) => {
-                    const workbook = XLSX.read(data, { type: 'array' });
-
-                    const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-                    const jsonData = XLSX.utils.sheet_to_json(firstSheet, {
-                        header: 1,
-                    });
-
-                    scholarships = jsonData.slice(1).map((row) => ({
-                        apply_now: row[0],
-                        image: row[1],
-                        scholarship_name: row[2],
-                        listing_awards: row[3],
-                        eligibility: row[4],
-                        start_date: row[5],
-                        deadline: row[6],
-                        last_date: row[7],
-                    }));
-
-                    console.log('Loaded Scholarships:', scholarships);
-                    displayScholarships(scholarships);
-                })
-                .catch((error) =>
-                    console.error('Error loading the Excel file:', error)
-                );
-        }
-
-        function changePage(direction) {
-            const totalPages = Math.ceil(scholarships.length / scholarshipsPerPage);
-            currentPage += direction;
-
-            if (currentPage < 1) currentPage = 1;
-            if (currentPage > totalPages) currentPage = totalPages;
-
-            displayScholarships(scholarships);
-        }
-
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
+                modal.style.display = 'flex';
             }
-        });
 
-        document.addEventListener('DOMContentLoaded', fetchAndProcessExcel);
-    </script>
-</main>
+            function fetchAndProcessExcel() {
+                const fileUrl = 'buddy4study.xlsx';
 
-<script src="/scripts/componentLoader.js"></script>
-<script>
-    prependComponent('Navbar');
-    prependComponent('Cursor');
-    prependComponent('ScrollToTop');
-    appendComponent('Footer');
-    appendComponent('ChatBot');
-    waitTillComponentsLoaded();
+                fetch(fileUrl)
+                    .then((response) => response.arrayBuffer())
+                    .then((data) => {
+                        const workbook = XLSX.read(data, {
+                            type: 'array'
+                        });
 
-    function toggleDetails(button) {
-        const details = button.previousElementSibling;
-        if (details.style.display === 'none') {
-            details.style.display = 'block';
-            button.textContent = 'Read Less';
-        } else {
-            details.style.display = 'none';
-            button.textContent = 'Read More';
+                        const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+                        const jsonData = XLSX.utils.sheet_to_json(firstSheet, {
+                            header: 1,
+                        });
+
+                        scholarships = jsonData.slice(1).map((row) => ({
+                            apply_now: row[0],
+                            image: row[1],
+                            scholarship_name: row[2],
+                            listing_awards: row[3],
+                            eligibility: row[4],
+                            start_date: row[5],
+                            deadline: row[6],
+                            last_date: row[7],
+                        }));
+
+                        console.log('Loaded Scholarships:', scholarships);
+                        displayScholarships(scholarships);
+                    })
+                    .catch((error) =>
+                        console.error('Error loading the Excel file:', error)
+                    );
+            }
+
+            function changePage(direction) {
+                const totalPages = Math.ceil(scholarships.length / scholarshipsPerPage);
+                currentPage += direction;
+
+                if (currentPage < 1) currentPage = 1;
+                if (currentPage > totalPages) currentPage = totalPages;
+
+                displayScholarships(scholarships);
+            }
+
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', fetchAndProcessExcel);
+        </script>
+    </main>
+
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+        prependComponent('Navbar');
+        prependComponent('Cursor');
+        prependComponent('ScrollToTop');
+        appendComponent('Footer');
+        appendComponent('ChatBot');
+        waitTillComponentsLoaded();
+
+        function toggleDetails(button) {
+            const details = button.previousElementSibling;
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+                button.textContent = 'Read Less';
+            } else {
+                details.style.display = 'none';
+                button.textContent = 'Read More';
+            }
         }
-    }
-</script>
-<div class="circle-container">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-</div>
+    </script>
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
 </body>
+
 </html>
