@@ -78,6 +78,31 @@ body {
     border-radius:30px;
 }
 
+.search-bar-smd 
+{
+    align-items: center;
+    width:100%;
+    height:3%;
+    background-color:black ;
+    border-radius:40px;
+    padding:2.5%;
+    padding-left:12%;
+}
+.searching-smd 
+{
+    width:70%;
+    height:90%;
+    border-radius: 40px;
+    padding:5%;
+    
+}
+
+.search-button-smd 
+{
+    height: 90%;
+    width:20%;
+    border-radius:80px;
+}
 .job-widges 
 {
     height:50%;
@@ -88,6 +113,14 @@ body {
     /* margin-top:1%; */
 }
 
+.job-wid-smd 
+{
+    width:100%;
+    border-color: #000000;
+    background-color: #e9e6e6;
+    padding:10px;
+}
+
 .job-card 
 {
     height:55%;
@@ -95,6 +128,19 @@ body {
     border-color: black;
     background-color: #ffffff;
     padding:35px;
+    border-radius:20px;
+    padding-right: 50px;
+    margin:2%;
+}
+
+.job-card-smd 
+{
+ 
+    height:55%;
+    width:100%;
+    border-color: black;
+    background-color: #ffffff;
+    padding:20px;
     border-radius:20px;
     padding-right: 50px;
     margin:2%;
@@ -163,11 +209,11 @@ body {
     margin:50px;
     background-color: black;
     height:50px;
-    width:20%;
+    width:40%;
     color:white;
     font-weight: 500;
     border-radius: 15px;
-    margin-left:100px;
+    margin-left:90px;
 }
 
 .load-box 
