@@ -1,218 +1,259 @@
 /* General body and typography settings */
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
-  margin-top: 0;
+    text-align: center;
+    color: #333;
+    margin-top: 0;
 }
 
 p {
-  text-align: center;
+    text-align: center;
 }
 
 .scholarship-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
+
 
 /* Card styling */
+
 .card {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better depth */
-  margin: 20px;
-  width: 320px; /* Slightly wider card */
-  padding: 20px; /* Added padding inside the card for more space */
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-color: var(--primary-color);
-  color: black;
-  font-family: "Arial", sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensures buttons stay at the bottom */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    /* Enhanced shadow for better depth */
+    margin: 20px;
+    width: 320px;
+    /* Slightly wider card */
+    padding: 20px;
+    /* Added padding inside the card for more space */
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--primary-color);
+    color: black;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures buttons stay at the bottom */
 }
 
+
 /* Card hover effect */
+
 .card:hover {
   transform: scale(1.08); /* Increased hover scale for better interaction */
   box-shadow: 2px 2px 10px #248b6f ; /* Stronger shadow on hover */
 }
 
+
 /* Card image styling */
+
 .card img {
-  border-radius: 10px;
-  width: 100%;
-  height: 160px; /* Slightly taller image */
-  object-fit: contain;
-  margin-bottom: 15px; /* Added space between image and text */
+    border-radius: 10px;
+    width: 100%;
+    height: 160px;
+    /* Slightly taller image */
+    object-fit: contain;
+    margin-bottom: 15px;
+    /* Added space between image and text */
 }
+
 
 /* Card heading */
+
 .card h2 {
-  font-size: 20px; /* Slightly larger font size for the scholarship name */
-  margin: 15px 0;
+    font-size: 20px;
+    /* Slightly larger font size for the scholarship name */
+    margin: 15px 0;
 }
+
 
 /* Card paragraph */
+
 .card p {
-  color: #666;
-  font-size: 16px; /* Increased font size for better readability */
-  margin: 10px 0; /* Added more space between paragraphs */
+    color: #666;
+    font-size: 16px;
+    /* Increased font size for better readability */
+    margin: 10px 0;
+    /* Added more space between paragraphs */
 }
+
 
 /* Button styling inside card */
+
 .card a,
 .card button {
-  display: inline-block;
-  margin-top: 20px; /* Increased top margin to give more space around buttons */
-  padding: 12px 20px; /* Added more padding for larger, more comfortable buttons */
-  background-color: #248b6f;
-  color: white;
-  border-radius: 8px; /* Softer, rounded corners */
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+    /* Increased top margin to give more space around buttons */
+    padding: 12px 20px;
+    /* Added more padding for larger, more comfortable buttons */
+    background-color: #248b6f;
+    color: white;
+    border-radius: 8px;
+    /* Softer, rounded corners */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s;
 }
+
 
 /* Hover effect for buttons */
+
 .card a:hover,
 .card button:hover {
-  background-color: #1c6057;
-  transform: translateY(
-    -5px
-  ); /* Increased hover lift for a more engaging feel */
+    background-color: #1c6057;
+    transform: translateY( -5px);
+    /* Increased hover lift for a more engaging feel */
 }
+
 
 /* Spacing for button container */
+
 .buttons {
-  margin-top: 20px; /* More space above the button section */
+    margin-top: 20px;
+    /* More space above the button section */
 }
+
 
 /* Modal styling */
+
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
+
 
 /* Modal content box */
+
 .modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
 }
 
+
 /* Close button for modal */
+
 .close-btn {
-  float: right;
-  cursor: pointer;
-  color: #aaa;
-  font-size: 24px;
+    float: right;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 24px;
 }
 
 .close-btn:hover {
-  color: #333;
+    color: #333;
 }
 
 .modal h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
+
 
 /* Modal text */
+
 .modal p {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+    color: #333;
 }
 
+
 /* Modal apply button */
+
 .modal a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #248b6f;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #248b6f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
 .modal a:hover {
-  background-color: #1c6057;
+    background-color: #1c6057;
 }
 
+
 /* Search bar styling */
+
 .search-bar {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  overflow: hidden;
-  max-width: 400px;
-  margin: 20px auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
 .search-bar input {
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    flex: 1;
 }
 
 .search-bar input:focus {
-  outline: none;
-  border: 1px solid #1c6057;
+    outline: none;
+    border: 1px solid #1c6057;
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .pagination button {
-  background-color: #1c6057; 
-  color: white;
-  border: none;
-  padding: 10px 15px; 
-  margin: 0 5px; 
-  cursor: pointer; 
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s;
+    background-color: #1c6057;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .pagination button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05); 
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 .pagination button:disabled {
-  background-color: #c0c0c0; 
-  cursor: not-allowed; 
+    background-color: #c0c0c0;
+    cursor: not-allowed;
 }
 
 #page-info {
-  margin: 0 15px;
-  font-size: 1.1em; 
-  font-weight: bold; 
+    margin: 0 15px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
