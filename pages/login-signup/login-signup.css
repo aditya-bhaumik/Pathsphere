@@ -302,7 +302,12 @@ div.tab-content{
 .tab-content::-webkit-scrollbar{
     display:none;
 }
-
+label {
+    margin: 0; /* Remove default margin from the label */
+    display: flex; /* Set display to flex for proper alignment */
+    align-items: center; /* Vertically center the icon and text */
+    padding-left:5px;
+}
 .success-message {
     display: none;
     position: fixed;
