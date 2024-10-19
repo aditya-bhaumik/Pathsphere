@@ -8,6 +8,11 @@
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link rel="stylesheet" type="text/css" href="styles/style2.css">
+>>>>>>> origin/rahul
 </head>
 
 <body class="light">
@@ -189,6 +194,24 @@
               </div>
             </div>
           </div>
+          <div class="newsletter-container">
+            <h2 class="newsletter-title">Join Our Newsletter</h2>
+            <p class="newsletter-description">Stay updated with our latest news and offers!</p>
+          
+            <div id="subscription-success-message" class="hidden subscription-message">
+              Thanks for subscribing! We'll be in touch soon.
+            </div>
+          
+            <form id="newsletter-subscription-form" class="newsletter-form">
+              <input type="email" id="subscriber-email" placeholder="Enter your email" required class="newsletter-input">
+              <button type="submit" class="newsletter-btn">Subscribe Now</button>
+            </form>
+          
+            <p class="newsletter-footer-text">
+              By subscribing, you agree to our Terms of Service and Privacy Policy.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -299,12 +322,35 @@
 
       requestAnimationFrame(animateCircles);
     }
+<<<<<<< HEAD
 
     animateCircles();
   });
 
 
 </script>
+=======
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="7akUzokCgwR0gNp0m-qQF"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+    <script>
+     document.getElementById("newsletter-subscription-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const emailInput = document.getElementById("subscriber-email");
+        console.log("Submitted email:", emailInput.value);
+
+        // Show success message and clear the form
+        document.getElementById("subscription-success-message").classList.remove("hidden");
+        emailInput.value = "";
+      });
+
+
+    </script>
+>>>>>>> origin/rahul
 
 </body>
 
