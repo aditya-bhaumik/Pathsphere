@@ -530,7 +530,8 @@ main {
 
 /* Hover state */
 .hero h1:hover {
-  text-decoration: underline;    /* Underline on hover */
+/* 	removing this styling as it is not looking good */
+/*   text-decoration: underline;     Underline on hover */
   color: #ffa500;                /* Change color on hover (optional) */
   transform: scale(1.05);        /* Slight pop-out effect */
 }
