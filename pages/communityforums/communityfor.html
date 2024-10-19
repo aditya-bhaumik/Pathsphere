@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathSphere Community</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-image: url('./4a3499c6b5cca368ec4e3717f9077114.gif');
+            padding: 20px;
+            /* background-color: #f5f5f5; */
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .columns {
+            display: flex;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+        }
+        .category {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+        .category-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+        .highlight {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .highlight-date {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #7b1fa2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        /* New styles for the added content */
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .tab.active {
+            border-bottom: 2px solid #007bff;
+            color: #007bff;
+        }
+        .topic-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .topic-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .topic-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        .topic-content {
+            flex-grow: 1;
+        }
+        .topic-title {
+            font-weight: bold;
+        }
+        .topic-category {
+            font-size: 0.8em;
+            color: #666;
+            background-color: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .topic-comments {
+            margin-left: auto;
+            color: #666;
+        }
+        .announcement-card {
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .announcement-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .announcement-content {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .announcement-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+        }
+        .learn-more {
+            color: white;
+            text-decoration: none;
+        }
+        .comments-section {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .comment-form {
+            margin-bottom: 20px;
+        }
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .comment-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .comment-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .comment-item {
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .comment-author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .comment-date {
+            font-size: 0.8em;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PathSphere Community</h1>
+        <p>We're happy to have you here. If you need help, please search before you post.</p>
+        <input type="text" class="search-bar" placeholder="Search">
+        
+        <div class="columns">
+            <div class="column">
+                <h2>Top Categories</h2>
+                <div class="category">
+                    <div class="category-icon">?</div>
+                    Ask the Community
+                </div>
+                <div class="category">
+                    <div class="category-icon">N</div>
+                    News from PathSphere
+                </div>
+                <div class="category">
+                    <div class="category-icon">✓</div>
+                    Suggestion Box
+                </div>
+            </div>
+            <div class="column">
+                <h2>Maker Highlights</h2>
+                <div class="highlight">
+                    <div>Introducing the Notion Pack! 🎉</div>
+                    <div class="highlight-date">Apr '22</div>
+                </div>
+                <div class="highlight">
+                    <div>Introducing our new Community Champions!</div>
+                    <div class="highlight-date">Aug '22</div>
+                </div>
+                <div class="highlight">
+                    <div>Preview: Cross-doc Plus (codename!) — My opinionated take on Cross-doc</div>
+                    <div class="highlight-date">Apr '22</div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#" class="button">Pack Studio is live!</a>
+
+        <!-- New content starts here -->
+        <div class="tabs">
+            <div class="tab active">Latest</div>
+            <div class="tab">Top</div>
+        </div>
+        <div class="comments-section">
+            <h2>Comments</h2>
+            <form class="comment-form" id="commentForm">
+                <textarea id="commentText" rows="4" placeholder="Write your comment here..."></textarea>
+                <button type="submit">Submit Comment</button>
+            </form>
+            <ul class="comment-list" id="commentList">
+                <!-- Comments will be dynamically added here -->
+            </ul>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <div class="topic-avatar" style="background-color: #ff9800;">S</div>
+                        <div class="topic-content">
+                            <div class="topic-title">"Sorry, we can't load your doc" on iPhone</div>
+                            <span class="topic-category">Bugs</span>
+                        </div>
+                        <div class="topic-comments">💬 3</div>
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-avatar" style="background-color: #4caf50;">R</div>
+                        <div class="topic-content">
+                            <div class="topic-title">Automatically create and pre-populate all the rows</div>
+                            <span class="topic-category">Start Here!</span>
+                        </div>
+                        <div class="topic-comments">💬 1</div>
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-avatar" style="background-color: #2196f3;">L</div>
+                        <div class="topic-content">
+                            <div class="topic-title">Lookup() doesn't work with relation/reference column?</div>
+                            <span class="topic-category">Ask the Community</span>
+                        </div>
+                        <div class="topic-comments">💬 3</div>
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-avatar" style="background-color: #9c27b0;">D</div>
+                        <div class="topic-content">
+                            <div class="topic-title">Dynamic Suggested Value for Autocomplete Parameter</div>
+                            <span class="topic-category">Ask the Community</span>
+                        </div>
+                        <div class="topic-comments">💬 1</div>
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-avatar" style="background-color: #795548;">M</div>
+                        <div class="topic-content">
+                            <div class="topic-title">Getting Actual Row ID Within PathSphere</div>
+                            <span class="topic-category">Ask the Community</span>
+                        </div>
+                        <div class="topic-comments">💬 28</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="announcement-card" style="background-color: #7b1fa2;">
+                    <div class="announcement-title">New: Cross-doc filtering</div>
+                    <div class="announcement-content">Check out dynamic sync filters for Cross-doc tables!</div>
+                    <div class="announcement-footer">
+                        <span>46d ago</span>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="announcement-card" style="background-color: #1565c0;">
+                    <div class="announcement-title">Launched: Improvements to timelines</div>
+                    <div class="announcement-footer">
+                        <span>382d ago</span>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+        // Add any JavaScript functionality here
+        document.querySelector('.search-bar').addEventListener('input', function(e) {
+            console.log('Searching for:', e.target.value);
+            // Implement search functionality
+        });
+
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                // Implement tab content switching here
+            });
+        });
+        const commentForm = document.getElementById('commentForm');
+        const commentList = document.getElementById('commentList');
+
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const commentText = document.getElementById('commentText').value;
+            if (commentText.trim() !== '') {
+                addComment(commentText);
+                document.getElementById('commentText').value = '';
+            }
+        });
+
+        function addComment(text) {
+            const li = document.createElement('li');
+            li.className = 'comment-item';
+            const now = new Date();
+            li.innerHTML = `
+                <div class="comment-author">Anonymous User</div>
+                <div class="comment-content">${text}</div>
+                <div class="comment-date">${now.toLocaleString()}</div>
+            `;
+            commentList.prepend(li);
+        }
+    </script>
+</body>
+</html>
