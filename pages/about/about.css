@@ -1,296 +1,361 @@
 /* Adding style for about page */
+.hero {
+  color: var(--primary-color);
+  text-align: center;
+  padding: 100px 20px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?t=st=1727864712~exp=1727868312~hmac=ad6cdca7dd7562e07c00b01f1fc711291818cc361847f5101e93b993ec72ed69&w=826');
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin: 0;
+  padding: 5px;
+  text-decoration: none;         /* No underline by default */
+  transition: all 0.3s ease;     /* Smooth transition for hover effects */
+}
+
+/* Hover state */
+.hero h1:hover {
+  text-decoration: underline;    /* Underline on hover */
+  color: #ffa500;                /* Change color on hover (optional) */
+  transform: scale(1.05);        /* Slight pop-out effect */
+}
+
+.hero p {
+  font-size: 24px;
+  padding: 10px;
+}
+.hero .left {
+  width: 100%;
+}
+.hero .right {
+  width: 40%;
+}
+.hero .right img {
+  width: 500px;
+  height: 300px;
+}
 
 /* General Section Styling */
+.containerTag {
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+/* Headings */
 h2 {
-    margin-top: 10px;
-    padding: 60px 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem; /* Adjust the size according to your needs */
-    font-weight: bold;
-    color: #FFB400; /* Orange color */
-    text-align: center;
-    margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem; /* Adjust the size according to your needs */
+  font-weight: bold;
+  color: #FFB400; /* Orange color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #F7A700, #e64b4b); /* Orange to Red gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Content Section */
+.content-section {
+  padding: 0px 0px;
+  background-color: #a19d9d;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.content-section h1, .content-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Highlight Section */
+.bg-highlight {
+  background: #8ABFA3;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+}
+
+.bg-light {
+  background-color: #f299b4;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px; /* Increased gap for better spacing */
+  justify-items: center;
+  margin: 20px 0;
+}
+
+/* General Card Styling */
+.content-card, .offering-card, .team-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.content-card:hover, .offering-card:hover, .team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(32, 31, 31, 0.15);
+}
+
+.content-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.content-card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Vision Section */
+.vision-cards {
+  margin-top: 60px;
+}
+
+
+.vision-cards {
+  background: linear-gradient(to bottom right, #f299b4, #FFC0CB); /* Light pink gradient */
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.vision-cards .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vision-cards h2 {
+  color: #FFC0CB; /* Hot pink heading */
+  margin-bottom: 30px;
+}
+
+.vision-cards .vision-card {
+  background-color: #FFC0CB; /* Semi-transparent white */
+  border: 10px;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.vision-cards .vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(250, 86, 168, 0.2); /* Pink shadow */
+}
+
+.vision-cards .vision-card h3 {
+  color: #070707; /* Black subheadings */
+  margin-bottom: 15px;
+}
+
+.vision-cards .vision-card p {
+  color: #232323;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Bullet points */
+.vision-cards .content-card p:before {
+  content: '•';
+  color: #d2a1b9; /* Hot pink bullet points */
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+}
+
+.Vision .content-card p:hover {
+  color: #d2a1b9; /* Hot pink hover */
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+/* Team Section */
+.team-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #FFB400;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.team-card img:hover {
+  transform: scale(1.05);
+}
+
+.team-card h3 {
+  font-size: 1.5em;
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.team-card p {
+  font-size: 1.1em;
+  margin: 0 0 15px;
+  color: #777;
+}
+
+/* Offer Section */
+.offering-card i {
+  font-size: 40px;
+  color: #4CAF50;
+}
+
+.offering-card:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.05);
+}
+
+.offer {
+  background-color: #03346E;
+}
+
+.offer h2 {
+  color: #fff;
+}
+
+/* Icon Styling */
+.offering-card i {
+  font-size: 3em;
+  color: #FFB400;
+  margin-bottom: 15px;
+}
+
+.offering-card h3 {
+  font-size: 1.5em;
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.offering-card p {
+  font-size: 1.1em;
+  color: #777;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FFB400;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.5em;
+  transition: background-color 0.3s;
+}
+
+.scroll-top:hover {
+  background-color: #f39c12;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
   }
-  
-  .highlight {
-    background: linear-gradient(90deg, #F7A700, #e64b4b); /* Orange to Blue gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Apply gradient to text */
+
+  .content-section h1, .content-section h2 {
+    font-size: 2rem;
   }
-  
-  .content-section {
-    padding: 40px 20px; /* Add padding to the section */
-    background-color: #ffffff; /* White background for the section */
-    text-align: center; /* Center the section text */
-  }
-  
-  .content-section h1,
-  .content-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
-  .bg-highlight {
-    background: #8ABFA3;
-    margin: 0;
-    width: 100%;
-    height: 350px;
-    padding: 0;
-  }
-  
-  .bg-light {
-    background-color: #fafafa;
-  }
-  
-  .cards-grid {
-    display: grid; /* Use CSS grid for layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between cards */
-    justify-items: center; /* Center cards within the grid */
-    margin: 10px 0; /* Margin for spacing between cards */
-  }
-  
-  /* General Card Styling */
-  .content-card,
-  .offering-card,
-  .team-card {
-    background-color: #f9f9f9; /* Light background for cards */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px; /* Inner padding for card content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-    text-align: center; /* Center the text within the card */
-  }
-  
-  .content-card:hover,
-  .offering-card:hover,
-  .team-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
-  }
-  
-  /* CSS Styling for the Vision Section */
+
   .Vision {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Adjust the height to cover the view */
-    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Light background for the outer area */
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
   }
-  
+
   .Vision .container {
-    width: 80%; /* Adjust width based on your preference */
-    background: linear-gradient(to bottom, #F19ED2, #FFD09B); /* Gradient background for the content */
-    padding: 30px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    color: #fff; /* White text */
-    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+    width: 90%;
+    padding: 15px;
   }
-  
-  .Vision .container:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
+
+  .Vision h1, .Vision h3 {
+    font-size: 2rem;
   }
-  
-  .Vision h1,
-  .Vision h3 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #000000; /* Light green for the main heading */
-    text-align: left; /* Align headings to the left */
-    transition: transform 0.3s ease; /* Smooth transition for scale effect */
-  }
-  
-  .Vision h1:hover,
-  .Vision h3:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-  }
-  
-  .Vision h3 {
-    font-size: 1.5em;
-    margin: 20px 0 10px;
-    color: #000000; /* Slightly different shade for subheadings */
-    text-align: left; /* Align subheadings to the left */
-    opacity: 0.75; /* Reduced opacity for h3 */
-  }
-  
+
   .Vision p {
-    font-size: 1.2em;
-    margin: 0 0 20px;
-    line-height: 1.5;
-    text-align: left; /* Align paragraphs to the left */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-    border-bottom: 2px solid #ccc; /* Add a line after each paragraph */
-    padding-bottom: 10px; /* Add some bottom padding for better spacing */
+    font-size: 1em;
   }
-  
-  .Vision p:hover {
-    color: #ff00b3; /* Change text color on hover */
-  }
-  
+
   .cards-grid {
-    display: grid; /* Use CSS grid for layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between cards */
-    justify-items: center; /* Center cards within the grid */
-    margin: 10px 0; /* Margin for spacing between cards */
+    grid-template-columns: 1fr;
   }
-  
-  .team-card {
-    background-color: #f9f9f9; /* Light background for cards */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    overflow: hidden; /* Prevent overflow of content */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-    padding: 20px; /* Inner padding for card content */
-    text-align: center; /* Center the text within the card */
-  }
-  
-  .team-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-    background-color: #f0f0f0; /* Change background color on hover */
-  }
-  
-  .team-card img {
-    width: 100%; /* Responsive image width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make images circular */
-    border: 3px solid #FFB400; /* Border color matching the theme */
-    margin-bottom: 15px; /* Space below the image */
-    transition: transform 0.3s; /* Smooth transition for image scaling */
-  }
-  
-  .team-card img:hover {
-    transform: scale(1.05); /* Scale image slightly on hover */
-  }
-  
-  .team-card h3 {
-    font-size: 1.5em; /* Font size for names */
-    margin: 15px 0 5px; /* Margin for spacing */
-    color: #333; /* Dark color for names */
-  }
-  
-  .team-card p {
-    font-size: 1.1em; /* Font size for titles */
-    margin: 0 0 15px; /* Margin for spacing */
-    color: #777; /* Lighter color for titles */
-  }
-  
-  /* Offer Section */
-  .offer {
-    background-color: #03346E;
-  }
-  
-  .offer h2 {
-    color: #fff; /* Heading color */
-  }
-  
-  .offering-card {
-    background-color: #FEF9D9; /* Light background for offering cards */
-  }
-  
-  /* Icon Styling */
-  .offering-card i {
-    font-size: 3em; /* Size for icons */
-    color: #FFB400; /* Color matching your theme */
-    margin-bottom: 15px; /* Space below the icon */
-  }
-  
-  .offering-card h3 {
-    font-size: 1.5em; /* Font size for headings */
-    margin: 15px 0 5px; /* Margin for spacing */
-    color: #333; /* Dark color for headings */
-  }
-  
-  .offering-card p {
-    font-size: 1.1em; /* Font size for descriptions */
-    color: #777; /* Lighter color for descriptions */
-  }
-  
-  /* Scroll to Top Button */
+
   .scroll-top {
-    position: fixed; /* Fixed position */
-    bottom: 20px; /* Space from the bottom */
-    right: 20px; /* Space from the right */
-    background-color: #FFB400; /* Button color matching the theme */
-    color: white; /* Text color */
-    border-radius: 50%; /* Circular button */
-    padding: 15px; /* Padding for the button */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    font-size: 1.5em; /* Font size for the icon */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    font-size: 1.2em;
+    padding: 10px;
   }
-  
-  .scroll-top:hover {
-    background-color: #f39c12; /* Darker shade on hover */
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 2rem; /* Adjust heading size for smaller screens */
-    }
-  
-    .content-section h1,
-    .content-section h2 {
-      font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-  
-    .Vision {
-      flex-direction: column; /* Stack content vertically */
-      height: auto; /* Allow auto height */
-      padding: 20px; /* Add padding */
-    }
-  
-    .Vision .container {
-      width: 90%; /* Adjust width for smaller screens */
-      padding: 15px; /* Reduce padding */
-    }
-  
-    .Vision h1,
-    .Vision h3 {
-      font-size: 2rem; /* Adjust heading sizes */
-    }
-  
-    .Vision p {
-      font-size: 1em; /* Adjust paragraph size */
-    }
-  
-    .cards-grid {
-      grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
-    }
-  
-    .scroll-top {
-      font-size: 1.2em; /* Adjust icon size */
-      padding: 10px; /* Adjust padding */
-    }
+
+  .content-section h1, .content-section h2 {
+    font-size: 1.5rem;
   }
-  
-  @media (max-width: 480px) {
-    h2 {
-      font-size: 1.8rem; /* Further adjust heading size for very small screens */
-    }
-  
-    .content-section h1,
-    .content-section h2 {
-      font-size: 1.5rem; /* Further adjust font size */
-    }
-  
-    .Vision h1,
-    .Vision h3 {
-      font-size: 1.8rem; /* Further adjust heading sizes */
-    }
-  
-    .Vision p {
-      font-size: 0.9em; /* Further adjust paragraph size */
-    }
-  
-    .scroll-top {
-      bottom: 10px; /* Adjust position */
-      right: 10px; /* Adjust position */
-      padding: 10px; /* Adjust padding */
-    }
-  };
+
+  .Vision h1, .Vision h3 {
+    font-size: 1.8rem;
+  }
+
+  .Vision p {
+    font-size: 0.9em;
+  }
+
+  .scroll-top {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+}
