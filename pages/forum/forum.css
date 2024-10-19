@@ -23,11 +23,11 @@ body, html {
     margin-top: 20px;
 }
 
-.backdrop{
+.backdrop-forum{
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 90vh;
     width: 100%;
     backdrop-filter: blur(5px);
 }
