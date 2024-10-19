@@ -44,7 +44,7 @@ p {
 /* Card hover effect */
 .card:hover {
   transform: scale(1.08); /* Increased hover scale for better interaction */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  box-shadow: 2px 2px 10px #248b6f ; /* Stronger shadow on hover */
 }
 
 /* Card image styling */
