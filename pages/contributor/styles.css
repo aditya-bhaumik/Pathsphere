@@ -1,23 +1,26 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9fafb;
-  color: #1f2937;
-  line-height: 1.5;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Hero section */
 .hero {
   height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #bfdbfe;
+  background-color: #3b82f6;
   color: white;
   text-align: center;
 }
@@ -43,35 +46,39 @@ body {
 
 .hero p {
   font-size: 1.5rem;
-  color: #bfdbfe;
+  color: #e0f2fe;
   margin-bottom: 2rem;
 }
 
+/* Call-to-action button */
 .cta-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: white;
-  color: #2563eb;
+  background-color: #ff6b6b;
+  color: white;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 9999px;
-  transition: background-color 0.3s ease;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #bfdbfe;
+  background-color: #ff5252;
+  transform: translateY(-3px);
 }
 
+/* Stats and contributors section */
 .stats, .contributors {
   padding: 4rem 1rem;
 }
 
 .stats {
-  background-color: white;
+  background-color: #fff;
 }
 
 .contributors {
-  background-color: #f3f4f6;
+  background-color: #f8fafc;
 }
 
 .stats h2, .contributors h2 {
@@ -90,28 +97,29 @@ body {
 }
 
 .stat-card, .contributor-card {
-  background-color: white;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contributor-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stat-card h3 {
   font-size: 2rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #333;
 }
 
 .stat-card p {
-  color: #6b7280;
+  color: #666;
 }
 
+/* Contributor card styling */
 .contributor-card img {
   width: 6rem;
   height: 6rem;
@@ -134,11 +142,11 @@ body {
 
 .contributor-card .contributions {
   display: inline-block;
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: #e0f2fe;
+  color: #3b82f6;
   font-weight: 600;
   padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
 }
 
@@ -155,10 +163,7 @@ body {
   color: #1e40af;
 }
 
-.contributor-card svg {
-  margin-right: 0.5rem;
-}
-
+/* Loading spinner */
 .loading {
   display: flex;
   justify-content: center;
@@ -167,7 +172,7 @@ body {
 }
 
 .spinner {
-  border: 4px solid #f3f3f3;
+  border: 4px solid #f0f4f8;
   border-top: 4px solid #3b82f6;
   border-radius: 50%;
   width: 40px;
@@ -178,73 +183,4 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-.contribute {
-  background-color: #2563eb;
-  color: white;
-  padding: 4rem 1rem;
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.contribute h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.contribute p {
-  font-size: 1.25rem;
-  color: #bfdbfe;
-  margin-bottom: 2rem;
-}
-
-#emailForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-#emailForm input {
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  border: none;
-  width: 100%;
-  max-width: 20rem;
-}
-
-#emailForm button {
-  padding: 0.75rem 2rem;
-  background-color: white;
-  color: #2563eb;
-  font-weight: bold;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#emailForm button:hover {
-  background-color: #bfdbfe;
-}
-
-@media (min-width: 640px) {
-  .hero h1 {
-      font-size: 3.75rem;
-  }
-
-  .hero p {
-      font-size: 1.875rem;
-  }
-
-  #emailForm {
-      flex-direction: row;
-      justify-content: center;
-  }
-
-  #emailForm input {
-      width: auto;
-  }
 }
