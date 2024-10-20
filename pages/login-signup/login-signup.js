@@ -65,6 +65,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
                 successMessage.style.transition = 'opacity 0.5s';
             }, 50);
             localStorage.setItem('isLoggedIn', 'true'); // Store login status
+            window.location.href = 'index.html'
             setTimeout(() => {
                 successMessage.style.display = 'none';
                 const urlParams = new URLSearchParams(window.location.search);
@@ -115,6 +116,7 @@ document.getElementById('signup-form').addEventListener('submit', async (event) 
         signupBtn.disabled = true;
         signupBtn.textContent = 'Signing up...';
         console.log('Signup submitted');
+        localStorage.setItem('isLoggedIn', 'true');
         setTimeout(() => {
             signupBtn.disabled = false;
             signupBtn.textContent = 'Sign Up';
