@@ -6,7 +6,7 @@ const fetchComponent = async (componentName) => {
   try {
     // fetch content from server
     const res = await fetch(
-      `/components/${componentName}/${componentName}.html`
+      `components/${componentName}/${componentName}.html`
     );
 
     // Check if the response is OK
