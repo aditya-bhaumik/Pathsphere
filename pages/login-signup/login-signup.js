@@ -71,7 +71,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
                 const urlParams = new URLSearchParams(window.location.search);
                 const redirect = urlParams.get('redirect');
                 if (redirect === 'scholarships') {
-                    window.location.href = './pages/scholarship-feature/scholarships.html'; // Redirect to scholarships page after login
+                    window.location.href = '/pages/scholarship-feature/scholarships.html'; // Redirect to scholarships page after login
                 }
             }, 2000); // Hide success message after 2 seconds
         }, 2000);
