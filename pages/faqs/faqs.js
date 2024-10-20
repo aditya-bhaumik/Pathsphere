@@ -7,80 +7,52 @@ document.addEventListener('DOMContentLoaded', () => {
       const control = self.querySelector('.accordions__control');
       const content = self.querySelector('.accordions__content');
 
-      self.classList.toggle('open');
+      // Close all other open accordions
+      accordions.forEach((otherEl) => {
+        if (otherEl !== self && otherEl.classList.contains('open')) {
+          const otherControl = otherEl.querySelector('.accordions__control');
+          const otherContent = otherEl.querySelector('.accordions__content');
+          
+          otherEl.classList.remove('open');
+          otherControl.setAttribute('aria-expanded', false);
+          otherContent.setAttribute('aria-hidden', true);
+          otherContent.style.maxHeight = null;
 
+          // Reset styles for closed items
+          const otherIcon = otherEl.querySelector('.accordions__icon');
+          const otherTitle = otherEl.querySelector('.accordions__title');
+          const otherNumber = otherEl.querySelector('.accordions__number');
+          if (otherIcon) otherIcon.style.color = 'black';
+          if (otherTitle) otherTitle.style.color = 'black';
+          if (otherNumber) otherNumber.style.color = 'black';
+        }
+      });
+
+      // Toggle the clicked accordion
+      self.classList.toggle('open');
       if (self.classList.contains('open')) {
         control.setAttribute('aria-expanded', true);
         content.setAttribute('aria-hidden', false);
         content.style.maxHeight = content.scrollHeight + 'px';
+
+        // Change colors for the opened item
+        const icon = self.querySelector('.accordions__icon');
+        const title = self.querySelector('.accordions__title');
+        const number = self.querySelector('.accordions__number');
+        if (icon) icon.style.color = 'white';
+        if (title) title.style.color = 'white';
+        if (number) number.style.color = 'white';
       } else {
         control.setAttribute('aria-expanded', false);
         content.setAttribute('aria-hidden', true);
         content.style.maxHeight = null;
-      }
-    });
-  });
-});
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const accordionsIcon = document.querySelector(".accordions__icon");
-
-//   accordionsIcon.addEventListener("click", function () {
-//     accordionsIcon.style.color = "white";
-//   });
-// });
-document.addEventListener('DOMContentLoaded', function () {
-  const accordionsIcons = document.querySelectorAll('.accordions__icon');
-
-  accordionsIcons.forEach((icon) => {
-    icon.addEventListener('click', function () {
-      const parentItem = icon.closest('.accordions__item');
-      const accordionsTitle = parentItem.querySelector('.accordions__title');
-      const accordionsNumber = parentItem.querySelector('.accordions__number');
-
-      if (parentItem.classList.contains('open')) {
-        icon.style.color = 'white';
-        if (accordionsTitle) {
-          accordionsTitle.style.color = 'white';
-        }
-        if (accordionsNumber) {
-          accordionsNumber.style.color = 'white';
-        }
-      } else {
-        icon.style.color = 'black';
-        if (accordionsTitle) {
-          accordionsTitle.style.color = 'black';
-        }
-        if (accordionsNumber) {
-          accordionsNumber.style.color = 'black';
-        }
-      }
-    });
-  });
-
-  const accordionsItems = document.querySelectorAll('.accordions__item');
-  accordionsItems.forEach((item) => {
-    item.addEventListener('click', function () {
-      const icon = item.querySelector('.accordions__icon');
-      const accordionsTitle = item.querySelector('.accordions__title');
-      const accordionsNumber = item.querySelector('.accordions__number');
-
-      if (item.classList.contains('open')) {
-        icon.style.color = 'white';
-        if (accordionsTitle) {
-          accordionsTitle.style.color = 'white';
-        }
-        if (accordionsNumber) {
-          accordionsNumber.style.color = 'white';
-        }
-      } else {
-        icon.style.color = 'black';
-        if (accordionsTitle) {
-          accordionsTitle.style.color = 'black';
-        }
-        if (accordionsNumber) {
-          accordionsNumber.style.color = 'black';
-        }
+        // Reset styles for closed item
+        const icon = self.querySelector('.accordions__icon');
+        const title = self.querySelector('.accordions__title');
+        const number = self.querySelector('.accordions__number');
+        if (icon) icon.style.color = 'black';
+        if (title) title.style.color = 'black';
+        if (number) number.style.color = 'black';
       }
     });
   });
