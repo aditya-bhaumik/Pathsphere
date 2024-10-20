@@ -28,27 +28,3 @@ icon.onclick = function () {
     localStorage.setItem("theme", "light");
   }
 };
-
-let ele = document.querySelectorAll("a")
-
-for (let i = 0 ;i < ele.length ; i++){
-  ele[i].onclick = function (){
-    // console.log(ele[i])
-
-    let isLoggedIn = localStorage.getItem("isLoggedIn")
-
-    if(isLoggedIn === 'false' || !isLoggedIn) {
-      ele[i].href = "/pages/login-signup/login-signup.html";
-    }else{
-      let login = document.getElementById("login");
-      login.href = login.baseURI
-    }
-
-    // console.log(ele[i])
-
-  };
-}
-
-
-
-
