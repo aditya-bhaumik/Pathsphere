@@ -11,170 +11,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="script.js" defer></script>
   </head>
-
   <body>
-    <div class="gtranslate_wrapper"></div>
-    <script>
-    window.gtranslateSettings = {
-      "default_language":"en",
-      "detect_browser_language":true,
-      "wrapper_selector":".gtranslate_wrapper"
-    }
-    </script>
-    <script 
-      src="https://cdn.gtranslate.net/widgets/latest/float.js"
-      defer
-    ></script>
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 id="heroTitle">Our Amazing Contributors</h1>
-        <p id="heroSubtitle">
-          Shaping the future of Pathsphere, one commit at a time
-        </p>
-        <a href="#contribute" class="cta-button">Become a Contributor</a>
+        <h1>PathSphere Contributors</h1>
+        <p>Explore our top contributors and GitHub stats</p>
+        <a href="#emailForm" class="cta-button">Contribute Now</a>
       </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Project Stats Section -->
     <section class="stats">
-      <h2>Project Statistics</h2>
-      <div id="stats" class="stats-container">
-        <!-- Stat Cards will be inserted here -->
-      </div>
+      <h2>Project Stats</h2>
+      <div id="stats" class="stats-container"></div>
     </section>
 
-    <!-- Contributors Grid -->
+    <!-- Top Contributors Section -->
     <section class="contributors">
-      <h2>Meet Our Contributors</h2>
-      <div id="contributors" class="contributors-container">
-        <div id="loading" class="loading">
-          <div class="spinner"></div>
-        </div>
+      <h2>Top Contributors</h2>
+      <div id="contributors" class="contributors-container"></div>
+      <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section id="contribute" class="contribute">
-      <div class="contribute-content">
-        <h2>Ready to Make an Impact?</h2>
-        <p>Join our community and help shape the future of StationGuide.</p>
-        <form id="emailForm">
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Get Started</button>
-        </form>
-      </div>
+    <!-- Contribute Section -->
+    <section class="contribute">
+      <h2>Join Us and Contribute</h2>
+      <p>Join the future of open-source by submitting your contributions today!</p>
+      <form id="emailForm" class="email-form">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit" class="cta-button">Sign Up</button>
+      </form>
     </section>
 
-    <script src="/scripts/componentLoader.js"></script>
-    <script>
-      prependComponent('Navbar');
-      prependComponent('Cursor');
-      prependComponent('ScrollToTop');
-      appendComponent('Footer');
-      appendComponent('ChatBot');
-      waitTillComponentsLoaded();
-    </script>
-
-<div class="circle-container">
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-</div>
-<style>
-  .circle {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    pointer-events: none;
-    background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
-    transition: transform 0.1s, left 0.1s, top 0.1s;
-  }
-
-  .circle-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-  }
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
-
-    circles.forEach(function (circle) {
-      circle.x = 0;
-      circle.y = 0;
-    });
-
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.pageX;
-      coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-    });
-
-    function animateCircles() {
-      let x = coords.x;
-      let y = coords.y;
-
-      circles.forEach(function (circle, index) {
-        circle.style.left = `${x - 12}px`;
-        circle.style.top = `${y - 12}px`;
-        circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-
-        const nextCircle = circles[index + 1] || circles[0];
-        circle.x = x;
-        circle.y = y;
-
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
-      });
-
-      requestAnimationFrame(animateCircles);
-    }
-
-    animateCircles();
-  });
-
-
-</script>
+    <footer>
+      <p>&copy; 2024 PathSphere. All rights reserved.</p>
+    </footer>
   </body>
 </html>
