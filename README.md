@@ -24,6 +24,16 @@
 </p>
 </div>
 
+
+## 📑 Table of Contents
+1. [Important Links](#important-links)
+2. [Features](#features)
+3. [Future Enhancements](#future-enhancements)
+4. [Roadmap](#roadmap)
+5. [Tech Stack](#tech-stack)
+6. [Contributors](#contributors)
+7. [License](#license)
+
 ## 🔗 Important Links 🔗
 
 <table border="1">
