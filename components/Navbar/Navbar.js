@@ -34,5 +34,6 @@ window.onload = () => {
   }
 };
 
+
 // Assign the click event to the icon for toggling dark mode
 icon.onclick = toggleDarkMode;
