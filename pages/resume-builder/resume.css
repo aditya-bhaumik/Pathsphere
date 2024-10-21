@@ -1,10 +1,10 @@
 :root {
     /* --primary-color: #007bff; */
     /* --primary-hover-color: #0056b3; */
-    --text-color: #dda4a4; /* Changed text color to white */
-    --secondary-text-color: rgba(218, 175, 175, 0.7); /* Changed secondary text color to a lighter shade of white */
+    --text-color: #fff; /* Changed text color to white */
+    --secondary-text-color: rgba(255, 255, 255, 0.7); /* Changed secondary text color to a lighter shade of white */
     --border-color: #ddd;
-    --focus-color: #007bff;
+    /* --focus-color: #007bff; */
 }
 
 * {
@@ -14,25 +14,15 @@
 }
 body {
     font-family: 'Arial', sans-serif;
-    background-color: black; /* Ensure there is a fallback color */
-    padding: 50px;
-    line-height: 1.6;
-    position: relative; /* Ensures the body content is relative to the GIF background */
-}
-body::before {
-    content: '';
-    position: fixed;
-    top: 40px;
-    left: 70px;
-    width: 90%;
-    height: 90%;
-    background-image: url('4a3499c6b5cca368ec4e3717f9077114.gif');
+    background-image: url('pages/resume-builder/4a3499c6b5cca368ec4e3717f9077114.gif');
+    background-color: black;
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
-    opacity: 0.5; /* Adjust the opacity here */
-    z-index: -1; /* Ensures the GIF stays behind the content */
-    pointer-events: none; /* Prevents interaction with the GIF */
+    padding: 20px;
+    line-height: 1.6;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -47,8 +37,8 @@ body::before {
 }
 
 h1 {
-    font-size: 4rem;
-    color: whitesmoke;
+    font-size: 2.5rem;
+    color: var(--text-color);
 }
 
 p {
@@ -70,7 +60,6 @@ p {
     flex: 1;
     display: flex;
     flex-direction: column;
-    color: var(--secondary-text-color);
 }
 
 label {
@@ -86,7 +75,7 @@ textarea {
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
-    color: var(--secondary-text-color); /* Set input text color to white */
+    color: var(--text-color); /* Set input text color to white */
     background-color: transparent; /* Make input background transparent */
 }
 
@@ -101,8 +90,8 @@ textarea {
 }
 
 button {
-    background-color: rgb(60, 208, 159);
-    color: rgb(0, 0, 0);
+    background-color: var(--primary-color);
+    color: white;
     border: none;
     padding: 12px 20px;
     font-size: 1rem;
@@ -112,11 +101,9 @@ button {
     display: block;
     margin-top: 20px;
 }
-h2{
-    color: var(--text-color);
-}
+
 button:hover {
-    background-color: #89e3bf;
+    background-color: var(--primary-hover-color);
 }
 
 #resumePreview {
@@ -126,126 +113,82 @@ button:hover {
 
 #resumeContent {
     padding: 30px;
-    border: 1px solid var(--text-color);
-    background-color:rgb(255, 255, 255);
+    border: 1px solid var(--border-color);
+    background-color: var(--preview-bg-color);
     border-radius: 8px;
     font-size: 1rem;
-    color:black/* Set resume content text color to white */
+    color: black/* Set resume content text color to white */
 }
-#resumeContent p{
-    color:black;
-}
+
 #downloadBtn {
     margin-top: 20px;
 }
 
-
-
-/* Form Section Styles */
-.form-section {
-    margin-bottom: 20px;
-}
-
-.form-section h2 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 10px;
-}
-
-.template-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.template-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: rgb(60, 208, 159);
-    color: #000000;
-    transition: background-color 0.3s ease;
-}
-
-.template-btn:hover {
-    background-color: #89e3bf;
-}
-
-.template-btn:focus {
-    outline: 2px solid #aaa;
-    background-color: #d0d0d0;
-}
-
-/* Active state */
-.template-btn.active {
-    background-color: #ddd;
-    border: 2px solid #aaa;
-    color: #222;
-}
-/* Classic Template */
+/* Template styles */
 .template1 {
     font-family: 'Georgia', serif;
     padding: 30px;
-    background-color: #f8f4f0; /* Light background */
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    color: #333;
 }
 
 .template1 h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #d9534f; /* A classic red color */
+    color: var(--text-color);
 }
 
 .template1 p {
-    color: #555;
+    color: #fff; /* Changed to white */
     margin-bottom: 20px;
 }
 
 .template1 h4 {
     font-size: 1.4rem;
     margin-top: 20px;
-    color: #333;
+    color: var(--text-color);
 }
 
-/* Modern Template */
 .template2 {
     font-family: 'Arial', sans-serif;
-    padding: 30px;
-    background-color: #eef2f7; /* Light modern background */
-    border: 2px solid #00bcd4;
-    border-radius: 8px;
-    color: #333;
+    /* Removed background color */
+    color: var(--text-color);
 }
 
 .template2 h3 {
     font-size: 2rem;
     margin-bottom: 8px;
-    color: #00bcd4; /* A modern cyan color */
+    color: #fff; /* Changed to white */
 }
 
 .template2 p {
-    color: #666;
+    color: var(--text-color);
     margin-bottom: 8px;
 }
 
 .template2 h4 {
     font-size: 1.6rem;
-    color: #333;
+    color: #fff; /* Changed to white */
 }
 
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
 .features {
     background-color: transparent;
     padding: 3rem 0;
     margin: 3rem 0;
     color: white;
 }
+
 .feature-item p{
-    color:rgb(239, 232, 232);
-    
+    color:rgb(239, 232, 232);  
 }
+
 .feature-list {
     display: flex;
     justify-content: space-around;
@@ -257,13 +200,6 @@ button:hover {
     min-width: 250px;
     margin: 1rem;
     text-align: center;
-    padding:20px;
-    background: rgba( 255, 255, 255, 0.3 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 3px );
--webkit-backdrop-filter: blur( 3px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .feature-icon {
     font-size: 3rem;
