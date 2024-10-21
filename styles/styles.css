@@ -5,13 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
  
 * {
-
   margin:  0;
   padding:  0;
   box-sizing:  border-box;
   scrollbar-width:  none;
-  
-
 }
  
 body {
@@ -29,9 +26,12 @@ body {
 
 /*Testimonial section*/
 #testimonials {
+  width: 80%;
   background-color: #f8f9fa;
-  padding: 80px 0;
+  padding: 30px 0;
+  margin: 60px 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 10px;
 }
 
 .container {
@@ -501,9 +501,14 @@ nav ul li a:hover {
 
 main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .hero {
+  width: 100%;
   color: var(--primary-color);
   text-align: center;
   padding: 100px 20px;
@@ -559,12 +564,20 @@ main {
   border-radius: 5px;
 }
 
-.features {
+.feature-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 75px 0;
+}
+
+.features {
+  width: 80%;
+  display: flex;
+  justify-content: center;
   padding: 20px;
   background: var(--primary-color);
   flex-wrap: wrap;
+  gap: 60px;
 }
 
 .feature {
@@ -1196,6 +1209,15 @@ h3 {
   justify-content: space-around;
 }
 
+.feature-item-box {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* margin: 50px 0; */
+}
+
 .feature-item {
   background: #fff;
   border-radius: 8px;
@@ -1204,6 +1226,7 @@ h3 {
   margin: 10px;
   flex: 1 1 calc(33.333% - 20px);
   display: flex;
+  justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
 }
