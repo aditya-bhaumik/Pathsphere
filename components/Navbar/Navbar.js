@@ -35,9 +35,9 @@ for (let i = 0 ;i < ele.length ; i++){
   ele[i].onclick = function (){
     // console.log(ele[i])
 
-    let isLoggedIn = localStorage.getItem("isLoggedIn")
+    let LoggedIn = localStorage.getItem("LoggedIn")
 
-    if(isLoggedIn === 'false' || !isLoggedIn) {
+    if(!LoggedIn) {
       ele[i].href = "./pages/login-signup/login-signup.html";
     }else{
       let login = document.getElementById("login");
