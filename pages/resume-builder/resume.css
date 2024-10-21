@@ -3,11 +3,8 @@
     /* --primary-hover-color: #0056b3; */
     --text-color: #fff; /* Changed text color to white */
     --secondary-text-color: rgba(255, 255, 255, 0.7); /* Changed secondary text color to a lighter shade of white */
-    /* --background-color: transparent; Removed background color */
-    /* --container-bg-color: transparent; Removed container background color */
     --border-color: #ddd;
     /* --focus-color: #007bff; */
-    /* --preview-bg-color: #f9f9f9; */
 }
 
 * {
@@ -17,7 +14,8 @@
 }
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('./4a3499c6b5cca368ec4e3717f9077114.gif');
+    background-image: url('pages/resume-builder/4a3499c6b5cca368ec4e3717f9077114.gif');
+    background-color: black;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
