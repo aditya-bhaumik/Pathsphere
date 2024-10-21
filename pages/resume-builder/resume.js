@@ -134,48 +134,40 @@ function debounce(func, delay) {
 
 // Function to generate the resume content dynamically
 function generateResume() {
-    const resumeContent = document.getElementById("resumeContent");
-    const objective = document.getElementById("objective").value;
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const linkedin = document.getElementById("linkedin").value;
+    const fields = ['name', 'email', 'phone', 'linkedin', 'objective', 'education1', 'education2', 'experience', 'project', 'skills', 'achievements'];
+    const resumeData = fields.reduce((acc, field) => {
+        acc[field] = document.getElementById(field).value.trim();
+        return acc;
+    }, {});
 
-    // Collect education details
-    const educationEntries = document.querySelectorAll(".education-entry");
-    let educationHTML = "<h4>Education</h4>";
-    educationEntries.forEach(entry => {
-        const institution = entry.querySelector('input[name="education"]').value;
-        const year = entry.querySelector('input[name="year"]').value;
-        const grade = entry.querySelector('input[name="grade"]').value;
-        educationHTML += `<p>${institution} - ${year} - ${grade}</p>`;
-    });
+    const template = document.getElementById('templateSelector').value;
 
-    const experience = document.getElementById("experience").value;
-    const project = document.getElementById("project").value;
-    const skills = document.getElementById("skills").value;
-    const achievements = document.getElementById("achievements").value;
-
-    // Constructing resume content
-    resumeContent.innerHTML = `
-        <h3>${name}</h3>
-        <p>Email: ${email}</p>
-        <p>Phone: ${phone}</p>
-        <p>LinkedIn: ${linkedin}</p>
-        <h4>Objective</h4>
-        <p>${objective}</p>
-        ${educationHTML} <!-- Education Section -->
-        <h4>Experience</h4>
-        <p>${experience}</p>
-        <h4>Projects</h4>
-        <p>${project}</p>
-        <h4>Skills</h4>
-        <p>${skills}</p>
-        <h4>Achievements</h4>
-        <p>${achievements}</p>
+    // Create the resume content
+    const resumeContent = `
+        <h2>${resumeData.name}</h2>
+        <p><strong>Email:</strong> ${resumeData.email}</p>
+        <p><strong>Phone:</strong> ${resumeData.phone}</p>
+        <p><strong>LinkedIn:</strong> ${resumeData.linkedin}</p>
+        <h3>Objective</h3>
+        <p>${resumeData.objective}</p>
+        <h3>Education</h3>
+        <p>${resumeData.education1}</p>
+        <p>${resumeData.education2}</p>
+        <h3>Experience</h3>
+        <p>${resumeData.experience}</p>
+        <h3>Projects</h3>
+        <p>${resumeData.project}</p>
+        <h3>Skills</h3>
+        <p>${resumeData.skills}</p>
+        <h3>Achievements</h3>
+        <p>${resumeData.achievements}</p>
     `;
-}
+    
+    const resumePreview = document.getElementById('resumeContent');
+    resumePreview.innerHTML = resumeContent;
 
+    updatePreviewTemplate(template);
+}
 
 // Function to update the preview template
 function updatePreviewTemplate(template) {
@@ -226,46 +218,6 @@ function handleMouseMove(e) {
     moveHeading(h1, e.clientX, e.clientY);
     updateContainerShadow(container, e.clientX, e.clientY);
 }
-function addEducation() {
-    const educationFields = document.getElementById("educationFields");
-    const educationEntry = document.createElement("div");
-    educationEntry.classList.add("form-field", "education-entry");
-    educationEntry.innerHTML = `
-        <input type="text" name="education" placeholder="Institution Name" required><br>
-        <input type="text" name="year" placeholder="Year of Graduation" required><br>
-        <input type="text" name="grade" placeholder="Grade/Percentage" required><br>
-        <button type="button" onclick="removeEducation(this)">Remove</button><br>
-    `;
-    educationFields.appendChild(educationEntry);
-}
-
-function removeEducation(button) {
-    const educationEntry = button.parentElement;
-    educationEntry.remove();
-}
-
-function applyTemplate(template) {
-    const resumeContent = document.getElementById('resumeContent');
-    const classicBtn = document.getElementById('classicTemplateBtn');
-    const modernBtn = document.getElementById('modernTemplateBtn');
-
-    // Switch template class
-    resumeContent.className = template;
-
-    // Toggle active button styles
-    if (template === 'template1') {
-        classicBtn.classList.add('active');
-        modernBtn.classList.remove('active');
-    } else {
-        modernBtn.classList.add('active');
-        classicBtn.classList.remove('active');
-    }
-
-    // Prevent page refresh
-    return false;
-}
-
-
 
 // Update element position
 function updateElementPosition(element, x, y) {
