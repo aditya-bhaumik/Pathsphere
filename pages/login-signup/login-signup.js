@@ -33,25 +33,10 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     const emailError = document.getElementById('login-email-error');
     const passwordError = document.getElementById('login-password-error');
     const successMessage = document.getElementById('login-success');
-    const data =localStorage.getItem('isLoggedIn', 'true'); 
-    if(data){
-
-    }
-    else{
-        window.location.href = '/Pathsphere/pages/login-signup/login-signup.html'; 
-        document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-        document.getElementById('sign').classList.add('active');
-        document.getElementById(document.getElementById('sign').dataset.tab).classList.add('active');
-        animateTabContent(document.getElementById(document.getElementById('sign').dataset.tab));
-
-
-    }
 
     let valid = true;
 
-    if (data.email !== email && data.password !== password) {
+    if (!validateEmail(email)) {
         emailError.textContent = 'Invalid email address';
         valid = false;
     } else {
@@ -65,7 +50,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         passwordError.textContent = '';
     }
 
-    if (data.email !== email && data.password !== password) {
+    if (valid) {
         const loginBtn = document.getElementById('login-btn');
         loginBtn.disabled = true;
         loginBtn.textContent = 'Logging in...';
@@ -79,15 +64,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
                 successMessage.style.opacity = 1;
                 successMessage.style.transition = 'opacity 0.5s';
             }, 50);
-
-            localStorage.setItem('LoggedIn', {"email":email,"password":password});
-            window.location.href = '/Pathsphere/index.html'; // Correct path
-
-
-            // Adjust based on directory structure
-
-
-
+            localStorage.setItem('isLoggedIn', 'true'); // Store login status
             setTimeout(() => {
                 successMessage.style.display = 'none';
                 const urlParams = new URLSearchParams(window.location.search);
@@ -133,27 +110,11 @@ document.getElementById('signup-form').addEventListener('submit', async (event) 
         confirmPasswordError.textContent = '';
     }
 
-    if (valid && password === confirmPassword) {
+    if (valid) {
         const signupBtn = document.getElementById('signup-btn');
         signupBtn.disabled = true;
         signupBtn.textContent = 'Signing up...';
         console.log('Signup submitted');
-
-        localStorage.setItem('LoggedIn', {"email":email,"password":password});
-        window.location.href = '/Pathsphere/index.html'; 
-
-        document.getElementById("signup-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting in the traditional way
-        
-            // Assuming signup is successful:
-            showSignupSuccessMessage();
-        
-            // Clear the form
-            document.getElementById("signup-form").reset();
-        });
-        
-
-
         setTimeout(() => {
             signupBtn.disabled = false;
             signupBtn.textContent = 'Sign Up';
@@ -253,6 +214,15 @@ function switchToLogin() {
     animateTabContent(loginContent);
 }
 
+document.getElementById("signup-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+    // Assuming signup is successful:
+    showSignupSuccessMessage();
+
+    // Clear the form
+    document.getElementById("signup-form").reset();
+});
 
 function showSignupSuccessMessage() {
     var messageBox = document.getElementById("signup-success-message");
