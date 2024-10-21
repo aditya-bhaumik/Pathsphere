@@ -243,7 +243,8 @@ button:hover {
     color: white;
 }
 .feature-item p{
-    color:rgb(239, 232, 232)
+    color:rgb(239, 232, 232);
+    
 }
 .feature-list {
     display: flex;
