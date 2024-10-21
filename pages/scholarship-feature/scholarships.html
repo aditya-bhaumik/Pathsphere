@@ -12,6 +12,44 @@
 </head>
 
 <body>
+
+    <div class="gtranslate_wrapper"></div>
+    <script>
+    window.gtranslateSettings = {
+      "default_language":"en",
+      "detect_browser_language":true,
+      "wrapper_selector":".gtranslate_wrapper"
+    }
+    </script>
+    <script 
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+<main>
+    <section class="hero">
+        <h1>Scholarships</h1>
+        <p class="subtext">
+            Find scholarships that match your academic profile and needs.
+        </p>
+    </section>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for scholarshipss..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+    </div>
+
+    <div id="scholarship-container" class="scholarship-container"></div>
+
+    <div class="pagination">
+        <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-btn" onclick="changePage(1)">Next</button>
+    </div>
+
+    <div id="scholarship-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <div id="modal-info"></div>
+
     <main>
         <section class="hero">
             <h1>Scholarships</h1>
@@ -21,7 +59,16 @@
         </section>
 
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+            <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search for scholarships..." 
+            aria-label="Search Scholarships" 
+            value="" 
+            onchange="filterScholarships(this.value)" 
+          />
+          
+
         </div>
 
         <div id="scholarship-container" class="scholarship-container"></div>
@@ -38,7 +85,7 @@
                 <div id="modal-info"></div>
             </div>
         </div>
-
+        
         <script>
             const container = document.getElementById('scholarship-container');
             const modal = document.getElementById('scholarship-modal');
@@ -112,15 +159,20 @@
             }
 
             function filterScholarships() {
-                const input = document.getElementById('searchInput');
-                const filter = input.value.toLowerCase();
-                const filteredScholarships = scholarships.filter(scholarship =>
-                    scholarship.scholarship_name.toLowerCase().includes(filter)
-                );
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
 
-                currentPage = 1;
-                displayScholarships(filteredScholarships);
-            }
+    // Check if the filter is empty
+    const filteredScholarships = filter 
+        ? scholarships.filter(scholarship =>
+            scholarship.scholarship_name.toLowerCase().includes(filter)
+        ) 
+        : scholarships; // Show all scholarships if input is empty
+
+    currentPage = 1; // Reset to the first page if using pagination
+    displayScholarships(filteredScholarships); // Call function to display filtered scholarships
+}
+
 
             function showDetails(scholarship) {
                 modalInfo.innerHTML = `
@@ -192,6 +244,7 @@
 
             document.addEventListener('DOMContentLoaded', fetchAndProcessExcel);
         </script>
+        
     </main>
 
     <script src="/scripts/componentLoader.js"></script>

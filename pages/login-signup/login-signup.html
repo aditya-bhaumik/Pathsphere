@@ -5,12 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login / Sign up</title>
+    <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="login-signup.css">
 
 </head>
 
 <body>
+    <div class="gtranslate_wrapper"></div>
+    <script>
+    window.gtranslateSettings = {
+      "default_language":"en",
+      "detect_browser_language":true,
+      "wrapper_selector":".gtranslate_wrapper"
+    }
+    </script>
+    <script 
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
     <div class="content">
         <div class="card">
             <div class="card-header">
@@ -19,11 +32,11 @@
                     Your gateway to educational and professional resources</div>
             </div>
             <div class="tabs">
-                <button type="button" class="tab-link active" data-tab="login">Login</button>
-                <button type="button" class="tab-link" data-tab="signup">Sign Up</button>
+                <button type="button" class="tab-link" data-tab="login">Login</button>
+                <button type="button" class="tab-link active" data-tab="signup" id = "sign" >Sign Up</button>
             </div>
             <div class="tab-container">
-                <div class="tab-content active" id="login">
+                <div class="tab-content " id="login">
                     <form id="login-form">
                         <div class="form-group">
                             <label for="login-email">
@@ -50,7 +63,7 @@
                         <div class="success" id="login-success">Login successful!</div>
                     </form>
                 </div>
-                <div class="tab-content" id="signup">
+                <div class="tab-content active" id="signup">
                     <form id="signup-form">
                         <div class="form-group">
                             <label for="signup-name">

@@ -570,15 +570,25 @@ main {
 .feature {
   text-align: center;
   padding: 20px;
-  background: var(--secondary-color);
-  border-radius: 5px;
+  border: 1px solid #9ecfb8;
+  border-radius: 25px;
   gap: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 30%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 300px;
   margin-bottom: 20px;
   transition: transform 0.2s;
-  background-color: #e7e7e7;
+  background-color: #e5fff3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.feature .feature-img{
+  width: 50px;
+  margin: 10px auto;
+}
+
 @media (max-width: 700px) {
   .features {
     display: flex;
@@ -630,10 +640,10 @@ main {
 
 .btn {
   display: inline-block;
-  background-color: #ffa500;
+  background-color: #359b6b;
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
