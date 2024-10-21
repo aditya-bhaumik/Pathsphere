@@ -24,109 +24,106 @@ p {
     padding: 20px;
 }
 
-
+ 
 /* Card styling */
-
 .card {
-    background-color: white;
+    background: linear-gradient(145deg, #bc45c0, #09cff3); /* Blue and green gradient background */
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    /* Enhanced shadow for better depth */
-    margin: 20px;
-    width: 320px;
-    /* Slightly wider card */
-    padding: 20px;
-    /* Added padding inside the card for more space */
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-color: var(--primary-color);
-    color: black;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); 
+    margin: 15px; /* Reduced margin */
+    width: 270px; /* Slightly smaller width */
+    padding: 15px; /* Reduced padding */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+    color: #fff;
     font-family: "Arial", sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Ensures buttons stay at the bottom */
 }
 
-
-/* Card hover effect */
+/* Card hover effect - turns pink on hover */
 
 .card:hover {
-  transform: scale(1.08); /* Increased hover scale for better interaction */
-  box-shadow: 2px 2px 10px #248b6f ; /* Stronger shadow on hover */
+    transform: scale(1.08) rotateZ(2deg); 
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
-
 
 /* Card image styling */
 
 .card img {
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 100%;
-    height: 160px;
-    /* Slightly taller image */
-    object-fit: contain;
-    margin-bottom: 15px;
-    /* Added space between image and text */
+    height: 150px; /* Smaller image to reduce height */
+    object-fit: cover;
+    margin-bottom: 10px; /* Reduced margin below the image */
 }
-
 
 /* Card heading */
 
 .card h2 {
-    font-size: 20px;
-    /* Slightly larger font size for the scholarship name */
-    margin: 15px 0;
+    font-size: 18px; /* Slightly smaller font */
+    color: #f9f9f9;
 }
-
 
 /* Card paragraph */
 
 .card p {
-    color: #666;
-    font-size: 16px;
-    /* Increased font size for better readability */
-    margin: 10px 0;
-    /* Added more space between paragraphs */
+    color: #ccc;
+    font-size: 14px; /* Reduced font size */
+    margin: 8px 0; /* Smaller margin */
+    line-height: 1.4; /* Slightly tighter line spacing */
 }
-
 
 /* Button styling inside card */
 
 .card a,
 .card button {
     display: inline-block;
-    margin-top: 20px;
-    /* Increased top margin to give more space around buttons */
-    padding: 12px 20px;
-    /* Added more padding for larger, more comfortable buttons */
-    background-color: #248b6f;
+    padding: 10px 18px;
+    background-color: rgba(0, 0, 0, 0.8); 
     color: white;
-    border-radius: 8px;
-    /* Softer, rounded corners */
+    border-radius: 10px;
     text-decoration: none;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 
 /* Hover effect for buttons */
 
 .card a:hover,
 .card button:hover {
-    background-color: #1c6057;
-    transform: translateY( -5px);
-    /* Increased hover lift for a more engaging feel */
+    background-color:#8a2be2;
+    transform: translateY(-6px); 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Card transition effects */
+
+.card {
+    perspective: 1000px;
+}
+
+.card:hover {
+    transform: rotateY(3deg) scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+/* Input focus effect - turns background purple */
+
+input:focus {
+    background-color: #8a2be2; /* Purple background on focus */
+    outline: none; /* Removes default outline */
+    border: 2px solid #5d3fd3; /* Slight border on focus */
+    transition: background-color 0.3s ease; /* Smooth transition to purple */
 }
 
 
-/* Spacing for button container */
 
-.buttons {
-    margin-top: 20px;
-    /* More space above the button section */
-}
 
 
 /* Modal styling */

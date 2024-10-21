@@ -79,6 +79,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
                 successMessage.style.opacity = 1;
                 successMessage.style.transition = 'opacity 0.5s';
             }, 50);
+
             localStorage.setItem('LoggedIn', {"email":email,"password":password});
             window.location.href = '/Pathsphere/index.html'; // Correct path
 
@@ -86,12 +87,13 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
             // Adjust based on directory structure
 
 
+
             setTimeout(() => {
                 successMessage.style.display = 'none';
                 const urlParams = new URLSearchParams(window.location.search);
                 const redirect = urlParams.get('redirect');
                 if (redirect === 'scholarships') {
-                    window.location.href = './pages/scholarship-feature/scholarships.html'; // Redirect to scholarships page after login
+                    window.location.href = '/pages/scholarship-feature/scholarships.html'; // Redirect to scholarships page after login
                 }
             }, 2000); // Hide success message after 2 seconds
         }, 2000);
@@ -136,6 +138,7 @@ document.getElementById('signup-form').addEventListener('submit', async (event) 
         signupBtn.disabled = true;
         signupBtn.textContent = 'Signing up...';
         console.log('Signup submitted');
+
         localStorage.setItem('LoggedIn', {"email":email,"password":password});
         window.location.href = '/Pathsphere/index.html'; 
 
@@ -149,6 +152,7 @@ document.getElementById('signup-form').addEventListener('submit', async (event) 
             document.getElementById("signup-form").reset();
         });
         
+
 
         setTimeout(() => {
             signupBtn.disabled = false;
