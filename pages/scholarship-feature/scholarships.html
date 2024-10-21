@@ -34,7 +34,7 @@
     </section>
 
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+        <input type="text" id="searchInput" placeholder="Search for scholarshipss..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
     </div>
 
     <div id="scholarship-container" class="scholarship-container"></div>
@@ -59,7 +59,15 @@
         </section>
 
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+            <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search for scholarships..." 
+            aria-label="Search Scholarships" 
+            value="" 
+            onchange="filterScholarships(this.value)" 
+          />
+          
 
         </div>
 
@@ -151,15 +159,20 @@
             }
 
             function filterScholarships() {
-                const input = document.getElementById('searchInput');
-                const filter = input.value.toLowerCase();
-                const filteredScholarships = scholarships.filter(scholarship =>
-                    scholarship.scholarship_name.toLowerCase().includes(filter)
-                );
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
 
-                currentPage = 1;
-                displayScholarships(filteredScholarships);
-            }
+    // Check if the filter is empty
+    const filteredScholarships = filter 
+        ? scholarships.filter(scholarship =>
+            scholarship.scholarship_name.toLowerCase().includes(filter)
+        ) 
+        : scholarships; // Show all scholarships if input is empty
+
+    currentPage = 1; // Reset to the first page if using pagination
+    displayScholarships(filteredScholarships); // Call function to display filtered scholarships
+}
+
 
             function showDetails(scholarship) {
                 modalInfo.innerHTML = `
