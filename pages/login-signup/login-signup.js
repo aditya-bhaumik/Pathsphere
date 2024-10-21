@@ -84,7 +84,6 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
             window.location.href = '/Pathsphere/index.html'; // Correct path
 
 
-  
 
             setTimeout(() => {
                 successMessage.style.display = 'none';
