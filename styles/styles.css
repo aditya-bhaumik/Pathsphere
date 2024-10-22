@@ -583,7 +583,9 @@ main {
   align-items: center;
   justify-content: space-between;
 }
-
+.feature-item h6 {
+  color: #000000; /*to keep the text color black*/
+}
 .feature .feature-img{
   width: 50px;
   margin: 10px auto;
