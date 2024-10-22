@@ -527,15 +527,18 @@ main {
   background-size: cover;
   height: 100vh;
 }
-
+ 
 .hero h1 {
-  font-size: 50px;
-  margin: 0;
-  padding: 5px;
-  text-decoration: none;         /* No underline by default */
-  transition: all 0.3s ease;     /* Smooth transition for hover effects */
-}
 
+  font-size:  50px;
+  margin:  0;
+  padding:  5px;
+  text-decoration:  none;        
+  transition:  all 0.3s ease;
+  color: #ffffff;
+
+}
+ 
 /* Hover state */
 .hero h1:hover {
   text-decoration: underline;    /* Underline on hover */
