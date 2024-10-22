@@ -30,11 +30,12 @@ h1 {
 }
 
 .heading {
-  height: 35px;
+  height: 65px;
   width: 100%;
   background-color: rgb(40, 40, 154);
   color: white;
   text-align: center;
+  text-wrap: wrap;
   justify-content: center;
   padding: 5px;
   margin: 10px;
@@ -126,6 +127,18 @@ h1 {
 
   .hero {
     padding: 15px;
+  }
+
+  .heading {
+    height: 65px;
+    width: 95%;
+    background-color: rgb(40, 40, 154);
+    color: white;
+    text-align: center;
+    text-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
   }
 
   .submit-button {
