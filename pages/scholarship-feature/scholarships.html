@@ -12,6 +12,44 @@
 </head>
 
 <body>
+
+    <div class="gtranslate_wrapper"></div>
+    <script>
+    window.gtranslateSettings = {
+      "default_language":"en",
+      "detect_browser_language":true,
+      "wrapper_selector":".gtranslate_wrapper"
+    }
+    </script>
+    <script 
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+<main>
+    <section class="hero">
+        <h1>Scholarships</h1>
+        <p class="subtext">
+            Find scholarships that match your academic profile and needs.
+        </p>
+    </section>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+    </div>
+
+    <div id="scholarship-container" class="scholarship-container"></div>
+
+    <div class="pagination">
+        <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-btn" onclick="changePage(1)">Next</button>
+    </div>
+
+    <div id="scholarship-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <div id="modal-info"></div>
+
     <main>
         <section class="hero">
             <h1>Scholarships</h1>
@@ -22,6 +60,7 @@
 
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+
         </div>
 
         <div id="scholarship-container" class="scholarship-container"></div>
@@ -38,7 +77,7 @@
                 <div id="modal-info"></div>
             </div>
         </div>
-
+        
         <script>
             const container = document.getElementById('scholarship-container');
             const modal = document.getElementById('scholarship-modal');
@@ -192,6 +231,7 @@
 
             document.addEventListener('DOMContentLoaded', fetchAndProcessExcel);
         </script>
+        
     </main>
 
     <script src="/scripts/componentLoader.js"></script>

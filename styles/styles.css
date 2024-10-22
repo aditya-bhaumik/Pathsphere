@@ -5,13 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
  
 * {
-
   margin:  0;
   padding:  0;
   box-sizing:  border-box;
   scrollbar-width:  none;
-  
-
 }
  
 body {
@@ -29,9 +26,12 @@ body {
 
 /*Testimonial section*/
 #testimonials {
+  width: 80%;
   background-color: #f8f9fa;
-  padding: 80px 0;
+  padding: 30px 0;
+  margin: 60px 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 10px;
 }
 
 .container {
@@ -501,9 +501,14 @@ nav ul li a:hover {
 
 main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .hero {
+  width: 100%;
   color: var(--primary-color);
   text-align: center;
   padding: 100px 20px;
@@ -559,26 +564,44 @@ main {
   border-radius: 5px;
 }
 
-.features {
+.feature-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 75px 0;
+}
+
+.features {
+  width: 80%;
+  display: flex;
+  justify-content: center;
   padding: 20px;
   background: var(--primary-color);
   flex-wrap: wrap;
+  gap: 60px;
 }
 
 .feature {
   text-align: center;
   padding: 20px;
-  background: var(--secondary-color);
-  border-radius: 5px;
+  border: 1px solid #9ecfb8;
+  border-radius: 25px;
   gap: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 30%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 300px;
   margin-bottom: 20px;
   transition: transform 0.2s;
-  background-color: #e7e7e7;
+  background-color: #e5fff3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.feature .feature-img{
+  width: 50px;
+  margin: 10px auto;
+}
+
 @media (max-width: 700px) {
   .features {
     display: flex;
@@ -630,10 +653,10 @@ main {
 
 .btn {
   display: inline-block;
-  background-color: #ffa500;
+  background-color: #359b6b;
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -1186,6 +1209,15 @@ h3 {
   justify-content: space-around;
 }
 
+.feature-item-box {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* margin: 50px 0; */
+}
+
 .feature-item {
   background: #fff;
   border-radius: 8px;
@@ -1194,6 +1226,7 @@ h3 {
   margin: 10px;
   flex: 1 1 calc(33.333% - 20px);
   display: flex;
+  justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
 }

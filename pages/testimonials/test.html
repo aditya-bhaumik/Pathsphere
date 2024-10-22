@@ -3,6 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Resume Builder Tool - Reviews, Testimonials & Popular Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        h1, h2 {
+            margin: 0;
+            padding: 1rem 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        .testimonial-grid, .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .testimonial, .service {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .testimonial:hover, .service:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial img, .service img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .testimonial h3, .service h3 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+        }
+        .testimonial p, .service p {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .rating {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background-color: #1a252f;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .stat-item {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .features {
+            background-color: #ecf0f1;
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature-item {
+            width: 30%;
+            min-width: 250px;
+            margin: 1rem;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: #34495e;
+        }
+        header {
+            position: relative;  /* Add this to ensure proper positioning of the home button */
+        }
+    </style>
+</head>
+<body>
+    <header>
+<!--         <a href="index.html" class="home-button">◀ Back to Home</a> -->
+        <h1>Professional Resume Builder Tool</h1>
+        <p class="subtitle">Create a standout resume with ease and confidence!</p>
+    </header>
+    <div class="container">
+        <section class="stats">
+            <div class="stat-item">
+                <div class="stat-number">20k+</div>
+                <div class="stat-label">Satisfied Users</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2M+</div>
+                <div class="stat-label">Resumes Created</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.9</div>
+                <div class="stat-label">User Rating</div>
+            </div>
+        </section>
+
+        <h2>What Our Users Are Saying</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <h3>Jessica M.</h3>
+                <div class="rating">★★★★★</div>
+                <p>"This resume builder has transformed my job application process. It's so simple yet effective!"</p>
+            </div>
+            <div class="testimonial">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <h3>David P.</h3>
+                <div class="rating">★★★★☆</div>
+                <p>"The templates made my resume look professional and polished. Highly recommend for job seekers!"</p>
+            </div>
+            <div class="testimonial">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <h3>Samantha K.</h3>
+                <div class="rating">★★★★★</div>
+                <p>"Building my resume was a breeze! The tool is incredibly user-friendly and offers tons of customization."</p>
+            </div>
+        </div>
+
+        <h2>Features Loved by Our Users</h2>
+        <div class="services-grid">
+            <div class="service">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                </div>
+                <h3>Professional Templates</h3>
+                <p>"The templates helped me structure my resume perfectly and stand out to recruiters."</p>
+            </div>
+            <div class="service">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/>
+                    </svg>
+                </div>
+                <h3>Customizable Sections</h3>
+                <p>"I loved how easy it was to customize my resume for each job I applied to."</p>
+            </div>
+            <div class="service">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                    </svg>
+                </div>
+                <h3>Real-Time Previews</h3>
+                <p>"Seeing changes in real-time helped me perfect my resume quickly."</p>
+            </div>
+        </div>
+
+        <section class="features">
+            <h2>Why Choose Our Resume Builder?</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Easy to Use</h3>
+                    <p>Our tool is designed to be simple and intuitive for everyone.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📄</div>
+                    <h3>ATS-Friendly Templates</h3>
+                    <p>Ensure your resume gets past the screening bots with optimized templates.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Tailored Suggestions</h3>
+                    <p>Receive helpful tips and suggestions based on your career field.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta">
+            <h2>Ready to Land Your Dream Job?</h2>
+            <p>Start creating your professional resume in minutes!</p> 
+            <a href="/pages/resume-builder/welcome.html" class="cta-button">Start Building Now ➡ </a>
+        </div>
+    </div>
+</body>
+</html>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Services Hub - Resume Builder, Scholarships & Jobs</title>
     <style>
         body {
