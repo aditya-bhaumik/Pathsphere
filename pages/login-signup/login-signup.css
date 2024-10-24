@@ -195,6 +195,88 @@ body {
     background-color: #aaa;
 }
 
+
+
+
+
+.btn1{
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0; /* Reduced gap around buttons */
+    border-radius: 50px; /* Make buttons round */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn1:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn1:disabled {
+    background-color: #aaa;
+}
+
+.btn1 a{
+    text-decoration: none;
+    color: #232836;
+}
+
+.btn2{
+    width: 100%;
+    padding: 12px;
+    background-color: #4267b2;;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0; /* Reduced gap around buttons */
+    border-radius: 50px; /* Make buttons round */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn2:hover {
+    background-color: #016dcb;
+    transform: translateY(-2px);
+}
+
+.btn2:disabled {
+    background-color: #aaa;
+}
+
+.btn2 a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.btn3{
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0; /* Reduced gap around buttons */
+    border-radius: 50px; /* Make buttons round */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn3:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+.btn3:disabled {
+    background-color: #aaa;
+}
+
+.btn3 a{
+    text-decoration: none;
+    color: #FFF;
+}
+
 .card-footer p {
     font-size: 12px;
     color: #666;
