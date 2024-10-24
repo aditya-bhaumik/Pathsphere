@@ -2,10 +2,94 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #3e3e3ef4;
     margin: 0;
     padding: 0;
+    
 }
+
+
+
+#heroid 
+{
+    background: linear-gradient(135deg, #3e3e3ef4, #000000e3 , #000000 ,#1b1b1bdf);
+    background-size: 300% 300%; 
+            animation: ga 10s ease infinite; 
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+}
+
+@keyframes ga {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+    
+}
+
+#herohead 
+{
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem; /* Large font size */
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    color: white;
+    opacity: 0; /* Start invisible for fade-in */
+    transform: scale(0.9); /* Slightly shrink for zoom-in effect */
+    text-align: center;
+    animation: fadeInZoom 4s ease-in-out forwards, glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes fadeInZoom {
+    0% { opacity: 0; transform: scale(0.7); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+#herohead:hover {
+    text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8);
+}
+
+#herocap 
+{
+            font-size: 1.2rem;
+            color: #d3d3d3;
+            margin-top: 0rem;
+            font-style: italic;
+            opacity: 0.5; 
+            animation: fadeInCaption 5s ease-in forwards 2s; 
+            text-align: center;
+            position: relative;
+            transition: color 0.4s ease; /* Smooth color transition on hover */
+}
+
+#herocap:hover {
+    color: #ffffff;
+}
+
+/* Underline Animation */
+#herocap::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Slightly below the text */
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+#herocap:hover::after {
+    width: 100%; /* Underline expands to full width */
+    left: 0;
+}
+@keyframes fadeInCaption {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 
 h1 {
     text-align: center;
@@ -17,17 +101,26 @@ p {
     text-align: center;
 }
 
+
+.search-bar 
+{
+    height:10%;
+    width:100%;
+}
+
+
 .scholarship-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    background-color: #e7e4e459;
 }
 
  
 /* Card styling */
 .card {
-    background: linear-gradient(145deg, #bc45c0, #09cff3); /* Blue and green gradient background */
+    background: linear-gradient(145deg, #000000, #5f5f5f); /* Blue and green gradient background */
     border-radius: 15px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); 
     margin: 15px; /* Reduced margin */
@@ -46,7 +139,7 @@ p {
 
 .card:hover {
     transform: scale(1.08) rotateZ(2deg); 
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 6px 6px 25px rgb(0, 0, 0);
 }
 
 /* Card image styling */
@@ -83,11 +176,11 @@ p {
 .card button {
     display: inline-block;
     padding: 10px 18px;
-    background-color: rgba(0, 0, 0, 0.8); 
-    color: white;
+    background-color: white; 
+    color: black;
     border-radius: 10px;
     text-decoration: none;
-    border: none;
+    border: solid black 1px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
@@ -97,7 +190,8 @@ p {
 
 .card a:hover,
 .card button:hover {
-    background-color:#8a2be2;
+    background-color:black;
+    color:white;
     transform: translateY(-6px); 
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
 }
@@ -112,19 +206,6 @@ p {
     transform: rotateY(3deg) scale(1.05);
     transition: transform 0.5s ease;
 }
-
-/* Input focus effect - turns background purple */
-
-input:focus {
-    background-color: #8a2be2; /* Purple background on focus */
-    outline: none; /* Removes default outline */
-    border: 2px solid #5d3fd3; /* Slight border on focus */
-    transition: background-color 0.3s ease; /* Smooth transition to purple */
-}
-
-
-
-
 
 /* Modal styling */
 
@@ -185,7 +266,7 @@ input:focus {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #248b6f;
+    background-color: #000000;
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -193,7 +274,7 @@ input:focus {
 }
 
 .modal a:hover {
-    background-color: #1c6057;
+    background-color: #343434;
 }
 
 
@@ -203,22 +284,32 @@ input:focus {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 40px;
     overflow: hidden;
-    max-width: 400px;
+    width: 550px;
+    height:70px;
+    padding:20px;
     margin: 20px auto;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #a9a9a9, #333333);
+    transition: width 0.5s ease, background-color 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar:hover {
+    width: 700px; /* Expands smoothly */
+    background: linear-gradient(90deg, #272727, #111111); /* Darker gradient on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+    color :white;
 }
 
 .search-bar input {
-    border: none;
+    border: black solid 1px;
+    color:#2f2f2f;
+    border-radius: 40px;
     padding: 10px;
     font-size: 16px;
     flex: 1;
-}
-
-.search-bar input:focus {
-    outline: none;
-    border: 1px solid #1c6057;
 }
 
 .pagination {
@@ -229,7 +320,7 @@ input:focus {
 }
 
 .pagination button {
-    background-color: #1c6057;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -240,7 +331,7 @@ input:focus {
 }
 
 .pagination button:hover {
-    background-color: #0056b3;
+    background-color: #535353;
     transform: scale(1.05);
 }
 

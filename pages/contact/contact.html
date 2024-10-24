@@ -45,6 +45,9 @@
                 name="name"
                 placeholder="Your Name"
                 required
+                pattern="[a-zA-Z ]+"
+                oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+                oninput="this.setCustomValidity('')"
               />
               <span class="error-message" id="nameError"></span>
             </div>
