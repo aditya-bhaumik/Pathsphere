@@ -8,10 +8,36 @@
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  #progress-container {
+  position: fixed ;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 7px;
+  width: 0;
+  background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+  box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+  transition: width 0.09s ease-in-out;
+  border-radius: 10px;
+}
+</style>
 </head>
 
 <body class="light">
   <div class="gtranslate_wrapper"></div>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
   <script>
     window.gtranslateSettings = {
       "default_language":"en",
@@ -330,6 +356,15 @@
   });
 
 
+</script>
+<script>
+
+  window.addEventListener('scroll', function () {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById('progress-bar').style.width = scrolled + '%';
+  });
 </script>
 
 </body>
