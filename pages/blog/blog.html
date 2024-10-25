@@ -21,6 +21,7 @@
       text-decoration: none;
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      justify-content: center;
      
     }
 
@@ -82,6 +83,8 @@
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png" />
     <link rel="stylesheet" href="./blog.css" />
     <link rel="stylesheet" href="/styles/essential.css" />
+    <!-- Add Swiper CSS in the <head> section -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     
   </head>
  
@@ -114,142 +117,104 @@
       <!-- Blogs Section Starts Here -->
       <section class="blogs-section" id="blogs">
         <h1 class="heading">Scholarship <span>Blogs</span></h1>
-        <div class="blogs-container">
-          <!-- Blog 1 -->
-          <div
-            class="blog-card"
-            onclick="redirectToBlog('https://example.com/blog1')"
-          >
-            <div class="blog-image">
-              <img src="/images/sc1.jpg" alt="Scholarship Blog 1" />
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Blog 1 -->
+                <div class="swiper-slide blog-card" onclick="redirectToBlog('https://example.com/blog1')">
+                    <div class="blog-image">
+                        <img src="/images/sc1.jpg" alt="Scholarship Blog 1" />
+                    </div>
+                    <div class="blog-content">
+                        <h3>Kishore Vaigyanik Protsahan Yojana (KVPY):</h3>
+                        <p>Funded by the Department of Science and Technology (DST), KVPY encourages students pursuing careers in research in basic sciences.</p>
+                        <div class="button-wrapper">
+                          <a href="https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/school/kishore-vaigyanik-protsahan-yojana-kvpy" class="neat-button" target="_blank" style="margin-top: 50px;">Visit</a>
+                          <a onclick="copyLink('https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/school/kishore-vaigyanik-protsahan-yojana-kvpy')" class="neat-button" target="_blank" style="margin-top: 50px;">Copy Link</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="swiper-slide blog-card" onclick="redirectToBlog('https://example.com/blog2')">
+                    <div class="blog-image">
+                        <img src="/images/sc2.webp" alt="Scholarship Blog 2" />
+                    </div>
+                    <div class="blog-content">
+                        <h3>National Means Cum Merit Scholarship (NMMS)</h3>
+                        <p>Offered by the Government of India to economically weaker students. Open for: Class 9 students with a family income below ₹1.5 lakh per annum. Scholarship Amount: ₹12,000 per annum.</p>
+                        <div class="button-wrapper">
+                        <a href="https://www.buddy4study.com/article/nmms" class="neat-button" target="_blank" style="margin-top: 23px;">Visit</a>
+                        <a onclick="copyLink('https://www.buddy4study.com/article/nmms')" class="neat-button" target="_blank" style="margin-top: 23px;">Copy Link</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="swiper-slide blog-card" onclick="redirectToBlog('https://example.com/blog3')">
+                    <div class="blog-image">
+                        <img src="/images/sc3.jpeg" alt="Scholarship Blog 3" />
+                    </div>
+                    <div class="blog-content">
+                        <h3>Prime Minister's Scholarship Scheme (PMSS)</h3>
+                        <p>Provided to the children of ex-servicemen and ex-coast guard personnel. Scholarship Amount: ₹2,500 to ₹3,000 per month.</p>
+                        <div class="button-wrapper">
+                          <a href="https://www.desw.gov.in/prime-ministers-scholarship-scheme-pmss" class="neat-button" target="_blank" style="margin-top: 50px;">Visit</a>
+                          <a onclick="copyLink('https://www.desw.gov.in/prime-ministers-scholarship-scheme-pmss')" class="neat-button" target="_blank" style="margin-top: 50px;">Copy Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide blog-card" onclick="redirectToBlog('https://example.com/blog4')">
+                  <div class="blog-image">
+                    <img src="/images/sc4.jpg" alt="Scholarship Blog 4" />
+                  </div>
+                  <div class="blog-content">
+                    <h3>Central Sector Scheme of Scholarships for College and University Students</h3>
+                    <p>Managed by the Ministry of Education for meritorious students from economically weaker sections. Scholarship Amount: ₹10,000 per annum (UG), ₹20,000 per annum (PG).</p>
+                    <div class="button-wrapper">
+                      <a href="https://www.education.gov.in/scholarships-education-loan-0" class="neat-button" target="_blank">Visit</a>
+                      <a onclick="copylink('https://www.education.gov.in/scholarships-education-loan-0')" class="neat-button" target="_blank">Copy Link</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Blog 5 -->
+                <div class="swiper-slide blog-card" onclick="redirectToBlog('https://example.com/blog5')">
+                  <div class="blog-image">
+                    <img src="/images/sc5.jpg" alt="Scholarship Blog 5" />
+                  </div>
+                  <div class="blog-content">
+                    <h3>AICTE Pragati Scholarship for Girls</h3>
+                    <p>Aimed at promoting the education of girl students in technical fields. Open for: Girl students in their first year of a technical diploma or degree program. Scholarship Amount: ₹30,000 per annum + tuition fees.</p>
+                    <div class="button-wrapper">
+                      <a href="https://www.buddy4study.com/page/aicte-pragati-scholarship-for-girls" class="neat-button" target="_blank">Visit</a>
+                      <a onclick="copylink('https://www.buddy4study.com/page/aicte-pragati-scholarship-for-girls')" class="neat-button" target="_blank">Copy Link</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Blog 6 -->
+                <div class="swiper-slide blog-card" onclick="redirectToBlog('https://example.com/blog6')">
+                  <div class="blog-image">
+                    <img src="/images/sc6.jpg" alt="Scholarship Blog 6" />
+                  </div>
+                  <div class="blog-content">
+                    <h3>Inspire Scholarship</h3>
+                    <p>Part of the Innovation in Science Pursuit for Inspired Research (INSPIRE) program by the Department of Science and Technology. Scholarship Amount: ₹80,000 per annum.</p>
+                    <div class="button-wrapper">
+                      <a href="https://online-inspire.gov.in/" class="neat-button" target="_blank">Visit</a>
+                      <a onclick="copylink('https://online-inspire.gov.in/')"class="neat-button">Copy Link</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add more blogs as swiper-slide here -->
             </div>
-            <div class="blog-content">
-              <h3>Kishore Vaigyanik Protsahan Yojana (KVPY):</h3>
-              <p>
-                Funded by the Department of Science and Technology (DST), KVPY
-                encourages students pursuing careers in research in basic
-                sciences.
-              </p>
-              <a href="https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/school/kishore-vaigyanik-protsahan-yojana-kvpy" 
-              class="neat-button" target="_blank"style="margin-top: 50px;">
-            Visit
-           </a>
+            <!-- Add Pagination -->
+            <div class="pagination-wrapper">
+              <div class="swiper-button swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button swiper-button-next"></div>
             </div>
-          </div>
-
-          <!-- Blog 2 -->
-          <div
-            class="blog-card"
-            onclick="redirectToBlog('https://example.com/blog2')"
-          >
-            <div class="blog-image">
-              <img src="/images/sc2.webp" alt="Scholarship Blog 2" />
-            </div>
-            <div class="blog-content">
-              <h3>National Means Cum Merit Scholarship (NMMS)</h3>
-              <p>
-                Offered by the Government of India to economically weaker
-                students.Open for: Class 9 students with a family income below
-                ₹1.5 lakh per annum.Scholarship Amount: ₹12,000 per annum.
-              </p>
-              <a href="https://www.buddy4study.com/article/nmms"
-              class="neat-button" target="_blank" style="margin-top: 23px;">
-            Visit
-           </a>
-            </div>
-          </div>
-
-          <!-- Blog 3 -->
-          <div
-            class="blog-card"
-            onclick="redirectToBlog('https://example.com/blog2')"
-          >
-            <div class="blog-image">
-              <img src="/images/sc3.jpeg" alt="Scholarship Blog 2" />
-            </div>
-            <div class="blog-content">
-              <h3>Prime Minister's Scholarship Scheme (PMSS)</h3>
-              <p>
-                Provided to the children of ex-servicemen and ex-coast guard
-                personnel.Scholarship Amount: ₹2,500 to ₹3,000 per month.
-              </p>
-              <a href="https://www.desw.gov.in/prime-ministers-scholarship-scheme-pmss" 
-              class="neat-button" target="_blank" style="margin-top: 50px;">
-            Visit
-           </a>
-            </div>
-          </div>
-
-          <!--Blog4-->
-          <div
-            class="blog-card"
-            onclick="redirectToBlog('https://example.com/blog2')"
-          >
-            <div class="blog-image">
-              <img src="/images/sc4.jpg" alt="Scholarship Blog 2" />
-            </div>
-            <div class="blog-content">
-              <h3>
-                Central Sector Scheme of Scholarships for College and University
-                Students
-              </h3>
-              <p>
-                Managed by the Ministry of Education for meritorious students
-                from economically weaker sections.Scholarship Amount: ₹10,000
-                per annum (UG), ₹20,000 per annum (PG).
-              </p>
-              <a href="https://www.education.gov.in/scholarships-education-loan-0" 
-              class="neat-button" target="_blank">
-            Visit
-           </a>
-            </div>
-          </div>
-
-          <!--Blog5-->
-          <div
-            class="blog-card"
-            onclick="redirectToBlog('https://example.com/blog2')"
-          >
-            <div class="blog-image">
-              <img src="/images/sc5.jpg" alt="Scholarship Blog 2" />
-            </div>
-            <div class="blog-content">
-              <h3>AICTE Pragati Scholarship for Girls</h3>
-              <p>
-                Aimed at promoting the education of girl students in technical
-                fields.Open for: Girl students in their first year of a
-                technical diploma or degree program.Scholarship Amount: ₹30,000
-                per annum + tuition fees.
-              </p>
-              <a href="https://www.buddy4study.com/page/aicte-pragati-scholarship-for-girls" 
-              class="neat-button" target="_blank">
-            Visit
-           </a>
-            </div>
-          </div>
-
-          <!--Blog6-->
-          <div
-            class="blog-card"
-            onclick="redirectToBlog('https://example.com/blog2')"
-          >
-            <div class="blog-image">
-              <img src="/images/sc6.jpg" alt="Scholarship Blog 2" />
-            </div>
-            <div class="blog-content">
-              <h3>Inspire Scholarship</h3>
-              <p>
-                Part of the Innovation in Science Pursuit for Inspired Research
-                (INSPIRE) program by the Department of Science and
-                Technology.Scholarship Amount: ₹80,000 per annum.
-              </p>
-              <a href="https://online-inspire.gov.in/" 
-              class="neat-button" target="_blank">
-            Visit
-           </a>
-            </div>
-          </div>
         </div>
+         <!-- Add Navigation -->
+        
       </section>
       <!-- Blogs Section Ends Here -->
 
@@ -282,6 +247,7 @@
     </script>
     <script src="./blog.js"></script>
     <div class="circle-container">
+      <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
@@ -375,5 +341,58 @@
   
   
     </script>
+    <!-- Add Swiper JS before the closing </body> tag -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+          },
+          pagination: {
+              el: '.swiper-pagination',
+          },
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+      });
+      function copyLink(url) {
+  navigator.clipboard.writeText(url)
+    .then(() => {
+      // Create and show toast notification
+      const toast = document.createElement('div');
+      toast.className = 'toast toast-success';
+      
+      const icon = document.createElement('span');
+      icon.className = 'toast-icon';
+      icon.innerHTML = '✓ ';
+      
+      const message = document.createElement('span');
+      message.className = 'toast-message';
+      message.textContent = 'Link copied to clipboard!';
+      
+      toast.appendChild(icon);
+      toast.appendChild(message);
+      
+      const toastContainer = document.getElementById('toast-container');
+      toastContainer.appendChild(toast);
+      
+      // Remove toast after 3 seconds
+      setTimeout(() => toast.remove(), 3000);
+    });
+}
+
+
+
+    </script>
+
   </body>
 </html>
