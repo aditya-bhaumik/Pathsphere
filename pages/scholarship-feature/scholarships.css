@@ -1,5 +1,4 @@
 /* General body and typography settings */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -17,6 +16,7 @@ p {
     text-align: center;
 }
 
+/* Scholarship container */
 .scholarship-container {
     display: flex;
     flex-wrap: wrap;
@@ -24,61 +24,54 @@ p {
     padding: 20px;
 }
 
- 
 /* Card styling */
 .card {
-    background: linear-gradient(145deg, #bc45c0, #09cff3); /* Blue and green gradient background */
+    background: linear-gradient(145deg, #f8f7f8, #f1f5f5); /* Blue and green gradient background */
     border-radius: 15px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); 
     margin: 15px; /* Reduced margin */
     width: 270px; /* Slightly smaller width */
     padding: 15px; /* Reduced padding */
     transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
-    color: #fff;
-    font-family: "Arial", sans-serif;
+    color: #0c0c0c;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Card hover effect - turns pink on hover */
-
+/* Card hover effect */
 .card:hover {
-    transform: scale(1.08) rotateZ(2deg); 
+   
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 /* Card image styling */
-
 .card img {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
     width: 100%;
-    height: 150px; /* Smaller image to reduce height */
+    height: 150px; /* Maintain smaller height */
     object-fit: cover;
     margin-bottom: 10px; /* Reduced margin below the image */
 }
 
 /* Card heading */
-
 .card h2 {
     font-size: 18px; /* Slightly smaller font */
-    color: #f9f9f9;
+    color: #1b1a1a;
 }
 
 /* Card paragraph */
-
 .card p {
-    color: #ccc;
+    color: #111111;
     font-size: 14px; /* Reduced font size */
     margin: 8px 0; /* Smaller margin */
     line-height: 1.4; /* Slightly tighter line spacing */
 }
 
 /* Button styling inside card */
-
 .card a,
 .card button {
     display: inline-block;
@@ -94,27 +87,14 @@ p {
 }
 
 /* Hover effect for buttons */
-
 .card a:hover,
 .card button:hover {
-    background-color:#8a2be2;
+    background-color: #8a2be2; /* Change hover color */
     transform: translateY(-6px); 
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
-/* Card transition effects */
-
-.card {
-    perspective: 1000px;
-}
-
-.card:hover {
-    transform: rotateY(3deg) scale(1.05);
-    transition: transform 0.5s ease;
-}
-
-/* Input focus effect - turns background purple */
-
+/* Input focus effect */
 input:focus {
     background-color: #8a2be2; /* Purple background on focus */
     outline: none; /* Removes default outline */
@@ -122,12 +102,7 @@ input:focus {
     transition: background-color 0.3s ease; /* Smooth transition to purple */
 }
 
-
-
-
-
 /* Modal styling */
-
 .modal {
     display: none;
     position: fixed;
@@ -141,9 +116,7 @@ input:focus {
     align-items: center;
 }
 
-
 /* Modal content box */
-
 .modal-content {
     background-color: white;
     padding: 20px;
@@ -152,9 +125,7 @@ input:focus {
     width: 90%;
 }
 
-
 /* Close button for modal */
-
 .close-btn {
     float: right;
     cursor: pointer;
@@ -170,17 +141,13 @@ input:focus {
     margin-top: 0;
 }
 
-
 /* Modal text */
-
 .modal p {
     font-size: 16px;
     color: #333;
 }
 
-
 /* Modal apply button */
-
 .modal a {
     display: inline-block;
     margin-top: 10px;
@@ -196,9 +163,7 @@ input:focus {
     background-color: #1c6057;
 }
 
-
 /* Search bar styling */
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -221,6 +186,7 @@ input:focus {
     border: 1px solid #1c6057;
 }
 
+/* Pagination */
 .pagination {
     display: flex;
     justify-content: center;
