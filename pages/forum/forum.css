@@ -1,163 +1,159 @@
 
-/* Overall container styling */
-.container {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #f7f7f7;
-  position: relative;
+body, html {
+    
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+.container-fluid, .row ,.col-12{
+    height: 100%;
+    width:100%;
+    background-color: #ffffff;
 }
 
-/* Main title styling */
-.container h1 {
-  text-align: center;
-  color: #97136e; /* Keeping your original color */
-  font-size: 2.5rem;
-}
-.content1{
-  top: 30%;
-  position: absolute;
-  transform: translateY(-50%);
-  color: #fff;
-}
-.content1 h1{
-  font-size: 100px;
-  font-weight: 600;
-}
-.content1 h1:hover{
-  color: #ffbb00;
-
-}
-.content1 h2{
-  font-size: 30px;
-  font-weight: 600;
-  padding-left: 5pc;
-}
-.content1 h2 span{
-  padding-top: 40px;
-  color: #ffbb00;
+.community-forum
+{
+    background-image: url("./forum.images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg");
+    background-size: cover;
+    height:90vh;
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+    
 }
 
-/* Forum sections layout */
-.sections {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-  position: relative;
+.com-head 
+{
+    
+    color:white;
+    font: 5rem Afacad Flux;
+    font-weight:lighter;
+    font-size: 3.5rem;
+    /* -webkit-text-stroke: 2px white; */
+    text-shadow: 4px 4px 8px rgba(71, 70, 70, 0.922);
 }
-.hero1 {
-  width: 100vw;
-  height: 120vh;
-  background-image: url(https://github.com/shriyadindi/comingsoonpage/blob/main/background.png?raw=true);
-  background-position: center;
-  background-size: cover;
-  padding: 0 8%;
+.com-head2 
+{
+    color:white;
+    font: 1.5rem Arial;
+    margin-top: 30px;;
 }
-.hero1 .left {
-  width: 100%;
+.com-pera 
+{
+    color:white;
+    font-size:1rem;
+    text-decoration: wavy;
+    font-style: italic;
 }
-.hero1 .right {
-  width: 40%;
+
+.com-diss 
+{
+    text-align: center;
+    margin:5%;
+    font-style:italic;
+    background-color:#e9e9e9;
+    border-radius:50px;
+    height:15%;
+    padding-top:10px;
+    border:black solid 1px;
 }
-.hero1 .right img {
-  width: 500px;
-  height: 300px;
+
+.diss 
+{
+    height:60%;
+    width:94%;
+    margin:3%;
+    /* margin-right:4%; */
+    padding:25px;
+    border-radius:15px;
+    background-color:rgb(241, 241, 241);
+    border:rgb(166, 166, 166) solid 2px;
+    margin-top:6%;
+    margin-bottom:100px;
+    box-shadow: 10px 15px #c9c9c9;
 }
-.rocket{
-  width: 250px;
-  position: absolute;
-  right: 5%;
-  bottom: 0;
-  animation: rocket 4s linear infinite;
+
+.diss-head
+{
+    text-align: center;
+    font-family:Monaco;
+    font-size:2.5rem;
+    font-weight: bold;
 }
-@keyframes rocket{
-  0%{
-      bottom: 0;
-      opacity: 0;
+
+.diss-pera{
+    text-align: center;
+    font-family: Arial;
+    font-style: oblique;
+    color: #4d4d4d;
+    font-size:0.8rem;;
+}
+.diss-slides 
+{
+    height:60%;
+    width:100%;
+}
+
+.dis-card:hover {
+    background-color: white;
+    transform: scale(1.1); /* Enlarge on hover */
   }
-  100%{
-      bottom: 200%;
-      opacity: 1;
-  }
+.dis-card 
+{
+    height:100%;
+    width:90%;
+    margin:10px;
+    border:rgba(172, 172, 172, 0.551) solid 2px;
+    border-radius: 15px;
+    padding:15px;
+    box-shadow: 10px 15px #d7d7d7;
+    background-color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
-/* Forum-section cards */
-.forum-section {
-  background-color: #fff;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  width: 28%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  position: relative;
+.diss-top 
+{
+    font-size:25px;
+    font-weight: 500;
+    
 }
-
-.forum-section:hover {
-  transform: scale(1.05);
+.posted 
+{
+    font-size: 10px;;
+    font-weight: bold;
+    font-style: oblique;
+    color:#767575;
 }
-
-/* Forum-section title and paragraph */
-.forum-section h2 {
-  color: #ffbb00; /* Yellow theme */
-  margin-bottom: 10px;
+.join 
+{
+    width:30%;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color:white;
+    font-weight: bold;
+    border:none;
+    transition: transform 0.2s ease;
 }
-
-.forum-section p {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-/* Forum posts inside cards */
-.forum-post {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.post-title {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.post-details {
-  color: #888;
-  font-size: 0.9rem;
-}
-
-/* New Post button */
-.new-post-button {
-  display: inline-block;
-  background-color: #ffbb00; /* Yellow theme */
-  color: #333;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.new-post-button:hover {
-  background-color: #ffbb00;
-}
-
-/* Responsive design */
-@media screen and (max-width: 900px) {
-  .sections {
-    flex-direction: column;
-    position: relative;
-    align-items: center;
+.join:active {
+    background-color:white;
+    color:#000000;
+    transform: scale(0.95); 
   }
 
-  .forum-section {
-    width: 70vw;
-    position: relative;
-  }
+.more {
+
+    width:20%;
+    height:50%;
+    border-radius: 10px;
+    color:white;
+    background-color: black;
+    cursor: pointer;
+      transition: all 0.3s ease;
 }
+
+.more:hover {
+    background-color: #ffffff;
+    color:black;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }

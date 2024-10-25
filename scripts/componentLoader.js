@@ -216,5 +216,4 @@ const init = async () => {
   await prependComponent('GlobalStyles');
   await prependComponent('GlobalScripts');
 };
-
 init();
