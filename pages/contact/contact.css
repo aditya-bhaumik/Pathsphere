@@ -145,3 +145,14 @@ h1 {
     width: 100%;
   }
 }
+
+.map-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.map {
+  width: 48%; /* Adjust width as necessary */
+  height: 300px; /* Set a fixed height for the maps */
+  border: 0; /* Remove border */
+}
