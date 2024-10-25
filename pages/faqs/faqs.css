@@ -81,7 +81,8 @@ h6 {
 }
 
 .title {
-  font-size: 40px;
+  color:white;
+  font-size: 35px;
   font-weight: 500;
   line-height: 127.5%;
   position: relative;
@@ -89,11 +90,12 @@ h6 {
   left: 290px; */
   margin-top: 130px;
   margin-left: 135px;
-  left: 400px;
+  left: 220px;
   text-transform: capitalize;
   display: inline-flex;
   font-family: Space Grotesk;
-  padding: 0 7px 0 7px;
+  padding: 3px 10px 3px 10px;
+  text-align: center;
 }
 @media (max-width: 1010px) {
   .title {
@@ -115,7 +117,7 @@ h6 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: #b9ff66;
+  background-color:rgb(0, 0, 0);
   border-radius: 0.4375rem;
 }
 
@@ -131,7 +133,7 @@ h6 {
 
 /* Process */
 .process {
-  padding: 70px 0 70px 0;
+  padding: 100px 0 100px 0;
   font-family: Space Grotesk;
 }
 @media (max-width: 767.98px) {
@@ -160,7 +162,7 @@ h6 {
 .accordions__list {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1rem;
 }
 @media (max-width: 479.98px) {
   .accordions__list {
@@ -169,13 +171,17 @@ h6 {
 }
 
 .accordions__item {
+ 
   background-color: #f3f3f3;
-  border-radius: 2.8rem;
+  border-radius: 1.5rem;
   overflow: hidden;
   transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
-  box-shadow: 0px 0.3125rem 0px 0px #191a23;
-  border: 0.0625rem solid #191a23;
+  box-shadow: 0px 0.3125rem 0px 0px #3f3f3f;
+  border: 0.0625rem solid #161616;
   margin-top: 22px;
+  width:90%;
+  margin-left: 5%;
+  
 }
 @media (max-width: 479.98px) {
   .accordions__item {
@@ -191,6 +197,7 @@ h6 {
   align-items: center;
   padding: 40px 60px;
   width: 100%;
+  height:50px;
   position: relative;
 }
 @media (max-width: 767.98px) {
@@ -205,7 +212,7 @@ h6 {
 }
 
 .accordions__number {
-  font-size: 60px;
+  font-size: 25px;
   font-family: Space Grotesk;
   padding-right: 1.5625rem;
   font-weight: 500;
@@ -224,7 +231,7 @@ h6 {
 
 .accordions__title {
   font-family: Space Grotesk;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
   flex: 1 1 auto;
@@ -295,7 +302,7 @@ h6 {
 
 .accordions__content {
   padding: 0 60px 0 60px;
-  max-height: 0;
+  max-height:0px;
   overflow: hidden;
   will-change: max-height;
   transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
@@ -329,7 +336,8 @@ h6 {
 }
 
 .open {
-  background-color: #b9ff66;
+  background-color: #000000;
+  color:#ffffff;
 }
 
 .open .accordions__icon {
@@ -368,4 +376,65 @@ h6 {
 }
 .scroll-top:hover .fa-arrow-up {
 	transform: translateY(-4px);
+}
+
+.userque 
+{
+  height:250px;;
+  width: 50%;
+  background-color: #f3f1f1;
+  margin-top:100px;
+  margin-left:300px;
+  border-radius:20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+}
+.userquehead
+{
+  font-size: 30px;
+  font-weight: bold;
+  margin:40px;
+  margin-bottom: 0px;
+}
+.quearea 
+{
+  height: 18%;
+  width:80%;
+  font-size: 17px;
+  padding:10px;
+  margin:auto;
+  margin-top: 25px;
+  margin-bottom:25px;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  border : solid 1px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.quearea:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.4); /* Add a stronger shadow */
+  border : solid 2px rgb(0, 0, 0);
+}
+.quesend 
+{
+  height:18%;
+  width:20%;
+  background-color: #000000;
+  color:#ffffff;
+  font-style: italic;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 38%;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.quesend:hover {
+  transform: scale(1.1); /* Makes the button slightly bigger on hover */
+}
+
+.quesend:active {
+  background-color: #ffffff; /* Switch background color on click */
+  color: #000000; /* Switch text color on click */
 }
