@@ -71,6 +71,7 @@ body {
 }
 .search-button 
 {
+    margin-left: 2%;
     width:17%;
     height:90%;
     background-color: #ffffff;
@@ -220,4 +221,77 @@ body {
 {
     height:20%;
     width:100%;
+}
+
+/* Dark mode styles */
+.darkmode .container-fluid{
+    background-color: black;
+}
+.darkmode .heading-head{
+    color: white;
+}
+.darkmode .job-card{
+    background-color: transparent;
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 9px 3px aqua;
+}
+.darkmode .searching{
+    border: 2px solid aqua;
+}
+.darkmode .search-button{
+    background-color: aqua;
+}
+.darkmode .search-button:hover{
+    background-color: rgb(255, 153, 0);
+}
+.darkmode h4{
+    color: white;
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 9px 3px aqua;
+    padding: 8px;
+    border-radius: 25px;
+}
+.darkmode .apply-button{
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 9px 3px aqua;
+}
+.darkmode .apply-button:hover{
+    background-color: rgb(255, 153, 0);
+    color: #000000;
+}
+.darkmode .loading{
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 9px 3px aqua;
+}
+.darkmode .loading:hover{
+    background-color: rgb(255, 153, 0);
+    color: #000000;
+}
+.darkmode #icons{
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10%;
+}
+.darkmode header{
+    background-color: black;
+    border: 2px solid aqua;
+}
+.darkmode a{
+    color: aqua !important;
+}
+.darkmode a:hover{
+    color: yellow !important;
+    text-decoration: none;
+}
+
+/* Media queries for dark mode */
+@media (max-width: 1500px){
+    .darkmode .job-card{
+        margin-right: 2% !important;
+    }
+}
+@media (max-width: 992px){
+    .darkmode .job-card{
+        margin-right: 2% !important;
+    }
 }
