@@ -21,12 +21,14 @@
             </button>
             <div class="menu">
                 <ul id="tabs">
+
                     <li class="tab"><a href="./index.html">Home</a></li>
                     <li class="tab"><a href="./pages/scholarship-feature/scholarships.html">Scholarships</a></li>
                     <li class="tab"><a href="./pages/jobs/jobs.html">Jobs</a></li>
                     <li class="tab"><a href="./pages/forum/forum.html">Forum</a></li>
                     <li class="tab"><a href="./pages/faqs/faqs.html">FAQs</a></li>
                     <li class="tab"><a href=./pages/blog/blog.html">Blog</a></li>
+
                     <li class="tab">
                         <a href="./pages/login-signup/login-signup.html">
                             <i class="fa-solid fa-sign-in-alt"></i> Login
@@ -37,6 +39,94 @@
             <img src="./images/dark.png" id="icon" alt="Dark mode toggle" />
         </nav>
     </header>
+
     <script src="./components/Navbar/Navbar.js"></script>
+
+
+    <style>
+        /* Default (Light Mode) */
+/* Dark Mode Styles */
+body.darkmode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+}
+
+/* Text Color for Headings and Paragraphs */
+.darkmode h1,
+.darkmode h2,
+.darkmode h3,
+.darkmode p,
+.darkmode li {
+    color: #ffffff; /* Light text color for headings, paragraphs, and list items */
+}
+
+/* Specific adjustments for different sections/pages */
+.home.darkmode h1,
+.home.darkmode h2,
+.home.darkmode h3,
+.home.darkmode p,
+.faq.darkmode h1,
+.faq.darkmode h2,
+.faq.darkmode h3,
+.faq.darkmode p,
+.blog.darkmode h1,
+.blog.darkmode h2,
+.blog.darkmode h3,
+.blog.darkmode p {
+    color: #ffffff; /* Ensuring text color is white for these specific sections */
+}
+
+/* Links */
+.darkmode a {
+    color: #1e90ff; /* Light blue for links to ensure visibility */
+}
+
+/* Adjustments for Buttons */
+.darkmode .button {
+    background-color: #1f1f1f; /* Button background */
+    color: #ffffff; /* Button text color */
+}
+
+/* Additional elements you may have */
+.darkmode input,
+.darkmode textarea {
+    background-color: #2c2c2c; /* Input background */
+    color: #ffffff; /* Input text color */
+    border: 1px solid #444444; /* Input border color */
+}
+
+/* Placeholder text color */
+.darkmode input::placeholder,
+.darkmode textarea::placeholder {
+    color: #aaaaaa; /* Lighter color for placeholders */
+}
+
+/* Card or section backgrounds */
+.darkmode .card,
+.darkmode .section {
+    background-color: #1f1f1f; /* Background for cards or sections */
+    color: #ffffff; /* Text color for these elements */
+}
+
+/* Scrollbar for dark mode */
+.darkmode ::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.darkmode ::-webkit-scrollbar-track {
+    background: #2c2c2c; /* Track background */
+}
+
+.darkmode ::-webkit-scrollbar-thumb {
+    background: #555555; /* Thumb background */
+}
+
+/* Optional: Transition for smoother effect */
+body {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+    </style>
+
 </body>
 </html>

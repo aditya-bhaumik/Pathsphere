@@ -259,7 +259,38 @@ textarea.comment-input {
             "wrapper_selector": ".gtranslate_wrapper"
         };
     </script>
+
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+    <script 
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+<main>
+    <section class="hero" id = "heroid">
+        <h1 id="herohead">Scholarships</h1>
+        <p class="subtext" id="herocap">
+            "Investing in Tomorrow's Leaders, Fueling Innovation Through Education"
+        </p>
+    </section>
+
+    <div class="search-bar" id="searchid">
+        <input type="text" id="searchInput" placeholder="Search for scholarships..." aria-label="Search Scholarships" onkeyup="filterScholarships()" />
+    </div>
+
+    <div id="scholarship-container" class="scholarship-container"></div>
+
+    <div class="pagination">
+        <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-btn" onclick="changePage(1)">Next</button>
+    </div>
+
+    <div id="scholarship-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <div id="modal-info"></div>
+
 
     <main>
         <section class="hero">

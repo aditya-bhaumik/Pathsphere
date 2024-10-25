@@ -1,10 +1,12 @@
 const hamburger = document.getElementsByClassName("hamburger")[0];
 const menu = document.getElementsByClassName("menu")[0];
+const icon = document.getElementById("icon");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   menu.classList.toggle("active");
 });
+
 
 let icon = document.getElementById("icon");
 window.onload = function () {
@@ -26,5 +28,10 @@ icon.onclick = function () {
   } else {
     icon.src = "./images/dark.png";
     localStorage.setItem("theme", "light");
+
   }
 };
+
+// Assign the click event to the icon for toggling dark mode
+icon.onclick = toggleDarkMode;
+

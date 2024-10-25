@@ -30,6 +30,53 @@
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
       text-decoration: none;
     }
+
+    .animated-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animated-button:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .animated-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .animated-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .animated-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
   </style>
     <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="./images/pathsphere.png" />
@@ -37,8 +84,9 @@
     <link rel="stylesheet" href="./styles/essential.css" />
     
   </head>
-
+ 
   <body>
+    
     <div class="gtranslate_wrapper"></div>
     <script>
     window.gtranslateSettings = {
@@ -55,6 +103,7 @@
       <!-- hero section -->
       <section class="hero">
         <div class="left">
+          <a href="/pages/blog/write_your_blog.html" class="animated-button">Your Blog</a>
           <h1>Scholarship Blogs</h1>
           <p>
             Your Ultimate Guide to Scholarships: Funding Your Dreams Made Easy
