@@ -190,7 +190,7 @@ p {
 
 .card a:hover,
 .card button:hover {
-    background-color: blue;
+    background-color: black;
     color:white;
     transform: translateY(-6px); 
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
