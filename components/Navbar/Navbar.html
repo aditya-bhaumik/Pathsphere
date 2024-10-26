@@ -37,13 +37,7 @@
             <!-- Theme Switcher -->
             <div class="theme-switcher">
                 <input type="checkbox" id="theme-toggle" />
-                <label for="theme-toggle" class="switch">
-                    <span class="switch-circle"></span>
-                    <span class="switch-icon">
-                        <img src="/images/sun-icon.png" alt="Light mode icon" class="light-icon" />
-                        <img src="/images/moon-icon.png" alt="Dark mode icon" class="dark-icon" />
-                    </span>
-                </label>
+                <label for="theme-toggle" class="switch"></label>
             </div>
         </nav>
     </header>
@@ -137,8 +131,6 @@
         }
 
         .switch {
-            display: inline-flex;
-            align-items: center;
             position: relative;
             width: 50px;
             height: 26px;
@@ -148,7 +140,8 @@
             transition: background-color 0.3s;
         }
 
-        .switch-circle {
+        .switch::before {
+            content: '';
             position: absolute;
             top: 3px;
             left: 3px;
@@ -156,31 +149,7 @@
             height: 20px;
             background-color: #fff;
             border-radius: 50%;
-            transition: left 0.3s;
-        }
-
-        .switch-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .light-icon,
-        .dark-icon {
-            width: 16px;
-            height: 16px;
-            transition: opacity 0.3s;
-        }
-
-        .light-icon {
-            opacity: 1;
-        }
-
-        .dark-icon {
-            opacity: 0;
+            transition: transform 0.3s;
         }
 
         /* Dark Mode Styling */
@@ -188,16 +157,8 @@
             background-color: #3d3d3d;
         }
 
-        #theme-toggle:checked + .switch .switch-circle {
-            left: 24px;
-        }
-
-        #theme-toggle:checked + .switch .light-icon {
-            opacity: 0;
-        }
-
-        #theme-toggle:checked + .switch .dark-icon {
-            opacity: 1;
+        #theme-toggle:checked + .switch::before {
+            transform: translateX(24px);
         }
 
         /* Dark Mode */
