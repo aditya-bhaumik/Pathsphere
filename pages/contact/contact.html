@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <link rel="stylesheet" href="/styles/styles.css" />
-    <!-- <base href="/Pathsphere/"> -->
-    <!-- uncomment above line if deploying to github pages -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
@@ -11,15 +10,27 @@
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png" />
     <link rel="stylesheet" href="./contact.css" />
     <link rel="stylesheet" href="/styles/essential.css" />
-  </head>
+    <style>
+        .map-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .map {
+            width: 48%; /* Adjust width as necessary */
+            height: 300px; /* Set a fixed height for the maps */
+            border: 0; /* Remove border */
+        }
+    </style>
+</head>
 
-  <body>
+<body>
     <div class="gtranslate_wrapper"></div>
     <script>
     window.gtranslateSettings = {
-      "default_language":"en",
-      "detect_browser_language":true,
-      "wrapper_selector":".gtranslate_wrapper"
+        "default_language":"en",
+        "detect_browser_language":true,
+        "wrapper_selector":".gtranslate_wrapper"
     }
     </script>
     <script 
@@ -27,174 +38,152 @@
       defer
     ></script>
     <main>
-      <section class="hero">
-        <h1>Contact Us</h1>
-        <p>Fill the below form,we will reach you out</p>
-      </section>
-      <section class="contact">
-        <div class="contact-form-container">
-          <div class="heading">
-            <h1>Submit your Details</h1>
-          </div>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required
-                pattern="[a-zA-Z ]+"
-                oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-                oninput="this.setCustomValidity('')"
-              />
-              <span class="error-message" id="nameError"></span>
+        <section class="hero">
+            <h1>Contact Us</h1>
+            <p>Fill the below form, we will reach you out</p>
+        </section>
+        <section class="contact">
+            <div class="contact-form-container">
+                <div class="heading">
+                    <h1>Submit your Details</h1>
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required pattern="[a-zA-Z ]+" oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')" oninput="this.setCustomValidity('')" />
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required />
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div id="successMessage" style="display: none; color: #921A40; font-size: 18px; margin-top: 20px;"></div>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <span class="error-message" id="emailError"></span>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Your Phone Number"
-                required
-              />
-              <span class="error-message" id="phoneError"></span>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                required
-              ></textarea>
-              <span class="error-message" id="messageError"></span>
-            </div>
-            <button type="submit" class="submit-button">Send Message</button>
-          </form>
-          <div id="successMessage" style="display: none; color: #921A40; font-size: 18px; margin-top: 20px;"></div>
-        </div>
-      </section>
-    </main>
+        </section>
 
-    <script src="/scripts/componentLoader.js"></script>
-    <script>
-        prependComponent('Navbar');
-        prependComponent('Cursor');
-        prependComponent('ScrollToTop');
-        appendComponent('Footer');
-        appendComponent('ChatBot');
-        waitTillComponentsLoaded();
-    </script>
- 
-    <script src="./contact.js"></script>
-    <div class="circle-container">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-    <style>
-      .circle {
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        pointer-events: none;
-        background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
-        transition: transform 0.1s, left 0.1s, top 0.1s;
-      }
-  
-      .circle-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 9999;
-      }
-    </style>
-  
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
-  
-        circles.forEach(function (circle) {
-          circle.x = 0;
-          circle.y = 0;
-        });
-  
-        window.addEventListener("mousemove", function (e) {
-          coords.x = e.pageX;
-          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-        });
-  
-        function animateCircles() {
-          let x = coords.x;
-          let y = coords.y;
-  
-          circles.forEach(function (circle, index) {
-            circle.style.left = `${x - 12}px`;
-            circle.style.top = `${y - 12}px`;
-            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-  
-            const nextCircle = circles[index + 1] || circles[0];
-            circle.x = x;
-            circle.y = y;
-  
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
-          });
-  
-          requestAnimationFrame(animateCircles);
-        }
-  
-        animateCircles();
-      });
-  
-  
-    </script>
-  </body>
+        <!-- Maps Section -->
+        <section class="maps">
+          <br>
+          <br>
+            <h2>Our Locations</h2>
+            <div class="map-container">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.5263247024!2d76.76357512440586!3d28.643684628180505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1729884082455!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3! 1d448196.5263247024!2d77.59457512440586!3d12.971684628180505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670cfa8f6df%3A0x8b4619298236e6!2sBangalore!5e0!3m2!1sen!2sin!4v1729884082455!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="map-container">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.5263247024!2d78.48657512440586!3d17.385684628180505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb92e3f164597%3A0x897a1a6f2a2a3!2sHyderabad!5e0!3m2!1sen!2sin!4v1729884082455!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.5263247024!2d72.83657512440586!3d18.972684628180505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306654165%3A0x1f573b3f662e6e!2sMumbai!5e0!3m2!1sen!2sin!4v1729884082455!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <script src="/scripts/componentLoader.js"></script>
+        <script>
+            prependComponent('Navbar');
+            prependComponent('Cursor');
+            prependComponent('ScrollToTop');
+            appendComponent('Footer');
+            appendComponent('ChatBot');
+            waitTillComponentsLoaded();
+        </script>
+        <script src="./contact.js"></script>
+        <div class="circle-container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <style>
+            .circle {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                pointer-events: none;
+                background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
+                transition: transform 0.1s, left 0.1s, top 0.1s;
+            }
+            .circle-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+ pointer-events: none;
+                z-index: 9999;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const coords = { x: 0, y: 0 };
+                const circles = document.querySelectorAll(".circle");
+                circles.forEach(function (circle) {
+                    circle.x = 0;
+                    circle.y = 0;
+                });
+                window.addEventListener("mousemove", function (e) {
+                    coords.x = e.pageX;
+                    coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+                });
+                function animateCircles() {
+                    let x = coords.x;
+                    let y = coords.y;
+                    circles.forEach(function (circle, index) {
+                        circle.style.left = `${x - 12}px`;
+                        circle.style.top = `${y - 12}px`;
+                        circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+                        const nextCircle = circles[index + 1] || circles[0];
+                        circle.x = x;
+                        circle.y = y;
+                        x += (nextCircle.x - x) * 0.3;
+                        y += (nextCircle.y - y) * 0.3;
+                    });
+                    requestAnimationFrame(animateCircles);
+                }
+
+                animateCircles();
+            });
+
+        </script>
+        
+    </body>
 </html>
