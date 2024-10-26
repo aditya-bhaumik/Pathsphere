@@ -175,7 +175,7 @@ p {
 .card a,
 .card button {
     display: inline-block;
-    padding: 10px 18px;
+    padding: 5px 10px;
     background-color: white; 
     color: black;
     border-radius: 10px;
@@ -190,7 +190,7 @@ p {
 
 .card a:hover,
 .card button:hover {
-    background-color:black;
+    background-color: black;
     color:white;
     transform: translateY(-6px); 
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
@@ -344,4 +344,26 @@ p {
     margin: 0 15px;
     font-size: 1.1em;
     font-weight: bold;
+}
+.card .buttons{
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+.read-more{
+    margin-left: 10px;
+}
+.card h4{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.comment-input{
+    height: 1.5rem;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.card .comments-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
