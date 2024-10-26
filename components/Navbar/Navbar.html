@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PathSphere Navbar</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav id="navbar">
-            
             <a href="/index.html" class="logo">
                 <img src="/images/logo.png" alt="PathSphere Logo" />
-                PathSphere</a>
+                PathSphere
+            </a>
             <button class="hamburger">
                 <span></span>
                 <span></span>
@@ -27,7 +27,6 @@
                     <li class="tab"><a href="/pages/forum/forum.html">Forum</a></li>
                     <li class="tab"><a href="/pages/faqs/faqs.html">FAQs</a></li>
                     <li class="tab"><a href="/pages/blog/blog.html">Blog</a></li>
-                    
                     <li class="tab">
                         <a href="/pages/login-signup/login-signup.html">
                             <i class="fa-solid fa-sign-in-alt"></i> Login
@@ -35,93 +34,195 @@
                     </li>
                 </ul>
             </div>
-            <img src="/images/dark.png" id="icon" alt="Dark mode toggle" />
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <input type="checkbox" id="theme-toggle" />
+                <label for="theme-toggle" class="switch"></label>
+            </div>
         </nav>
     </header>
     <script src="/components/Navbar/Navbar.js"></script>
     <style>
-        /* Default (Light Mode) */
-/* Dark Mode Styles */
-body.darkmode {
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text color */
-}
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Text Color for Headings and Paragraphs */
-.darkmode h1,
-.darkmode h2,
-.darkmode h3,
-.darkmode p,
-.darkmode li {
-    color: #ffffff; /* Light text color for headings, paragraphs, and list items */
-}
+        body {
+            font-family: 'Playfair Sans', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #f0f0f0;
+            color: #121212;
+        }
 
-/* Specific adjustments for different sections/pages */
-.home.darkmode h1,
-.home.darkmode h2,
-.home.darkmode h3,
-.home.darkmode p,
-.faq.darkmode h1,
-.faq.darkmode h2,
-.faq.darkmode h3,
-.faq.darkmode p,
-.blog.darkmode h1,
-.blog.darkmode h2,
-.blog.darkmode h3,
-.blog.darkmode p {
-    color: #ffffff; /* Ensuring text color is white for these specific sections */
-}
+        header {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-/* Links */
-.darkmode a {
-    color: #1e90ff; /* Light blue for links to ensure visibility */
-}
+        .logo {
+            font-weight: bold;
+            text-decoration: none;
+            color: #121212;
+            display: flex;
+            align-items: center;
+        }
 
-/* Adjustments for Buttons */
-.darkmode .button {
-    background-color: #1f1f1f; /* Button background */
-    color: #ffffff; /* Button text color */
-}
+        .logo img {
+            width: 40px;
+            margin-right: 8px;
+        }
 
-/* Additional elements you may have */
-.darkmode input,
-.darkmode textarea {
-    background-color: #2c2c2c; /* Input background */
-    color: #ffffff; /* Input text color */
-    border: 1px solid #444444; /* Input border color */
-}
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-/* Placeholder text color */
-.darkmode input::placeholder,
-.darkmode textarea::placeholder {
-    color: #aaaaaa; /* Lighter color for placeholders */
-}
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: #121212;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
 
-/* Card or section backgrounds */
-.darkmode .card,
-.darkmode .section {
-    background-color: #1f1f1f; /* Background for cards or sections */
-    color: #ffffff; /* Text color for these elements */
-}
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-/* Scrollbar for dark mode */
-.darkmode ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-}
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
 
-.darkmode ::-webkit-scrollbar-track {
-    background: #2c2c2c; /* Track background */
-}
+        .menu a {
+            text-decoration: none;
+            color: #121212;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
 
-.darkmode ::-webkit-scrollbar-thumb {
-    background: #555555; /* Thumb background */
-}
+        /* Hover Effects */
+        .menu a:hover {
+            color: #04aaff;
+        }
 
-/* Optional: Transition for smoother effect */
-body {
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
-}
+        /* Theme Switcher Styles */
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            margin-left: 1rem;
+        }
 
+        .theme-switcher input[type="checkbox"] {
+            display: none;
+        }
+
+        .switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            background-color: #db4444;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .switch::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        /* Dark Mode Styling */
+        #theme-toggle:checked + .switch {
+            background-color: #3d3d3d;
+        }
+
+        #theme-toggle:checked + .switch::before {
+            transform: translateX(24px);
+        }
+
+        /* Dark Mode */
+        .darkmode body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .darkmode .logo {
+            color: #000000;
+        }
+
+        .darkmode .menu a {
+            color: #050505;
+        }
+
+        .darkmode input,
+        .darkmode textarea {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            border: 1px solid #444444;
+        }
+
+        .darkmode a {
+            color: #070707;
+        }
+
+        /* Dark Mode UI Components */
+        .darkmode .card,
+        .darkmode .section {
+            background-color: #1f1f1f;
+            color: #ffffff;
+        }
+
+        /* Scrollbar in Dark Mode */
+        .darkmode ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .darkmode ::-webkit-scrollbar-track {
+            background: #2c2c2c;
+        }
+
+        .darkmode ::-webkit-scrollbar-thumb {
+            background: #555555;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .menu {
+                display: none;
+            }
+            .menu.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #f8f8f8;
+                padding: 1rem;
+            }
+        }
     </style>
+    <script src="Navbar.js"></script>
 </body>
 </html>
