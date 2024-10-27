@@ -42,8 +42,10 @@ body {
 
 .carousel-images 
 {
-    height:80vh;
+    height:82vh;
     width:100%;
+    object-fit: cover;
+    margin-top: 35px;
 }
 
 .search-bar 
