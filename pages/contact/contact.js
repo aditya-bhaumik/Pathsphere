@@ -16,35 +16,36 @@ document
     // Validation flags
     let isValid = true;
 
-    // Name validation
-    if (name === '') {
-      document.getElementById('nameError').textContent = 'Name is required';
+    // Name validation (at least 3 characters)
+    if (name.length < 3) {
+      document.getElementById('nameError').textContent =
+        'Name must be at least 3 characters long';
       document.getElementById('nameError').style.display = 'block';
       isValid = false;
     }
 
-    // Email validation
+    // Email validation (formal email pattern)
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email === '' || !emailPattern.test(email)) {
+    if (!emailPattern.test(email)) {
       document.getElementById('emailError').textContent =
-        'Valid email is required';
+        'Please enter a valid email address';
       document.getElementById('emailError').style.display = 'block';
       isValid = false;
     }
 
-    // Phone validation
+    // Phone validation (exactly 10 digits)
     const phonePattern = /^[0-9]{10}$/;
-    if (phone === '' || !phonePattern.test(phone)) {
+    if (!phonePattern.test(phone)) {
       document.getElementById('phoneError').textContent =
-        'Valid phone number is required';
+        'Phone number must be exactly 10 digits';
       document.getElementById('phoneError').style.display = 'block';
       isValid = false;
     }
 
-    // Message validation
-    if (message === '') {
+    // Message validation (at least 10 characters)
+    if (message.length < 10) {
       document.getElementById('messageError').textContent =
-        'Message is required';
+        'Message must be at least 10 characters long';
       document.getElementById('messageError').style.display = 'block';
       isValid = false;
     }
@@ -55,7 +56,7 @@ document
         'Thank you for contacting us! We will reach you soon.';
       document.getElementById('successMessage').style.display = 'block';
 
-      // Optionally, you could clear the form fields
+      // Clear the form fields
       document.getElementById('contactForm').reset();
     }
   });

@@ -51,26 +51,26 @@
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required pattern="[a-zA-Z ]+" oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')" oninput="this.setCustomValidity('')" />
-                        <span class="error-message" id="nameError"></span>
+                        <div class="error-message" id="nameError">Numbers and symbols are not allowed</div>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Your Email" required />
-                        <span class="error-message" id="emailError"></span>
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
                         <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
-                        <span class="error-message" id="phoneError"></span>
+                        <div class="error-message" id="phoneError">Please enter a valid phone number</div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        <span class="error-message" id="messageError"></span>
-                    </div>
+                        <div class="error-message" id="messageError">Please enter your message</div>
+                    </div>                    
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
-                <div id="successMessage" style="display: none; color: #921A40; font-size: 18px; margin-top: 20px;"></div>
+                <div id="successMessage" style="display: none; color: green; font-size: 18px; margin-top: 20px;"></div>
             </div>
         </section>
 
