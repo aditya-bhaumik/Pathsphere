@@ -158,13 +158,13 @@ p {
 
 .card h2 {
     font-size: 18px; /* Slightly smaller font */
-    color: #f9f9f9;
+    color: black;
 }
 
 /* Card paragraph */
 
 .card p {
-    color: #ccc;
+    color: #5a5757;
     font-size: 14px; /* Reduced font size */
     margin: 8px 0; /* Smaller margin */
     line-height: 1.4; /* Slightly tighter line spacing */
