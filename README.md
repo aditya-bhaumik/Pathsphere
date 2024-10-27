@@ -62,6 +62,14 @@
   - Modern and intuitive design for easy navigation.
   - Responsive layout to ensure accessibility on all devices.
 
+- **📚Collaborative Resource Library**: 
+  - Platform for educational and career resources.
+  - Supports individual learning and community sharing.
+
+- **📝Dynamic Blog Platform**: 
+  - Enables easy creation, display, and categorization of posts.
+  - Features responsive design, commenting, and filtering for a better user experience.
+
 ## 🚀 Future Enhancements 🚀
 
 PathSphere can be significantly improved with additional front-end features. Here are some ideas to enhance the site using only HTML, CSS, and JavaScript:
