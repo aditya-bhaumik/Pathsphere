@@ -35,8 +35,6 @@ h1 {
   background-color: rgb(40, 40, 154);
   color: white;
   text-align: center;
-  text-wrap: wrap;
-  justify-content: center;
   padding: 5px;
   margin: 10px;
 }
@@ -60,24 +58,22 @@ h1 {
 }
 
 .form-group {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Align items center vertically */
+  display: flex;
+  flex-direction: column; /* Stack label, input, and error vertically */
   margin-bottom: 25px;
 }
 
 .form-group label {
-  width: 150px; /* Fixed width for labels */
   font-weight: bold;
-  margin-right: 15px; /* Space between label and input */
   color: #333;
   font-size: 16px;
+  margin-bottom: 8px; /* Space between label and input */
 }
 
 .form-group input,
 .form-group textarea {
-  flex: 1; /* Allow input to fill remaining space */
   padding: 12px 15px;
-  border: 1px solid #ccc; /* Grayish border */
+  border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
   background-color: #f9f9f9;
@@ -86,22 +82,30 @@ h1 {
 
 .form-group input:hover,
 .form-group textarea:hover {
-  border-color: #161313; /* Slightly darker gray on hover */
+  border-color: #161313;
   background-color: #fff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #0f2d10; /* Green border on focus */
+  border-color: #0f2d10;
   background-color: #fff;
   outline: none;
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
 }
 
 .error-message {
+  display: none; /* Hidden initially */
   color: red;
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 0.9em;
+  margin-top: 5px; /* Space between input and error message */
+}
+
+.success-message {
+  color: green;
+  font-size: 1em;
+  margin-top: 10px;
+  display: none; /* Hidden initially */
 }
 
 .submit-button {
@@ -135,8 +139,6 @@ h1 {
     background-color: rgb(40, 40, 154);
     color: white;
     text-align: center;
-    text-wrap: wrap;
-    justify-content: center;
     padding: 5px;
     margin: 10px;
   }
@@ -145,4 +147,3 @@ h1 {
     width: 100%;
   }
 }
-
