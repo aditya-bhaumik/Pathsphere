@@ -3,15 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
- 
-* {
 
+html,body{
+  overflow-x: hidden; /* to prevent horizontal scrolling */
+}
+
+* {
   margin:  0;
   padding:  0;
   box-sizing:  border-box;
   scrollbar-width:  none;
-  
-
 }
  
 body {
@@ -29,9 +30,12 @@ body {
 
 /*Testimonial section*/
 #testimonials {
+  width: 80%;
   background-color: #f8f9fa;
-  padding: 80px 0;
+  padding: 30px 0;
+  margin: 60px 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 10px;
 }
 
 .container {
@@ -284,14 +288,13 @@ main {
 
 header {
   margin-top: 10px;
-
   padding: 10px 0;
   position: fixed;
   border: 2px solid black;
   border-radius: 50px;
   background: rgb(255, 255, 255);
   width: 100%;
-  height: 10%;
+  height: 100px;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -303,13 +306,13 @@ nav {
   align-items: center;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  height: fit-content;
+  height: 70px;
   color: var(--secondary-color);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -334,7 +337,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin: 0 5px 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -368,7 +371,7 @@ nav ul li a:hover {
     border: 2px solid black;
     border-radius: 50px;
     background: rgba(0, 0, 0, 0.1);
-    height: 10vh;
+    height: 80px;
     position: fixed;
     width: 100vw;
     margin-top: 10px;
@@ -501,9 +504,14 @@ nav ul li a:hover {
 
 main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .hero {
+  width: 100%;
   color: var(--primary-color);
   text-align: center;
   padding: 100px 20px;
@@ -519,15 +527,18 @@ main {
   background-size: cover;
   height: 100vh;
 }
-
+ 
 .hero h1 {
-  font-size: 50px;
-  margin: 0;
-  padding: 5px;
-  text-decoration: none;         /* No underline by default */
-  transition: all 0.3s ease;     /* Smooth transition for hover effects */
-}
 
+  font-size:  50px;
+  margin:  0;
+  padding:  5px;
+  text-decoration:  none;        
+  transition:  all 0.3s ease;
+  color: #ffffff;
+
+}
+ 
 /* Hover state */
 .hero h1:hover {
   text-decoration: underline;    /* Underline on hover */
@@ -559,12 +570,20 @@ main {
   border-radius: 5px;
 }
 
-.features {
+.feature-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 75px 0;
+}
+
+.features {
+  width: 80%;
+  display: flex;
+  justify-content: center;
   padding: 20px;
   background: var(--primary-color);
   flex-wrap: wrap;
+  gap: 60px;
 }
 
 .feature {
@@ -583,7 +602,9 @@ main {
   align-items: center;
   justify-content: space-between;
 }
-
+.feature-item h6 {
+  color: #000000; /*to keep the text color black*/
+}
 .feature .feature-img{
   width: 50px;
   margin: 10px auto;
@@ -1196,6 +1217,15 @@ h3 {
   justify-content: space-around;
 }
 
+.feature-item-box {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* margin: 50px 0; */
+}
+
 .feature-item {
   background: #fff;
   border-radius: 8px;
@@ -1204,6 +1234,7 @@ h3 {
   margin: 10px;
   flex: 1 1 calc(33.333% - 20px);
   display: flex;
+  justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
 }
