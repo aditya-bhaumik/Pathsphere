@@ -73,6 +73,14 @@
     - Modern and intuitive design for easy navigation.
     - Responsive layout to ensure accessibility on all devices.
 
+  - **📚Collaborative Resource Library**: 
+    - Platform for educational and career resources.
+    - Supports individual learning and community sharing.
+
+  - **📝Dynamic Blog Platform**: 
+    - Enables easy creation, display, and categorization of posts.
+    - Features responsive design, commenting, and filtering for a better user experience.
+
   <!--line-->
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
