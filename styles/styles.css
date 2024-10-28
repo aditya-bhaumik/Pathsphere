@@ -322,9 +322,18 @@ nav {
   }
 }
 
-.logo:hover {
-  color: #ff6f61;
+.logo-text {
+  font-size: 1.25rem; /* Adjust size as needed */
+  color: #333; /* Initial color */
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
+
+.logo-text:hover {
+  color: #359b6b; /* Hover color */
+  transform: scale(1.04); /* Slightly enlarge */
+  text-shadow: 0 4px 15px #2d815a; /* Glow effect */
+}
+
 #icon {
   width: 30px;
   cursor: pointer;
