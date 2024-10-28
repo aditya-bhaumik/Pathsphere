@@ -163,7 +163,6 @@
 
 <<<<<<< HEAD
 
-## 🚀 Future Enhancements 🚀
   ## 🛠️ Tech Stack
     
   | ![HTML5](https://skillicons.dev/icons?i=html) | **HTML5**: Semantic Markup |
