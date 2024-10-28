@@ -323,7 +323,9 @@ nav {
 }
 
 .logo:hover {
-  color: #ff6f61;
+  color: #359b6b; /* Hover color */
+  transform: scale(1.04); /* Slightly enlarge */
+  text-shadow: 0 4px 15px #2d815a; /* Glow effect */
 }
 #icon {
   width: 30px;
