@@ -177,7 +177,6 @@
   
   <!--line-->
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
->>>>>>> 934dd7ff32369bf0c19f9f11767e58e9a42e9f24
 
   ## Acknowledgements ⚡
   
