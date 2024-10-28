@@ -1,7 +1,7 @@
 document.querySelectorAll(".tab-link").forEach((button) => {
   button.addEventListener("click", () => {
     document.querySelectorAll(".tab-link").forEach((btn) => btn.classList.remove("active"));
-    document
+    document.querySelectorAll(".tab-content").forEach((content) => content.classList.remove("active"));
       .querySelectorAll(".tab-content")
       .forEach((content) => content.classList.remove("active"));
 
