@@ -74,11 +74,41 @@
 
 
             <!-- for  lg , xl device  -->
-            <div class="search-bar d-none d-lg-block">              
-                <input type="text" class="searching" placeholder="Search you are passionate about" >
-                <button class="search-button">Search</button>
-            </div>
-            
+            <div class="search-container">
+              <input type="text" class="search-input" placeholder="Search...">
+              <button class="search-button">Search</button>
+          </div>
+            <style>
+              * {
+                  box-sizing: border-box;
+              }
+      
+              .search-container {
+                  display: flex;
+                  align-items: center;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  overflow: hidden; /* Prevents overflow */
+                  margin-left: 150px;
+                  margin-right: 150px;
+                  margin-bottom: 50px;
+              }
+      
+              .search-input {
+                  flex-grow: 1;
+                  border: none;
+                  padding: 10px;
+                  outline: none; /* Remove outline on focus */
+              }
+      
+              .search-button {
+                  background-color: #007BFF;
+                  color: white;
+                  border: none;
+                  padding: 10px 15px;
+                  cursor: pointer;
+              }
+          </style>
             <!-- for xs , sm , md device  -->
             <div class="search-bar-smd d-block d-lg-none">              
               <input type="text" class="searching-smd" placeholder="Search your passion..." >

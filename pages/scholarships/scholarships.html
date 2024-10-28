@@ -6,47 +6,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scholarships</title>
-    <!-- Added a favicon -->
     <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
-    <link rel="stylesheet" href="..pages/scholarships.css" />
+    <link rel="stylesheet" href="../pages/scholarships.css" />
     <link rel="stylesheet" href="/styles/essential.css" />
+    <style>
+        .circle {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            pointer-events: none;
+            background-color: rgba(0, 0, 255, 0.6); /* Blue color */
+            transition: transform 0.1s, left 0.1s, top 0.1s;
+        }
 
-  </head>
-  <body>
-    <div class="gtranslate_wrapper"></div>
-    <script>
-    window.gtranslateSettings = {
-      "default_language":"en",
-      "detect_browser_language":true,
-      "wrapper_selector":".gtranslate_wrapper"
-    }
-    </script>
-    <script 
-      src="https://cdn.gtranslate.net/widgets/latest/float.js"
-      defer
-    ></script>
-    <main>
-      <section class="hero">
-        <h1>Scholarships</h1>
-
-        <p>Find scholarships that match your academic profile and needs.</p>
-      </section>
-
-      <div class="search-bar">
-        <!-- <i class="fas fa-search"></i> -->
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search for scholarships..."
-          aria-label="Search Scholarships"
-          onkeyup="filterScholarships()"
-        />
-      </div>
-
+        .circle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
-
 <body>
+    <div class="gtranslate_wrapper"></div>
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "en",
+            "detect_browser_language": true,
+            "wrapper_selector": ".gtranslate_wrapper"
+        }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
     <main>
         <section class="hero">
             <h1>Scholarships</h1>
@@ -58,8 +54,7 @@
         </div>
 
         <section class="scholarship-list">
-
-            <!-- Scholarship Item -->
+            <!-- Scholarship Items -->
             <div class="scholarship-item">
                 <img src="/images/globalearth.jpg" alt="Global Student Scholarship" class="scholarship-image" />
                 <div class="scholarship-content">
@@ -70,10 +65,7 @@
                     <a href="#" class="apply-btn" onclick="applyForScholarship('Global Student Scholarship')">Apply Now</a>
                 </div>
             </div>
-            </div>
 
-            <!-- Repeat for other scholarships -->
-            <!-- STEM Excellence Scholarship -->
             <div class="scholarship-item">
                 <img src="/images/STEM.jpg" alt="STEM Excellence Scholarship" class="scholarship-image" />
                 <div class="scholarship-content">
@@ -82,13 +74,11 @@
                     <p><strong>Eligibility:</strong> Students pursuing STEM majors</p>
                     <p><strong>Deadline:</strong> March 15, 2024</p>
                     <a href="#" class="apply-btn" onclick="applyForScholarship('STEM Excellence Scholarship')">Apply Now</a>
-
                     <div class="like-comment-section">
                         <div class="like-container">
                             <button class="like-btn" onclick="toggleLike(this)">👍 Like</button>
                             <span class="like-count">0</span> Likes
                         </div>
-
                         <div class="comment-section">
                             <h3>Comments</h3>
                             <div class="comment-list"></div>
@@ -98,9 +88,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Add similar blocks for other scholarships -->
-
         </section>
     </main>
 
@@ -136,70 +123,25 @@
 
     <div class="circle-container">
         <div class="circle"></div>
-        <!-- (rest of your circle animation code) -->
     </div>
 
-    <style>
-        .circle {
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            pointer-events: none;
-            background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
-            transition: transform 0.1s, left 0.1s, top 0.1s;
-        }
-        
-        .circle-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-        }
-    </style>
-
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const coords = {
-                x: 0,
-                y: 0
-            };
-            const circles = document.querySelectorAll(".circle");
+        document.addEventListener("DOMContentLoaded", function () {
+            const circle = document.querySelector(".circle");
+            let coords = { x: 0, y: 0 };
 
-            circles.forEach(function(circle) {
-                circle.x = 0;
-                circle.y = 0;
-            });
-
-            window.addEventListener("mousemove", function(e) {
+            window.addEventListener("mousemove", function (e) {
                 coords.x = e.pageX;
-                coords.y = e.pageY - window.scrollY;
+                coords.y = e.pageY;
             });
 
-            function animateCircles() {
-                let x = coords.x;
-                let y = coords.y;
-
-                circles.forEach(function(circle, index) {
-                    circle.style.left = `${x - 12}px`;
-                    circle.style.top = `${y - 12}px`;
-                    circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-
-                    const nextCircle = circles[index + 1] || circles[0];
-                    circle.x = x;
-                    circle.y = y;
-
-                    x += (nextCircle.x - x) * 0.3;
-                    y += (nextCircle.y - y) * 0.3;
-                });
-
-                requestAnimationFrame(animateCircles);
+            function animateCircle() {
+                circle.style.left = `${coords.x - 12}px`; // Center the circle on cursor
+                circle.style.top = `${coords.y - 12}px`; // Center the circle on cursor
+                requestAnimationFrame(animateCircle);
             }
 
-            animateCircles();
+            animateCircle();
         });
     </script>
 </body>
