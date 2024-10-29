@@ -686,6 +686,9 @@ main {
     transform: scale(1);
   }
 }
+
+/*footer*/
+
 footer {
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -694,17 +697,19 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+ 
 }
 
 .footer-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
   padding: 30px 60px;
   background-color: #f9f9f9;
   color: var(--secondary-color);
   flex-wrap: wrap;
   gap: 20px;
+  border: 2px solid black;
 }
 
 .footer-description {
@@ -735,6 +740,9 @@ footer {
 .footer-list ul {
   list-style: none;
   padding: 0;
+  /*display: flex;
+  flex-direction: column;*/
+  text-align: center
 }
 
 .footer-list ul li {
@@ -827,6 +835,7 @@ footer {
     color: var(--secondary-color);
     flex-wrap: wrap;
     gap: 20px;
+    
   }
 
   .footer-description {
@@ -1417,7 +1426,8 @@ a.new{
 }
 .Sharing .circle-share .fa-share-alt{
 	line-height: 50px;
-	color: #fff;
+	color: #150b0b;
+  width: 20px;
 }
 .Sharing ul{
 	list-style-type: none;
