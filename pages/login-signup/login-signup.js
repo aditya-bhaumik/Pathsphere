@@ -23,7 +23,31 @@ function validateEmail(email) {
 }
 
 function validatePassword(password) {
-    return password.length >= 6;
+
+    let matchPassword = [];
+    matchPassword.push("[$@$!%*#?&]");
+    matchPassword.push("[A-Z]");
+    matchPassword.push("[a-z]");
+    matchPassword.push("[0-9]");
+
+    // console.log(matchPassword)
+
+    if(password.length<8) return 4;
+
+    for (let i   = 0  ; i < matchPassword.length ; i++){
+        if (!RegExp(matchPassword[i]).test(String(password))) {
+            switch (i){
+                case 0:
+                    return 0;
+                case 1:
+                    return 1;
+                case 2:
+                    return 2;
+                case 3:
+                    return 3;
+            }
+        }
+    }
 }
 
 document.getElementById('login-form').addEventListener('submit', async (event) => {
@@ -43,8 +67,24 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         emailError.textContent = '';
     }
 
-    if (!validatePassword(password)) {
-        passwordError.textContent = 'Password must be at least 6 characters';
+    if (validatePassword(password)=== 0 || validatePassword(password)=== 1 || validatePassword(password)=== 2 || validatePassword(password)=== 3 || validatePassword(password)=== 4 ) {
+        switch (validatePassword(password)){
+            case 0 :
+                passwordError.textContent = 'Password must contains a special character';
+                break;
+            case 1 :
+                passwordError.textContent = 'Password must contains at least a capital letter';
+                break;
+            case 2 :
+                passwordError.textContent = 'Password must contains at least a small letter';
+                break;
+            case 3 :
+                passwordError.textContent = 'Password must contains a number';
+                break;
+            case 4 :
+                passwordError.textContent = 'Password must be at least 8 characters';
+                break;
+        }
         valid = false;
     } else {
         passwordError.textContent = '';
@@ -97,8 +137,24 @@ document.getElementById('signup-form').addEventListener('submit', async (event) 
         emailError.textContent = '';
     }
 
-    if (!validatePassword(password)) {
-        passwordError.textContent = 'Password must be at least 6 characters';
+    if (validatePassword(password)=== 0 || validatePassword(password)=== 1 || validatePassword(password)=== 2 || validatePassword(password)=== 3 || validatePassword(password)=== 4 ) {
+        switch (validatePassword(password)){
+            case 0 :
+                passwordError.textContent = 'Password must contains a special character';
+                break;
+            case 1 :
+                passwordError.textContent = 'Password must contains at least a capital letter';
+                break;
+            case 2 :
+                passwordError.textContent = 'Password must contains at least a small letter';
+                break;
+            case 3 :
+                passwordError.textContent = 'Password must contains a number';
+                break;
+            case 4 :
+                passwordError.textContent = 'Password must be at least 8 characters';
+                break;
+        }
         valid = false;
     } else {
         passwordError.textContent = '';
@@ -130,6 +186,7 @@ document.getElementById('signup-form').addEventListener('submit', async (event) 
                 switchToLogin(); // Switch to login tab after successful signup
             }, 2000); // Hide success message after 2 seconds
         }, 2000);
+        successMessage.textContent = 'Signup Successful';
     }
 });
 
@@ -178,7 +235,7 @@ function closeModal() {
     }, 500);
 }
 
-document.getElementById('password-recovery-form').addEventListener('submit', async (event) => {
+document.getElementById('password-recovery-form')?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const email = document.getElementById('recovery-email').value;
     const emailError = document.getElementById('recovery-email-error');
@@ -227,10 +284,14 @@ document.getElementById("signup-form").addEventListener("submit", function(event
 
 function showSignupSuccessMessage() {
     var messageBox = document.getElementById("signup-success-message");
-    messageBox.style.display = "block"; // Show the message
+    if(messageBox){
+        messageBox.style.display = "block"; // Show the message
+    }
 
     // Hide the message after 3 seconds
     setTimeout(function() {
-        messageBox.style.display = "none";
+        if(messageBox){
+            messageBox.style.display = "none";
+        }
     }, 3000);
 }
