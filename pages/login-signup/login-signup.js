@@ -243,9 +243,7 @@ function closeModal() {
   }, 500);
 }
 
-document
-  .getElementById("password-recovery-form")
-  .addEventListener("submit", async (event) => {
+document.getElementById("password-recovery-form")?.addEventListener("submit", async (event) => {
     event.preventDefault();
     const email = document.getElementById("recovery-email").value;
     const emailError = document.getElementById("recovery-email-error");
