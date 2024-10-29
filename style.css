@@ -1,0 +1,28 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.feature {
+    width: 260px;
+    padding: 15px;
+    margin: 5px;
+    margin-bottom: 17px;
+    background-color: rgb(253, 180, 192);
+    transition: 0.1s linear;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 15px;
+}
+
+.feature a {
+    font-size: 17px;
+}
+
+.feature:hover {
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
