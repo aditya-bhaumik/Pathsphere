@@ -11,9 +11,12 @@
     <header>
       <nav id="navbar">
         <a href="/index.html" class="logo">
-          <img src="/images/logo.png" alt="PathSphere Logo" />
-          PathSphere
+          <img src="/images/abcd.png" alt="PathSphere Logo" class="logo-image" />
+          <span class="logo-text">
+            Path<span class="logo-text-sphere">Sphere</span>
+          </span>
         </a>
+        
         <button class="hamburger">
           <span></span>
           <span></span>
@@ -65,6 +68,30 @@
         align-items: center;
         justify-content: space-between;
       }
+       /* Style for the logo link */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Space between logo image and text */
+.logo-image {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+/* Style for the logo text */
+.logo-text {
+  font-weight: bold;
+  color: black; /* Color for 'Path' part */
+  font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+/* Style for 'Sphere' in the logo text */
+.logo-text-sphere {
+  color: #359B6B; /* Change to your preferred color */
+  font-weight: bold;
+}
 
       .logo {
         font-weight: bold;
@@ -74,11 +101,7 @@
         align-items: center;
       }
 
-      .logo img {
-        width: 40px;
-        margin-right: 8px;
-      }
-
+  
       .hamburger {
         display: none;
         flex-direction: column;
