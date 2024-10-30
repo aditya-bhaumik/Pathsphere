@@ -312,6 +312,8 @@ main {
 
 .hamburger {
   display: none;
+  background-color: #359b6b; 
+
 }
 
 header {
@@ -519,7 +521,6 @@ nav ul li {
     top: 120px;
     left: 0;
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
     padding: 10px;
     display: none;
   }
@@ -561,8 +562,6 @@ nav ul li {
 
   .menu.active {
     display: block;
-    border: 2px solid black;
-    border-radius: 50px;
   }
 
   .footer-description p {
