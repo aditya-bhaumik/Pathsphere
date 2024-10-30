@@ -188,6 +188,9 @@ main {
 .darkmode main {
   background-color: #121212;
 }
+.darkmode .anchor h6 a{
+  color:white;
+}
 
 .darkmode .copyright {
   background-color: #3C3D37;
@@ -358,7 +361,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #7965ea;
+  color: #bcb0fc;
 }
 
 @media (max-width: 1000px) {
