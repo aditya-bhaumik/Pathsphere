@@ -4,17 +4,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-html,body{
-  overflow-x: hidden; /* to prevent horizontal scrolling */
+html,
+body {
+  overflow-x: hidden;
+  /* to prevent horizontal scrolling */
 }
 
 * {
-  margin:  0;
-  padding:  0;
-  box-sizing:  border-box;
-  scrollbar-width:  none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
 }
- 
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -66,8 +68,10 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.08); /* Increased hover scale for better interaction */
-  box-shadow: 2px 2px 10px #248b6f ; /* Stronger shadow on hover */
+  transform: scale(1.08);
+  /* Increased hover scale for better interaction */
+  box-shadow: 2px 2px 10px #248b6f;
+  /* Stronger shadow on hover */
 }
 
 
@@ -178,47 +182,72 @@ body {
   bottom: 60px;
   /* height: 220px; */
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 main {
   position: relative;
   bottom: 60px;
 }
+
 .darkmode main {
   background-color: #121212;
+}
+.darkmode .col-12 {
+  background-color: #121212;
+}
+.darkmode .dis-card {
+  background-color: #202020;
+}
+.darkmode .diss-top {
+  color: rgb(209, 205, 205);
 }
 
 .darkmode .copyright {
   background-color: #3C3D37;
   color: #fff;
 }
+
 .darkmode .scroll-up-btn {
   z-index: 1000;
 }
 
-.darkmode .feature { 
+.darkmode .feature {
   background-color: #202020;
 }
-.darkmode .why-us h1{
+
+.darkmode .why-us h1 {
   color: #fff;
 }
+< main
 .darkmode .why-us p{
   color: #f6f2f2;
+=======
+
+.darkmode .why-us p {
+  color: #8d8a8a;
+> main
 }
-.darkmode #testimonials{
+
+.darkmode #testimonials {
   background-color: #202020;
 }
-.darkmode .card{
+
+.darkmode .card {
   background-color: #121212;
 }
-.darkmode .card h5{
-  color: #fff;
-}
-.darkmode .card h6{
+
+.darkmode .card h5 {
   color: #fff;
 }
 
+.darkmode .card h6 {
+  color: #fff;
+}
+
+< main
 .darkmode .card h2{
   color: #fff;
 }
@@ -229,6 +258,16 @@ main {
 .darkmode #testimonials h3+p{
   color: #a39292;
 } 
+=======
+.darkmode #testimonials h3 {
+  color: #fff;
+}
+
+.darkmode #testimonials h3+p {
+  color: #8d8a8a;
+}
+
+>> main
 .darkmode .feature p {
   color: #fff;
 }
@@ -285,10 +324,12 @@ main {
   border-radius: 100vw;
   margin-block: 0.5em;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #ff9800;
   border-radius: 100vw;
 }
+
 @supports (scrollbar-color: #ff9800) {
   * {
     scrollbar-color: #ff9800;
@@ -302,6 +343,8 @@ main {
 
 .hamburger {
   display: none;
+  background-color: #359b6b; 
+
 }
 
 header {
@@ -334,11 +377,17 @@ nav {
   color: var(--secondary-color);
   text-decoration: none;
   transition: color 0.3s ease;
+
   img {
     width: 50px;
     height: 50px;
   }
 }
+/*  */
+/* .logo:hover { */
+  /* color: #ff6f61; */
+/* } */
+/*  */
 
 .logo:hover {
   color: #359b6b; /* Hover color */
@@ -349,6 +398,7 @@ nav {
   width: 30px;
   cursor: pointer;
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -364,20 +414,50 @@ nav ul li {
   padding: 0 25px 0 25px;
 }
 
-nav ul li a {
+.menu a {
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0.5px;
   color: var(--secondary-color);
   text-decoration: none;
   font-size: 1.3em;
   transition: color 0.3s ease;
-  font-family: 'Playpen Sans', cursive;
+  font-family: 'Playpen Sans',;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
-nav ul li a:hover {
-  color: #7965ea;
+.menu a:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3S;
 }
+ .menu a:hover {
+  color: rgb(13 110 253);
+}
+.menu a:hover:after {
+  width: 100%;
+}
+
+/* nav ul li a { */
+/* color: var(--secondary-color); */
+/* text-decoration: none; */
+/* font-size: 1.3em; */
+/* transition: color 0.3s ease; */
+/* font-family: 'Playpen Sans', cursive; */
+/* font-optical-sizing: auto; */
+/* font-weight: 400; */
+/* font-style: normal; */
+/* } */
+/*  */
+/* nav ul li a:hover { */
+/* color: #7965ea; */
+/* } */
 
 @media (max-width: 1000px) {
   nav ul li a:hover {
@@ -472,7 +552,6 @@ nav ul li a:hover {
     top: 120px;
     left: 0;
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
     padding: 10px;
     display: none;
   }
@@ -514,9 +593,8 @@ nav ul li a:hover {
 
   .menu.active {
     display: block;
-    border: 2px solid black;
-    border-radius: 50px;
   }
+
   .footer-description p {
     text-align: start;
   }
@@ -547,39 +625,46 @@ main {
   background-size: cover;
   height: 100vh;
 }
- 
+
 .hero h1 {
 
-  font-size:  50px;
-  margin:  0;
-  padding:  5px;
-  text-decoration:  none;        
-  transition:  all 0.3s ease;
+  font-size: 50px;
+  margin: 0;
+  padding: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
   color: #ffffff;
 
 }
- 
+
 /* Hover state */
 .hero h1:hover {
-  text-decoration: underline;    /* Underline on hover */
-  color: #ffa500;                /* Change color on hover (optional) */
-  transform: scale(1.05);        /* Slight pop-out effect */
+  text-decoration: underline;
+  /* Underline on hover */
+  color: #ffa500;
+  /* Change color on hover (optional) */
+  transform: scale(1.05);
+  /* Slight pop-out effect */
 }
 
 .hero p {
   font-size: 24px;
   padding: 10px;
 }
+
 .hero .left {
   width: 100%;
 }
+
 .hero .right {
   width: 40%;
 }
+
 .hero .right img {
   width: 500px;
   height: 300px;
 }
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -622,10 +707,13 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+
 .feature-item h6 {
-  color: #000000; /*to keep the text color black*/
+  color: #000000;
+  /*to keep the text color black*/
 }
-.feature .feature-img{
+
+.feature .feature-img {
   width: 50px;
   margin: 10px auto;
 }
@@ -640,11 +728,13 @@ main {
     height: 100%;
     padding: 10px;
   }
+
   .feature {
     width: 100%;
     height: 100%;
   }
 }
+
 .feature:hover {
   transform: scale(1.05);
 }
@@ -697,13 +787,16 @@ main {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 
 /*footer*/
 
@@ -781,6 +874,7 @@ footer {
 .social-icons {
   display: flex;
 }
+
 .social-icons a {
   display: inline-flex;
   flex-direction: column;
@@ -833,6 +927,7 @@ footer {
   background-color: #106bcb;
   font-size: 1.5rem;
 }
+
 .copyright {
   display: flex;
   align-items: center;
@@ -999,6 +1094,7 @@ footer {
     border-bottom: 1px solid var(--primary-color);
     transition: background-color 0.2s;
   }
+
   .blog-header {
     text-align: center;
     padding: 2rem;
@@ -1022,6 +1118,7 @@ footer {
     background-color: var(--primary-color);
     background-color: var(--primary-color);
   }
+
   .blog-post h2 {
     margin-bottom: 0.5rem;
     color: #333;
@@ -1035,10 +1132,12 @@ footer {
   .forum-post .post-title:hover {
     color: #2563eb;
   }
+
   .forum-post .post-details {
     font-size: 0.9em;
     color: #64748b;
   }
+
   .new-post-button {
     background-color: #ff6f61;
     color: var(--primary-color);
@@ -1054,6 +1153,7 @@ footer {
     transition: background-color 0.2s ease, transform 0.2s ease;
     margin-top: 15px;
   }
+
   .new-post-button:hover {
     background-color: #2563eb;
     transform: translateY(-3px);
@@ -1073,6 +1173,7 @@ footer {
   .read-more:hover {
     background-color: #0056b3;
   }
+
   html {
     scroll-behavior: smooth;
   }
@@ -1118,13 +1219,13 @@ footer {
   }
 
   .feature-item {
-   
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
     height: 100%;
-    
+
   }
 
   .feature-item i {
@@ -1171,6 +1272,7 @@ footer {
   }
 
   @media (max-width: 992px) {
+
     .text-content,
     .image-content {
       flex-basis: 100%;
@@ -1205,6 +1307,7 @@ footer {
     color: #ff6f61;
     font-weight: bold;
   }
+
   .navbar {
     position: relative;
     width: 100%;
@@ -1338,49 +1441,53 @@ h3 {
   color: #333;
   margin-top: 30px;
 }
+
 .why-us p {
   text-align: center;
 }
+
 .about {
-  display: flex ;
+  display: flex;
   justify-content: space-around;
   padding: 10px;
   margin-bottom: 50px;
   margin-top: 50px;
 }
+
 @media(max-width: 700px) {
-    .about {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-    }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
 }
 
 
-.forum{
+.forum {
   background-color: lightseagreen;
-  height:100%;
-  width:100%;
-}
-.forum-section{
-  margin:10px;
-  font-size:20px;
-
-
+  height: 100%;
+  width: 100%;
 }
 
-a.new{
+.forum-section {
+  margin: 10px;
+  font-size: 20px;
+
+
+}
+
+a.new {
   box-sizing: border-box;
-  margin-top:10px;
-  cursor:pointer;
+  margin-top: 10px;
+  cursor: pointer;
   text-decoration: none;
 }
 
-.scroll-top{
+.scroll-top {
   position: fixed;
   bottom: 12px;
   right: 80px;
@@ -1400,33 +1507,51 @@ a.new{
   text-decoration: none;
 }
 
-.scroll-top .fa-arrow-up{
+.scroll-top .fa-arrow-up {
   transition: 0.2s ease-out;
-	color: #fff;
-	transition: 0.2s ease-out;
+  color: #fff;
+  transition: 0.2s ease-out;
 }
 
 .scroll-top:hover {
-	background-color: #34947c;
+  background-color: #34947c;
 }
+
 .scroll-top:hover .fa-arrow-up {
-	transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 
-.star-rating{
-  display:flex;
+.star-rating {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 
-.star-rating li{
+.star-rating li {
   padding: 0 1px;
   list-style: none;
 
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.Sharing {
+  position: relative;
+  z-index: 1;
+}
+
+.Sharing .circle-share {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 2px #1f2d3a;
+  cursor: pointer;
+  text-align: center;
  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .Sharing{
 	position: relative;
@@ -1465,61 +1590,97 @@ a.new{
 .Sharing:hover ul{
 	transform: scale(1) rotate(0deg);	
 }
-.Sharing ul:before,
-.Sharing ul:after{
-	content: '';
-	position: absolute;
-	height: 1px;
-	width: 100%;
-	background-color: #1f2d3a;
-	top: 50%;
-}
-.Sharing ul:before{
-	left: -1px;
-	transform: rotate(45deg);
-}
-.Sharing ul:after{
-	right: -1px;
-	transform: rotate(-45deg);
-}
-.Sharing ul li a{
-	text-decoration: none;
-	font-size: 25px;
-}
-.Sharing ul li:first-of-type a{
-	color: #3b5999;
-}
-.Sharing ul li:nth-of-type(2) a{
-	color: #25D366;
-}
-.Sharing ul li:nth-of-type(3) a{
-	color: black;
-}
-.Sharing ul li:last-of-type a{
-	color: #e4405f;
+
+.Sharing .circle-share .fa-share-alt {
+  line-height: 50px;
+  color: #fff;
 }
 
-.Sharing ul li:first-of-type{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 10px;
+.Sharing ul {
+  list-style-type: none;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  top: -50px;
+  left: -50px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 2px #1f2d3a,
+    0px 0px 0px 5px #fff;
+  transform: scale(.3) rotate(-180deg);
+  transition: .5s ease-in;
 }
-.Sharing ul li:nth-of-type(2){
-	position: absolute;
-	left: 10px;
-	transform: translateY(-50%);
-	top: 50%;	
+
+.Sharing:hover ul {
+  transform: scale(1) rotate(0deg);
 }
-.Sharing ul li:nth-of-type(3){
-	position: absolute;
-	right: 10px;
-	transform: translateY(-50%);
-	top: 50%;	
+
+.Sharing ul:before,
+.Sharing ul:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #1f2d3a;
+  top: 50%;
 }
-.Sharing ul li:last-of-type{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 10px;	
+
+.Sharing ul:before {
+  left: -1px;
+  transform: rotate(45deg);
+}
+
+.Sharing ul:after {
+  right: -1px;
+  transform: rotate(-45deg);
+}
+
+.Sharing ul li a {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.Sharing ul li:first-of-type a {
+  color: #3b5999;
+}
+
+.Sharing ul li:nth-of-type(2) a {
+  color: #25D366;
+}
+
+.Sharing ul li:nth-of-type(3) a {
+  color: black;
+}
+
+.Sharing ul li:last-of-type a {
+  color: #e4405f;
+}
+
+.Sharing ul li:first-of-type {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+.Sharing ul li:nth-of-type(2) {
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.Sharing ul li:nth-of-type(3) {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.Sharing ul li:last-of-type {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
 }

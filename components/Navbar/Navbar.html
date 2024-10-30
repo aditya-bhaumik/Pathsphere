@@ -6,18 +6,21 @@
     <title>PathSphere Navbar</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header style="border: none; border-radius: 0%;">
       <nav id="navbar">
         <a href="/index.html" class="logo">
           <img src="/images/logo.png" alt="PathSphere Logo" />
           PathSphere
         </a>
         <button class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span style="background-color: #b8e9d2; "></span>
+          <span style="background-color:#b8e9d2" ></span>
+          <span style="background-color: #b8e9d2;"></span>
         </button>
         <div class="menu">
           <ul id="tabs">
@@ -75,8 +78,9 @@
       }
 
       .logo img {
-        width: 40px;
+        width: 50px;
         margin-right: 8px;
+        border-radius: 10px;
       }
 
       .hamburger {
@@ -110,14 +114,20 @@
         color: #121212;
         font-weight: 600;
         transition: color 0.3s;
+        font-family: "Agdasima", sans-serif;
+      font-weight: 700;
+       font-style: normal;
       }
 
       /* Hover Effects */
+      /* .menu a:hover { */
+        /* color: #04aaff; */
+      /* } */
       .menu a:hover {
       color: #359b6b;
       padding: 3.5px;
-      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      
     }
 
       /* Theme Switcher Styles */
@@ -135,7 +145,7 @@
         position: relative;
         width: 50px;
         height: 26px;
-        background-color: #db4444;
+        background-color: #359b6b;
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
