@@ -39,6 +39,9 @@ body {
     height:80vh;
 }
 
+.darkmode .page-headings{
+    color: #fff;
+  }
 
 .carousel-images 
 {

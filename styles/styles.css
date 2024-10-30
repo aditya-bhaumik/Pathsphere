@@ -195,6 +195,15 @@ main {
 .darkmode main {
   background-color: #121212;
 }
+.darkmode .col-12 {
+  background-color: #121212;
+}
+.darkmode .dis-card {
+  background-color: #202020;
+}
+.darkmode .diss-top {
+  color: rgb(209, 205, 205);
+}
 
 .darkmode .copyright {
   background-color: #3C3D37;
