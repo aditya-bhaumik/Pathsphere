@@ -204,7 +204,7 @@ main {
   color: #fff;
 }
 .darkmode .why-us p{
-  color: #8d8a8a;
+  color: #f6f2f2;
 }
 .darkmode #testimonials{
   background-color: #202020;
@@ -218,11 +218,16 @@ main {
 .darkmode .card h6{
   color: #fff;
 }
+
+.darkmode .card h2{
+  color: #fff;
+}
+
 .darkmode #testimonials h3{
   color: #fff;
 } 
 .darkmode #testimonials h3+p{
-  color: #8d8a8a;
+  color: #a39292;
 } 
 .darkmode .feature p {
   color: #fff;
@@ -251,6 +256,19 @@ main {
 .darkmode .footer-container {
   background-color: #121212;
   border-top: 2px solid #fff;
+  color: #fff;
+}
+
+
+
+/*.darkmode .footer-container {
+  background-color: #121212;
+  border-top: 2px solid #fff;
+  color: #fff;
+}*/
+
+
+.darkmode .card p{
   color: #fff;
 }
 
