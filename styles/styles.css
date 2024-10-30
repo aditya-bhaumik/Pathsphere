@@ -758,6 +758,9 @@ main {
   }
 }
 
+
+/*footer*/
+
 footer {
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -766,17 +769,19 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+ 
 }
 
 .footer-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
   padding: 30px 60px;
   background-color: #f9f9f9;
   color: var(--secondary-color);
   flex-wrap: wrap;
   gap: 20px;
+  border: 2px solid black;
 }
 
 .footer-description {
@@ -807,6 +812,9 @@ footer {
 .footer-list ul {
   list-style: none;
   padding: 0;
+  /*display: flex;
+  flex-direction: column;*/
+  text-align: center
 }
 
 .footer-list ul li {
@@ -901,6 +909,7 @@ footer {
     color: var(--secondary-color);
     flex-wrap: wrap;
     gap: 20px;
+    
   }
 
   .footer-description {
@@ -1504,6 +1513,43 @@ a.new {
   box-shadow: 0px 0px 0px 2px #1f2d3a;
   cursor: pointer;
   text-align: center;
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.Sharing{
+	position: relative;
+	z-index: 1;
+}
+.Sharing .circle-share{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background-color: #fbbf24;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 2px #1f2d3a;
+	cursor: pointer;
+	text-align: center;
+}
+.Sharing .circle-share .fa-share-alt{
+	line-height: 50px;
+	color: #150b0b;
+  width: 20px;
+}
+.Sharing ul{
+	list-style-type: none;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background-color: #fff;
+	top: -50px;
+	left: -50px;
+	z-index: -1;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 2px #1f2d3a,
+				0px 0px 0px 5px #fff;
+	transform: scale(.3) rotate(-180deg);
+	transition: .5s ease-in;
+}
+.Sharing:hover ul{
+	transform: scale(1) rotate(0deg);	
 }
 
 .Sharing .circle-share .fa-share-alt {

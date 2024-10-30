@@ -71,12 +71,67 @@
               <h1 class="heading-head">Opportunities Awaits</h1>
               <p class="heading-pera">"Your next big career step starts here—find it today."</p>
             </div>
-
+            <style>
+              /* Styling for the container */
+              .search-bar {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                  max-width: 500px;
+                  margin: 0 auto;
+                  background: #f9f9f9;
+                  border-radius: 30px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  overflow: hidden;
+              }
+          
+              /* Styling for the input field */
+              .searching {
+                  flex: 1;
+                  padding: 14px 20px;
+                  font-size: 16px;
+                  border: none;
+                  border-radius: 30px 0 0 30px;
+                  color: #333;
+                  background-color: #fff;
+                  transition: background-color 0.3s ease, padding-left 0.3s ease;
+              }
+              
+              /* Placeholder styling */
+              .searching::placeholder {
+                  color: #aaa;
+              }
+          
+              /* Button styling */
+              .search-button {
+                  padding: 14px 20px;
+                  font-size: 16px;
+                  background-color: #007bff;
+                  color: #fff;
+                  border: none;
+                  border-radius: 0 30px 30px 0;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+              }
+          
+              /* Hover effect on the button */
+              .search-button:hover {
+                  background-color: #0056b3;
+              }
+          
+              /* Focus effect on the input */
+              .searching:focus {
+                  background-color: #f1f1f1;
+                  padding-left: 25px;
+                  outline: none;
+              }
+          </style>
 
             <!-- for  lg , xl device  -->
             <div class="search-bar d-none d-lg-block">              
                 <input type="text" class="searching" placeholder="Search you are passionate about" >
-                <button class="search-button">Search</button>
+                <button class="search-button" style="padding-left: 13px;">Search</button>
             </div>
             
             <!-- for xs , sm , md device  -->
