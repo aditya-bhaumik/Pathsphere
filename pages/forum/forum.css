@@ -11,7 +11,9 @@ body, html {
     width:100%;
     background-color: #ffffff;
 }
-
+.replies{
+    color:black;
+}
 .community-forum
 {
     background-image: url("./forum.images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg");
