@@ -213,6 +213,9 @@ main {
 .darkmode .scroll-up-btn {
   z-index: 1000;
 }
+.darkmode .replies{
+  color:white;
+}
 
 .darkmode .feature {
   background-color: #202020;
