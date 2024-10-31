@@ -10,6 +10,28 @@ body {
   animation: backgroundAnimation 5s infinite alternate;
 }
 
+.home-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0; /* Reduced gap around buttons */
+  border-radius: 50px; /* Make buttons round */
+  transition: transform 0.3s;
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+}
+
+.home-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
 @keyframes backgroundAnimation {
   0% {
     background-color: #f0f0f0;
