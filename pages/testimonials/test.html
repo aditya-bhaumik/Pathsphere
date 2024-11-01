@@ -9,6 +9,14 @@
 />
     <link rel="stylesheet" href="testimonial.css" />
     <title>Reviews, Testimonials & Popular Services</title>
+    <link rel="icon" type="image/x-icon" href="/images/pathsphere.png">
+   
+    <!-- bootstrap linking -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -286,7 +294,16 @@
             <h2>Ready to Land Your Dream Job?</h2>
             <p>Start creating your professional resume in minutes!</p> 
             <a href="/pages/resume-builder/welcome.html" class="cta-button">Start Building Now ➡</a>
-        </div>
+   </div>
     </div>
+    <script src="/scripts/componentLoader.js"></script>
+    <script>
+      prependComponent('Navbar');
+      prependComponent('Cursor');
+      prependComponent('ScrollToTop');
+      appendComponent('Footer');
+      appendComponent('ChatBot');
+      waitTillComponentsLoaded();
+    </script>
 </body>
 </html>
