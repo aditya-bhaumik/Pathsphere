@@ -195,6 +195,7 @@ main {
 .darkmode main {
   background-color: #121212;
 }
+
 .darkmode .col-12 {
   background-color: #121212;
 }
@@ -225,6 +226,10 @@ main {
   color: #fff;
 }
 
+.darkmode .why-us p{
+  color: #f6f2f2;
+}
+
 .darkmode .why-us p {
   color: #8d8a8a;
 }
@@ -245,6 +250,17 @@ main {
   color: #fff;
 }
 
+.darkmode .card h2{
+  color: #fff;
+}
+
+.darkmode #testimonials h3{
+  color: #fff;
+} 
+.darkmode #testimonials h3+p{
+  color: #a39292;
+} 
+
 .darkmode #testimonials h3 {
   color: #fff;
 }
@@ -252,6 +268,7 @@ main {
 .darkmode #testimonials h3+p {
   color: #8d8a8a;
 }
+
 
 .darkmode .feature p {
   color: #fff;
@@ -280,6 +297,19 @@ main {
 .darkmode .footer-container {
   background-color: #121212;
   border-top: 2px solid #fff;
+  color: #fff;
+}
+
+
+
+/*.darkmode .footer-container {
+  background-color: #121212;
+  border-top: 2px solid #fff;
+  color: #fff;
+}*/
+
+
+.darkmode .card p{
   color: #fff;
 }
 
@@ -1524,7 +1554,8 @@ a.new {
   box-shadow: 0px 0px 0px 2px #1f2d3a;
   cursor: pointer;
   text-align: center;
- @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
 .Sharing{
 	position: relative;
 	z-index: 1;
