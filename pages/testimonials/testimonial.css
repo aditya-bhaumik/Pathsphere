@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primary-color: #3498db;
+    --secondary-color:#e8e8e8;
+    --text-dark:#0f172a;
+    --text-light:#94a3b8;
+    --white:#ffffff;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+   font-family: "Poppins",sans-serif; 
+   background-color: var(--secondary-color);
+}
+.section_container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    text-align: center;;
+}
+.section_container h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.section_container h1{
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.section_container h1 ::after{
+    position:absolute;
+    content: "";
+    left: 50%;
+    bottom:0;
+    transform: translateX(-50%);
+    height: 2px ;
+    width: 5rem;
+    background-color: var(--primary-color);
+}
+.section_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.section_card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 5rem 2rem 2rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.section_card {
+    animation: float 3s ease-in-out infinite;
+}
+
+.section_card::before{
+    position: absolute;
+    content:"" ;
+    top:0;
+    left: 0;
+    transform: translate(-50% ,-50%);
+    width: 75%;
+    aspect-ratio: 1;
+    border-radius:100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.section_card span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.section_card h4{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.section_card p{
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.section_card img{
+    margin-bottom: 1rem;
+    max-width: 100px;
+    border-radius: 100%;
+    border: 2px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.section_card h5{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition:0.3s;
+}
+
+.section_card h6{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+.section_card:hover::before{
+    width: 700%;
+}
+
+.section_card:hover :is(h4 ,h5){
+    color:var(--white);
+}
+
+.section_card:hover :is(p,h6){
+    color: var(--secondary-color);
+}
+
+.section_card:hover img{
+    border-color:var(--white);
+}
