@@ -249,7 +249,9 @@ main {
 .darkmode .card h6 {
   color: #fff;
 }
-
+.darkmode #testimonials p{
+  color: #fff;
+}
 .darkmode .card h2{
   color: #fff;
 }
