@@ -148,39 +148,41 @@
 
         // Function to generate resume preview and download
         function generateResume() {
-            const resumeContent = document.getElementById("resumeContent");
-            const objective = document.getElementById("objective").value;
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            const linkedin = document.getElementById("linkedin").value;
-            const education1 = document.getElementById("education1").value;
-            const education2 = document.getElementById("education2").value;
-            const experience = document.getElementById("experience").value;
-            const project = document.getElementById("project").value;
-            const skills = document.getElementById("skills").value;
-            const achievements = document.getElementById("achievements").value;
+    const resumeContent = document.getElementById("resumeContent");
+    const objective = document.getElementById("objective").value || "Not provided";
+    const name = document.getElementById("name").value || "Not provided";
+    const email = document.getElementById("email").value || "Not provided";
+    const phone = document.getElementById("phone").value || "Not provided";
+    const linkedin = document.getElementById("linkedin").value || "Not provided";
+    const education1 = document.getElementById("education1").value || "Not provided";
+    const education2 = document.getElementById("education2").value || "Not provided";
+    const experience = document.getElementById("experience").value || "Not provided";
+    const project = document.getElementById("project").value || "Not provided";
+    const skills = document.getElementById("skills").value || "Not provided";
+    const achievements = document.getElementById("achievements").value || "Not provided";
 
-            resumeContent.innerHTML = `
-                <h3>${name}</h3>
-                <p style="color: black;">Email: ${email}</p>
-                <p style="color: black;">Phone: ${phone}</p>
-                <p style="color: black;">LinkedIn: ${linkedin}</p>
-                <h4>Objective</h4>
-                <p>${objective}</p>
-                <h4>Education</h4>
-                <p>${education1}</p>
-                <p>${education2}</p>
-                <h4>Experience</h4>
-                <p>${experience}</p>
-                <h4>Projects</h4>
-                <p>${project}</p>
-                <h4>Skills</h4>
-                <p>${skills}</p>
-                <h4>Achievements</h4>
-                <p>${achievements}</p>
-            `;
-        }
+    resumeContent.innerHTML = `
+        <h3>Name: ${name}</h3>
+        <p style="color: white;">Email: ${email}</p>
+        <p style="color: white;">Phone: ${phone}</p>
+        <p style="color: white;">LinkedIn: ${linkedin}</p>
+        <h4>Objective:</h4>
+        <p>${objective}</p>
+        <h4>Education:</h4>
+        <p>${education1}</p>
+        <p>${education2}</p>
+        <h4>Experience:</h4>
+        <p>${experience}</p>
+        <h4>Projects:</h4>
+        <p>${project}</p>
+        <h4>Skills:</h4>
+        <p>${skills}</p>
+        <h4>Achievements:</h4>
+        <p>${achievements}</p>
+    `;
+}
+
+
 
         function downloadResume() {
             const element = document.getElementById('resumeContent');

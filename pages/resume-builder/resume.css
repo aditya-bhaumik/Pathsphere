@@ -117,7 +117,7 @@ button:hover {
     background-color: var(--preview-bg-color);
     border-radius: 8px;
     font-size: 1rem;
-    color: black/* Set resume content text color to white */
+    color: rgb(240, 226, 226)/* Set resume content text color to white */
 }
 
 #downloadBtn {
