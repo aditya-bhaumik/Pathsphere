@@ -22,15 +22,56 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+
     <title>Document</title>
+    <style>
+
+      .footer-logo {
+  font-weight: bold;
+  font-size: 1.8rem; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.footer-logo-text {
+  color: black; /* Color for 'Path' */
+}
+
+/* Style for 'Sphere' in the footer logo */
+.footer-logo-sphere {
+  color: #359B6B; /* Accent color */
+}
+
+/* Style for the footer logo image */
+.footer-logo-image {
+  width: 30px; /* Adjust size to fit */
+  height: 30px;
+  object-fit: contain; /* Maintains aspect ratio */
+  margin-right: 8px; /* Space between logo image and text */
+}
+
+/* Style for footer paragraph text */
+.footer-description p {
+  font-size: 1rem; /* Adjust for readability */
+  line-height: 1.6; /* Space between lines */
+  color: #666; /* Subtle color for readability */
+}
+
+    </style>
   </head>
   <body>
     <div class="footer-container">
       <div class="footer-description">
-        <h3>PathSphere</h3>
+        <h3 class="footer-logo">
+          <img src="/images/abcd.png" alt="PathSphere Logo" class="footer-logo-image" />
+          <span class="footer-logo-text">
+            PathSphere
+          </span>
+        </h3>
         <p>
           PathSphere is a comprehensive platform designed to connect students
-          with scholarship opportunities and educators with job openings. It
+          with scholarship opportunities and educators with job openings.It
           features dynamic search tools and community discussions to enhance
           access to educational and career resources.
         </p>
