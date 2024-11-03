@@ -147,12 +147,15 @@ p {
 .card img {
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 10px;
+    border: 2px solid rgb(234, 231, 231);
+    border-radius: 5px;
     width: 100%;
     height: 150px; /* Smaller image to reduce height */
     object-fit: cover;
     margin-bottom: 10px; /* Reduced margin below the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
 }
+
 
 /* Card heading */
 
@@ -178,7 +181,7 @@ p {
     padding: 5px 10px;
     background-color: white; 
     color: black;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
     border: solid black 1px;
     cursor: pointer;
@@ -339,7 +342,9 @@ p {
     background-color: #c0c0c0;
     cursor: not-allowed;
 }
-
+#like_btn{
+    border:none;
+}
 #page-info {
     margin: 0 15px;
     font-size: 1.1em;
@@ -354,16 +359,38 @@ p {
 }
 .card h4{
     width: 100%;
-    margin-bottom: 10px;
+    
 }
-.comment-input{
-    height: 1.5rem;
-    margin-right: 10px;
-    border-radius: 10px;
+.comment-input {
+    height: 2.5rem;
+    margin-right: 5px;
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-top: 7px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    resize: none; /* Disables the text area's resize handle */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
+
+.comment-input:focus {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Highlight shadow on focus */
+    border-color: #66afe9;
+}
+
 .card .comments-section{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+#post_btn{
+    color:white;
+    background: #000;
+}
+#comm_ent{
+    padding: 0px;
 }

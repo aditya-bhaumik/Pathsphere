@@ -119,18 +119,18 @@
                     <!-- Likes and Comments functionality -->
     <div class="interaction">
         <!-- Likes Button -->
-        <button class="like-btn" onclick="increaseLikes(this)">
+        <button class="like-btn" id="like_btn"onclick="increaseLikes(this)">
             <i class="fa fa-thumbs-up"></i> Like <span class="like-count">0</span>
         </button>
 
         <!-- Comments Section -->
         <div class="comments-section">
-            <h4>Comments:</h4>
+            <h4 id="comm_ent">Comments:</h4>
             <ul class="comments-list">
                 <!-- Comments will be appended here -->
             </ul>
             <textarea placeholder="Add a comment..." class="comment-input"></textarea>
-            <button class="submit-comment" onclick="submitComment(this)">Post</button>
+            <button class="submit-comment" id="post_btn" onclick="submitComment(this)">Post</button>
         </div>
                     </div>
                 `;
