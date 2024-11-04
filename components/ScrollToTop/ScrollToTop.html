@@ -11,4 +11,15 @@
       <i class="fa-solid fa-arrow-up"></i>
     </a>
   </body>
+  <script>
+      const scrollTopButton = document.querySelector(".scroll-top");
+      scrollTopButton.style.display = "none";
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          scrollTopButton.style.display = "block";
+        } else {
+          scrollTopButton.style.display = "none";
+        }
+      });
+  </script>
 </html>
