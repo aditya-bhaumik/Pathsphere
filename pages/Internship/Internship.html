@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Opportunities</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main Container */
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            color: #0077cc;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .header p {
+            font-size: 1.2em;
+        }
+
+        /* Internship Opportunities Section */
+        .opportunities-section {
+            margin-top: 30px;
+        }
+
+        .opportunity-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .opportunity-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .opportunity-card h3 {
+            color: #0077cc;
+            margin-bottom: 10px;
+        }
+
+        .opportunity-card p {
+            margin-bottom: 10px;
+        }
+
+        /* Form Section */
+        .form-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .form-section h2 {
+            color: #0077cc;
+            margin-bottom: 15px;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-section input,
+        .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .form-section button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-section button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Explore Our Internship Opportunities</h1>
+            <p>Gain hands-on experience, mentorship, and growth in a supportive environment.</p>
+        </div>
+
+        <!-- Internship Opportunities Section -->
+        <div class="opportunities-section" style="text-align: center;" color="blue;">
+            <h2>Available Internships</h2>
+
+            <div class="opportunity-card">
+                <h3>Web Development Internship</h3>
+                <p>Work on creating, designing, and maintaining websites. Get exposure to HTML, CSS, JavaScript, and front-end frameworks.</p>
+                <p><strong>Eligibility:</strong> Basic knowledge of web development technologies.</p>
+                <p><strong>Duration:</strong> 3-6 months</p>
+                <p><strong>Location:</strong> Remote or On-site</p>
+            </div>
+
+            <div class="opportunity-card">
+                <h3>Data Science Internship</h3>
+                <p>Analyze data and build models to support decision-making. Learn Python, machine learning algorithms, and data visualization.</p>
+                <p><strong>Eligibility:</strong> Background in statistics or computer science.</p>
+                <p><strong>Duration:</strong> 6 months</p>
+                <p><strong>Location:</strong> Remote</p>
+            </div>
+
+            <div class="opportunity-card">
+                <h3>Marketing Internship</h3>
+                <p>Assist in developing and executing marketing campaigns. Gain experience with digital marketing, SEO, and analytics tools.</p>
+                <p><strong>Eligibility:</strong> Enthusiasm for marketing and analytics.</p>
+                <p><strong>Duration:</strong> 3-6 months</p>
+                <p><strong>Location:</strong> Remote</p>
+            </div>
+        </div>
+
+        <!-- Application Form Section -->
+        <div class="form-section">
+            <h2>Apply Now</h2>
+            <form id="applicationForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="position">Position Interested In</label>
+                <input type="text" id="position" name="position" placeholder="e.g., Web Development" required>
+
+                <label for="resume">Resume (link to Google Drive or Dropbox)</label>
+                <input type="url" id="resume" name="resume" required>
+
+                <label for="coverLetter">Cover Letter</label>
+                <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+
+                <button type="button" onclick="submitApplication()">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for form submission
+        function submitApplication() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const position = document.getElementById("position").value;
+            const resume = document.getElementById("resume").value;
+            const coverLetter = document.getElementById("coverLetter").value;
+
+            if (name && email && position && resume && coverLetter) {
+                alert("Thank you, " + name + "! Your application for the " + position + " position has been submitted.");
+                document.getElementById("applicationForm").reset();
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+</body>
+</html>
