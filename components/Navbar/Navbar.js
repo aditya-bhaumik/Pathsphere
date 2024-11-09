@@ -44,3 +44,46 @@ window.onload = () => {
 
 // Assign the change event to the theme toggle for toggling dark mode
 icon.addEventListener('change', toggleDarkMode);
+
+
+
+// Function to mark the active tab based on the current URL
+function setActiveTab() {
+    const tabs = document.querySelectorAll('#tabs .tab'); // Select all tab <li> elements
+    const currentPath = window.location.pathname; // Get the current path from the URL
+
+    // Loop through each tab to add or remove the active class
+    tabs.forEach(tab => {
+        const link = tab.querySelector('a'); // Get the <a> inside the <li>
+        const linkPath = link.getAttribute('href'); // Get the href attribute of the <a>
+        console.log('Current Path:', currentPath);
+        console.log('Link Path:', linkPath);
+
+        // Check if the href of the link matches the current path
+        if (currentPath === linkPath || currentPath === linkPath.split('?')[0]) {
+            tab.classList.add('active'); // Add 'active' to the current tab
+        } else {
+            tab.classList.remove('active'); // Remove 'active' from other tabs
+        }
+        // if (link.getAttribute('href') === currentPath) {
+        //     tab.classList.add('active'); // Add 'active' to the current tab
+        // } else {
+        //     tab.classList.remove('active'); // Remove 'active' from other tabs
+        // }
+    });
+}
+
+// Call the function on page load
+window.onload = () => {
+    setActiveTab();
+
+    // Existing theme setup
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('darkmode');
+        icon.checked = true; // Set checkbox to checked
+    } else {
+        document.body.classList.remove('darkmode');
+        icon.checked = false; // Set checkbox to unchecked
+    }
+};
