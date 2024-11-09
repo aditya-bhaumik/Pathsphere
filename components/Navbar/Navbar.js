@@ -13,13 +13,20 @@ const toggleDarkMode = () => {
     const body = document.body;
     body.classList.toggle('darkmode');
 
+    //setting photopaths for the images
+    const photoPaths = ["/images/sun.png", "/images/moon.png"];
+    const photoElement = document.getElementById("photo");
+
     // Update the theme preference in local storage
     if (body.classList.contains('darkmode')) {
         icon.checked = true; // Set checkbox to checked
         localStorage.setItem('theme', 'dark');
+        photoElement.src = photoPaths[1]; //set moon for night mode
+
     } else {
         icon.checked = false; // Set checkbox to unchecked
         localStorage.setItem('theme', 'light');
+        photoElement.src = photoPaths[0];  //set sun for day
     }
 };
 
