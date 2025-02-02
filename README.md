@@ -1,6 +1,4 @@
 
-
-
 <h1 align="center">
     <strong>✨PathSphere✨</strong>
   </h1>
